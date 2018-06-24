@@ -1,3 +1,18 @@
 <div role="logo" class="sidenav__logo">
   <img src="/assets/images/sidenav/logo.png" alt="GroundSchool NZ">
 </div>
+
+<div class="sidenav__nav-wrapper" role="navigation">
+  <mat-expansion-panel class="gs" [expanded]="true">
+    
+    <!-- Courses -->
+    <mat-expansion-panel-header [expandedHeight]="'40px'" [collapsedHeight]="'40px'">
+        <i class="material-icons">flight_takeoff</i><span>Courses</span>
+    </mat-expansion-panel-header>
+
+    <mat-nav-list>
+      <mat-list-item><i class="material-icons">chevron_right</i> CPL</mat-list-item>
+    </mat-nav-list>
+
+  </mat-expansion-panel>
+</div>

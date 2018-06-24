@@ -4,4 +4,41 @@
         text-align: center;
         margin-top: 10px;
     }
+
+    &__nav-wrapper {
+        width: 240px;
+        margin: 20px 0 0 10px;
+    }
+}
+
+.mat-expansion-panel {
+
+    -webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+    box-shadow: none !important;
+    
+    i {
+        padding-right: 16px;
+        font-size: 1.3em;
+    }
+
+    .mat-expansion-panel-header {
+        color: #fff;
+        background-color: #6b7a8f;
+        font-weight: 200;
+
+        &:hover {
+            background-color: #576272;
+        }
+    }
+    ::ng-deep .mat-expansion-indicator:after {
+      color: white;
+    }
+}
+
+.mat-nav-list {
+    .mat-list-item {
+        font-size: 0.9em;
+        height: 30px;
+    }
 }
