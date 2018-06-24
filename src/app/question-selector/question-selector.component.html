@@ -1,0 +1,29 @@
+<mat-card class="question-selector">
+
+  <!-- Topic -->
+  <mat-form-field class="question-selector__topic">
+    <mat-select placeholder="Topic">
+      <!-- TODO: this should be bound with ngFor -->
+      <mat-option [value]="'navigation-flight-planning'">
+        Navigation and Flight Planning
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Question Set -->
+  <mat-form-field class="question-selector__question-set">
+    <mat-select placeholder="Question Set">
+      <!-- TODO: this should be bound with ngFor -->
+      <mat-option [value]="'track-and-heading'">
+        Track and Heading
+      </mat-option>
+      <mat-option [value]="'nz-aeronautical-charts'">
+        New Zealand Aeronautical Charts
+      </mat-option>
+      <mat-option [value]="'e6b-computations'">
+        E6B Computations
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</mat-card>

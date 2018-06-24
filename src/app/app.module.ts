@@ -8,13 +8,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { PageTitleComponent } from './page-title/page-title.component';
+import { QuestionSelectorComponent } from './question-selector/question-selector.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    QuestionSelectorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+.question-selector {
+    color: #0e0;
+    width: 90%;
+    padding-bottom: 0;
+    padding-left: 0;
+
+    &__topic {
+        width: 300px;
+    }
+
+    &__question-set {
+        width: 400px;
+    }
+}
+
+.mat-form-field {
+    margin-left: 30px;
+}
