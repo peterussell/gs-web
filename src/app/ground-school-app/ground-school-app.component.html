@@ -1,0 +1,13 @@
+<mat-sidenav-container fullscreen class="mat-typography">
+
+  <!-- Sidebar -->
+  <mat-sidenav [fixedInViewport]="true" opened="true" mode="side" class="sidebar-container">
+      <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content class="content-container">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

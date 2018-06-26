@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+
+mat-sidenav {
+    width: 260px;
+}
+
+.sidebar-container {
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+    background-color: #ccc;
+    background: url('/assets/images/background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-left: 40px;
+}
