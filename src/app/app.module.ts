@@ -20,6 +20,7 @@ import { GroundSchoolAppComponent } from './ground-school-app/ground-school-app.
 import { CourseComponent } from './course/course.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CourseResolver } from './course/course-resolver.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { CourseResolver } from './course/course-resolver.service';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     JsonService,

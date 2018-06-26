@@ -12,7 +12,8 @@ const appRoutes: Routes = [
     { path: 'courses', component: GroundSchoolAppComponent, children: [
         { path: '', component: CoursesDashboardComponent },
         { path: ':title', component: CourseComponent, resolve: {course: CourseResolver} }
-    ]}
+    ]},
+    { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({
