@@ -10,8 +10,8 @@ import { Question } from '../../core/models/question.model';
 export class QuestionComponent implements OnInit {
   @Input() question: Question;
 
-  private questionText: string;
-  private answerText: string;
+  public questionText: string;
+  public answerText: string;
 
   constructor() { }
 

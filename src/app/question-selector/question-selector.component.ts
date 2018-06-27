@@ -12,8 +12,8 @@ import { MatSelectChange } from '@angular/material/select';
 })
 export class QuestionSelectorComponent implements OnInit {
   @Input() course: Course;
-  private topics: Array<Topic>;
-  private questionSets: Array<QuestionSet>;
+  public topics: Array<Topic>;
+  public questionSets: Array<QuestionSet>;
 
   public selectedTopic: Topic;
   public selectedQuestionSet: QuestionSet;
