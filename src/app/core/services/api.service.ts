@@ -3,7 +3,7 @@ import { HttpClient} from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 
 @Injectable()
-export class JsonService {
+export class ApiService {
     private basePath = 'http://localhost:4200/assets';
     private awsBasePath = 'https://wbr0qbew2b.execute-api.us-west-2.amazonaws.com/prod/v1';
     

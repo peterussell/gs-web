@@ -10,8 +10,18 @@ import { Question } from '../../core/models/question.model';
 export class QuestionComponent implements OnInit {
   @Input() question: Question;
 
+  private questionText: string;
+  private answerText: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.questionText = this.insertDegreeSymbols(this.question.question);
+    this.answerText = this.insertDegreeSymbols(this.question.answer);
+  }
+
+  // TODO: move this to a util class
+  insertDegreeSymbols(input: string): string {
+    return input.replace(/&deg;/g, '°');
   }
 }

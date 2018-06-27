@@ -11,7 +11,7 @@ import { PageTitleComponent } from './page-title/page-title.component';
 import { QuestionSelectorComponent } from './question-selector/question-selector.component';
 import { QuestionSetComponent } from './question-set/question-set.component';
 import { QuestionComponent } from './question-set/question/question.component';
-import { JsonService } from './core/services/json.service';
+import { ApiService } from './core/services/api.service';
 import { QuestionService } from './core/services/question.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
@@ -45,7 +45,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [
-    JsonService,
+    ApiService,
     QuestionService,
     CourseResolver
   ],

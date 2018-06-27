@@ -1,1 +1,12 @@
-<app-question></app-question>
+<div class="question-set__container">
+    <div *ngIf="QuestionSet; else noQuestions">
+        <app-question
+            *ngFor="let question of QuestionSet.Questions"
+            [question]="question">
+        </app-question>
+    </div>
+        
+    <ng-template #noQuestions>
+        <p>Select a certification</p>
+    </ng-template>
+</div>

@@ -3,19 +3,16 @@ import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/r
 import { Observable } from "rxjs/Observable";
 
 import { Course } from "../core/models/course.model";
-import { QuestionService } from "../core/services/question.service";
+import { ApiService } from "../core/services/api.service";
 
 
 @Injectable()
-export class CourseResolver implements Resolve<Course> {
-    constructor(private questionService: QuestionService) {
-    }
+export class CourseResolver implements Resolve<Array<Course>> {
+    
+    constructor(private apiService: ApiService) {}
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
-        Observable<Course> | Promise<Course> | Course {
-            // tmp
-            console.log('resolving some bishes');
-            // TODO: this is where we should actually fetch the course from the API
-            return new Course('1234', "Pete's flying course", []);
+        Observable<Array<Course>> | Promise<Array<Course>> | Array<Course> {
+            return this.apiService.getCourses();
     }
 }
