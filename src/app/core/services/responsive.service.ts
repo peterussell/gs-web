@@ -1,6 +1,7 @@
 import { Injectable, Output, EventEmitter } from "@angular/core";
 import { BreakpointObserver } from "@angular/cdk/layout";
 import { BreakpointState } from "@angular/cdk/layout";
+import { Breakpoints } from "@angular/cdk/layout";
 
 @Injectable()
 export class ResponsiveService {
@@ -10,9 +11,9 @@ export class ResponsiveService {
 
     constructor(public breakpointObserver: BreakpointObserver) {
         this.breakpointObserver
-        .observe(['(max-width: 780px)'])
+        .observe([Breakpoints.Web, Breakpoints.WebLandscape, Breakpoints.Tablet, Breakpoints.TabletLandscape])
         .subscribe((state: BreakpointState) => {
-            this.currentViewportSize = state.matches ? ViewportSize.Small : ViewportSize.Large;
+            this.currentViewportSize = state.matches ? ViewportSize.Large : ViewportSize.Small;
             this.onViewportChange.emit(this.currentViewportSize);
       });
     }
