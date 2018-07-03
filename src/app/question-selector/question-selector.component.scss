@@ -1,5 +1,5 @@
 .question-selector {
-    width: 90%;
+    width: 95%;
     padding-bottom: 0;
     padding-left: 0;
 
@@ -10,6 +10,10 @@
     &__question-set {
         width: 40%;
     }
+}
+
+.mat-card {
+    padding-right: 0px;
 }
 
 .mat-form-field {

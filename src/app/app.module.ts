@@ -21,6 +21,10 @@ import { CourseComponent } from './course/course.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CourseResolver } from './course/course-resolver.service';
 import { FormsModule } from '@angular/forms';
+import { LayoutModule } from '@angular/cdk/layout';
+
+import { UserEventsService } from './core/services/user-events.service';
+import { ResponsiveService } from './core/services/responsive.service';
 
 
 @NgModule({
@@ -42,11 +46,14 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    LayoutModule
   ],
   providers: [
     ApiService,
     QuestionService,
+    UserEventsService,
+    ResponsiveService,
     CourseResolver
   ],
   bootstrap: [AppComponent]
