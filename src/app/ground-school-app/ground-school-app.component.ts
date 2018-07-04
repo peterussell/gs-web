@@ -20,6 +20,10 @@ export class GroundSchoolAppComponent implements OnInit, OnDestroy {
     public responsiveService: ResponsiveService) { }
 
   ngOnInit() {
+    // initial load
+    this.setMenuMode(this.responsiveService.getViewportSize());
+
+    // window resize
     this.responsiveService.onViewportChange.subscribe((newViewportSize: ViewportSize) => {
       this.setMenuMode(newViewportSize);
     });

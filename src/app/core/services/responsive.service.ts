@@ -8,14 +8,26 @@ export class ResponsiveService {
     @Output() onViewportChange: EventEmitter<ViewportSize> = new EventEmitter<ViewportSize>();
 
     private currentViewportSize: ViewportSize;
+    private readonly largeViewportBreakpoints = [
+        Breakpoints.Web,
+        Breakpoints.WebLandscape,
+        Breakpoints.Tablet,
+        Breakpoints.TabletLandscape
+    ];
 
     constructor(public breakpointObserver: BreakpointObserver) {
+        // initial load
+        this.currentViewportSize = this.breakpointObserver.isMatched(this.largeViewportBreakpoints) ?
+            ViewportSize.Large : ViewportSize.Small;
+
+        // change events
         this.breakpointObserver
-        .observe([Breakpoints.Web, Breakpoints.WebLandscape, Breakpoints.Tablet, Breakpoints.TabletLandscape])
-        .subscribe((state: BreakpointState) => {
-            this.currentViewportSize = state.matches ? ViewportSize.Large : ViewportSize.Small;
-            this.onViewportChange.emit(this.currentViewportSize);
-      });
+            .observe(this.largeViewportBreakpoints)
+            .subscribe((state: BreakpointState) => {
+                this.currentViewportSize = state.matches ? ViewportSize.Large : ViewportSize.Small;
+                this.onViewportChange.emit(this.currentViewportSize);
+            }
+        );
     }
 
     getViewportSize(): ViewportSize {
