@@ -16,7 +16,6 @@ export class QuestionSetComponent implements OnInit {
   ngOnInit() {
     this.questionService.onQuestionsUpdated.subscribe((questionSet: QuestionSet) => {
       this.QuestionSet = questionSet;
-      console.log('updated questionSet', this.QuestionSet); // tmp
     });
   }
 
