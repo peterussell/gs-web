@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { UserEventsService } from '../core/services/user-events.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
@@ -10,7 +10,7 @@ import { ResponsiveService, ViewportSize } from '../core/services/responsive.ser
   templateUrl: './ground-school-app.component.html',
   styleUrls: ['./ground-school-app.component.scss']
 })
-export class GroundSchoolAppComponent implements OnInit, OnDestroy {
+export class GroundSchoolAppComponent implements OnInit {
   private readonly menuBreakpoint: number = 780;
 
   @ViewChild(MatSidenav) sidenav: MatSidenav;
@@ -28,10 +28,6 @@ export class GroundSchoolAppComponent implements OnInit, OnDestroy {
       this.setMenuMode(newViewportSize);
     });
     this.userEventsService.onToggleSidenav.subscribe(() => { this.toggleSidenav(); });
-  }
-
-  ngOnDestroy() {
-    this.userEventsService.onToggleSidenav.unsubscribe();
   }
 
   private toggleSidenav() {
