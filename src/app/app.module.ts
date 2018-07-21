@@ -26,6 +26,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { UserEventsService } from './core/services/user-events.service';
 import { ResponsiveService } from './core/services/responsive.service';
 import { RegisterComponent } from './register/register.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { RegisterComponent } from './register/register.component';
     CoursesDashboardComponent,
     GroundSchoolAppComponent,
     CourseComponent,
-    RegisterComponent
+    RegisterComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@
 
       <div>
         <mat-form-field>
-          <input matInput [(ngModel)]="username" name="username" placeholder="Username">
+          <input matInput [(ngModel)]="email" name="email" placeholder="Email">
         </mat-form-field>
       </div>
       
@@ -24,7 +24,15 @@
       </mat-card-actions>
       
       <mat-card-footer>
-        New here? <a [routerLink]="['/register']">Create an account</a>.
+        <span class="forgot-password">
+          <a [routerLink]="['/reset-password']">Forgot password?</a>
+        </span>
+        
+        <span class="create-account">
+          <a [routerLink]="['/register']">Create an account</a><br>
+        </span>
+        
+        
       </mat-card-footer>
 
     </form>

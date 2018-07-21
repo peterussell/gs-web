@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public username: string;
+  public email: string;
   public password: string;
 
   public readonly u: { u: string, p: string}[] = [
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
     let success = false;
     for (let i=0; i<this.u.length; i++) {
-      if (this.username.toLowerCase() === this.u[i]['u'] && this.password === this.u[i]['p']) {
+      if (this.email.toLowerCase() === this.u[i]['u'] && this.password === this.u[i]['p']) {
         success = true;
         break;
       }
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     if (success) {
       this.router.navigate(['/courses', 'cpl']);
     } else {
-      this.username = "";
+      this.email = "";
       this.password = "";
     }
   }
