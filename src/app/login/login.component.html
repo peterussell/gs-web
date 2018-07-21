@@ -1,9 +1,10 @@
-<form>
 <div class="page-wrapper">
-    <mat-card class="login-container">
+  <mat-card class="login-container">
+    <form>
 
       <mat-card-title>
-        <img src="/assets/images/login/logo.png" alt="GroundSchool NZ">
+        <img src="/assets/images/login/logo.png" alt="GroundSchool NZ"><br>
+        Log In
       </mat-card-title>
 
       <div>
@@ -19,9 +20,13 @@
       </div>
 
       <mat-card-actions class="login-container__actions-panel">
-          <button mat-raised-button (click)="doLogin($event)">Login</button>
+          <button mat-raised-button (click)="onLogin($event)">Login</button>
       </mat-card-actions>
       
-    </mat-card>
+      <mat-card-footer>
+        New here? <a [routerLink]="['/register']">Create an account</a>.
+      </mat-card-footer>
+
+    </form>
+  </mat-card>
 </div>
-</form>

@@ -25,6 +25,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { UserEventsService } from './core/services/user-events.service';
 import { ResponsiveService } from './core/services/responsive.service';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ResponsiveService } from './core/services/responsive.service';
     LoginComponent,
     CoursesDashboardComponent,
     GroundSchoolAppComponent,
-    CourseComponent
+    CourseComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

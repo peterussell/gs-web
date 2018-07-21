@@ -6,9 +6,11 @@ import { CoursesDashboardComponent } from './courses-dashboard/courses-dashboard
 import { GroundSchoolAppComponent } from './ground-school-app/ground-school-app.component';
 import { CourseComponent } from './course/course.component';
 import { CourseResolver } from './course/course-resolver.service';
+import { RegisterComponent } from './register/register.component';
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
     { path: 'courses', component: GroundSchoolAppComponent, children: [
         { path: '', component: CoursesDashboardComponent },
         { path: ':title', component: CourseComponent, resolve: {course: CourseResolver} }

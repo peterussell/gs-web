@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  doLogin(event: Event) {
+  onLogin(event: Event) {
     event.preventDefault();
 
     let success = false;
