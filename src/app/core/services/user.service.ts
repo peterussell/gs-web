@@ -29,4 +29,9 @@ export class UserService {
         }
         return false;
     }
+
+    resetPassword(email: string): boolean {
+        console.log('UserService: resetPassword called but not implemented.');
+        return true;
+    }
 }

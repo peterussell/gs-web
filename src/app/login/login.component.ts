@@ -9,12 +9,9 @@ import { UserService } from '../core/services/user.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
   public loginForm: FormGroup;
   public isProcessing: boolean = false;
   public hasAuthError: boolean = false;
-
-  
 
   constructor(private router: Router, private userService: UserService) { }
 
