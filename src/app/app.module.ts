@@ -20,13 +20,14 @@ import { GroundSchoolAppComponent } from './ground-school-app/ground-school-app.
 import { CourseComponent } from './course/course.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CourseResolver } from './course/course-resolver.service';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { UserEventsService } from './core/services/user-events.service';
 import { ResponsiveService } from './core/services/responsive.service';
 import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { UserService } from './core/services/user.service';
 
 
 @NgModule({
@@ -50,11 +51,12 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     MaterialModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
+    ReactiveFormsModule,
     LayoutModule
   ],
   providers: [
     ApiService,
+    UserService,
     QuestionService,
     UserEventsService,
     ResponsiveService,

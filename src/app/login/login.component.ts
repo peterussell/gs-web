@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { UserService } from '../core/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -7,44 +9,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  public email: string;
-  public password: string;
 
-  public readonly u: { u: string, p: string}[] = [
-    { 'u': 'gs1', 'p': 'temp_253' },
-    { 'u': 'gs2', 'p': 'temp_919' },
-    { 'u': 'gs3', 'p': 'temp_564' },
-    { 'u': 'gs4', 'p': 'temp_175' },
-    { 'u': 'gs5', 'p': 'temp_632' },
-    { 'u': 'gs6', 'p': 'temp_255' },
-    { 'u': 'gs7', 'p': 'temp_770' },
-    { 'u': 'gs8', 'p': 'temp_283' },
-    { 'u': 'gs9', 'p': 'temp_186' },
-    { 'u': 'gs100', 'p': 'temp_618' },
-    { 'u': '100', 'p': 'demo' }
-  ];
+  public loginForm: FormGroup;
+  public isProcessing: boolean = false;
+  public hasAuthError: boolean = false;
 
-  constructor(private router: Router) { }
+  
+
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
+    this.loginForm = new FormGroup({
+      'email': new FormControl(null, Validators.required),
+      'password': new FormControl(null, Validators.required)
+    });
   }
 
-  onLogin(event: Event) {
-    event.preventDefault();
+  onLogin() {
+    this.hasAuthError = false;
+    this.isProcessing = true;
 
-    let success = false;
-    for (let i=0; i<this.u.length; i++) {
-      if (this.email.toLowerCase() === this.u[i]['u'] && this.password === this.u[i]['p']) {
-        success = true;
-        break;
-      }
-    }
-
-    if (success) {
+    if (this.userService.authenticateUser(this.loginForm.value.email, this.loginForm.value.password)) {
       this.router.navigate(['/courses', 'cpl']);
     } else {
-      this.email = "";
-      this.password = "";
+      this.hasAuthError = true;
     }
+
+    this.isProcessing = false;
   }
 }

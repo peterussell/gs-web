@@ -14,13 +14,19 @@
     overflow:hidden;
     z-index:-1;
 
-    padding-top: 60px;
+    padding-top: 20px;
     text-align: center;
 }
 
 .login-container {
+    width: 300px;
     display: inline-block;
     padding: 20px 40px;
+}
+
+.error-msg {
+    padding: 0px 0 14px 0;
+    color: #f44336;
 }
 
 .forgot-password, .create-account {
@@ -33,7 +39,7 @@
 }
 
 ::ng-deep .mat-input-wrapper{
-    width: 300px !important;
+    width: 260px !important;
 }
 
 .mat-card-footer {
