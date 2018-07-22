@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UserService } from '../core/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -6,21 +8,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  public email: string;
-  public password: string;
-  public confirmPassword: string;
+  public registerForm: FormGroup;
+  public passwordMismatch: boolean;
 
-  constructor() { }
+  constructor(public userService: UserService) { }
 
   ngOnInit() {
+    this.registerForm = new FormGroup({
+      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'password': new FormGroup({
+        'original': new FormControl(null, Validators.required),
+        'confirm': new FormControl(null, Validators.required)
+      }),
+    });
   }
 
-  onRegister(event: Event) {
-    event.preventDefault();
-    
-    console.log('email', this.email);
-    console.log('password', this.password);
-    console.log('confirmPassword', this.confirmPassword);
+  checkPasswordsMatch(): boolean {
+    const originalControl = this.registerForm.get('password.original');
+    const confirmControl = this.registerForm.get('password.confirm');
+    this.passwordMismatch =
+      originalControl.touched && confirmControl.touched &&
+      (originalControl.value !== confirmControl.value);
+    return !this.passwordMismatch;
   }
 
+  onRegister() {
+    if (!this.checkPasswordsMatch()) {
+      return;
+    }
+    const registerResult = this.userService.registerUser(
+      this.registerForm.get('email').value,
+      this.registerForm.get('password.original').value
+    );
+  }
+}
+
+enum RegisterUserState {
+  Initial,
+  Success,
+  Error
 }
