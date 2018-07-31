@@ -1,0 +1,732 @@
+{
+	"question_set_id": "45df69bd-1d06-426d-b21a-5ab54b7e8e25",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["admin-and-operations"],
+	"title": "Administration and Operations",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 1: Administration and Operations",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+		{
+			"question": "'CAA' stands for ____________________. It is a (private/government) organisation.",
+			"answer": "Civil Aviation Authority. Government.",
+			"references": [
+				{
+				  "text": "Waypoints 1-1",
+				  "url": ""
+				}
+			]
+		},
+		{
+			"question": "What is the main role of the CAA?",
+			"answer": "Set policy and standards and promulgate rules and procedures for the safe and efficient operation of aircraft.",
+			"references": [
+				{
+					"text": "Waypoints 1-1",
+					"url": ""
+				},
+				{
+					"text": "CAA website",
+					"url": "https://www.caa.govt.nz/"
+				}
+			]
+		},
+		{
+			"question": "What is the main task of Airways New Zealand?",
+			"answer": "Provide Air Traffic Services required by aircraft.",
+			"references": [
+				{
+					"text": "Waypoints 1-1",
+					"url": ""
+				},
+				{
+					"text": "Airways website",
+					"url": "https://www.airways.co.nz/"
+				}
+			]
+		},
+		{
+			"question": "What is the main role of MetService with regard to aviation?",
+			"answer": "Provide meteorological services for aviation.",
+			"references": [
+				{
+					"text": "Waypoints 1-1",
+					"url": ""
+				},
+				{
+					"text": "MetService website",
+					"url": "https://www.metservice.com"
+				},
+				{
+					"text": "MetService - Aviation Weather",
+					"url": "https://about.metservice.com/weather-for-business/aviation-weather/"
+				}
+			]
+		},
+		{
+			"question": "What is the main role of Aspeq (formerly Aviation Services Limited ASL))?",
+			"answer": "Administer licensing functions, eg. theory and flight exams.",
+			"references": [
+				{
+					"text": "Waypoints 1-1",
+					"url": ""
+				},
+				{
+					"text": "Aspeq website",
+					"url": "https://caanz.aspeqexams.com/"
+				}
+			]
+		},
+		{
+			"question": "What does ICAO stand for?",
+			"answer": "International Civil Aviation Organisation.",
+			"references": [	
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "What is the role of ICAO, and how does it relate to New Zealand aviation?",
+			"answer": "Set standards and practices for international aviation. Many NZ rules and standards are based on ICAO documents.",
+			"references": [
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				},
+				{
+					"text": "ICAO website",
+					"url": "https://www.icao.int/Pages/default.aspx"
+				}
+			]
+		},
+		{
+			"question": "What are the three main areas of interest to pilots in the Civil Aviation Act (1990)?",
+			"answer": "The requirement to register aircraft (Section 6). The requirement for participants in NZ aviation to hold an 'aviation document (eg. license, permit, etc.) (Section 7). The requirement for participants in NZ aviation to ensure compliance, eg. management systems, training plans, etc. (Section 12).",
+			"references": [
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				},
+  			{
+  				"text": "Civil Aviation Act - Section 6",
+  				"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html#DLM215591"
+  			},
+				{
+					"text": "Civil Aviation Act - Section 7",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html#DLM215595"
+				},
+				{
+					"text": "Civil Aviation Act - Section 12",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html#DLM215595"
+				}
+			]
+		},
+		{
+			"question": "When considering a person for an aviation document, the _______________ test considers, among other things, a person's history, experience, mental health, and transport safety offence convictions.",
+			"answer": "Fit and Proper Person.",
+			"references": [
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				},
+				{
+					"text": "Criteria for fit and proper person test (Civil Aviation Act)",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html#DLM215709"
+				}
+			]
+		},
+		{
+			"question": "The Director of the CAA may require __________ or __________ of persons and/or organisations who whole aviation documents, and those documents may be either __________ or __________ if deemed to be in the interests of safety.",
+			"answer": "Inspections. Audits. Suspended. Revoked.",
+			"references": [
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				},
+				{
+					"text": "Safety and security inspections and monitoring (Civil Aviation Act, Section 15)",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html#DLM215778"
+				},
+				{
+					"text": "Power to suspend aviation document or impose conditions (Civil Aviation Act, Section 17/18)",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html#DLM215790"
+				}
+			]
+		},
+		{
+			"question": "The Authority may delegate functions to (CAA employees/both CAA employees and non-CAA employees).",
+			"answer": "Both CAA employees and non-CAA employees.",
+			"references": [
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				},
+				{
+					"text": "Delegation of Director's functions of powers (Civil Aviation Act, Section 23A)",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html#DLM215790"
+				}
+			]
+		},
+		{
+			"question": "What does CAR stand for?",
+			"answer": "Civil Aviation Rules.",
+			"references": [
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Which organisation produces the CARs?",
+			"answer": "The CAA (Civil Aviation Authority).",
+			"references": [	
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "What are the two types of CA rules?",
+			"answer": "Ordinary rules, and emergency rules.",
+			"references": [	
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "CA Rules are divided into _____, eaching dealing with a particular aspect of aviation.",
+			"answer": "Parts.",
+			"references": [
+				{
+					"text": "Waypoints 1-2",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Give the names of the following CAR Parts: Part 12; Part 39; Part 43; Part 47; Part 61; Part 67; Part 91; Part 92; Part 115; Part 119; Part 121; Part 125; Part 135; Part 137.",
+			"answer": "Part 12: Accident, incident and statistics. Part 39: Airworthiness directives. Part 43: General maintenance rules. Part 47: Aircraft registration and markings. Part 61: Pilot licenses and ratings. Part 67: Medical standards and certification. Part 91: General operating and flight rules. Part 92: Carriage of dangerous goods. Part 119: Air operator - certification. Part 121: Air operations - large aeroplanes. Part 125: Air operations - medium aeroplanes. Part 135: Air operations - helicopters and small aeroplanes. Part 137: Agricultural aircraft operations.",
+			"references": [
+				{
+					"text": "Waypoints 1-3",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Who issues Advisory Circulars (ACs), and where can you find them?",
+			"answer": "The CAA. Through the CAA website: www.caa.govt.nz.",
+			"references": [
+				{
+					"text": "Waypoints 1-4",
+					"url": ""
+				},
+				{
+					"text": "CAA Advisory Circulars website",
+					"url": "https://www.caa.govt.nz/rules/acs/"
+				}
+			]
+		},
+		{
+			"question": "What does AIP stand for? Who is responsible for its contents? Who publishes it?",
+			"answer": "Aeronautical Information Publication. The CAA. Airways New Zealand.",
+			"references": [
+				{
+					"text": "Waypoints 1-4",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "AIPNZ Volume 1 contains GEN (__________ information), ENR (__________ information), and AD (__________ information).",
+			"answer": "General. Enroute. Aerodrome.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ website",
+					"url": "http://www.aip.net.nz/Home.aspx"
+				}
+			]
+		},
+		{
+			"question": "AIPNZ Volume 2 and 3 contain GEN, ENR, and AD information, procedures and charts specific to _____ flight.",
+			"answer": "IFR.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ website",
+					"url": "http://www.aip.net.nz/Home.aspx"
+				}
+			]
+		},
+		{
+			"question": "AIPNZ Volume 4 contains GEN, ENR, and AD information, procedures and charts specific to _____ flight.",
+			"answer": "VFR.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ website",
+					"url": "http://www.aip.net.nz/Home.aspx"
+				}
+			]
+		},
+		{
+			"question": "The AIP __________ (referred to as SUP) contains __________ and __________ to the AIPNZ documents, as well as information and procedures of a (temporary/permanent) nature not urgent enough to warrant issue by ________, or information too extensive to be issued by ________.",
+			"answer": "Supplement. Additions. Amendments. Temporary. NOTAM. NOTAM.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ website",
+					"url": "http://www.aip.net.nz/Home.aspx"
+				}
+			]
+		},
+		{
+			"question": "The AIRAC (__________ __________ __________ and __________) cycle has _____ effective dates, which are _____ days apart.",
+			"answer": "Aeronautical Information Regulation and Control. 13. 28.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ Vol 1, GN 3, Table 3.1.3",
+					"url": ""
+				},
+				{
+					"text": "AIRAC Cycle Dates (AIRAC cycle dates at bottom of page)",
+					"url": "https://www.caa.govt.nz/airspace/aip/"
+				}
+			]
+		},
+		{
+			"question": "AIP Volumes 1-4 are amended _____ times annually. The AIP Supplement is amended _____ times annually. The amendment dates follow the ________ cycle.",
+			"answer": "6. 13. AIRAC.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ GEN 3.1 (Section 3: Aeronautical Publications)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What information does a NOTAM contain?",
+			"answer": "Temporary changes to operationally significant information that needs to be promulgated immediately.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ GEN 3.1 (Section 3.4: NOTAM and PIB)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "NOTAM are available via the internet on the _____ website, as part of __________ briefings, or from _____ units during flight.",
+			"answer": "IFIS. Pre-flight. ATS.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ GEN 3.1 (Section 3.4.2: NOTAM and PIB)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What is the difference between a Series A and Series B NOTAM?",
+			"answer": "Series A: primarily domestic information. Series B: primarily international information.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIPNZ GEN 3.1 (Section 3.4.7: NOTAM format)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Decode this NOTAM identifier: A0906/18B02.",
+			"answer": "Series type A NOTAM (domestic), serial number 0906, issued 2018, part 2 (B) of 2 (02).",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.4.7/Section 3.4.8: NOTAM Format)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "In a NOTAM identifier, what do the letters N, R, and C stand for? For example: A0006/16 NOTAMR A0906/16.",
+			"answer": "N = New, R = Replacement, C = Cancellation.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.4.1: NOTAM Format)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "How many NOTAM areas are there in the New Zealand FIR?",
+			"answer": "10.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Figure GEN 3.1-1: New Zealand Briefing Areas)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What kind of NOTAM is associated with an AIP amendment or SUP publication. When is that NOTAM issued and what is its purpose?",
+			"answer": "Trigger NOTAM. On the AIRAC effective date of the amendment or SUP. To remind users of changes that may affect their operations.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.7.2: Trigger NOTAM)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What information is contained in a Trigger NOTAM?",
+			"answer": "A brief description of the contents of the amendment or supplement, the effective date, and the reference number of the amendment or supplement.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.7.3: Trigger NOTAM)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Unless otherwise requested, how long are in-flight and pre-flight briefing NOTAMs valid for?",
+			"answer": "24 hours from the time of despatch.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.4.4: NOTAM and PIB)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What publication does AIC stand for, and what information do they contain?",
+			"answer": "Aeronautical Information Circular. Information about flight safety, navigation, technical, administrative, or legislative matters, which doesn't qualify for a NOTAM or inclusion in the AIPNZ.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.5: Aeronautical Information Circular)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "When are AICs published?",
+			"answer": "As required, in accordance with the AIRAC cycle.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.5: Aeronautical Information Circular)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "VFR (planning and navigation) and IFR (en-route and area) charts are part of the __________.",
+			"answer": "AIPNZ.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.2: AIP)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What does an AIP Update Bulletin contain?",
+			"answer": "New pages for AIPNZ documents, including past amendments and additions.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Amendments to AIPNZ documents are distributed at least _____ days in advance of the effective date.",
+			"answer": "28.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.7: AIP Amendments)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "You are able to submit and terminal flight plans via the _____ website.",
+			"answer": "IFIS.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "IFIS Website",
+					"url": "https://www.ifis.airways.co.nz/"
+				}
+			]
+		},
+		{
+			"question": "Weather information (is/is not) available on the IFIS website. The two exceptions are __________ and __________ reports.",
+			"answer": "Is not. SIGMETs. ATIS.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "IFIS Website",
+					"url": "https://www.ifis.airways.co.nz/"
+				}
+			]
+		},
+		{
+			"question": "In which CAR part can you find definitions and abbreviations of terms used in aviation documents?",
+			"answer": "CAR Part 1",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Who does the Director refer to?",
+			"answer": "The Director of Civil Aviation.",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Which person is referred to as the Minister?",
+			"answer": "The Minister of Transport (an elected Member of Parliament).",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "In aviation documents, the terms _____ or _____ indicate a rule that must be complied with, whereas the word _____ means a recommendation is being made.",
+			"answer": "Shall. Must. Should.",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Give the units of measurement used in New Zealand aviation for navigation distances: __________, elevation: __________, altitude and height: __________, speed: __________, vertical speed: __________, dimensions: __________, visibility: __________ or __________, temperature: __________.",
+			"answer": "Nautical miles. Feet. Feet. Knots. Feet per minute. Metres. Metres or kilometres. Degrees celsius.",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 1: Units of Measurement)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What time is used for all flights within New Zealand?",
+			"answer": "Co-ordinated universal time (UTC).",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2: Time System)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "NZST stands for ___________________ and is _____ hours (ahead of/behind) UTC. NZDT stands for ____________________ and is _____ hours (ahead of/behind) UTC.",
+			"answer": "New Zealand Standard Time. 12. Ahead. New Zealand Daylight Time. 13. Ahead.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2: Time System)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "When does NZDT begin and end?",
+			"answer": "Begins at 0200 NZST on the last Sunday of September. Ends at 0300 NZDT on the first Sunday in April.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.3: NZDT)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "How can you get accurate time information from a radio broadcast?",
+			"answer": "Radio New Zealand broadcast programmes transmit time pips every hour on the hour.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Decode this date/time group: 080518 UTC.",
+			"answer": "8th day of the month, 5:18am UTC.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.4: Date/Time Groups)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Decode this date/time group: 301442 UTC.",
+			"answer": "30th day of the month, 2:42pm UTC.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.4: Date/Time Groups)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Decode this date/time group: 1109042055 UTC.",
+			"answer": "4 September 2011, 8:55pm UTC.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.4: Date/Time Groups)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Decode this date/time group: 1412110107.",
+			"answer": "11 December 2014, 1:07am UTC.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.4: Date/Time Groups)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		}
+	]
+}

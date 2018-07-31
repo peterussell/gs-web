@@ -1,0 +1,74 @@
+{
+	"question_set_id": "45df69bd-1d06-426d-b21a-5ab54b7e8e25",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["admin-and-operations"],
+	"title": "Administration and Operations",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 1: Administration and Operations",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+		{
+			"question": "All flying operations are governed to some extend by CAR Part _____ (General Operating and Flight Rules."",
+			"answer": "91.",
+			"references": [
+				{
+				  "text": "Waypoints 1-8",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 91",
+				  "url": "https://www.caa.govt.nz/assets/legacy/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "As well as Part 91, you also need to comply with parts specific to your type of operation (eg. Microlights, or Air Operations), as well as more general Parts like Part _____ (Pilot Licenses and Ratings) and Part _____ (General Maintenance Rules).",
+			"answer": "61. 43.",
+			"references": [
+				{
+				  "text": "Waypoints 1-9",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 61 - Pilot Licenses and Ratings",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 43 - General Maintenance Rules",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Which CAR Part deals with Air Operator certification, and what does it mean for an Air Operator to be certificated?",
+			"answer": "Part 119. The operator has met, and continues to meet, all the operating and administration requirements stipulated in the appropriate CAR Part.",
+			"references": [
+				{
+				  "text": "Waypoints 1-9",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 119 - Air Operator - Certification",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_119_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Which CAR Part are most aircraft and aircraft parts certificated under?",
+			"answer": "Part 21.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 21 - Certification of Products and Parts",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
