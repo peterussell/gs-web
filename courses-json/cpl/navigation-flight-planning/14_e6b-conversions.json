@@ -1,0 +1,93 @@
+{
+	"question_set_id": "e23ad829-2310-41cd-b8bd-16bad3710c6c",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["e6b, conversion"],
+	"title": "E6B Conversions",
+	"notes": "Use an E6B for all computations below. Answers may be less accurate than with a calculator, and may include a small amount of variation depending on how you read the E6B.",
+	"questions": [
+		{
+			"question": "1nm = _____sm = _____km = _____m.",
+			"answer": "1.15sm. 1.852km. 1852m."
+		},
+		{
+			"question": "Convert 35nm to SM and KM (using an E6B).",
+			"answer": "40.5sm. 65km. (Calculator: 40.25sm / 64.82km)."
+		},
+		{
+			"question": "Convert 97km to NM and SM.",
+			"answer": "52.5nm. 60.2sm. (Calculator: 52.38nm / 60.23sm)."
+		},
+		{
+			"question": "What is 1 metre in feet? (Rounded to 1dp).",
+			"answer": "3.3'."
+		},
+		{
+			"question": "Convert 12.7 metres to feet.",
+			"answer": "41.7'. (Calculator: 41.7')."
+		},
+		{
+			"question": "Convert 154 feet to metres.",
+			"answer": "47m. (Calculator: 46.9m)."
+		},
+		{
+			"question": "_____ is the internationally accepted unit for weight, although _____ is still commonly used.",
+			"answer": "Kilogram (kg). Pounds (lb)."
+		},
+		{
+			"question": "1kg = _____lb (2dp), 1lb = _____kg (2dp).",
+			"answer": "2.2lb. 0.45kg."
+		},
+		{
+			"question": "Convert 431kg to pounds.",
+			"answer": "950lb. (Calculator: 950.192lb)."
+		},
+		{
+			"question": "Convert 82lb to kg.",
+			"answer": "37.1kg. (Calculator: 37.1946kg)."
+		},
+		{
+			"question": "1 Imperial Gallon = _____ litre = _____ US gal.",
+			"answer": "4.546l. 1.201 US gal."
+		},
+		{
+			"question": "1 US gal = _____ litre = _____ Imp. gal.",
+			"answer": "3.785l. 0.832 Imp. gal."
+		},
+		{
+			"question": "For approximations, 1 US or Imperial gallon is roughly _____ litres, and US gallons and Imperial gallons are __________.",
+			"answer": "4 litres. Roughly equivalent."
+		},
+		{
+			"question": "Convert 15 US gal to Imperial gal and litres.",
+			"answer": "12.51 Imp. gal, 56.9l. (Calculator: 12.4901 Imp. gal, 56.7812l)."
+		},
+		{
+			"question": "The weight of a fluid (eg. aviation fuel) is determined by its SG, which stands for __________. What is the calculation for SG?",
+			"answer": "Specific Gravity. SG = weight of a particular fluid / weight of the same volume of water."
+		},
+		{
+			"question": "Fluids lighter than water have an SG of __________. Fluids heaver than water have an SG of __________.",
+			"answer": "Less than 1. More than 1."
+		},
+		{
+			"question": "SG (is/is not) constant. Explain why.",
+			"answer": "Is not. Can be affected by temperature and component mix."
+		},
+		{
+			"question": "The commonly accepted SG value for AVGAS is _____. Because a litre of water weighs _____kg, that means a litre of AVGAS weighs _____kg.",
+			"answer": "0.72. 1kg. 0.72kg."
+		},
+		{
+			"question": "Fuel LBs on the E6B (is/is not) the same as LBs.",
+			"answer": "Is not."
+		},
+		{
+			"question": "Convert 65 US gal of AVGAS to kg and lb.",
+			"answer": "390lb. 177kg."
+		},
+		{
+			"question": "Your fuel gauge shows 6 US gal. in the tank. After taking on fuel it shows 22 US gal. How much fuel have you taken on in litres, and what is the weight in lbs and kg?",
+			"answer": "60.6l. 96lb. 43.5kg."
+		}
+	]
+}

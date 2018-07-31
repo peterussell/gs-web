@@ -1,0 +1,120 @@
+{
+	"question_set_id": "3a32728a-6185-49c4-a6ff-6b2298c3a118",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["cruise performance, performance, cpl only, cpl"],
+	"title": "Cruise Performance (CPL Only)",
+	"questions": [
+		{
+			"question": "What is the purpose of flying for maximum range?",
+			"answer": "Flying the furthest distance possible with the fuel carried."
+		},
+		{
+			"question": "Although carrying more fuel may extend your range, what is the negative aspect of doing so?",
+			"answer": "More fuel carried means greater weight, which means more power required to stay airborne, which means higher fuel burn."
+		},
+		{
+			"question": "Range flying means using the __________ and __________ in the most efficient way possible.",
+			"answer": "Engine. Airframe."
+		},
+		{
+			"question": "What are the four factors which increase or decrease range?",
+			"answer": "All Up Weight (AUW). Air tempture/density. Wind direction. Aircraft configuration."
+		},
+		{
+			"question": "Lower AUW means a (greater/smaller) range).",
+			"answer": "Greater."
+		},
+		{
+			"question": "Headwind (increases/decreases) range. Tailwind (increases/decreases) range.",
+			"answer": "Decreases. Increases."
+		},
+		{
+			"question": "Warmer air (increases/decreases) range. Why?",
+			"answer": "Decreases. More power is required to maintain the same amount of lift in warm air, compared to cooler air."
+		},
+		{
+			"question": "What are three aspects of airframe configuration that can impact range? In which configuration does each increase range?",
+			"answer": "Flaps, retracted. Undercarriage, retracted. Cowl gills, closed."
+		},
+		{
+			"question": "For an airframe with an adjustable pitch propellor, different settings of __________ and __________ can increase or decrease range. Generally a combination of (high/low) __________ and (high/low) __________ increase range.",
+			"answer": "Manifold pressure. RPM. High manifold pressure. Low RPM."
+		},
+		{
+			"question": "Correctly setting the __________ can have a significant effect on power, fuel flow, and efficiency. This procedure is called __________.",
+			"answer": "Mixture. Leaning."
+		},
+		{
+			"question": "In most cases, when is leaning not permitted?",
+			"answer": "When using more than 81% power."
+		},
+		{
+			"question": "Give the definition of Specific Range.",
+			"answer": "Distance travelled per unit of fuel burned."
+		},
+		{
+			"question": "What are the two types of Specific Range? Give the definition of each.",
+			"answer": "Specific Air Range (SAR), air nautical miles travelled per unit of fuel burned. Specific Ground Range (SGR), ground nautical miles travelled per unit of fuel burned."
+		},
+		{
+			"question": "What is the equation for determining SAR?",
+			"answer": "SAR = TAS / fuel flow."
+		},
+		{
+			"question": "What is the equation for determining SGR?",
+			"answer": "SGR = GS / fuel flow."
+		},
+		{
+			"question": "Best Specific Air range means ____________________, the unit for which is _____. It means we want the best ratio of (TAS/GS) to _____.",
+			"answer": "The greatest air nautical miles for a given amount of fuel. anmpg. TAS. Fuel flow."
+		},
+		{
+			"question": "Because the fuel flow for a given engine/propellor combination depends on power, we require the most efficient _____ to _____ ratio.",
+			"answer": "TAS. Power."
+		},
+		{
+			"question": "What is the Long Range Cruise Speed?",
+			"answer": "A recommended range speed for many aircraft, which is often slightly higher than the 'best range' speed." 
+		},
+		{
+			"question": "What are two reasons given for using Long Range Cruise Speed?",
+			"answer": "A significant saving in time can be obtained for a relatively small increase in fuel burn (eg. 5% saving in time for an extra 1% of fuel used). It can also improve aircraft handling compared to flying at 'best range' speed."
+		},
+		{
+			"question": "Best Specific Ground Range means ____________________, the unit for which is _____. It means we want the best ratio of (TAS/GS) to _____.",
+			"answer": "The greatest ground nautical miles for a given amount of fuel. gnmpg. GS. Fuel flow."
+		},
+		{
+			"question": "Calculate the SAR for a TAS of 120kt and a fuel flow of 11.8 US gal/hour.",
+			"answer": "10.16 anm/US gal."
+		},
+		{
+			"question": "Calculate the SGR for a TAS of 135kt, a 25kt tailwind, and fuel flow of 12.5 US gal/hour.",
+			"answer": "12.8 gnm/US gal."
+		},
+		{
+			"question": "What does flying for Maximum Endurance mean?",
+			"answer": "Remaining airborne as long as possible for a given amount of fuel."
+		},
+		{
+			"question": "What is a common situation where you might configure the aircraft to fly for maximum endurance?",
+			"answer": "While holding."
+		},
+		{
+			"question": "To fly for maximum endurance, we want to use the smallest amount of __________ required to remain airborne.",
+			"answer": "Fuel, or power."
+		},
+		{
+			"question": "The _______________ is used to determine the speed and __________ which, for a given __________, provide the minimum __________ and maximum range.",
+			"answer": "Cruise Performance Chart. Altitude. All Up Weight (AUW). Fuel burn."
+		},
+		{
+			"question": "Minimum flight time means ____________________.",
+			"answer": "Flying from one point to anther over the shortest time possible."
+		},
+		{
+			"question": "Flying for minimum flight time is at the highest _____ in nil wind conditions, or _____ if there is a wind component.",
+			"answer": "TAS. GS."
+		}
+	]
+}

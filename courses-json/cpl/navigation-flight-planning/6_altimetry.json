@@ -1,0 +1,160 @@
+{
+	"question_set_id": "910435ee-93eb-422f-a274-66b112d180a9",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Altimetry",
+	"questions": [
+		{
+			"question": "What are the three types of 'height' referred to in the Civil Aviation Rules Part 1?",
+			"answer": "Height, Altitude, Pressure Altitude."
+		},
+		{
+			"question": "What is the definition of 'height'?",
+			"answer": "The vertical distance of a level, a point, or an object considered as a point, measured from a specified datum and includes the vertical dimension of the object."
+		},
+		{
+			"question": "What is the definition of 'altitude'?",
+			"answer": "The vertical distance of a level, a point, or an object considered as a point, measured from mean sea level."
+		},
+		{
+			"question": "What is the definition of 'pressure altitude'?",
+			"answer": "An atmospheric pressure, expressed in terms of altitude, which corresponds to that pressure in the standard atmosphere."
+		},
+		{
+			"question": "In simple terms, height is __________ and (is/is not) affected by atmospheric density.",
+			"answer": "The actual distance above a point, level, or object. Is not."
+		},
+		{
+			"question": "In simple terms, altitude is __________ and (is/is not) affected by atmospheric density.",
+			"answer": "The distance above Mean Sea Level. Is."
+		},
+		{
+			"question": "In simple terms, pressure altitude is __________. It is commonly referred to as __________ and is measured in __________.",
+			"answer": "The altitude shown on the altimeter when the subscale is set to 1013.2 hPa. Flight levels. Hundreds of feet."
+		},
+		{
+			"question": "In New Zealand, flight levels are (almost always) used for flights __________, referred to as FL___",
+			"answer": "At or above 15,000'. FL150."
+		},
+		{
+			"question": "Altitude in an aircraft is typically measured with a __________ altimeter.",
+			"answer": "Pressure."
+		},
+		{
+			"question": "Describe the basic operation of a pressure altimeter.",
+			"answer": "The static port is connected to an expandable capsule. As the aircraft ascends, air density decreases and the capsule contracts. This is converted to a mechanical reading on the altimeter."
+		},
+		{
+			"question": "The altimeter subscale allows the altimeter to be set to a __________.",
+			"answer": "Specified pressure datum."
+		},
+		{
+			"question": "What are the three types of altimeter settings in New Zealand?",
+			"answer": "QNH, QNE, and QFE."
+		},
+		{
+			"question": "QNH is __________. When set, the altimeter reads __________.",
+			"answer": "Sea level pressure. Altitude."
+		},
+		{
+			"question": "QNE is __________. When set, the altimeter reads __________.",
+			"answer": "ISA sea level pressure (1013.2 hPa). Flight levels."
+		},
+		{
+			"question": "QFE is __________. When set, the altimeter reads __________.",
+			"answer": "Field elevation. Height above the selected datum (eg. aerodrome)."
+		},
+		{
+			"question": "You fly 2600' over a 3300' high mountain. Your height above the mountain is _____', your altitude is _____'.",
+			"answer": "2600'. 5900'."
+		},
+		{
+			"question": "QNH is based on the pressure at __________ and needs to be set at __________.",
+			"answer": "Sea level. Regular intervals."
+		},
+		{
+			"question": "If you fly from an area of high pressure to an area of low pressure, your altimeter will read (higher/lower) than your actual altitude.",
+			"answer": "Higher."
+		},
+		{
+			"question": "If you fly from an area of low pressure to an area of high pressure, your altimeter will read (higher/lower) than your actual altitude.",
+			"answer": "Lower."
+		},
+		{
+			"question": "What are two important reasons for making sure you have the correct altimeter setting set?",
+			"answer": "Terrain clearance. Separation from other aircraft."
+		},
+		{
+			"question": "A pressure change of 1 hPa = an altitude change of _____ feet.",
+			"answer": "30."
+		},
+		{
+			"question": "You fly from an area with SLP of 1011 hPa to 1017 without adjusting your altimeter. Your altimeter reads 3000', what is your actual altitude?",
+			"answer": "180' higher than indicated = 3180'."
+		},
+		{
+			"question": "Temperature (does/does not) affect indicated altitude.",
+			"answer": "Does."
+		},
+		{
+			"question": "How does a temperature warmer than ISA standard affect indicated altitude?",
+			"answer": "Altimeter reads lower than actual altitude, you are higher than indicated."
+		},
+		{
+			"question": "How does a temperature colder than ISA standard affect indicated altitude?",
+			"answer": "Altimeter reads higher than actual altitude, you are lower than indicated."
+		},
+		{
+			"question": "Flying from (high/low) pressure to (high/low) pressure without adjusting the altimeter setting will result in a descent.",
+			"answer": "High to low."
+		},		
+		{
+			"question": "What is calibrated altitude?",
+			"answer": "Indicated altitude corrected for non-standard pressure and temperature (ie. with the correct QNH set), adjusted for installation error."
+		},
+		{
+			"question": "What are examples of altimeter installation error?",
+			"answer": "Incorrect pressure at the static vent. Wear on tubes. Mechanical wear."
+		},
+		{
+			"question": "What does FIR stand for?",
+			"answer": "Flight Information Region."
+		},
+		{
+			"question": "What is a QNH zone?",
+			"answer": "An area up to and including 13,000' and where QNH values are normally similar."
+		},
+		{
+			"question": "How many QNH zones are there in New Zealand?",
+			"answer": "11."
+		},
+		{
+			"question": "FL150 is known as the __________, and is the lowest _____ _____ available for _____ _____.",
+			"answer": "Transition level. Pressure altitude. Cruise flight."
+		},
+		{
+			"question": "Airspace between 13,000' and 15,000' is known as the __________ and (is/is not) normally used for cruise flight..",
+			"answer": "Transition layer. Is not."
+		},
+		{
+			"question": "When descending and passing FL150, the altimeter is set to _____.",
+			"answer": "QNH."
+		},
+		{
+			"question": "When ascending and passing 13,000', the altimeter is set to _____.",
+			"answer": "QNE."
+		},
+		{
+			"question": "VFR cruising altitudes apply above _____' _____, or _____' _____, whichever is higher.",
+			"answer": "3000' MSL. 1000' AGL."
+		},
+		{
+			"question": "What are the VFR cruising altitude rules in NZ?",
+			"answer": "270&deg; to 089&deg;: Odd thousands of feet + 500'. 090&deg; to 269&deg;: Even thousands of feet + 500'."
+		},
+		{
+			"question": "VFR cruising altitude rules are based on (true/magnetic) (track/heading).",
+			"answer": "Magnetic track."
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"question_set_id": "af84ebc1-f4b1-4eac-8a01-17556ba029cb",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["applied navigation, mountain flying"],
+	"title": "Mountain Flying Techniques",
+	"questions": [
+		{
+			"question": "What are two recommended ways to stay safe flying in the mountains as a novice?",
+			"answer": "Fly in favourable weather conditions. Fly with sufficient altitude to see well ahead."
+		},
+		{
+			"question": "What are two important aspects of decision making in mountain flying?",
+			"answer": "Make decisions early. Stick to your decisions."
+		},
+		{
+			"question": "How can you prevent navigating towards an incorrect peak?",
+			"answer": "Check the direction against the DI."
+		},
+		{
+			"question": "To avoid turbulence and downdraughts, it's generally best to keep to the (windward/leeward) side of a ridge and __________ the planned track if necessary.",
+			"answer": "Windward. Parallel."
+		},
+		{
+			"question": "What should you do before flying up a valley, especially when multiple valleys diverge from a junction?",
+			"answer": "Check the orientation against the DI."
+		},
+		{
+			"question": "What is a common issue with the horizon if flying below ridge height, and how can you remedy it?",
+			"answer": "It's easy to mistake the ridgeline for the actual horizon, when it could be at an angle. Remedy is to check the outside reference against your instruments (attitude indicator, altimeter, vertical speed indicator, and airspeed indicator)."
+		},
+		{
+			"question": "What is a consideration about power when flying light aircraft in mountainous terrain?",
+			"answer": "Power may be limited and prevent you from being able to climb out of trouble."
+		},
+		{
+			"question": "It may be difficult to observe __________ on the other side of a ridge until crossing it, especially true on the West Coast of the South Island.",
+			"answer": "Low level weather."
+		},
+		{
+			"question": "Preflght planning on the day before, you should: esnure charts are __________ and adequate for the route and any possible __________. Examine charts for suitable landmarks and __________ them clearly on the chart. Plan routes over (lower/higher) parts of mountain ranges if possible. Determine end of __________ and allow plenty of time for any possible __________.",
+			"answer": "Current. Diversions. Mark. Lower. ECT. Diversions."
+		},
+		{
+			"question": "Before any flight, but especially in mountains, obtain a thorough MET briefing for the route, __________, and __________.",
+			"answer": "Destination aerodrome. Any alternate aerodromes."
+		},
+		{
+			"question": "When considering flight in turbulence, remember that sustained flight in turbulent conditions can be __________.",
+			"answer": "Fatiguing."
+		},
+		{
+			"question": "Before any cross country flight, but especially in mountains, notify details of your flight to _____ or __________.",
+			"answer": "Air Traffice Service (ATS). Reliable flight following organisation."
+		},
+		{
+			"question": "What are advantages flight at higher altitude give you?",
+			"answer": "Better visibility of the terrain layout. Better terrain clearance. Better radio reception. Possibly a smoother flight out of low-level turbulence."
+		},
+		{
+			"question": "(Early/later) departure times often provide smoother flying conditions.",
+			"answer": "Early."
+		}
+	]
+}

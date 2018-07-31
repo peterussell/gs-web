@@ -1,0 +1,104 @@
+{
+	"question_set_id": "78e4a8ab-0079-4669-ae6a-ad3e3b0838e4",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["applied navigation, low-level flying, diversions, cross country, flight planning, navigation"],
+	"title": "Applied Navigation: Diversions and Low-level Flight.",
+	"questions": [
+		{
+			"question": "What are examples of reasons you may have to divert from yur planned track?",
+			"answer": "Low localised cloud. ATC instructions in controlled airspace."
+		},
+		{
+			"question": "Sometimes diversions can be done by following geographic features, but other times require __________.",
+			"answer": "Dead reckoning."
+		},
+		{
+			"question": "What are important considerations about your diversion track when flying by dead reckoning?",
+			"answer": "Unplanned terrain. Airspace."
+		},
+		{
+			"question": "One technique is to divert from your track ('_____-track') at a given angle, and rejoin ('_____-track') at the same angle. In this case the heading change to rejoin your original track is the _____ of the two angles. If both angles are the same, then you can simply __________ the original diversion angle.",
+			"answer": "Off-track. Rejoin-track. Sum. Double."
+		},
+		{
+			"question": "You divert by making a heading change 30&deg; left. Assuming no wind conditions and rejoining at the same rate you diverted, what heading change should you make to rejoin the planned track? On rejoining the original track, what heading change should you make to maintain the original track?",
+			"answer": "60&deg; right. 30&deg; left."
+		},
+		{
+			"question": "Why can a 60&deg; diversion angle be good to use?",
+			"answer": "The three sides of a 60&deg; triangle are equal, so - asssuming nil wind - with a 60&deg; diversion containing no part paralleling the original track, you know the diversion is twice as long as the distance over the original planned track."
+		},
+		{
+			"question": "At 1503 UTC you divert 60&deg; right. After 4 minutes you turn _____&deg; left to rejoin the original track at the same angle you departed it. Your original ETA is 1621 UTC, what is your new ETA?",
+			"answer": "120&deg. 1625 UTC."
+		},
+		{
+			"question": "At each turning point during a diversion, what should you note on the flight log? When can this be particularly helpful?",
+			"answer": "Time and new heading. If you need to backtrack to return to base."
+		},
+		{
+			"question": "When faced with a decision to divert, it's important to make the decision __________ and _________.",
+			"answer": "Early. Stick to it."
+		},
+		{
+			"question": "Name three situations that may require diverting to an alternate aerodrome or returning to base.",
+			"answer": "Running out of daylight. Low fuel. Worsening weather. Sick passenger. Mechanical problem."
+		},
+		{
+			"question": "During flight planning, you should identify ____________________ on either side of the track. For each, you should __________ for quick access.",
+			"answer": "Suitable aerodromes. Mark it (eg. with a paperclip)."
+		},
+		{
+			"question": "If the alternate is not in visual range, you can find it using the __________. When would this not apply (although it can be used anyway if an emergency situation).",
+			"answer": "1-in-60 rule. For heading changes greater than 15&deg;."
+		},
+		{
+			"question": "Once the decision to divert has been made, you can save time by ____________________. What else should you do?",
+			"answer": "Altering heading toward the alternate. Notify ATC."
+		},
+		{
+			"question": "You're tracking to your destination on a heading of 058&deg;M. At 2204 UTC you're advised of a line of thunderstorms across your track. Groundspeed is 108kt. You decide to divert to an aerodrome right of track and ahead of your present position. The alternate is 36nm to run, and 6nm off track. What is the required heading to the alternate, and ETA for that aerodrome?",
+			"answer": "068&deg;. 2224 UTC."
+		},
+		{
+			"question": "When flying at low level (at or near _____' AGL), it's important to be aware of _________ requirements.",
+			"answer": "Legislative/legal."
+		},
+		{
+			"question": "The distance you can see is directly proportional to the _____ you fly at. This is exacerbated by _____ or _____.",
+			"answer": "Height. Fog. Haze."
+		},
+		{
+			"question": "When flying at low level, you require (more/less) checkpoints. Why?",
+			"answer": "More. You can't see as far, so won't be able to see distant checkpoints until you're closer."
+		},
+		{
+			"question": "Although few man-made __________ exist at 500' AGL, many __________ ones do, for example: __________.",
+			"answer": "Obstructions. Natural. Mountains. Cliffs along coastlines."
+		},
+		{
+			"question": "What else should you specifically look out for when flying at low level, and in what kind of common environment is this most important?",
+			"answer": "Birds. Coastal areas."
+		},
+		{
+			"question": "If low flight is planned, describe the recommended procedure for checkpoints.",
+			"answer": "Use as many as possible, mark them on your chart, and tick them off as you pass them. It is also recommended to write elapsed times between checkpoints on the chart."
+		},
+		{
+			"question": "If low flight is unplanned, describe the recommended procedure for checkpoints.",
+			"answer": "Draw a freehand line on the chart, identify any nearby checkpoints. Estimate elapsed times."
+		},
+		{
+			"question": "Aircraft management at low levels requires (more/less) attention. You may also need to fly in the __________ configuration.",
+			"answer": "More. Bad weather/low visibility."
+		},
+		{
+			"question": "Is there a difference between selecting checkpoints for high level and low level flight? If yes, what is it?",
+			"answer": "Yes. Useful checkpoints may be different, for example ones that may be hard to see from altitude may be good from lower down. For example: church steeples, factory chimneys, railroad crossings."
+		},
+		{
+			"question": "During low-level flight, note taking is generally __________ due to (higher/lower) workloads than normal flight. It is often useful to use the __________ as a log.",
+			"answer": "Brief. Higher. Chart."
+		}
+	]
+}

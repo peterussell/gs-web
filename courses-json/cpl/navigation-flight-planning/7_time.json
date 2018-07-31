@@ -1,0 +1,208 @@
+{
+	"question_set_id": "07960e1b-fb3a-4ade-b929-83d81859e5c4",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Time",
+	"questions": [
+		{
+			"question": "What shape is Earth's orbit around the sun?",
+			"answer": "Eliptical."
+		},
+		{
+			"question": "The date the Earth is closest to the Sun is __________ and called the __________.",
+			"answer": "January 3rd. Perihelion."
+		},
+		{
+			"question": "The date the Earth is farthest from the Sun is __________ and called the __________.",
+			"answer": "July 3rd. Aphelion."
+		},
+		{
+			"question": "Decode the date/time group: 241630.",
+			"answer": "16:30 (4:30pm) on the 24th of the month."
+		},
+		{
+			"question": "Decode the date/time group: 110000.",
+			"answer": "12:00am (midnight) at the start of the 11th day of the month."
+		},
+		{
+			"question": "Decode the date/time group: 062400.",
+			"answer": "24:00 (12:00) (midnight) at the end of the 6th day of the month."
+		},
+		{
+			"question": "Decode the date/time group: 11092230.",
+			"answer": "22:30 (10:30pm), November 9th."
+		},
+		{
+			"question": "Decode the date/time group: 1908070645.",
+			"answer": "August 7 2019, 06:45 (6:45am)."
+		},
+		{
+			"question": "Earth rotates _____&deg; every day, or _____&deg; every hour.",
+			"answer": "360. 15."
+		},
+		{
+			"question": "Earth rotates _____&deg; in 5 hours.",
+			"answer": "75."
+		},
+		{
+			"question": "It is the same time at all points on a __________. To the East the time is (earlier/later), to the west the time is (earlier/later). ",
+			"answer": "Meridian. Later. Earlier."
+		},
+		{
+			"question": "What is Local Mean Time (LMT?)",
+			"answer": "The time along a selected meridian of longitude."
+		},
+		{
+			"question": "LMT at all points on a meridian is (the same/different).",
+			"answer": "The same."
+		},
+		{
+			"question": "Time zones are referenced to _____, and go from _____ to _____.",
+			"answer": "GMT. -12. +12."
+		},
+		{
+			"question": "Time zones are designated from letters from _____ to _____. New Zealand is in the _____ time zone. Greenwich is in the _____ time zone.",
+			"answer": "A (Alpha) to Z (Zulu). Mike. Zulu."
+		},
+		{
+			"question": "Time zones are normally _____&deg;, or _____ hour(s) apart.",
+			"answer": "15&deg;. 1 hour."
+		},
+		{
+			"question": "Which meridian does New Zealand use for its time zone?",
+			"answer": "The 180&deg; meridian."
+		},
+		{
+			"question": "When does NZST start/end. How far ahead/behind GMT is NZST?",
+			"answer": "First Sunday in April/last Sunday in September. 12 hours ahead of GMT."
+		},
+		{
+			"question": "When does NZDT start/end? How far ahead/behind GMT is NZDT?",
+			"answer": "Last Sunday in September/first Sunday in April. 13 hours ahead of GMT."
+		},
+		{
+			"question": "To convert NZST to GMT (add/subtract) _____ hours. To convert GMT to NZST (add/subtract) _____ hours.",
+			"answer": "Subtract 12 hours. Add 12 hours."
+		},
+		{
+			"question": "To convert NZDT to GMT (add/subtract) _____ hours. To convert GMT to NZDT (add/subtract) _____ hours.",
+			"answer": "Subtract 13 hours. Add 13 hours."
+		},
+		{
+			"question": "Where is the international date line, with what exceptions, and what causes the exceptions?",
+			"answer": "Following the 180&deg; meridian. Once exception in each of the northern/southern hemispheres due to geography."
+		},
+		{
+			"question": "When you travel East across the international date line, (add/subtract) a day.",
+			"answer": "Subtract."
+		},
+		{
+			"question": "When you travel West across the international date line (add/subtract) a day.",
+			"answer": "Add."
+		},
+		{
+			"question": "How long does it take the Earth to rotate 1 degree?",
+			"answer": "4 minutes. "
+		},
+		{
+			"question": "How many degrees does the Earth rotate in 1 minute?",
+			"answer": "1/4."
+		},
+		{
+			"question": "How long does it take the Earth to rotate 1'? (NB. minute of longitude, not time).",
+			"answer": "4 seconds."
+		},
+		{
+			"question": "What is the definition of sunrise?",
+			"answer": "Precise time the upper limb (first visible part) of the sun is visible on the horizon."
+		},
+		{
+			"question": "What is the defintion of sunset?",
+			"answer": "Precise time the upper limb (last visible part) of the sun disappears below the horizon."
+		},
+		{
+			"question": "Daylight is the time between the ____________________ and the ____________________.",
+			"answer": "Start of morning twilight. End of evening twilight."
+		},
+		{
+			"question": "What is the sensible horizon?",
+			"answer": "A plane tangential to the Earth at the observer's location."
+		},
+		{
+			"question": "How is the sensible horizon different to the visible horizon?",
+			"answer": "Visible horizon is slight curved due to Earth's curvature and refraction of light."
+		},
+		{
+			"question": "What is MCT?",
+			"answer": "Morning Civil Twilight. Begins when the centre of the sun is 6&deg; below the sensible horizon."
+		},
+		{
+			"question": "What is ECT?",
+			"answer": "Evening Civil Twilight. Ends when the centre of the sun is 6&deg; below the sensible horizon."
+		},
+		{
+			"question": "As elevation increases, the start of MCT will be (earlier/later), and the end of ECT will be (earlier/later).",
+			"answer": "Earlier. Later."
+		},
+		{
+			"question": "Twilight is (longer/shorter) in tropical regions than regions at higher/lower latitudes.",
+			"answer": "Longer."
+		},
+		{
+			"question": "NZ twilight is longer in the (North/South).",
+			"answer": "South."
+		},
+		{
+			"question": "Areas with the same LMT (on the same meridian) (will/will not) be in the same part of the day as each other. This is because __________.",
+			"answer": "Will not. The Earth's axis is tilted relative to the sun."
+		},
+		{
+			"question": "What are B of MCT and E of ECT?",
+			"answer": "Beginning of Morning Civil Twilight. End of Morning Civil Twilight."
+		},
+		{
+			"question": "In summer, B of MCT is (earlier/later) and E of ECT is (earlier/later). These differences are (significant/insignificant) in equatorial regions, and (significant/insignificant) nearer the poles.",
+			"answer": "Earlier. Later. Insignificant. Significant."
+		},
+		{
+			"question": "In New Zealand, summer days in the south are (shorter/longer) than days in the north.",
+			"answer": "Longer."
+		},
+		{
+			"question": "In New Zealand, winter days in the south are (shorter/longer) than days in the north.",
+			"answer": "Shorter."
+		},
+		{
+			"question": "What is an important consideration when descending into an aerodrome near ECT?",
+			"answer": "Daylight is longer at altitude, meaning it may still be daylight at cruise elevation, but after sunset at the aerodrome elevation."
+		},
+		{
+			"question": "What are three considerations which can affect daylight conditions at a given location?",
+			"answer": "Altitude: daylight at altitude, after sunset at ground level. Atmospheric conditions: smog, preciptiation, cloud cover. Obstructions: can block daylight, resulting in earlier E of ECT. "
+		},
+		{
+			"question": "What side of a mountain range should you especially wary of flying on around ECT? Why?",
+			"answer": "Eastern side. Mountains can block the sun setting in the west, resulting in less amount of daylight at that location.."
+		},
+		{
+			"question": "Where can you find Daylight Zones and Tables? What do the figures represent?",
+			"answer": "AIPNZ Volume 4 GEN 2.7. B of MCT and E of ECT."
+		},
+		{
+			"question": "What timezone are the values in the Daylight Zones and Tables?",
+			"answer": "UTC."
+		},
+		{
+			"question": "If a flight is restricted to 'day only', when can it operate?",
+			"answer": "After B of MCT and before E of ECT."
+		},
+		{
+			"question": "Moving eastward: (add/subtract) time. Moving westward (add/subtract) time.",
+			"answer": "Add. Subtract."
+		},
+		{
+			"question": "Where are three places you can get an accurate time check?",
+			"answer": "Air Traffic Service unit. National radio programme, 6 'pips' on the hour. Industrial Research Limited."
+		}
+	]
+}

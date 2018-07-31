@@ -1,0 +1,124 @@
+{
+	"question_set_id": "0a181692-d01a-4b30-91ea-3d0e5a09f1ff",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["flight planning, cpl only"],
+	"title": "CPL Flight Planning",
+	"questions": [
+		{
+			"question": "For magnetic variation in flight planning, use the __________ which applies to the (greater/shorter) part of the leg, and apply its value to the nearest __________.",
+			"answer": "Isogonal. Greater. Whole degree."
+		},
+		{
+			"question": "Where can you find the deviation for planning an actual cross-country flight?",
+			"answer": "In the aircraft you'll be using for the flight."
+		},
+		{
+			"question": "You should calculate time to _____ and _____ based on total heights involved and the rate of _____ or _____. You can use this to calculate the _____ travelled, and will give you the positions of _____ and _____.",
+			"answer": "Climb. Descend. Climb. Descent. Distance. Top of Climb (TOC). Top of Descent (TOD)."
+		},
+		{
+			"question": "Cruise distances and times are entered, based on the _____ speed for each leg.",
+			"answer": "Ground."
+		},
+		{
+			"question": "You can calculate the ETA (Estimated time of _____) based on the ETD (E__________) and _____ time for each leg.",
+			"answer": "Arrival. Estimated time of Departure. Elapsed."
+		},
+		{
+			"question": "What is the ATA, and what does it mean?",
+			"answer": "Actual time of Arrival. The time you actually arrived at the destination."
+		},
+		{
+			"question": "You depart at 2110 UTC and have a total flight time of 75 minutes. What is your ETA?",
+			"answer": "2225 UTC."
+		},
+		{
+			"question": "What is Zone Fuel?",
+			"answer": "Fuel consumed during each leg."
+		},
+		{
+			"question": "Once you've calculated all zone fuel amounts, which value is it a good idea to check against?",
+			"answer": "Total fuel required based on total flight time."
+		},
+		{
+			"question": "Aside from the zone fuel calculations, what are two other fuel amounts that should be explicitly considered in the flight plan?",
+			"answer": "Operational, specifically taxi and take-off. Reserves, eg. as required by Part 91, the flight training organisation etc."
+		},
+		{
+			"question": "For CPL flight planning, you should adhere to the following: temperature to the nearest _____&deg;C. Altitude to the nearest _____'. Direction to the nearest _____ degree. Distances to the nearest _____ nm. Time to the nearest _____. Fuel to the nearest _____ gallon, litre, pound, or kg.",
+			"answer": "1. 500'. Whole. Whole. Half minute. Half."
+		},
+		{
+			"question": "Which points should your flight plan include information on?",
+			"answer": "Departure point, arrival point, and any turning points."
+		},
+		{
+			"question": "In To/From columns, you should abbreviate place names in accordance with ones given in __________.",
+			"answer": "AIPNZ Volume 4."
+		},
+		{
+			"question": "Airspeeds will often be given in CAS. Calculate _____ (__________) by correcting for temperature.",
+			"answer": "TAS (True Airspeed)."
+		},
+		{
+			"question": "How can you use the freezing level to calculate temperature at a given altitude (assuming standard or close to standard conditions?)",
+			"answer": "Use the standard lapse rate of 2&deg;C loss per 1000' gain in altitude, and either add to or subtract from 0&deg;C at the freezing level altitude to get the temperature at the required altitude."
+		},
+		{
+			"question": "Which altitude should you use for the 'mean' temperature for climb calculations?",
+			"answer": "Temperature at the altitude 2/3 of the way up the climb."
+		},
+		{
+			"question": "Which altitude should you use for the 'mean' temperature for descent calculations?",
+			"answer": "Temperature at the altitude 1/2 way down the descent."
+		},
+		{
+			"question": "At turning points, what is an important consideration with regard to cruise altitude?",
+			"answer": "You may need to change cruise altitude based on magnetic heading."
+		},
+		{
+			"question": "What is the time to climb from 1500' to 7500' at 800 FPM?",
+			"answer": "7 minutes, 30 seconds."
+		},
+		{
+			"question": "At a descent rate of 500 FPM, what is the descent time from 9500' to 1500'?",
+			"answer": "16 minutes."
+		},
+		{
+			"question": "Directions shown on charts are (&deg;M/&deg;T). Wind direction provide by MetService is in (&deg;M/&deg;/T).",
+			"answer": "&deg;T. &deg;T."
+		},
+		{
+			"question": "Although not a legal requirement, it's strongly recommended to lodge a flight plan with the ____________________ prior to any cross-country flight. What are 3 ways this can be done?",
+			"answer": "National Briefing Office. Via internet, fax, or telephone."
+		},
+		{
+			"question": "What is the purpose behind flying for Maximum Endurance, and how would you determine the configuration required to do this?",
+			"answer": "To remain airborne as long as possible. Use fuel performance charts to find the power and altitude settings which give the lowest fuel consumption rate."
+		},
+		{
+			"question": "It is recommended that you transfer the departure _____ and _____ to the VNC, written next to the departure point and any __________, along with an arrow showing direction of the leg.",
+			"answer": "Magnetic heading. Elapsed time. Turning points."
+		},
+		{
+			"question": "Examine the map for useful and easily identifiable __________, and write the times from the previous __________ or __________ next to the ones you've identified.",
+			"answer": "Pinpoints. Pinpoints. Checkpoints."
+		},
+		{
+			"question": "What is an advantage of noting the expected time next to pinpoints along your route?",
+			"answer": "It allows you to see if you're running ahead or behind your expected times at checkpoints."
+		},
+		{
+			"question": "What are track guides? Why are they useful and what is the recommended method for displaying them on a chart?",
+			"answer": "Lines diverging from the point of departure and destination on either side of your flight planned track (FPT). They make it easier to determine and correct for any drift. Recommended 10&deg; either side of FPT."
+		},
+		{
+			"question": "You are required to know the AUW (__________) on takeoff and landing.",
+			"answer": "All Up Weight."
+		},
+		{
+			"question": "What is required for flight over water?",
+			"answer": "Serviceable life jackets."
+		}
+	]
+}

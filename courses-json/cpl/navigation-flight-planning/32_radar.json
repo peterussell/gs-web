@@ -1,0 +1,72 @@
+{
+	"question_set_id": "a1984ae4-fc22-490c-860e-a90eddb8dec1",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["radar, navigation systems"],
+	"title": "Radar",
+	"questions": [
+		{
+			"question": "New Zealand is (almost completely covered/partially covered) by __________ and __________ radar.",
+			"answer": "Almost completely covered. Primary. Secondary."
+		},
+		{
+			"question": "How does primary radar work?",
+			"answer": "A signal is sent from the ground, bounces off the aircraft, and scatters. Some of the signal is picked up by the receiver. Time between transmit and receive gives distance."
+		},
+		{
+			"question": "How does secondary radar work?",
+			"answer": "Signal from the ground-based radar aerial is received by the aircraft's transponder. The transponder sends back a signal, often encoded with an identifier."
+		},
+		{
+			"question": "Radar can operate over _____ or _____ signals, both of which require line of _____.",
+			"answer": "VHF. UHF. Sight."
+		},
+		{
+			"question": "Radar coverage is better at (higher/lower) altitudes. In what environment can receiving radar coverage be particularly difficult?",
+			"answer": "Higher. Flying low around mountains."
+		},
+		{
+			"question": "Information from all radar aerials in New Zealand is fed into a __________ __________, which is accessed by radar operators in a number of different locations.",
+			"answer": "Central computer."
+		},
+		{
+			"question": "Aircraft without a transponder can only receieve __________ radar coverage, as long as they also have an __________ __________ and are in __________ radar coverage.",
+			"answer": "Primary. Operable radio. Primary."
+		},
+		{
+			"question": "Secondary radar coverage is significantly (greater/smaller) than primary radar coverage.",
+			"answer": "Greater."
+		},
+		{
+			"question": "Transponders normally have two modes: __________ and __________.",
+			"answer": "Mode A. Mode C."
+		},
+		{
+			"question": "What information does a Mode A transponder send?",
+			"answer": "A four-digit code entered by the pilot."
+		},
+		{
+			"question": "What information does a Mode C transponder send?",
+			"answer": "The same as a Mode A transponder, plus altitude information."
+		},
+		{
+			"question": "What are the four functions typically found a transponder? Give a brief description of each.",
+			"answer": "OFF: don't transmit. SBY: transponder is on but will not respond to interrogation. ON: transponder will respond to Mode A interrogation. ALT: transponder will respond to Mode C interrogation."
+		},
+		{
+			"question": "What are the three transponder distress codes, and what do they mean?",
+			"answer": "7500: hijacking. 7600: radio communication failure. 7700: emergency."
+		},
+		{
+			"question": "The primary functions of radar service are to provide __________ for aircraft in controlled airspace, and assist __________ _____ __________.",
+			"answer": "Separation. Aircraft in trouble."
+		},
+		{
+			"question": "What are three other types of information that may be available from radar controllers?",
+			"answer": "Navigation assistance (eg. recommended tracks, vectors), traffic information, weather information."
+		},
+		{
+			"question": "What is one important thing to remember when requesting weather information from a radar controller?",
+			"answer": "Radars don't show weather information."
+		}
+	]
+}

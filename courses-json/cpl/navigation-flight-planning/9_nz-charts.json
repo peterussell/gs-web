@@ -1,0 +1,80 @@
+{
+	"question_set_id": "dbef6831-15a2-45c9-b62d-0aa6079aa1be",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "New Zealand Aeronautical Charts",
+	"questions": [
+		{
+			"question": "What is the Reduced Earth?",
+			"answer": "The smaller, imaginary globe that gets projected on to the paper to make a chart."
+		},
+		{
+			"question": "What is the chart scale?",
+			"answer": "The ratio of a given chart length to the distance on Earth it represents."
+		},
+		{
+			"question": "A (larger/smaller) area of the Earth is represented on a 1:250,000 compared to a 1:500,000 chart.",
+			"answer": "Smaller."
+		},
+		{
+			"question": "A (greater,lesser) level of detail is shown on a 1:1,000,000 chart compared to a 1:250,000 chart.",
+			"answer": "Lesser."
+		},
+		{
+			"question": "Convert 1km to centimetres.",
+			"answer": "100,000cm"
+		},
+		{
+			"question": "Convert 1nm to kilometres.",
+			"answer": "1.82km (approximately)."
+		},
+		{
+			"question": "How many feet are in a nautical mile (approximately)?",
+			"answer": "6080."
+		},
+		{
+			"question": "Convert 1\" to centimetres.",
+			"answer": "2.54cm"
+		},
+		{
+			"question": "Convert 1nm to kilometres",
+			"answer": "1.85km or 1.852km. (12\" x 6080' x 2.54cm/inch). (Approximately). "
+		},
+		{
+			"question": "What is the VPC, and what scale does it use?",
+			"answer": "Visual Planning Chart. 1:1,000,000."
+		},
+		{
+			"question": "What are VNCs, and what scale does it use?",
+			"answer": "Visual Navigation Charts. 1:500,000."
+		},
+		{
+			"question": "On a VPC, 1cm represents _____nm or _____km.",
+			"answer": "5.39nm. 10km."
+		},
+		{
+			"question": "On a 1:500,000 VNC, 1cm represents _____nm or _____km.",
+			"answer": "2.7nm. 5km."
+		},
+		{
+			"question": "The VPC is used primarily for __________. It shows __________ and __________ information, and is based on the __________ Projection.",
+			"answer": "Visual navigation planning. Topographical, cultural. New Zealand Map Grid."
+		},
+		{
+			"question": "VNCs are used for __________. They cover _____ airspace in New Zealand and show detailed __________, __________, and __________ information. They are based on the __________ Projection.",
+			"answer": "In-flight navigation. All. topographical, cultural, aeronautical. New Zealand Map Grid."
+		},
+		{
+			"question": "Charts called __________ are provided for congested airspace, and have a scale of __________.",
+			"answer": "Visual Navigation Charts Enlargement. 1:250,000."
+		},
+		{
+		 	"question": "On a 1:250,000 VNC enlargement, 1cm represents _____nm or _____km.",
+			"answer": "1.35nm. 2.5km."
+		},
+		{
+		 	"question": "Detailed information on aerodromes can be found on a __________, which can be located in __________.",
+			"answer": "Visual Aerodrome Charts. AIPNZ Volume 4."
+		}
+	]
+}

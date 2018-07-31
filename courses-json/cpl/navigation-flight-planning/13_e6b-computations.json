@@ -1,0 +1,69 @@
+{
+	"question_set_id": "2fc309c8-4bb3-49d1-8b8b-2e3e70724ec7",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["e6b, computation"],
+	"title": "E6B Computations",
+	"notes": "Use an E6B for all computations below. Answers may be less accurate than with a calculator, and may include a small amount of variation depending on how you read the E6B.",
+	"questions": [
+		{
+			"question": "What is 17.2 x 9.7?",
+			"answer": "166.5. (Calculator: 166.84)."
+		},
+		{
+			"question": "What is 133 x 23?",
+			"answer": "3,060. (Calculator: 3059)."
+		},
+		{
+			"question": "What is 95 / 9?",
+			"answer": "10.56. (Calculator: 10.56)."
+		},
+		{
+			"question": "What is 154 / 18?",
+			"answer": "8.55. (Calculator: 8.56)."
+		},
+		{
+			"question": "You used 67L of fuel in 1h 13m. How much will you use in the next 25 minutes?",
+			"answer": "22.95L. (Calculator: 22.94L)."
+		},
+		{
+			"question": "You've travelled 78nm in 44 minutes. How far will you travel in the next 9 minutes?",
+			"answer": "15.95nm. (Calculator: 15.95nm)."
+		},
+		{
+			"question": "How does speed relate to distance and time?",
+			"answer": "Speed = distance / time."
+		},
+		{
+			"question": "On the E6B calculator side, time is always on the (inner/outer) scale, distance is always on the (inner/outer) scale.",
+			"answer": "Inner. Outer."
+		},
+		{
+			"question": "In 24 minutes you travel 63nm. What is your speed?",
+			"answer": "157kt. (Calculator: 157.5kt)."
+		},
+		{
+			"question": "You fly at 125kt for 41 minutes, how much distance do you cover?",
+			"answer": "85nm. (Calculator: 85.42nm)."
+		},
+		{
+			"question": "To calculate ETA, add __________ to your __________.",
+			"answer": "Estimated Elapsed Time (EET). Current time."
+		},
+		{
+			"question": "Most US-built light aircraft have consumption figures and fuel gauge markings in __________. In New Zealand refuelling is done in __________.",
+			"answer": "US gallons. Litres."
+		},
+		{
+			"question": "An Imperial gallon is slightly (larger/smaller) than a US gallon.",
+			"answer": "Larger."
+		},
+		{
+			"question": "How much fuel is consumed in 1h 20m at a consumption rate of 39 litres per hour?",
+			"answer": "52 litres. (Calculator: 52 litres)."
+		},
+		{
+			"question": "If you use 19 litres of fuel in 32 minutes, what is your fuel consumption rate?",
+			"answer": "35.6 litres/hour. (35.625 litres/hour)."
+		}
+	]
+}

@@ -1,0 +1,116 @@
+{
+	"question_set_id": "3422f6c1-69d7-499d-aecf-4c9355595e3d",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Visual Planning Charts",
+	"questions": [
+		{
+			"question": "How many VPCs are there and what areas do they cover?",
+			"answer": "2. One for each of the North and South Islands."
+		},
+		{
+			"question": "What is the primary purpose of the VPC?",
+			"answer": "To be used for pre-flight navigation planning."
+		},
+		{
+			"question": "What are 3 types of information represented on a VPC? Give examples of each.",
+			"answer": "Topographic: mountains, rivers, lakes, coast lines. Cultural: cities, roads, train lines. Aeronautical (limited): aerodromes, airspace, navaids."
+		},
+		{
+			"question": "What are isogonals? At what intervals are they depicted on a VPC?",
+			"answer": "Lines of constant magnetic declination/variation. At 1&deg; intervals, on every half degree (eg. 20.5&deg;, 21.5&deg;, 22.5&deg;."
+		},
+		{
+			"question": "On a VPC, all __________ __________ and __________ of surface features are correct.",
+			"answer": "Angular relationships. Shapes."
+		},
+		{
+			"question": "A constant scale (can/cannot) be assumed across a VPC.",
+			"answer": "Can."
+		},
+		{
+			"question": "What are 3 ways height is shown on a VPC?",
+			"answer": "Colour: layers of elevation are assigned different colours. Spot height: heights of prominent features. Maximum Elevation Figures: elevation of highest known feature in a 1-degree quadrant."
+		},
+		{
+			"question": "What does MEF stand for, and what does it represent?",
+			"answer": "Maximum Elevation Figure. Height of the highest known feature in a 1-degree quadrangle."
+		},
+		{
+			"question": "What colour are cities and towns depicted in on a VPC?",
+			"answer": "Yellow."
+		},
+		{
+			"question": "How are small settlements or towns shown on a VPC?",
+			"answer": "Small dot with the place name."
+		},
+		{
+			"question": "A VPC shows (limited/extensive) aeronautical information.",
+			"answer": "Limited."
+		},
+		{
+			"question": "Describe the VPC symbol for an aerodrome for aeroplane and helicopter operations.",
+			"answer": "Circle with four tick-marks around it."
+		},
+		{
+			"question": "Describe the symbol for a heliport.",
+			"answer": "Circle containing the letter 'H'."
+		},
+		{
+			"question": "What is a Visual Aerodrome, and how are they depicted on a VPC?",
+			"answer": "An aerodrome with no published instrument procedures. Coloured blue."
+		},
+		{
+			"question": "What is an Instrument Aerodrome, and how are they depicted on a VPC?",
+			"answer": "An aerodrome with one or more published instrument procedures. Coloured purple."
+		},
+		{
+			"question": "What is a non-published aerodrome, and how is it represented on a VPC?",
+			"answer": "An aerodrome with an uknown status. Circle with eight tick-marks around it."
+		},
+		{
+			"question": "How are radio-navigation facilities depicted on a VPC?",
+			"answer": "Purple oblong box."
+		},
+		{
+			"question": "What is a CTR, what is the lower limit, and how is it depicted on a VPC?",
+			"answer": "Control Zone. Surface. Solid navy blue lines."
+		},
+		{
+			"question": "What is a CTA, what is the lower limit, and how is it depicted on a VPC?",
+			"answer": "Control Area. Above the surface (cannot be at the surface). Solid purple lines, thinner above 9500'."
+		},
+		{
+			"question": "What does TM mean, and how does it apply to controlled airspace?",
+			"answer": "Transponder Mandatory. All controlled airspace is TM."
+		},
+		{
+			"question": "If there's insufficient room to show airspace information on the chart, where can it be found?",
+			"answer": "In a separate table on the chart."
+		},
+		{
+			"question": "Where can you find the 'name' of a section of airspace?",
+			"answer": "In a separate table on the chart."
+		},
+		{
+			"question": "What does LLCA stand for, and what does it mean?",
+			"answer": "Lower Limit Controlled Airspace. Means the upper limit of this airspace is at the lower limit of the overlying airspace."
+		},
+		{
+			"question": "FISCOM stands for __________. It is only relevant in (controlled/uncontrolled) airspace.",
+			"answer": "Flight Information Service Communication. Uncontrolled."
+		},
+		{
+			"question": "FISCOM information (is/is not) printed on VPCs.",
+			"answer": "Is."
+		},
+		{
+			"question": "Where can you find information about special airspace?",
+			"answer": "ENR Section 5 of the AIPNZ, and in the NZ Air Navigation Register."
+		},
+		{
+			"question": "In terms of special airspace, what do D, M, and B stand for?",
+			"answer": "D = Danger, M = Military, B = MBZ (Mandatory Broadcast Zone)."
+		}
+	]
+}

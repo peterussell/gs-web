@@ -1,0 +1,144 @@
+{
+	"question_set_id": "3314e64c-d8dc-4039-a047-23b93052b8c6",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["gps, gnss, navigation systems"],
+	"title": "GPS",
+	"questions": [
+		{
+			"question": "What is the relationship between GNSS and GPS?",
+			"answer": "GPS is an American version of the GNSS."
+		},
+		{
+			"question": "What does GPS stand for?",
+			"answer": "Global Positioning System."
+		},
+		{
+			"question": "What does GNSS stand for?",
+			"answer": "Global Navigation Satellite System."
+		},
+		{
+			"question": "How many GPS segments are there? What are they, and what components make up each of them?",
+			"answer": "Three. Space segment: at least 24 satellites orbiting earth. Control segment: monitoring stations, ground atnennas, uplinks, master station (operated by the US DoD). User segment: all receivers."
+		},
+		{
+			"question": "Each satellite transmits __________ and __________, along with a coded signal containing the __________ __________.",
+			"answer": "Position. Time. Navigation message."
+		},
+		{
+			"question": "The _________ ___________ is used by the __________ to track individual satellites for ranging purposes." ,
+			"answer": "Navigation message. Receiver."
+		},
+		{
+			"question": "The uniquely encoded signal which identifies a satellite is known as the __________ __________ code, and can either be a __________ __________ or a more accurate __________ code.",
+			"answer": "Pseudo random. Coarse acquisition. Precision."
+		},
+		{
+			"question": "What are three pieces of information contained in the navigation message?",
+			"answer": "Current satellite position. GPS time reference. An 'almanac' used to predict satellites in view and their estimated ranges."
+		},
+		{
+			"question": "How does range determination work?",
+			"answer": "The time between transmission and receiption of the satellite signal is measured, and multiplied by the speed of light in free space."
+		},
+		{
+			"question": "Establishing current position takes about ___ seconds.",
+			"answer": "6."
+		},
+		{
+			"question": "It takes approximately ___ seconds to receive almanac data, which is stored in the __________'s memory and continuously updated.",
+			"answer": "13. Receiver."
+		},
+		{
+			"question": "A signal travelling from a satellite at a given time gives a circular disc around the satellite called a __________ __________. This plots a __________ line where it intersects the earth, but additional satellites are required to obtain a _____",
+			"answer": "Range sphere. Curved. Fix."
+		},
+		{
+			"question": "A minimum of _____ satellite signals are required to provide range information. To provide additional accuracy by synchronising the reciever clock, a minimum of _____ satellite signals are required.",
+			"answer": "3. 4."
+		},
+		{
+			"question": "The difference in time used by the satellites and receiver can result in comparatively (large/small) errors, called __________ __________.",
+			"answer": "Large. Clock errors."
+		},
+		{
+			"question": "Without __________, the position of the aircraft is likely to have large uncertainty.",
+			"answer": "Synchronisation, or trimming."
+		},
+		{
+			"question": "What does RAIM stand for?",
+			"answer": "Receiver Autonomous Integrity Monitoring."
+		},
+		{
+			"question": "RAIM minimises a potential error, known as PDOP (__________ __________ __________ __________).",
+			"answer": "Position Dilution of Precision."
+		},
+		{
+			"question": "PDOP depends on the position of satellites relative to the _____. Greater distance = (greater/lesser) accuracy = (greater/smaller) error.",
+			"answer": "Fix. Greater. Smaller."
+		},
+		{
+			"question": "RAIM analyses signal __________ and relative positions of all satellites _____ _____, and chooses the _____.",
+			"answer": "Integrity. In view. Best."
+		},
+		{
+			"question": "RAIM requires _____ satellites to be in view to find an anomolous situation, and _____ satellites in view to isolate the unacceptable satellite.",
+			"answer": "5. 6."
+		},
+		{
+			"question": "How does the GPS unit indicate if RAIM is lost?",
+			"answer": "It will display a warning."
+		},
+		{
+			"question": "Which organisation provides a RAIM prediction service?",
+			"answer": "Airways Corporation."
+		},
+		{
+			"question": "What is a consideration if using older charts and GPS to navigate?",
+			"answer": "Older charts are based on a different Geodesic Datum than the GPS system, so significant position errors are likely. (Bonus points: the New Zealand Geodesic datum has been used in New Zealand charts until the last few years. The GPS system uses the World Geodetic System (WGS) which is now being used for New Zealand charts. It is the mixing of these two Geodesic systems which causes the errors.)"
+		},
+		{
+			"question": "GPS error is further reduced by __________ reference stations.",
+			"answer": "Ground."
+		},
+		{
+			"question": "How are ground stations used to apply corrections to GPS signals?",
+			"answer": "Ground stations exist at precisely known locations. They receive a signal giving a position indicating where the satellite thinks the ground station is. The ground stations applies and broadcasts the error between these values which is factored in to positions in GPS receivers."
+		},
+		{
+			"question": "What are two ground based reference correction systems? Where are they used?",
+			"answer": "WAAS (Wide Area Augmentation System), in North America. DGPS (Differential GPS), other countries overseas."
+		},
+		{
+			"question": "What are five sources of GPS errors?",
+			"answer": "Multi-path error. Ionosphere propagation effect. Troposphere propagation effect. Receiver error. Interference."
+		},
+		{
+			"question": "What is multi-path error?",
+			"answer": "Multiple GPS signals being bounced off different surfaces and being received at different times."
+		},
+		{
+			"question": "What is the ionosphere propoagation effect?",
+			"answer": "Charged particles in the ionosphere interfering with the propagation speed of GPS signals."
+		},
+		{
+			"question": "What is the troposphere propagation effect? How can this be mitigated?",
+			"answer": "Water vapour in the troposphere slowing down GPS signals. Partially mitigated by correcting for this in the GPS receiver."
+		},
+		{
+			"question": "What is receiver error?",
+			"answer": "Error caused by the receiver having difficulting precisely matching the internal psuedo random code with the satellite's."
+		},
+		{
+			"question": "What is interference? What are some common causes of interference?",
+			"answer": "GPS signals are relatively weak compared to other signals, and other signals are able to disrupt the GPS signal. Examples are VHF, TV, or FM transmitters near the GPS receiver."
+		},
+		{
+			"question": "Who shold be notified in the event of a loss of RAIM?",
+			"answer": "The appropriate ATS unit."
+		},
+		{
+			"question": "What are five human factors considerations whne using GPS? Briefly describe each.",
+			"answer": "Mode error: incorrect mode selected (eg. ENR/TERM/APP). Data entry error: incorrect entry of coordinates or waypoints. Control non-standardisation: being unfamiliar with your particular GPS receiever. Data display: screen size and light conditions. Position error: must be easily readable and aware of parallax errors."
+		}
+	]
+}

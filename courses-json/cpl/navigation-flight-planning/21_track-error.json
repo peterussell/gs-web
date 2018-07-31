@@ -1,0 +1,116 @@
+{
+	"question_set_id": "6a05a29b-5f17-42a2-86ab-da3081add3f7",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["track error, track guides, 1-in-60 rule, navigation"],
+	"title": "Track Error",
+	"questions": [
+		{
+			"question": "What is the purpose of drawing track guides?",
+			"answer": "To allow quick estimation of Track Error (TE) and Closing Angle (CA) required, within the bounds of the track guides drawn."
+		},
+		{
+			"question": "Which three places are track guides normally drawn from?",
+			"answer": "Departure aerodrome. Destination aerodrome. Checkpoints if applicable."
+		},
+		{
+			"question": "What two angles are recommended for track guides?",
+			"answer": "10&deg; or sometimes 5&deg;."
+		},
+		{
+			"question": "The advantage of track guides is you don't have to calculate __________ along track, you simply estimate the __________ and __________ and add them to get the __________.",
+			"answer": "Distance. Track Error (TE). Closing Angle (CA). Total Error (TE)."
+		},
+		{
+			"question": "The main disadvantage of estimation using track guides is the flight planned track will intercept the TMG at the __________, which is often (too far/too close).",
+			"answer": "Destination/next checkpoint. Too far."
+		},
+		{
+			"question": "An alternative to track guides is to use the __________ rule, based on the idea that _____nm subtends (forms) an angle of _____&deg; at a distance of _____nm.",
+			"answer": "1-in-60. 1nm. 1&deg;. 60nm."
+		},
+		{
+			"question": "Using the 1-in-60 rule, if you know the distance travelled and __________, you can calculate the distance from the __________ track.",
+			"answer": "Track Error. Planned.."
+		},
+		{
+			"question": "Using the 1-in-60 rule, if you know the distance travelled and distance off track, you can calculate the __________.",
+			"answer": "Track Error."
+		},
+		{
+			"question": "What is the formula for the 1-in-60 rule?",
+			"answer": "(60 / Distance travelled) = (Track Error / Distance off track)"
+		},
+		{
+			"question": "When making calculations using the 1-in-60 rule, it's important to use distance travelled along the (flight planned track/track made good).",
+			"answer": "Flight Planned Track."
+		},
+		{
+			"question": "You have travelled 42nm and have a track error of 8&deg;. What is your distance from the FPT?",
+			"answer": "5.6nm."
+		},
+		{
+			"question": "You've travelled 90nm and are 4.5nm left of required track. What's your track error?",
+			"answer": "3&deg; left."
+		},
+		{
+			"question": "You've travelled 75nm and are 11nm right of FPT. What is your track error?",
+			"answer": "8.8&deg; right."
+		},
+		{
+			"question": "Give the 1-in-60 rule formula, rearranged to solve for TE.",
+			"answer": "Track Error = Distance off track x (60 / distance gone)."
+		},
+		{
+			"question": "What change should be made to determine Closing Angle (CA) using the 1-in-60 rule?",
+			"answer": "Use distance to go instead of distance travelled."
+		},
+		{
+			"question": "Once you have the Track Error and Closing Angle required, you can (add/subtract) these to get the __________.",
+			"answer": "Add. Total Correction (TC)."
+		},
+		{
+			"question": "You've flown 90nm and are 6nm left of track. You want to reestablish on the FPT at a point in 30nm. What is the TE, CA, and TC?",
+			"answer": "4&deg; left. 12&deg; right. 16&deg; right."
+		},
+		{
+			"question": "The 1-in-60 rule should only be used when the TE and CA are less than _____&deg; each.",
+			"answer": "15&deg;."
+		},
+		{
+			"question": "Workings can be simplified when the distance __________ is equal to the distance __________, because ____________________.",
+			"answer": "Travelled. To go. The same calculation can be used for both directions."
+		},
+		{
+			"question": "Once you are reestablished on the FPT, what two corrections do you need to apply?",
+			"answer": "The closing angle (CA) in the opposite direction. Drift correction."
+		},
+		{
+			"question": "What are two methods of calculating the Wind Correction Angle (WCA) after reestablishing on the FPT?",
+			"answer": "With a flight computer. Using the original TE that was calculated."
+		},
+		{
+			"question": "At 0330 UTC, you arrive overhead a checkpoint and turn to 359&deg; to maintain a track of 017&deg;T (assume 20&deg;E variation). At 0339 UTC your distance gone is 16nm, and distance off track is 2nm. You decide to rejoin FPT at a distance to go of 9nm. What is your TE, GS, CA, TC and new heading, and ETA from the heading change to the checkpoint where you regain track?",
+			"answer": "7.5deg; left. 107kt. 13.3&deg; right. 21&deg; right. 020&deg;M. 5 minutes = 0344 UTC."
+		},
+		{
+			"question": "If you're flying with drift correction and make a 180&deg; turn, what drift correction do you need to apply (relative to the original heading)?",
+			"answer": "Twice the drift correction, in the opposite direction."
+		},
+		{
+			"question": "If you're flying with port drift and make a 180&deg; turn, fly the reciprocal heading and (add/subtract) _____ the original drift value.",
+			"answer": "Subtract. Double."
+		},
+		{
+			"question": "If you're flying with starboard drift and make a 180&deg; turn, fly the reciprocal heading and (add/subtract) _____ the original drift value.",
+			"answer": "Add. Double."
+		},
+		{
+			"question": "You're flying a 350&deg;M heading to maintain a track of 360&deg;. After making a 180&deg; turn, what heading should you fly to maintain a track 180&deg; from the original track of 360&deg;?",
+			"answer": "190&degM."
+		},
+		{
+			"question": "You fly a heading of 083&deg;M to maintain a track of 070&deg;M. After making a 180&deg; turn, what new heading should you fly to maintain a reciprocal track to the original track of 070&deg;M?",
+			"answer": "237&deg;M."
+		}
+	]
+}

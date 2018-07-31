@@ -1,0 +1,48 @@
+{
+	"question_set_id": "63e5785b-2be6-4d03-9372-a13388af9c3c",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["relative bearing, total correction, distance off, cpl only, navigation"],
+	"title": "Relative Bearings, Total Correction, Distance Off",
+	"questions": [
+		{
+			"question": "What is the relationship between magnetic bearing from an aircraft to a point, magnetic heading, and relative bearing to the point?",
+			"answer": "Aircraft heading + relative bearing = magnetic bearing to the point."
+		},
+		{
+			"question": "Relative bearing is the angle between the __________ of the aircraft and a straight line from the aircraft to a point.",
+			"answer": "Nose."
+		},
+		{
+			"question": "An object with a relative bearing of 090&deg; is off the (right/left) wing of the aircraft.",
+			"answer": "Right."
+		},
+		{
+			"question": "An object directly off the tail of the aircraft has a relative bearing of __________&deg;.",
+			"answer": "180&deg;."
+		},
+		{
+			"question": "You're flying from A to B on a heading of 070&deg;. After some time you notice A has a relative bearing of 170&deg;, meaning it is (in front/behind) and to the (right/left). What is the bearing to A? What is the bearing from A? What is the TMG and your drift?",
+			"answer": "Behind. Right. 240&deg;M. 060&deg;M. TMG is 060&deg;. Drift is 10&deg; left (port)."
+		},
+		{
+			"question": "At position B, your relative bearing to the destination C is 005&deg;. If your current heading is 070&deg;, what is your bearing to C? Upon reaching B, you calculate a track error (TE) of 10&deg; port. What is the TC required to reach C?",
+			"answer": "075&deg;. 085&deg;."
+		},
+		{
+			"question": "The track between A and B is 040&deg;T. You've computed a heading of 026&deg;M, variation is 21&deg;E. While enroute you establish that A bears 176&deg;R, and B bears 351&deg;R. What is the new magnetic heading to make good B?",
+			"answer": "021&deg;M."
+		},
+		{
+			"question": "The required track from C to D is 119&degM;. Variation is 21&deg;E, deviation is 3&deg;W. Your heading is 127&deg;C. Enroute, C bears 168&deg;R, and D bears 003&deg;R. What is the required heading to make good D?",
+			"answer": "139&deg;M, or 160&deg;T. Requires checking deviation for 139&deg;M to obtain compass heading."
+		},
+		{
+			"question": "(Use E6B for working): With a TE of 5&deg; determined after travelling 80nm, what is the distance off?",
+			"answer": "6.7nm."
+		},
+		{
+			"question": "(Use E6B for working): You depart at 1250 UTC on a 120nm track. You obtain a relative bearing at 1308 UTC, and determine a closing angle of 9&deg;. GS is 132kt. What is your distance off track, and new ETA?",
+			"answer": "12nm left of track. 1344 UTC."
+		}
+	]
+}

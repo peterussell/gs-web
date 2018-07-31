@@ -1,0 +1,36 @@
+{
+	"question_set_id": "26b41709-eaef-4915-8a05-a53630c0c330",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["applied navigation, mountain flying, cross country navigation, search and resuce, SARTIME"],
+	"title": "SARTIME (Search and Rescue)",
+	"questions": [
+		{
+			"question": "What are three methods for filing a flight plan?",
+			"answer": "Telephone. Internet. Fax."
+		},
+		{
+			"question": "What is a SARTIME?",
+			"answer": "The time when Search and Rescue will be alerted if a pilot has not terminated their flight plan."
+		},
+		{
+			"question": "A SARTIME (does/does not) have to be the time you'll reach the destination aerodrome.",
+			"answer": "Does not."
+		},
+		{
+			"question": "When planning a flight crossing Cook Strait, give an example of a SARTIME that would not be at the destination aerodrome.",
+			"answer": "A SARTIME for when you expect to reach the other side of the strait."
+		},
+		{
+			"question": "What is important to do if you don't file a SARTIME for the destination aerodrome?",
+			"answer": "Update the SARTIME once you reach the point you filed for."
+		},
+		{
+			"question": "What is the difference between ETA and SARTIME?",
+			"answer": "The ETA is the time you expect to arrive at a point. A SARTIME is a nominated time, usually after the ETA, when Search and Rescue will initiate procedures."
+		},
+		{
+			"question": "If your flight is delayed and you no longer expect to terminate the flight plan before the SARTIME, what should you do?",
+			"answer": "Amend the SARTIME (eg. via radio)."
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"question_set_id": "7df6b9b0-0779-4e80-a858-e0c710b47e32",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["cruise procedures, navigation"],
+	"title": "Cruise Procedures",
+	"questions": [
+		{
+			"question": "What four procedures are specifically mentioned for 'stabilising the aircraft in the cruise configuration'?",
+			"answer": "Selecting attitude and power setting to maintain planned speed and altitude. Trimming. Leaning mixture. SADIE or CLEAR."
+		},
+		{
+			"question": "What does TOC stand for, and what should you note in your flight log when you reach it?",
+			"answer": "Top of climb. Time at TOC."
+		},
+		{
+			"question": "What is the calculation given for Groundspeed in terms of time and distance?",
+			"answer": "GS = (60 / time in minutes) x distance travelled."
+		},
+		{
+			"question": "If you cover 38nm in 15 minutes, what is your groundspeed?",
+			"answer": "158kt."
+		},
+		{
+			"question": "It takes 1.5 hours to cover 144nm. What is your groundspeed?",
+			"answer": "96kt."
+		},
+		{
+			"question": "TOC occurred at 0115. Current pinpoint is at 0126. Distance between TOC and current pinpoint is 24nm. Calculate your groundspeed. How long will it take to reach the next checkpoint 29nm away (assuming constant wind)?",
+			"answer": "131kt (130.9kt). Approximately 14 minutes (13.28 minutes) => 0140Z at next checkpoint."
+		},
+		{
+			"question": "Distance from A to B is 130nm. You're overhead A at 0400 UTC. At some point C along the route, you're 48nm from A at 0418 UTC. What is the groundspeed between A and C, and ETA at B?",
+			"answer": "160kt. 0448 UTC. (04:48.45 UTC)."
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"question_set_id": "89587d71-32f6-45f6-aa1e-2b1524b9056e",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["equi-time point, critical point"],
+	"title": "Equi-time Point (Critical Point)",
+	"questions": [
+		{
+			"question": "What is the Equi-time Point (or Critical Point)?",
+			"answer": "A point along the track where it takes the same amount of time to return to your point of departure as it takes to continue to your destination."
+		},
+		{
+			"question": "What does GSH stand for, and what is it??",
+			"answer": "Groundspeed Home. The groundspeed from the ETP to the departure point."
+		},
+		{
+			"question": "What does GSO stand for, and what is it?",
+			"answer": "Groundspeed On. The groundspeed from the ETP to the destination point."
+		},
+		{
+			"question": "In nil wind conditions, the GSH and GSO are _____.",
+			"answer": "Equal."
+		},
+		{
+			"question": "If there is a headwind, the GSO will be (faster/slower) than the GSH, and the ETP moves toward the (departure/destination).",
+			"answer": "Slower. Destination."
+		},
+		{
+			"question": "If there is a tailwind, the GSO will be (faster/slower) than the GSH, and the ETP moves toward the (departure/destination).",
+			"answer": "Faster. Departure. "
+		},
+		{
+			"question": "In general, the ETP will always move (into/opposite to) the wind (away/toward) the mid (or equi-distance) point.",
+			"answer": "Into. Away."
+		},
+		{
+			"question": "What is the Equi-time Point formula? (Write out the meaning of each component in full).",
+			"answer": "(Total distance x groundspeed home) / (Groundspeed home x Groundspeed on)."
+		},
+		{
+			"question": "A tailwind component is (positive/negative). A headwind component is (positive negative). Eg. a tailwind of 35 knots is (+/-)35kt, a headwind of 9 knots is (+/-)9kt.",
+			"answer": "Positive. Negative. +35kt. -9kt."
+		},
+		{
+			"question": "A and B are 450nm apart. TAS cruise is 150kt. Headwind component (A to B) is 20kt. Calculate the ETP and flight time from A to the ETP.",
+			"answer": "255nm. Approximately 120 minutes, or 2 hours."
+		},
+		{
+			"question": "What is one method to check your ETP calculations?",
+			"answer": "Calculate the time from departure point to ETP, and time from ETP to destination, and check they're equal."
+		},
+		{
+			"question": "A and B are 580nm apart. The wind from A to the ETP is a 40kt headwind. The wind from the ETP to B is a 20kt tailwind. TAS is 210kt. What is the distance of the ETP from A. What is the elapsed time for the outbound flight from A to the ETP?",
+			"answer": "302nm. Approximately 106 minutes, or 1 hour 46 minutes."
+		}
+	]
+}

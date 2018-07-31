@@ -1,0 +1,64 @@
+{
+	"question_set_id": "45a84c68-2c86-4dc9-acb9-30372cb9f048",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["e6b, wind computations"],
+	"title": "E6B Wind Side",
+	"questions": [
+		{
+			"question": "A vector with one arrowhead represents __________ and __________. Two arrowheads represents __________ and __________. Three arrowheads represents __________ and __________.",
+			"answer": "Heading and TAS. Track and GS. Wind direction and wind speed."
+		},
+		{
+			"question": "Drift is the angular distance between __________ and __________.",
+			"answer": "Heading. Track."
+		},
+		{
+			"question": "To maintain constant track we need to angle into the wind by an amount equal to the __________. This is called the __________. It's important not to confuse this with the __________, which is the angle between track and __________.",
+			"answer": "Drift. Wind Correction Angle. Wind Angle. Wind direction."
+		},
+		{
+			"question": "If you're correcting for (right/left) drift, your right wingtip will be forward. If you're correcting for (right/left) drift, your left wingtip will be forward.",
+			"answer": "Right. Left."
+		},
+		{
+			"question": "What are the three factors that determine the amount of drift?",
+			"answer": "Wind angle relative to track (greater angle = greater drift). Wind speed (greater speed = greater drift). TAS (slower TAS = greater drift)."
+		},
+		{
+			"question": "__________ drift is calculated during pre-flight planning. __________ drift is experienced during flight.",
+			"answer": "Anticipated. Actual."
+		},
+		{
+			"question": "Calculate WCA, HDG and GS for: planned track 280&deg;T, wind 320&deg; at 20kt, TAS 110kt.",
+			"answer": "WCA: 7&deg; right. HDG: 287&deg;T. GS: 94kt."
+		},
+		{
+			"question": "Calculate WCA, HDG, and GS for: planned track 260&deg;T, wind 140&deg;T at 30kt, TAS 140kt.",
+			"answer": "WCA: 11&deg; left. HDG: 249&deg;T, GS: 153kt."
+		},
+		{
+			"question": "What types of wind velocities are reported in &deg;T, and which are reported in &deg;M?",
+			"answer": "&deg;T = Meteorological reports (METAR, TAF). &deg;M = Air Traffic Service reports."
+		},
+		{
+			"question": "What are the headwind and crosswind components for runway 34, with wind 290&deg;M at 30kt?",
+			"answer": "Headwind component: 20kt, crosswind component 23kt."
+		},
+		{
+			"question": "What are the headwind and crosswind components for runway 06, with wind 020&deg; at 28kt?",
+			"answer": "Headwind component: 21kt, crosswind component: 18kt."
+		},
+		{
+			"question": "True Altitude is your __________ above __________.",
+			"answer": "True height. Mean sea level."
+		},
+		{
+		  "question": "What are the two steps to calculate true altitude?",
+			"answer": "Calculate pressure altitude. Correct for non-standard temperature."
+		},
+		{
+			"question": "With a correct QNH of 1030 hPa set the altimeter reads 7500'. With OAT of +12&deg;C, determine true altitude.",
+			"answer": "Approximately 7800'."
+		}
+	]
+}

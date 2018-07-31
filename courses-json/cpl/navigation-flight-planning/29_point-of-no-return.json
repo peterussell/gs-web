@@ -1,0 +1,84 @@
+{
+	"question_set_id": "40af3701-96f2-4e4b-9e5f-a385bb7aad6b",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["point of no return, pnr"],
+	"title": "Point of No Return (PNR)",
+	"questions": [
+		{
+			"question": "What is the Point of No Return (PNR)?",
+			"answer": "Point along a track from the departure point where there is insufficient fuel remaining to return to the departure point with sufficient fuel reserves remaining."
+		},
+		{
+			"question": "What is the difference between an on-track and off-track PNR?",
+			"answer": "An on track PNR is one along the flight planned track. An off-track PNR is one where the pilot may divert to an off-track aerodrome without the need to return to the departure aerodrome."
+		},
+		{
+			"question": "The PNR is based entirely on the amount of __________.",
+			"answer": "Fuel carried."
+		},
+		{
+			"question": "What is the total endurance, or maximum endurance?",
+			"answer": "Total/maximum endurance is time until dry tanks."
+		},
+		{
+			"question": "Safe endurance is the _____ endurance, less __________, __________, __________, and __________.",
+			"answer": "Total. Unusable fuel. Required fuel reserves. Fuel for holding. Fuel for an instrument approach/diverting/other contingencies as required."
+		},
+		{
+			"question": "PNRs are often calculated for ____________________, but are useful for other situations, eg. ____________________.",
+			"answer": "Long flights over water. Short flights without suitable alternates."
+		},
+		{
+			"question": "For short flights with suitable alternates, PNRs (are/are not) often computed.",
+			"answer": "Are not."
+		},
+		{
+			"question": "What reason might you calculate a PNR for in a pressurised aircraft with enough fuel to fly to suitable alternates?",
+			"answer": "PNR in case of loss of cabin pressure. Due to flight at lower altitudes often having a significant performance penalty, it may not be possible to return to the departure aerodrome."
+		},
+		{
+			"question": "Give a reason why you might calculate a PNR concerning bad weather which is expected to clear.",
+			"answer": "Bad weather at the destination which is expected to clear may require calculating a PNR, to give a go/no-go point where you decide whether to continue."
+		},
+		{
+			"question": "What is the main difference between the Equi-Time Point and the Point of No Return?",
+			"answer": "The ETP is based on the time required to return or continue. The PNR is based on the fuel required to return."
+		},
+		{
+			"question": "An increase in fuel load moves the PNR (closer to/away from) the destination, possibly even __________.",
+			"answer": "Closer to. Past the destination."
+		},
+		{
+			"question": "What is Flight Fuel?",
+			"answer": "Total fuel - (unusable fuel + legal or required reserves)."
+		},
+		{
+			"question": "What does Safe Endurance mean, and how is it calculated?",
+			"answer": "Flying time using the current flight fuel available, being burned at a constant rate. Safe endurance = flight fuel / fuel flow rate (per hour)."
+		},
+		{
+			"question": "You have 265 litres of flight fuel available, and fuel flow is 55 litres per hour. What is the safe endurance?",
+			"answer": "Approximately 4 hours 48 minutes. "
+		},
+		{
+			"question": "Your safe endurance is calculated as 3 hours 26 minutes. In nil wind conditions, how long will it take to reach the PNR?",
+			"answer": "1 hour 43 minutes."
+		},
+		{
+			"question": "What is the formula for finding the time to the PNR in non-nil wind conditions? (Write out terms in full).",
+			"answer": "(Safe endurance x Groundspeed home) / (Groundspeed out + Groundspeed home). Multiply by the Groundspeed out to find distance to the PNR."
+		},
+		{
+			"question": "What is the formula for finding the distance to the PNR in non-nil wind conditions? (Write out terms in full).",
+			"answer": "(Safe endurance x Groundspeed home x Groundspeed out) / (Groundspeed out + Groundspeed home)."
+		},
+		{
+			"question": "You have 360 litres flight fuel available, and a fuel flow rate of 68 litres/hour. Cruise speed is 160kt TAS. Forecast gives an outbound tailwind component of 45kt. Calculate the time and distance to the PNR.",
+			"answer": "1h 45m. 390nm."
+		},
+		{
+			"question": "Your fuel consumption rate is 48 litres/hour, with flight fuel of 188 litres. Your cruise TAS is 180kt with an outbound headwind of 25kt. Calculate the time required to reach the PNR, and the distance from your departure point to the PNR.",
+			"answer": "Approximately 2h 12m. 344nm from the departure aerodrome."
+		}
+	]
+}

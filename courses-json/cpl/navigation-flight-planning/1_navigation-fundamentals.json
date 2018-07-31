@@ -1,0 +1,132 @@
+{
+	"question_set_id": "57fc6d36-0e24-4430-9e9c-c93957febc09",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Navigation Fundamentals",
+	"questions": [
+		{
+			"question": "What shape is the Earth?",
+			"answer": "Oblate Spheroid."
+		},
+		{
+			"question": "Which axis does the Earth rotate around, and where does the axis pass through?",
+			"answer": "Polar axis. True North and True South (the geographic poles)."
+		},
+		{
+			"question": "Lines of __________ run North to South, and are also called __________.",
+			"answer": "Longitude. Meridians."
+		},
+		{
+			"question": "Lines of __________ run East to West, also called __________",
+			"answer": "Latitude. Parallels."
+		},
+		{
+			"question": "What is the definition of a great circle?",
+			"answer": "A circle drawn on the earth whose plane passes through the centre of the Earth."
+		},
+		{
+			"question": "A great circle divides the Earth into two equal parts called __________.",
+			"answer": "Hemispheres."
+		},
+		{
+			"question": "How many great circles can be drawn between two points on the Earth's surface, and what is the exception?",
+			"answer": "One, unless the points are diametrically opposed (eg. the poles)."
+		},
+		{
+			"question": "Each half of a great circle between the poles is called a __________. The same line on the opposite side is called the __________.",
+			"answer": "Meridian. Anti-meridian."
+		},
+		{
+			"question": "Define the Equator in terms of great circles.",
+			"answer": "The equator is the great circle perpendicular to the Earth's axis."
+		},
+		{
+			"question": "The shortest distance between two points on a sphere is the __________.",
+			"answer": "Shorter arc of a great circle."
+		},
+		{
+			"question": "What is the definition of a small circle?",
+			"answer": "Any circle on the surface whose plane *doesn't* pass through the centre of the Earth."
+		},
+		{
+			"question": "Lines of __________ are small circles, except for __________.",
+			"answer": "Latitude. The equator."
+		},
+		{
+			"question": "What is the definition of a rhumb line?",
+			"answer": "A rhumb line crosses every meridian at a constant angle."
+		},
+		{
+			"question": "The only rhumb lines that are also great circles are __________ and __________.",
+			"answer": "The equator. Meridians."
+		},
+		{
+			"question": "What is true about the heading flown between two points following a great circle track vs. a rhumb line track?",
+			"answer": "Heading remains constant when following a rhumb line track, but not when following a great circle track (unless following the equator or a meridian)."
+		},
+		{
+			"question": "What is true about the distance flown between two points following a great circle track vs. a rhumb line track?",
+			"answer": "The great circle distance is shorter than the rhumb line distance (unless following the equator or a meridian)."
+		},
+		{
+			"question": "The reference datum for latitude is __________. Latitude at the North Pole is __________, latitude at the South Pole is __________.",
+			"answer": "The equator. 90&deg;N. 90&deg;S"
+		},
+		{
+			"question": "What is the definition of a latitude of a given place?",
+			"answer": "Its angular distance from the equator in degrees."
+		},
+		{
+			"question": "You travel from 30&deg;N to 73&deg;S. What is your difference (or change) in latitude (ie. d lat/ch lat)?",
+			"answer": "103&deg;S."
+		},
+		{
+			"question": "What is the relationship between degrees, minutes, and seconds?",
+			"answer": "There are 60 seconds in a minute, and 60 minutes in a degree."
+		},
+		{
+			"question": "What is the definition of a nautical mile?",
+			"answer": "The length of the arc of 1 minute, measured from the centre of the earth along a great circle."
+		},
+		{
+			"question": "How many nautical miles are there in 1&deg; change in latitude?",
+			"answer": "60nm."
+		},
+		{
+			"question": "For practical purposes, 1 nautical mile = __________ feet.",
+			"answer": "6080'."
+		},
+		{
+			"question": "1 statute mile = __________ feet.",
+			"answer": "5280'."
+		},
+		{
+			"question": "1 kilometre = __________ feet.",
+			"answer": "3280'."
+		},
+		{
+			"question": "What is the definition of a kilometre?",
+			"answer": "1/10,000th of the average distance between the equator and either pole."
+		},
+		{
+			"question": "A change in latitude of 35&deg;N is a distance of __________ nautical miles.",
+			"answer": "2,100nm."
+		},
+		{
+      "question": "Define longitude in terms of meridians.",
+      "answer": "Distance between the Prime Meridian and a position on the Earth, along the shorter arc around the equator"
+    },
+    {
+      "question": "Where does the Prime Meridian pass through?",
+      "answer": "Greenwich"
+    },
+    {
+      "question": "What is the position (in degrees) of the Prime Meridian and its anti-meridian?",
+      "answer": "Prime Meridian: 0&deg;E or 0&deg;W (either is correct). Anti-meridian: 180&deg; E or W."
+    },
+    {
+      "question": "What is the change in longitude (ch lon, or d lon) from 110&deg;E to 20&deg;E?",
+      "answer": "90&deg;W"
+    }
+	]
+}

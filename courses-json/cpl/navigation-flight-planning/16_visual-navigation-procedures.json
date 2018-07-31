@@ -1,0 +1,192 @@
+{
+	"question_set_id": "b85a2e52-d90f-4594-9897-379e15338d16",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["visual navigation, navigation"],
+	"title": "Visual Navigation Procedures",
+	"questions": [
+		{
+			"question": "If flying beyond the coast, you should take __________.",
+			"answer": "Serviceable life jackets."
+		},
+		{
+			"question": "You should file a flight plan with __________, or give your flight details to ____________________.",
+			"answer": "ATC. A person prepared to act as your flight follower if filing with ATC is not practicable."
+		},
+		{
+			"question": "The track you actually follow in flight is called your __________.",
+			"answer": "Track Made Good (TMG)."
+		},
+		{
+			"question": "During flight planning, you should select __________ and mark these as checkpoints.",
+			"answer": "Easily identifiable features."
+		},
+		{
+			"question": "When in busy airspace or near busy airports, you should select (more/less) checkpoints. In sparsely populated terrain you may select (more/less).",
+			"answer": "More. Less."
+		},
+		{
+			"question": "When is 'Track Crawling' required, and what is it?",
+			"answer": "Required when forecast and actual wind differ. Process is to determine which direction you're drifting from planned track, apply a correction angle, and continue doing this until the drift stops."
+		},
+		{
+			"question": "Once established, prefer the (DI/compass) for maintaining heading, because __________.",
+			"answer": "DI. Less susceptible to errors and changes in turbulence."
+		},
+		{
+			"question": "What is important to remember when navigating by using the DI?",
+			"answer": "It can precess and needs to be periodically reset against the magnetic compass."
+		},
+		{
+			"question": "What is a 'fix', and two methods of determining one?",
+			"answer": "A geographical position at a given point in time. Using ground features or navigation aids."
+		},
+		{
+			"question": "What is a 'pinpoint' and how is it different to a fix?",
+			"answer": "A geographical position at a given point in time determined by reference to a point on the ground. Differs to a fix in that it uses a single reference point, where a fix usually uses two or more."
+		},
+		{
+			"question": "What is a 'waypoint'?",
+			"answer": "Location or fix that can be used in a navigation system (eg. GPS)."
+		},
+		{
+			"question": "What is a DR position, and what two measurements is it based on?",
+			"answer": "Dead Reckoning Position. Place you anticipate you'll be at a point in time. Based on track made good (TMG) and groundspeed (GS)."
+		},
+		{
+			"question": "When using two or more features to obtain a visual fix, what is the ideal position for them to be relative to the aircraft and each other?",
+			"answer": "Positions such that the lines drawn from each visual reference to the aircraft cross as close as possible to right angles."
+		},
+		{
+			"question": "What is the symbol for a visual fix or pinpoint (not using position lines)?",
+			"answer": "Circle with a dot inside it."
+		},
+		{
+			"question": "What is the symbol for a visual fix using position lines?",
+			"answer": "Circle with two arrows crossed over it, arrows extending beyond the circle."
+		},
+		{
+			"question": "What is the symbol for a Dead Reckoning (DR) position?",
+			"answer": "Triangle with a filled dot in the middle."
+		},
+		{
+			"question": "What is the symbol for a radar fix position from ATC?",
+			"answer": "Circle with two lines across it, but contained within the circle."
+		},
+		{
+			"question": "What are the two important components during a navigation flight?",
+			"answer": "Aircraft management and pilot navigation."
+		},
+		{
+			"question": "What are two problems resulting from flying an aircraft out of balance?",
+			"answer": "Tends to roll making it harder to maintain heading. Increases drag and can cause imprecise readings at pitot and static vents."
+		},
+		{
+			"question": "What are two engine settings can affect the output of a planned power setting at a given altitude?",
+			"answer": "Mixture and carb heat."
+		},
+		{
+			"question": "When concentrating on navigation, it's important to intersperse _______________ with updating logs or looking at charts.",
+			"answer": "Frequent checks outside."
+		},
+		{
+			"question": "What factors should be considered when selecting a cruise altitude? (8 factors).",
+			"answer": "Terrain height. Meteorological conditions (eg. cloud bases). Winds aloft. VFR cruise altitudes. Airspace. Freezing level. ATC reception. Aircraft performance."
+		},
+		{
+			"question": "Once you've decided to divert, don't __________.",
+			"answer": "Change your mind."
+		},
+		{
+			"question": "What are three times safety checks should be carried out?",
+			"answer": "Shortly after departure. At checkpoints and turning points. At intervals not exceeding 15 minutes."
+		},
+		{
+			"question": "What does SADIE stand for?",
+			"answer": "Suction, Amps, DI (to compass), Icing, Engine."
+		},
+		{
+			"question": "What does CLEAR stand for?",
+			"answer": "Compass. Log. Engine. Altitude. Radio."
+		},
+		{
+			"question": "In general, how often should you check fuel endurance?",
+			"answer": "Every 30 minutes."
+		},
+		{
+			"question": "What do the following acronyms stand for? ATD, SH, ETA, EET.",
+			"answer": "Actual Time of Departure. Set-Heading (time). Estimated Time of Arrival. Estimated Elapsed Time."
+		},
+		{
+			"question": "What are two documents that are important to carry on all XC flights?",
+			"answer": "Current VNC and current AIPNZ Vol. 4."
+		},
+		{
+			"question": "What is true about navigation documents and equipment while in the circuit?",
+			"answer": "It should be stowed, ie. not on your lap."
+		},
+		{
+			"question": "What are the four basic components which contribute to successful map reading?",
+			"answer": "Direction, distance, groundspeed, selection and identification of landmarks and checkpoints."
+		},
+		{
+			"question": "What types of checkpoint features can be useful to help maintain orientation?",
+			"answer": "Long narrow features (help maintain either parallel or perpendicular)."
+		},
+		{
+			"question": "What are 5 considerations for selecting checkpoints?",
+			"answer": "Distance for planned track. Prevailing visiblity. Dimensions of features. Blending in with surrounding features. Plan (side) view, depending on altitude being flown."
+		},
+		{
+			"question": "Railways and roads can look __________, except that railways can only have __________.",
+			"answer": "Similar. Gentle bends."
+		},
+		{
+			"question": "What other feature similar to railways and roads can be useful for navigation?",
+			"answer": "Major powerlines in places they stand out clearly."
+		},
+		{
+			"question": "What are 3 alternatives to using a full-size plotter for measuring distance in flight?",
+			"answer": "Small piece of plastic with 1:500,000 and 1:250,000 scales drawn on. Thumb width (or similar) as an estimate. Scale on E6B."
+		},
+		{
+			"question": "What potential issues exist with using mountain peaks as checkpoints?",
+			"answer": "Can be difficult to identify peaks from above unless they're standing alone. From the side it can be difficult to establish height relative to other peaks."
+		},
+		{
+			"question": "What potential issue exists when using rivers or streams as navigation aids?",
+			"answer": "Can shrink, expand, or change shape depending on season and weather."
+		},
+		{
+			"question": "When using valleys for navigation, you should only use __________ valleys and verify the __________.",
+			"answer": "Major. Orientation against the DI."
+		},
+		{
+			"question": "What are 5 good features to use as navigation checkpoints?",
+			"answer": "Distinctive coastal features. Lakes and major rivers, especially with outlets to sea. Major towns. Major industrial plants (abbatoirs, forestry plants etc.). Isolated mountains (eg. Mt. Taranaki)."
+		},
+		{
+			"question": "Why should you be careful about using small towns as checkpoints?",
+			"answer": "Can be only a gathering of a few houses and difficult to see. Can be difficult to distinguish from other small towns from above."
+		},
+		{
+			"question": "When you pass a checkpoint, you know __________, __________, and __________, which allows you to calculate __________ and determine the __________ to the next checkpoint.",
+			"answer": "Direction, required track, distance. Groundspeed, time."
+		},
+		{
+			"question": "When is it recommended you start looking for the next checkpoint?",
+			"answer": "3-5 minutes out."
+		},
+		{
+			"question": "If there's wind at your cruise altitude, any heading change of _____&deg; or more will also probably  result in a change in __________.",
+			"answer": "15. Groundspeed."
+		},
+		{
+			"question": "Which chart orientation is recommended?",
+			"answer": "Track up."
+		},
+		{
+			"question": "It is important to view checkpoints relative to your __________, not your __________.",
+			"answer": "Track Made Good (TMG). Heading."
+		}
+	]
+}

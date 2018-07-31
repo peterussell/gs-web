@@ -1,0 +1,36 @@
+{
+	"question_set_id": "6836e2ad-9ded-49dd-ac70-c6949dd9a11b",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["charts, VNC, VPC"],
+	"title": "Charts - Misc.",
+	"questions": [
+		{
+			"question": "Due to __________ the track direction one way is not always 180&deg; different to the other direction. This is especially true on tracks running (north-south/east-west).",
+			"answer": "Convergency. East-west."
+		},
+		{
+			"question": "When measuring track direction, align the protractor with the __________ nearest the __________ of the track.",
+			"answer": "Meridian. Mid-point."
+		},
+		{
+			"question": "Bearings on charts are in (&deg;T/&deg;M). In New Zealand we (add/subtract) from chart track direction to get flyable headings.",
+			"answer": "&deg;T. Subtract."
+		},
+		{
+			"question": "Isogonals are indicated on the chart by __________.",
+			"answer": "Dashed blue lines."
+		},
+		{
+			"question": "Which value should you use for variation?",
+			"answer": "The isogonal which applies to the greatest part of the track."
+		},
+		{
+			"question": "Important information on communications (FISCOM, navaid frequencies), VFR procedures, search and rescue, and emergency procedures can be found in AIPNZ Volumes ___ and ___.",
+			"answer": "1 and 4."
+		},
+		{
+			"question": "All bearings in AIPNZ Vol 4 are __________, elevations in (AMSL/AGL), dimensions (eg. runway lengths) in __________, distances in __________, visibility in __________ or __________.",
+			"answer": "Magnetic. AMSL. Metres. Nautical miles. Metres or kilmetres."
+		}
+	]
+}

@@ -1,0 +1,100 @@
+{
+	"question_set_id": "15d8082d-7977-40b5-88bb-bda5f2b71305",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["departure procedures, navigation"],
+	"title": "Departure Procedures",
+	"questions": [
+		{
+			"question": "What are 3 factors that will affect the departure from an aerodrome?",
+			"answer": "Circuit direction. Nearby airspace. Nearby terrain."
+		},
+		{
+			"question": "Early on, you'll depart as close to ____________________ as possible, but this may change with experience.",
+			"answer": "Overhead the centre of the aerdrome."
+		},
+		{
+			"question": "At the start of a XC it is essential to check the _____ for accuracy.",
+			"answer": "DI."
+		},
+		{
+			"question": "What does SH stand for, and when should it be recorded?",
+			"answer": "Set Heading time. When you settle on the heading for the first leg."
+		},
+		{
+			"question": "What 6 actions should you take as soon as possible after departure?",
+			"answer": "Enter Actual Time of Departure (ATD). Record SH time. Record new heading if different from planned. Calculate and record ETA for first checkpoint. Calculate ETAs for all other checkpoints and destination. Transmit a departure report."
+		},
+		{
+			"question": "How should you calculate your ETA for the first checkpoint?",
+			"answer": "Estimated Elapsed Time (EET) to SH time.."
+		},
+		{
+			"question": "Due to a high workload immediately after departure, what can be a good idea to do before departure to ensure you're on the correct general track?",
+			"answer": "Identify 1 or 2 landmarks along your departure track, or use sun position to verify general direction."
+		},
+		{
+			"question": "To help during high workload immediately after departure, it can be useful to mark features _____ - _____nm from the __________ to help verify you're on the correct track.",
+			"answer": "5-10nm. Aerodrome."
+		},
+		{
+			"question": "If a navaid is available and your aircraft is equipped to receive it, it can be used ____________________.",
+			"answer": "As a backup to visual navigation."
+		},
+		{
+			"question": "What 4 details should you record as soon as possible after departure?",
+			"answer": "Departure time. Set Heading time. Heading (if different from planned). ETA for first and subsequent checkpoints, and destination."
+		},
+		{
+			"question": "Who should you submit a departure report to?",
+			"answer": "ATC if in controlled airspace. The nearest ATS unit if in uncontrolled airspace."
+		},
+		{
+			"question": "What information should you include in a departure report?",
+			"answer": "Aircraft identification, set heading time in minutes past the hour, altitude + \"CLIMBING TO\" + altitude of the initial portion of the flight, significant point/fix where the ATS route is joined, and ETO in minutes past the hour."
+		},
+		{
+			"question": "At a Rate of Climb of 800 FPM, what is the climb time from sea level to 6500' to the nearest minute?",
+			"answer": "8.125 minutes = approximately 8 minutes."
+		},
+		{
+			"question": "At a rate of climb of 650 FPM, what is the climb time for 1500' to 9500' to the nearest minute?",
+			"answer": "12.3 = approximately 12 minutes to the nearest minute."
+		},
+		{
+			"question": "What is the rate of climb if it takes 13 minutes to climb from 1000' to 7500'?",
+			"answer": "500 FPM."
+		},
+		{
+			"question": "At a groundspeed of 95kt it takes 18 minutes to climb from sea level to 8500'. What is the horizontal distance from SOC to TOC?",
+			"answer": "28.5nm."
+		},
+		{
+			"question": "For climb calculations, what is the 'Mean Climb Wind'? Why do we use this value?",
+			"answer": "Wind velocity taken at 2/3 up the climb. More time in the climb is typically spent at higher altitudes where aircraft performance is worse, and winds are typically stronger and therefore have a greater impact on calculations."
+		},
+		{
+			"question": "Where can you find forecast winds? Are they &deg;T or &deg;M, and what altitudes are they typically forecast for?",
+			"answer": "ARFORs (Area Forecasts). &deg;T. Sea level, 3000', 5000', 7000', 10000'."
+		},
+		{
+			"question": "Climbing from a runway at 1000' AMSL to 7500', with a TAS of 105kt and a 10kt tailwind component, and rate of climb of 600 FPM, what is the climb time and horizontal distance covered?",
+			"answer": "10 minutes 48 seconds, or 11 minutes to the nearest minute. 21.083nm, or 21nm to the nearest nautical mile."
+		},
+		{
+			"question": "You take off from a runway at 1500' AMSL and climb to 8500'. Your TAS is 145kt and have a 15kt headwind. What is the rate of climb required to complete the climb in 12 minutes, and what horizontal distance would be covered?",
+			"answer": "583 FPM (580 or 600 FPM). 26nm."
+		},
+		{
+			"question": "Given the following winds aloft forecast, what wind value should you use for a climb from sea level to 7500'? SL: 350&deg;/10kt. 3000' 340&deg;/15kt. 5000': 320&deg;/20kt. 7000': 300&deg;/30kt. 10000': 280&deg;/40kt.",
+			"answer": "320&deg;/20kt."
+		},
+		{
+			"question": "Given the following winds aloft forecast, what wind value should you use for a climb from 1000' to 5500'? SL: 350&deg;/10kt. 3000' 340&deg;/15kt. 5000': 320&deg;/20kt. 7000': 300&deg;/30kt. 10000': 280&deg;/40kt.",
+			"answer": "330&deg;/17.5kt (either 17kt or 18kt is fine)."
+		},
+		{
+			"question": "Before the mean altitude wind is interpolated, round (up/down) to the nearest 500'. eg. 4750' becomes __________.",
+			"answer": "Up. 5000'."
+		}
+	]
+}

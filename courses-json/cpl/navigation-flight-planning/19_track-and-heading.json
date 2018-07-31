@@ -1,0 +1,92 @@
+{
+	"question_set_id": "efe53dd4-e504-4eee-9b77-a4af84c7bee8",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["track, heading, drift, closing angle, correction, navigation"],
+	"title": "Track and Heading",
+	"questions": [
+		{
+			"question": "What is a Position Line (PL?)",
+			"answer": "A line an aircraft is known to be on at a particular time."
+		},
+		{
+			"question": "What are examples of physical features that can give position lines?",
+			"answer": "Railways, coastline, power lines, roads."
+		},
+		{
+			"question": "What is a transit bearing?",
+			"answer": "A bearing obtained from two or more features positioned on the Track Made Good (TMG)."
+		},
+		{
+			"question": "Given a position line, what else is required to obtain a fix? What is a desirable property of this other feature?",
+			"answer": "One or more additional lines, ideally crossing as close to 90&deg; as possible."
+		},
+		{
+			"question": "What is a non-visual method of plotting a fix using a pre-determined position line?",
+			"answer": "Obtaining a fix from a navigation beacon."
+		},
+		{
+			"question": "A fix obtained using navigation aids is generally (more/less) accurate than by using visual references.",
+			"answer": "More."
+		},
+		{
+			"question": "What piece of navigation equipment can be useful for determining groundspeed (that doesn't give a direct groundspeed readout)?",
+			"answer": "DME (Distance Measuring Equipment)."
+		},
+		{
+			"question": "How can visual references be used to determine drift?",
+			"answer": "Tracking along a straight visual line (eg. railroad, coast line) and noting whether your distance from the line is increasing, decreasing, or remaining constant."
+		},
+		{
+			"question": "During flight planning, which track is determined?",
+			"answer": "FPT (Flight Planned Track)."
+		},
+		{
+			"question": "What value do you calculate during flight planning to maintain the FPT?",
+			"answer": "Heading (HDG)."
+		},
+		{
+			"question": "What is the major cause that results in the FPT requiring adjustment in flight, and what is the adjusted track called?",
+			"answer": "Actual winds being different to forecast winds used for flight planning. Actual track in flight is called the Track Made Good (TMG)."
+		},
+		{
+			"question": "The angle between the required track and TMG is called the __________, specified in ____________________.",
+			"answer": "Track Error (TE). Degrees left or right of track."
+		},
+		{
+			"question": "The angle between the HDG and FPT is called the __________.",
+			"answer": "Flight planned drift."
+		},
+		{
+			"question": "Angle between the HDG and TMG is called the __________.",
+			"answer": "Actual drift."
+		},
+		{
+			"question": "Angle between the FPT and TMG is called the __________.",
+			"answer": "Track Error (TE)."
+		},
+		{
+			"question": "After realising the TMG has diverged from the FPT, you can calculate and apply the TE. Flying this new heading will __________ the FPT.",
+			"answer": "Parallel."
+		},
+		{
+			"question": "In addition to applying a correction to the TMG, to return to the FPT you must apply an additional correction, called the __________.",
+			"answer": "Closing Angle (CA)."
+		},
+		{
+			"question": "What is the relationship between CA and time/distance to get re-established on the FPT?",
+			"answer": "A larger closing will get you re-established on the FPT sooner. A shallower angle will take longer to re-establish on the FPT."
+		},
+		{
+			"question": "The combination of Track Error (TE) and Closing Angle (CA) is called the __________.",
+			"answer": "Total Correction (TC)."
+		},
+		{
+			"question": "The TC is normally approximate, because ____________________.",
+			"answer": "It assumes groundspeed and wind velocity are constant, which is unlikely to be the case."
+		},
+		{
+			"question": "If the TE or CA is greater than _____&deg;, then the approximation is __________ and the TC will need to be __________.",
+			"answer": "15. Invalid. Calculated on a flight computer."
+		}
+	]
+}

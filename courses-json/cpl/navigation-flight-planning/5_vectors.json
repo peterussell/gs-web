@@ -1,0 +1,104 @@
+{
+	"question_set_id": "29c35d6f-04c6-41b1-b0ae-8cded7be91e9",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Vectors",
+	"questions": [
+		{
+			"question": "Vectors have __________ and __________.",
+			"answer": "Direction, magnitude."
+		},
+		{
+			"question": "What do single, double, and triple arrowhead vectors represent?",
+			"answer": "Single: heading/TAS. Double: track/GS. Triple: wind direction/wind speed."
+		},
+		{
+			"question": "Does wind direction give direction the wind comes from, or direction the wind goes to?",
+			"answer": "Direction from."
+		},
+		{
+			"question": "Decode this wind information: 260/19.",
+			"answer": "Wind is from 260&deg; at 19 knots."
+		},
+		{
+			"question": "When is wind direction given in &deg;magnetic?",
+			"answer": "Takeoff and landing reports provided by ATC or flight service. ATIS. Automated weather reports at uncontrolled aerodromes."
+		},
+		{
+			"question": "When is wind direction given in &deg;T?",
+			"answer": "For flight planning, eg. Metservice, or given in flight by Flight Information Service."
+		},
+		{
+			"question": "What vectors can be combined to get a Track/Groundspeed vector?",
+			"answer": "Heading/TAS and wind direction/wind speed (Wind Velocity vector, or W/V vector)."
+		},
+		{
+			"question": "What is an aircraft's \"track\"?",
+			"answer": "Path of the aircraft over the Earth's surface."
+		},
+		{
+			"question": "What is the Track Made Good (TMG)?",
+			"answer": "The actual track being flown by the aircraft."
+		},
+		{
+			"question": "The Drift Angle is the angle between the __________ and the __________.",
+			"answer": "HDG/TAS vector. TRK/GS vector."
+		},
+		{
+			"question": "The drift angle depends on __________ and __________.",
+			"answer": "Wind velocity and aircraft speed."
+		},
+		{
+			"question": "A high wind velocity results in a (large/small) drift angle.",
+			"answer": "Large."
+		},
+		{
+			"question": "A low wind velocity results in a (large/small) drift angle.",
+			"answer": "Small."
+		},
+		{
+			"question": "A low TAS results in a (large/small) drift angle.",
+			"answer": "Large."
+		},
+		{
+			"question": "A high TAS results in a (large/small) drift angle.",
+			"answer": "Small."
+		},
+		{
+			"question": "Drift is measured from the __________ to the __________.",
+			"answer": "Heading (HDG) to Track (TRK)."
+		},
+		{
+			"question": "Starboard drift pushes the aircraft to the (right/left), ie. wind is from the (right/left).",
+			"answer": "Right. Wind from the left."
+		},
+		{
+			"question": "Port drift pushes the aircraft to the (right/left), ie. wind is from the (right/left).",
+			"answer": "Left. Wind from the right."
+		},
+		{
+			"question": "What do you do to apply drift correction? What happens if it is correctly applied?",
+			"answer": "Point the nose of the aircraft into the direction the wind comes from. Track (TRK) and Track Made Good (TMG) are the same."
+		},
+		{
+			"question": "Track Error (TE) is the difference between __________ and __________.",
+			"answer": "Track (TRK) and Track Made Good (TMG)."
+		},
+		{
+			"question": "Drift Error is measured from  _____ to _____. Track Error is measured from  _____ to _____.",
+			"answer": "HDG to TRK. TRK to TMG."
+		},
+		{
+			"question": "Tailwind is identified by a (+/-). Headwind is identified by a (+/-).",
+			"answer": "Tailwind: '+'. Headwind: '-'."
+		},
+		{
+			"question": "+23 kt is a 23 knot (headwind/tailwind) component.",
+			"answer": "Tailwind."
+		},
+		{
+			"question": "-14 kt is a 14 knot (headwind/tailwind) component.",
+			"answer": "Headwind."
+		}
+	]
+}

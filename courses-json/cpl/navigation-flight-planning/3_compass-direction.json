@@ -1,0 +1,88 @@
+{
+	"question_set_id": "9ac4d6f7-da98-4a7f-9c6b-bc91b6ec427a",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Compass Direction",
+	"questions": [
+		{
+			"question": "The difference between Magnetic direction and Compass heading is called __________.",
+			"answer": "Deviation."
+		},
+		{
+			"question": "What is the maximum deviation value on a compass card, and how is it reduced below that value?",
+			"answer": "3&deg;. Via calibration."
+		},
+		{
+			"question": "What causes deviation?",
+			"answer": "Aircraft components, metal in the aircraft, other magnetic fields (eg. electronics)."
+		},
+		{
+			"question": "An easterly deviation means the compass heading will be __________ than the magnetic direction.",
+			"answer": "Less. 'Deviation east = compass least.'"
+		},
+		{
+			"question": "A westerly deviation means the compass heading will be __________ than the magnetic direction.",
+			"answer": "Greater. 'Deviation west = compass best.'"
+		},
+		{
+			"question": "What is a 'compass swing', and what's the result of doing one?",
+			"answer": "Process performed by a maintenance engineer, where they check deviation at regular intervals against a master compass. Result is a graph showing deviation through 360&deg;."
+		},
+		{
+			"question": "What compass heading should you fly to maintain 183&deg;M with a 2&deg;W compass deviation?",
+			"answer": "185&deg;C."
+		},
+		{
+			"question": "What compass heading should you fly to maintain 039&deg;M with a 1&deg;E compass deviation?",
+			"answer": "038&deg;C."
+		},
+		{
+			"question": "Compass heading is 216&deg;C with 2&deg;W compass deviation. What is the magnetic direction?",
+			"answer": "214&deg;M."
+		},
+		{
+			"question": "Compass heading is 080&deg;C with 3&deg;E compass deviation. What is the magnetic direction?",
+			"answer": "083&deg;M."
+		},
+		{
+			"question": "What is a True Bearing?",
+			"answer": "The angular difference from True north of a straight line drawn between two places."
+		},
+		{
+			"question": "Starting at Wellington and ending at Taupo, you measure the angle of a direct line between them as having an angle of 027&deg;T. You would say this is _____&deg;T FROM Wellington, or _____&deg;T FROM Taupo.",
+			"answer": "027&deg;T. 207&deg;T"
+		},
+		{
+			"question": "A magnetic bearing is a true bearing which has been __________.",
+			"answer": "Corrected for variation."
+		},
+		{
+			"question": "A compass bearing is a magnetic bearing which has been __________.",
+			"answer": "Corrected for deviation."
+		},
+		{
+			"question": "What is the definition of a relative bearing?",
+			"answer": "Angle between the nose of the aircraft and an object, measured clockwise in degrees."
+		},
+		{
+			"question": "What is the relative bearing of an object directly off the left wing?",
+			"answer": "270&deg;R."
+		},
+		{
+			"question": "What is a relative back bearing?",
+			"answer": "Angle between the tail and an object, measured clockwise in degrees."
+		},
+		{
+			"question": "How do you convert relative bearing to a magnetic bearing TO an object/place?",
+			"answer": "Magnetic heading + relative bearing = magnetic bearing."
+		},
+		{
+			"question": "Your heading is 093&deg;M, and you want to fly to an object with a relative bearing of 226&deg;R. What is the magnetic bearing to the object (in nil wind conditions)?",
+			"answer": "093&deg;M + 226&deg;R = 319&deg;M."
+		},
+		{
+			"question": "What navigation instrument is commonly associated with finding a relative bearing to its associated navaid?",
+			"answer": "Automated Direction Finder (ADF)."
+		}
+	]
+}

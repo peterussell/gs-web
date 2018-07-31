@@ -1,0 +1,48 @@
+{
+	"question_set_id": "c46b31e1-36b5-4301-80e1-57b86a0a1f1b",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["descent procedures, navigation"],
+	"title": "Descent Procedures",
+	"questions": [
+		{
+			"question": "The position where the descent begins is called __________. Name 4 factors that may affect its position.",
+			"answer": "Top of Descent (TOD). Descent speed, power setting, wind component, altitude loss required."
+		},
+		{
+			"question": "At a constant airspeed, higher power settings = a (steeper/shallower) and (shorter/longer) descent.",
+			"answer": "Shallower. Longer."
+		},
+		{
+			"question": "For a given power setting, the descent is shallowest and longest when _____ speed is selected.",
+			"answer": "Range."
+		},
+		{
+			"question": "When descending into a headwind (low groundspeed) the descent will be (shallower/steeper) and (shorter/longer).",
+			"answer": "Steeper. Shorter."
+		},
+		{
+			"question": "When descending with a tailwind (high groundspeed) the descent will be (shallower/steeper) and (shorter/longer).",
+			"answer": "Shallower. Longer."
+		},
+		{
+			"question": "With a rate of descent (ROD) of 500 FPM, how much time is required to descent from 6000' AMSL to sea level?",
+			"answer": "12 minutes."
+		},
+		{
+			"question": "What ROD is required for descent from 8500' to 1500' in 9 minutes?",
+			"answer": "Approximately 780 FPM (777 FPM)."
+		},
+		{
+			"question": "ATC instructs you to commence descent at 22nm from the sea level aerodrome. You are at 7500' and must arrive overhead at 1500'. You intend to maintain IAS of 120kt. Temperature is 16&deg;C at 4000'. Headwind is 20kt. What ROD should you use to arrive overhead at 1500' AMSL?",
+			"answer": "Approximately 500 FPM (495 FPM)."
+		},
+		{
+			"question": "Which altitude is typically used for wind velocity in descent calculations? Is this the same as the wind velocity altitude used for climbs? Why?",
+			"answer": "Wind at the altitude halfway down the descent. No, because ROD is normally constant, where climb ROD often decreases near the top and/or wind velocity near the top of the climb is stronger."
+		},
+		{
+			"question": "When descending from 9500' to 1500' with the following winds, what is the mean wind velocity for this descent? (SL: 160&deg; at 15kt. 3000': 170&deg; at 20kt. 5000': 200&deg; at 30kt. 7000': 240&deg; at 35kt. 10,000': 260&deg; at 40kt.",
+			"answer": "210&deg; at 31kt."
+		}
+	]
+}

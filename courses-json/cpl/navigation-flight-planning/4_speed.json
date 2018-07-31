@@ -1,0 +1,80 @@
+{
+	"question_set_id": "466086ba-5de1-4ff4-a1e2-87114257108f",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Speed",
+	"questions": [
+		{
+			"question": "Airspeed is relative to __________. Groundspeed is relative to __________.",
+			"answer": "The air mass being travelled through. The ground."
+		},
+		{
+			"question": "What is the relationship between wind and groundspeed?",
+			"answer": "Wind directly effects groundspeed, a headwind results in a slower GS, a tailwind results in a faster GS."
+		},
+		{
+			"question": "Your 'airspeed' (ignore details of TAS/IAS/CAS, etc.) is 140kt with a 25kt tailwind. What is your groundspeed?",
+			"answer": "165kt."
+		},
+		{
+			"question": "What does the airspeed indicator (ASI) measure?",
+			"answer": "Dynamic pressure, the differential between static air pressure from the static port, and total air pressure from the pitot tube."
+		},
+		{
+			"question": "How does an ASI work?",
+			"answer": "An expandable diaphragm is housed inside a chamber. The chamber is connected to the static port and is at ambient pressure. The diaphragm is connected to the pitot tube and is at total pressure. As airspeed increases it increases air into the diaphragm, expanding it against static pressure. This expansion/contraction is converted to a mechanical movement of the needle on the ASI."
+		},
+		{
+			"question": "What is IAS?",
+			"answer": "Indicated Airspeed."
+		},
+		{
+			"question": "What are two types of IAS errors?",
+			"answer": "Instrument error: friction, wear on parts. Position/pressure error: due to incorrect sensing of pressure by pitot and/or static ports due to location (eg. when yawing or at high angles of attack)."
+		},
+		{
+			"question": "What airspeed do you get after correcting IAS for instrument and position errors?",
+			"answer": "Calibrated Airspeed (CAS)."
+		},
+		{
+			"question": "What is Compressibility Error. Does it cause the ASI to over or under-read?",
+			"answer": "Error caused by air compressing against the diaphragm resulting in over-expansion. ASI over-reads."
+		},
+		{
+			"question": "What is CAS corrected for compressibility called?",
+			"answer": "Equivalent Airspeed (EAS)."
+		},
+		{
+			"question": "When is Equivalent Airspeed more likely to be encountered?",
+			"answer": "In faster aircraft that typically operate at higher altitudes."
+		},
+		{
+			"question": "What is TAS?",
+			"answer": "True Airspeed. CAS corrected for non-standard temperature and pressure."
+		},
+		{
+			"question": "What standard is the ASI calibrated to, and what values are used?",
+			"answer": "ISA standards. 1013.25 hPa (normally 1013.2 hPa, or just 1013 hPa, and +15&deg;C at sea level."
+		},
+		{
+			"question": "An increase in temperature results in an (increase/decrease) in TAS.",
+			"answer": "Increase."
+		},
+		{
+			"question": "Atmospheric pressure lower than normal results in an (increase/decrease) in TAS.",
+			"answer": "Increase."
+		},
+		{
+			"question": "An increase in pressure results in a (higher/lower) TAS.",
+			"answer": "Lower."
+		},
+		{
+			"question": "With a decrease in temperature, TAS (increases/decreases).",
+			"answer": "Decreases."
+		},
+		{
+			"question": "TAS is generally (higher/lower) than IAS, except __________.",
+			"answer": "Higher. When pressure is higher than standard, or temperature is lower than standard, or both."
+		}
+	]
+}

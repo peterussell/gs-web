@@ -1,0 +1,80 @@
+{
+	"question_set_id": "850e11cc-3252-41e2-b163-8487661c88dc",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Direction",
+	"questions": [
+		{
+			"question": "What are examples of cardinal and intercardinal/quadrantal points?",
+			"answer": "Cardinal: North, South, East, West. Intercardinal: Northeast, Southeast, Southwest, Northwest."
+		},
+		{
+			"question": "The __________ North Pole is  used as reference for True direction?",
+			"answer": "Geographic."
+		},
+		{
+			"question": "The North-seeking end of a magnetic compass is often coloured __________.",
+			"answer": "Red."
+		},
+		{
+			"question": "VFR Aeronautical charts are referenced to __________ North.",
+			"answer": "True."
+		},
+		{
+			"question": "IFR Aeronautical charts are referenced to __________ North.",
+			"answer": "Magnetic."
+		},
+		{
+			"question": "What is the name of the value added or subtracted to convert between &deg;T and &deg;M?",
+			"answer": "Magnetic variation."
+		},
+		{
+			"question": "What is the definition of magnetic variation.",
+			"answer": "The angular difference between True and Magnetic North at a given location."
+		},
+		{
+			"question": "Magnetic variation is (the same/different) at different locations. It (does/does not) change over time.",
+			"answer": "Different. Does."
+		},
+		{
+			"question": "What is the definition of an isogonal?",
+			"answer": "Lines joining places of the same magnetic variation."
+		},
+		{
+			"question": "Where can you find the annual change in magnetic variation?",
+			"answer": "Printed in the legend of all aeronautical charts."
+		},
+		{
+			"question": "Define Agonic Line.",
+			"answer": "Isogonal with 0&deg; (ie. no) variation."
+		},
+		{
+			"question": "To convert True headings to Magnetic, (add/subtract) easterly variation.",
+			"answer": "Subtract."
+		},
+		{
+			"question": "To convert True headings to Magnetic, (add/subtract) westerly variation.",
+			"answer": "Add."
+		},
+		{
+			"question": "To convert Magnetic headings to True, (add/subtract) easterly variation.",
+			"answer": "Add."
+		},
+		{
+			"question": "To convert Magnetic headings to True, (add/subtract) westerly variation.",
+			"answer": "Subtract."
+		},
+		{
+			"question": "What value is commonly used in New Zealand as a rough average variation?",
+			"answer": "20&deg;E."
+		},
+		{
+			"question": "Where can you find accurate variation values?",
+			"answer": "Printed on navigation/planning charts."
+		},
+		{
+			"question": "When measuring variation for a track crossing multiple isogonals, which value should you use?",
+			"answer": "The variation for the main part of the track."
+		}
+	]
+}

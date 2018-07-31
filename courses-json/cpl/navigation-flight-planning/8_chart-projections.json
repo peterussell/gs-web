@@ -1,0 +1,72 @@
+{
+	"question_set_id": "3741656e-c438-4f70-9716-be3c9322d34a",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["fundamentals"],
+	"title": "Aeronautical Maps and Charts",
+	"questions": [
+		{
+			"question": "What is one of the main purposes of different map projections?",
+			"answer": "Produce a map with the least amount of distortion for a specific purpose."
+		},
+		{
+			"question": "__________ or __________ is the name given to charts whose scales and angular relationships are consistent. What are the 3 properties of these types of charts?",
+			"answer": "Orthomorphic or Conformal. 1. Scale at any point is the same in all directions. 2. Meridians and parallels cross at right angles. 3. Angles and bearings on the chat should match those on the Earth's surface."
+		},
+		{
+			"question": "What are two general types of projections used? Name an example of each.",
+			"answer": "Conic - Lambert Conformal Projection. Cylindrical - Mercator Projection."
+		},
+		{
+			"question": "Name four desirable properties of aeronautical charts. Which two are impossible together?",
+			"answer": "Conformal (scale and angular relationships are maintained). Surface features represent their true shape. Great circles are straight lines. Rhumb lines are straight lines. Only one of great circles or rhumb lines can be straight lines on a given projection."
+		},
+		{
+			"question": "When are great circles as straight lines perferred over rhumb lines as straight lines, and vice versa?",
+			"answer": "Great circles as straight lines for long distance flights. Rhumb lines as straight lines when navigating with a magnetic compass."
+		},
+		{
+			"question": "Which projection is used for most NZ aeronautical charts?",
+			"answer": "Lambert Conformal Projection."
+		},
+		{
+			"question": "In a conic projection, parallels are __________ and meridians __________. The angle between meridians and parallels is __________.",
+			"answer": "Curved/concave. Converge to a point (eg. North or South Pole). 90&deg;."
+		},
+		{
+			"question": "In a cylindrical projection, parallels are __________ and meridians are __________. The angle between meridians and parallels is __________.",
+			"answer": "Straight. Straight. 90&deg;."
+		},
+		{
+			"question": "A basic Mercator projection (is/is not) orthomorphic, but ____________________.",
+			"answer": "Mathematical corrections can be made to make it orthomorphic."
+		},
+		{
+			"question": "In a Mercator projection, what is a property of the parallels?",
+			"answer": "The distance between them increases as they move away from the Equator/nearer the Poles."
+		},
+		{
+			"question": "The Lambert projection cuts the Earth's surface at _____ parallels, called the __________. Details of these can be found __________.",
+			"answer": "2. Standard Parallels. Title page of the chart using this projection."
+		},
+		{
+			"question": "What is the Parallel of Origin on a Lambert projection?",
+			"answer": "The parallel halfway between the two standard parallels."
+		},
+		{
+			"question": "In cylindrical projections, the __________ scale between the standard parallels is slightly (compressed/expanded) and the area outside the standard parallels slightly (compressed/expanded). This is fixed __________ for every point of the chart on the __________ scale. The effects of this distortion (are/are not) signficant because __________. For practical purposes the scale may be assumed to be __________.",
+			"answer": "Latitude. Compressed. Expanded. Mathetmatically. Latitude. Are not. Most charts cover only a small range of latitudes. Constant."
+		},
+		{
+			"question": "What are the properties of a Mercator Chart? (Orthomorphic, bearings correct/incorrect, shapes portrayed correctly/incorrectly, meridians, parallels, great circles, rhumb lines, scale, Poles).",
+			"answer": "Orthomorphic. Bearings correct. Shapes portrayed correctly. Meridians straight, parallel, equi-distant. Parallels straight, parallel, increasing in distance away from Equator. Great circles curved convex (away from) the nearer pole. Rhumb lines straight. Scale not constant (increases away from equator). Distances difficult to measure. Polar regions can't be used greater than 70&deg;N and S."
+		},
+		{
+			"question": "What are the properties of a Lambert Chart? (Orthomorphic, bearings correct/incorrect, shapes portrayed correctly/incorrectly, meridians, parallels, great circles, rhumb lines, scale, poles).",
+			"answer": "Orthomorphic. Bearings Correct. Shapes portrayed correctly. Meridians converge to pole, not parallel. Parallels concave to nearer pole, equally spaced. Great circles practically straight. Rhumb lines curved concave to nearer pole. Scale considered constant. Distances can be measured accurately. Can be used for polar regions."
+		},
+		{
+			"question": "What are four primary advantages of the Lambert Conformal Projection?",
+			"answer": "Most latitudes can be projected (eg. poles). Useful for countries with a large east/west expanse. Distances can be measured accurately. Great circles are straight lines."
+		}
+	]
+}

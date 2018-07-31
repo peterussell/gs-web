@@ -1,0 +1,112 @@
+{
+	"question_set_id": "206ba88f-6d34-4cd8-8ae7-4ded7ba71736",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["applied navigation, reduced visibility, uncertain of position, lost procedures, cross country, flight planning, navigation"],
+	"title": "Applied Navigation: Reduced Visibility. Uncertain of Position/Lost Procedures.",
+	"questions": [
+		{
+			"question": "If forced to navigate in reduced visibility, make all effort to maintain ____________________, and resist temptation to ____________________.",
+			"answer": "Visual contact with the surface. Climb through clouds."
+		},
+		{
+			"question": "Give three reasons why you should avoid climbing through holes in clouds in reduced visibility.",
+			"answer": "Light aircraft performance decreases significantly with an increase in altitude. Manoeuvering between clouds may require steep angles of bank, further reducing aircraft performance. Severe risk of disorientation."
+		},
+		{
+			"question": "What is a good rule of thumb for flying among or above cloud cover?",
+			"answer": "Avoid flying among or above clouds that cover more than half the sky (4 oktas)."
+		},
+		{
+			"question": "How does flying in low visibility affect checkpoints?",
+			"answer": "They may be harder to see, possibly not until you're over them."
+		},
+		{
+			"question": "What should you keep in mind when selecting checkpoints if you have to fly in low visibility conditions?",
+			"answer": "Select as many as practical. Select on-track checkpoints when possible (you may not be able to see off-track ones)."
+		},
+		{
+			"question": "What should you consider about timing when flying in bad weather?",
+			"answer": "If flying in the bad weather configuration, EETs need to be updated to reflect the new groundspeed."
+		},
+		{
+			"question": "When passing checkpoints, especially in low visibility, you should ____________________.",
+			"answer": "Mark them clearly on your map, and note the time you passed them."
+		},
+		{
+			"question": "What is a major consideration if you depart from your flight planned track in bad weather?",
+			"answer": "Terrain or obstacles along the unplanned route."
+		},
+		{
+			"question": "If forced down due to bad weather, what is a consideration about other aircraft? What can you do to respond to this?",
+			"answer": "They may be in the same situation. Keep a good lookout. Turn on all external lights. Broadcast position and intentions as required."
+		},
+		{
+			"question": "What does 'Uncertain of Position' mean? What should you do in this situation?",
+			"answer": "Expected checkpoints don't appear, doubt exists about your precise position. Continue flight and be alert for the next checkpoint."
+		},
+		{
+			"question": "What does 'Lost' mean?",
+			"answer": "Unable to relate features on the chart to ground features. Continuing flight doesn't result in definite orientation."
+		},
+		{
+			"question": "Complete these Uncertain of Position procedures: 1. Enter __________ and __________ on your flight log or chart. 2. Check the ____________________ to determine if this is the cause of the discrepancy. 3. If (2) was the cause, apply the error to the required track from your ____________________ to give you an approximate current position. 4. Synchronise the __________ then make a heading change in order to intercept the __________.",
+			"answer": "Time and current heading. DI against compass. Last known position. The DI. Required/flight planned track."
+		},
+		{
+			"question": "Complete these Uncertain of Position procedures: 1. Enter __________ and __________ on your flight log or chart. 2. Check the ____________________ to determine if this is the cause of the discrepancy. 3. If (2) is not the cause, consider whether the cause was flying an ____________________. If so, note this and make a similar change in the __________ direction. 4. If your next checkpoint doesn't appear, start __________ procedures.",
+			"answer": "Time and current heading. DI against compass. Incorrect heading. Opposite. Lost." 
+		},
+		{
+			"question": "If you're lost, what are four methods that may help you find your location? Give a brief description of each.",
+			"answer": "Altitude: the higher you are the further you can see (cloud or controlled airspace may prevent this). Reverse track: make a 180&deg; turn and fly back the way you came until you establish your position again. Geography: given the relatively narrow width of NZ (with the exception of the centraly North Island), flying East or West should lead you to a coast. ATC: most of NZ is under radar coverage, consider asking ATC for help. You may need to climb to receive radar or communication coverage."
+		},
+		{
+			"question": "Complete these lost procedures: 3. Note the __________. 2. __________ to give time to do calculations. 3. Check the flight log or chart for __________ flown since the last definite fix, draw estimated __________. 4. Determine the MPP (__________), within the MPA (__________), estimate the __________ from the last positive fix to help narrow down this area. 5. Once this area is established, look at the ground to see if you ____________________.",
+			"answer": "Time. Orbit. Heading. TMG (Track Made Good). Most Probable Postion. Most Probable Area. Groundspeed. Recognise any features."
+		},
+		{
+			"question": "Once you've marked the MPP, what are three recommended methods for establishing the MPA?",
+			"answer": "1. Estimate two lines at 30&deg; either side of the estimated track. 2.) Draw two points either side of the MPP, one 10nm before, and one 10nm after. 3. Draw a circle around the MPP with a radius of 10% of the estimated distance."
+		},
+		{
+			"question": "When in a lost situation, read from the (ground/chart) to the (ground/chart).",
+			"answer": "Ground. Chart."
+		},
+		{
+			"question": "What ground features can help with orientation?",
+			"answer": "Roads, railways, lakes, rivers."
+		},
+		{
+			"question": "How can valleys be used to establish position when lost?",
+			"answer": "If in or near a valley, determine the orientation and compare to orientation of valleys on the chart. Eliminate any that don't match the orientiation of the actual valley."
+		},
+		{
+			"question": "While executing Lost procedures, if you positively identify a fix you should ____________________ and then ____________________.",
+			"answer": "Confirm with other nearby features. Use this to continue to your destination."
+		},
+		{
+			"question": "While executing Lost procedures, what should you do if unable to identify your location after establishing a MPP and MPA? If still unable, what is your next decision?",
+			"answer": "Increase the size of the MPA. Executing a precautionary landing, or depart the MPA."
+		},
+		{
+			"question": "What are four factors which help determine whether you should remain in the MPA and execute a __________, or depart the MPA?",
+			"answer": "Fuel remaining. Surrounding terrain. Daylight remaining. Weather."
+		},
+		{
+			"question": "If you decide to depart the MPA, you should leave via a __________. Give examples, and reasons why these can be particularly useful.",
+			"answer": "Well defined feature. Roads, railways. Roads and railways often lead to towns or other major feature that can be identified."
+		},
+		{
+			"question": "If you believe you can continue via an alternate route, you should select speed for maximum (range/endurance). If you need time to figure out the situation, select speed for maximum (range/endurance).",
+			"answer": "Range. Endurance."
+		},
+		{
+			"question": "What are two engine settings you should consider when executing Lost procedures?",
+			"answer": "Ensure the mixture is fully rich if flying at low level (or properly set otherwise). Be wary of carb icing if flying in bad weather."
+		},
+		{
+			"question": "When executing Lost or Unsure of Position procedures, what is important with regard to note taking?",
+			"answer": "Record the steps you've taken."
+		}
+	]
+}

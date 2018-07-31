@@ -1,0 +1,76 @@
+{
+	"question_set_id": "e0ac6d65-227e-4255-b523-e9c276a67b98",
+	"topic_id": "8ae615e5-fbb5-4c94-8416-7de818301bca",
+	"tags": ["VNC, Visual Navigation Chart, charts"],
+	"title": "Visual Navigation Charts",
+	"questions": [
+		{
+			"question": "What are the two scales for a VNC?",
+			"answer": "1:500,000 and 1:250,000."
+		},
+		{
+			"question": "VNCs give pilots detailed __________, __________, and __________ information.",
+			"answer": "Topographical. Cultural. Aeronautical."
+		},
+		{
+			"question": "When is a VNC intended to be used?",
+			"answer": "In flight."
+		},
+		{
+			"question": "What controlled airspace is shown on VNCs? What is the exception?",
+			"answer": "Controlled airspace with a lower level below 9500'. Exceptions are Queenstown and Southern Alps VNCs, which show controlled airspace to FL175."
+		},
+		{
+			"question": "On a VNC (excluding the VNC exceptions showing higher altitude controlled airspace), if airspace shows 'LL5500', what are the vertical limits of this airspace?",
+			"answer": "Lower limit: 5500'. Upper limit at or above 9500'."
+		},
+		{
+			"question": "Is runway length included on aerodrome labels on a VNC?",
+			"answer": "Not on 1:500,000 VNCs. Length of longest runway is included on 1:250,000 VNCs."
+		},
+		{
+			"question": "What does a 'W' next to a glider symbol indicate? What other information may be included?",
+			"answer": "Winch-launched gliding. Elevation figure showing the upper limit of winch-launched gliding operations."
+		},
+		{
+			"question": "Aerodromes with the longest runway less than _____m show ____________________. Aerodromes with a runway longer than this show ____________________.",
+			"answer": "1800. Orientation of the longest runway. The entire runway layout."
+		},
+		{
+			"question": "How are airspace sectors depicted?",
+			"answer": "Dashed blue lines."
+		},
+		{
+			"question": "What is a GAA? How are they depicted, and what related information may be depicted in the same manner?",
+			"answer": "General Aviation Area. Solid blue lines. VFR transit lanes."
+		},
+		{
+			"question": "Instrument Approach Procedures (inside/outside) controlled airspace use a __________ symbol to identify the ____________________, extending for _____nm.",
+			"answer": "Teardrop. Final instrument approach track. 7."
+		},
+		{
+			"question": "Visual Reporting Points are indicated by a __________.",
+			"answer": "Two-colour diamond."
+		},
+		{
+			"question": "What is a waypoint?",
+			"answer": "Fix or location which exists in a navigation system (eg. GPS)."
+		},
+		{
+			"question": "A fly-by waypoint is (filled/unfilled). A fly-over waypoint is (filled/unfilled).",
+			"answer": "Unfilled. Filled."
+		},
+		{
+			"question": "What number may be displayed with cable hazards?",
+			"answer": "Height of the highest span if known."
+		},
+		{
+			"question": "What colour is a Special Message box? How can you use it to find more information?",
+			"answer": "Red. A message is shown elsewhere on the chart, matching the number displayed in the Special Message box."
+		},
+		{
+			"question": "Obstructions on 1:250,000 charts (are/are not) always shown on 1:500,000. When is this particularly important?",
+			"answer": "Are not. When flying low level with a 1:500,000 chart."
+		}
+	]
+}
