@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { AuthenticateUserResult, AuthenticateUserResultStatus } from "./authenticate-user.result";
 import { RegisterUserResult, RegisterUserResultStatus } from "./register-user.result";
+import { Auth } from "aws-amplify";
 
 @Injectable()
 export class UserService {
@@ -19,30 +20,35 @@ export class UserService {
         { 'u': '100', 'p': 'demo' }
         ];
 
-    authenticateUser(email: string, password: string): AuthenticateUserResult {
-        if (email === null || password === null) {
-            return new AuthenticateUserResult(AuthenticateUserResultStatus.Error, "Null username or password.");
-        }
+    // authenticateUser(email: string, password: string): AuthenticateUserResult {
+    //     if (email === null || password === null) {
+    //         return new AuthenticateUserResult(AuthenticateUserResultStatus.Error, "Null username or password.");
+    //     }
 
-        // tmp until AWS is working
-        for(let i=0; i< this.u.length; i++) {
-            if (this.u[i]['u'] === email.toLowerCase()&& this.u[i]['p'] === password.toLowerCase()) {
-                return new AuthenticateUserResult(AuthenticateUserResultStatus.Success);
-            }
-        }
-        return new AuthenticateUserResult(
-            AuthenticateUserResultStatus.Error, "No matching username/password combination found."
-        );
+    //     // tmp until AWS is working
+    //     for(let i=0; i< this.u.length; i++) {
+    //         if (this.u[i]['u'] === email.toLowerCase()&& this.u[i]['p'] === password.toLowerCase()) {
+    //             return new AuthenticateUserResult(AuthenticateUserResultStatus.Success);
+    //         }
+    //     }
+    //     return new AuthenticateUserResult(
+    //         AuthenticateUserResultStatus.Error, "No matching username/password combination found."
+    //     );
+    // }
+
+    authenticateUser(email: string, password: string): Promise<any> {
+        return Auth.signIn(email, password);
     }
 
-    registerUser(email: string, password: string) {
-        if (email === null || password === null) {
-            return new RegisterUserResult(RegisterUserResultStatus.Error, "Null username or password.");
-        }
-        
-        // tmp until AWS is working
-        console.log('UserService: registerUser called but not implemented.');
-        return new RegisterUserResult(RegisterUserResultStatus.Success);
+    registerUser(email: string, password: string): Promise<any> {
+        return Auth.signUp({
+            username: email,
+            password: password
+        });
+    }
+
+    activateUser(email: string, code: string): Promise<any> {
+        return Auth.confirmSignUp(email, code);
     }
 
     resetPassword(email: string): boolean {

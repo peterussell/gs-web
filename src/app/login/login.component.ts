@@ -24,19 +24,26 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    this.startProcessing();
+    // this.startProcessing();
     this.hasAuthError = false;
 
-    const authResult = this.userService.authenticateUser(
-      this.loginForm.value.email, this.loginForm.value.password
-    );
+    this.userService.authenticateUser(
+      this.loginForm.get('email').value,
+      this.loginForm.get('password').value
+    )
+    .then(res => this.router.navigate(['/courses', 'cpl']))
+    .catch(err => this.hasAuthError = true);
+
+    // const authResult = this.userService.authenticateUser(
+    //   this.loginForm.value.email, this.loginForm.value.password
+    // );
     
-    if (authResult.status === AuthenticateUserResultStatus.Success) {
-      this.router.navigate(['/courses', 'cpl']);
-    } else {
-      this.hasAuthError = true;
-    }
-    this.isProcessing = false;
+    // if (authResult.status === AuthenticateUserResultStatus.Success) {
+    //   this.router.navigate(['/courses', 'cpl']);
+    // } else {
+    //   this.hasAuthError = true;
+    // }
+    // this.isProcessing = false;
   }
 
   startProcessing() {

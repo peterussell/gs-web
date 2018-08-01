@@ -13,7 +13,6 @@ export class QuestionService {
     constructor(private apiService: ApiService) {}
 
     updateQuestionSet(questionSetId: string) {
-
         this.apiService.getQuestions(questionSetId).subscribe((res) => {
             if (res == {}) {
                 // TODO: should go to a logger (does S3 have something we can use?)

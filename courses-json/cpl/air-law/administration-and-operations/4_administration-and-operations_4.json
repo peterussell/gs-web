@@ -1,0 +1,38 @@
+{
+	"question_set_id": "45df69bd-1d06-426d-b21a-5ab54b7e8e25",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["admin-and-operations"],
+	"title": "Administration and Operations",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 1: Administration and Operations",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+        {
+			"question": "One of the purposes of the CARs is to (summarise/elaborate on) the CAA Act 1990.",
+			"answer": "Elaborate on.",
+			"references": [
+				{
+				  "text": "Waypoints 1-12",
+				  "url": ""
+				}
+			]
+		},
+		{
+			"question": "What does F&PP stand for? Which part of the CAA Act specifies the criteria for this qualification?",
+			"answer": "Fit and Proper Person. Section 10.",
+			"references": [
+				{
+				  "text": "Waypoints 1-12",
+				  "url": ""
+				},
+				{
+				  "text": "CAA Act 1990 - Section 10",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+        }
+    ]
+}

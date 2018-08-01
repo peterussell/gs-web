@@ -1,0 +1,168 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["admin-and-operations"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Which CAA Part contains definitions and abbreviations of terms used in other parts?",
+			"answer": "CAR Part 1",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of an aircraft?",
+			"answer": "Any machine that can derive support in the atmosphere from the reactions of the air, otherwise than by the reactions of the air against the surface of the earth.",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Give three examples of aircraft categories.",
+			"answer": "Possible answers: aeroplane, balloon, glider, hang glider, helicopter, microlight.",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1 (Aircraft category and category of aircraft)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How is 'Approved' defined by CAA Part 1, unless it's used with reference to another person?",
+			"answer": "Approved in writing by the Director.",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Which certificate is the flight manual specifically associated with?",
+			"answer": "Certificate of airworthiness.",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "CAR Part 1 defines the flight manual as containing __________ within which the aircraft may be considered airworthy, as well as what other information?",
+			"answer": "Limitations. Instructions and information necessary to the flight crew members for the safe operation of the aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Does the definition of glider in CAR Part 1 include a powered glider while the engine is operating?",
+			"answer": "Yes, 'includes a powered glider whether the engines are operating or not'.",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "According to CAR Part 1, a helicopter means a rotorcraft incorporating one or more ________ ________ ________.",
+			"answer": "Power driven rotors.",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Does the CAR Part 1 definition for maintenance include modifications?",
+			"answer": "Yes.",
+			"references": [
+				{
+				  "text": "Waypoints 2-1",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the maximum number of people a microlight can carry legally?",
+			"answer": "2.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How does CAR Part 1 define Operate, in relation to an aircraft?",
+			"answer": "Fly or use the aircraft, or cause or permit the aircraft to fly, be used, or be in any place, whether or not the person is present with the aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

@@ -137,7 +137,7 @@
 				{
 				  "text": "CAR Part 1 - Definitions and Abbreviations",
 				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
-				},
+				}
 			]
 		},
 		{
@@ -151,7 +151,7 @@
 				{
 				  "text": "CAR Part 1 - Definitions and Abbreviations",
 				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
-				},
+				}
 			]
 		},
 		{
@@ -165,7 +165,7 @@
 				{
 				  "text": "CAR Part 1 - Definitions and Abbreviations",
 				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
-				},
+				}
 			]
 		},
 		{
@@ -179,7 +179,7 @@
 				{
 				  "text": "CAR part 1 - Definitions and Abbreviations",
 				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
-				},
+				}
 			]
 		},
 		{
@@ -193,7 +193,7 @@
 				{
 				  "text": "CAR part 1 - Definitions and Abbreviations",
 				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
-				},
+				}
 			]
 		},
 		{
@@ -263,30 +263,6 @@
 				{
 				  "text": "CAR Part 119",
 				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_119_Consolidation.pdf"
-				}
-			]
-		},
-		{
-			"question": "One of the purposes of the CARs is to (summarise/elaborate on) the CAA Act 1990.",
-			"answer": "Elaborate on.",
-			"references": [
-				{
-				  "text": "Waypoints 1-12",
-				  "url": ""
-				}
-			]
-		},
-		{
-			"question": "What does F&PP stand for? Which part of the CAA Act specifies the criteria for this qualification?",
-			"answer": "Fit and Proper Person. Section 10.",
-			"references": [
-				{
-				  "text": "Waypoints 1-12",
-				  "url": ""
-				},
-				{
-				  "text": "CAA Act 1990 - Section 10",
-				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
 				}
 			]
 		}

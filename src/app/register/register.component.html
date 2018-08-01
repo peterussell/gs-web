@@ -1,54 +1,119 @@
 
 <div class="page-wrapper">
   <mat-card class="register-container">
-    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
-
+    
       <mat-card-title>
         <img src="/assets/images/login/logo.png" alt="GroundSchool NZ"><br>
         Create Account
       </mat-card-title>
       
-      <div>
-        <mat-form-field>
-          <input matInput formControlName="email" placeholder="Email">
-          <mat-error *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched">
-            Valid email required
-          </mat-error>
-        </mat-form-field>
-      </div>
-      
-      <div formGroupName="password">
-        <div>
-          <mat-form-field>
-            <input matInput formControlName="original" type="password" placeholder="Password">
-            <mat-error *ngIf="!registerForm.get('password.original').valid && registerForm.get('password.original').touched">
-              Required
-            </mat-error>
-          </mat-form-field>
-        </div>
-    
-        <div>
-          <mat-form-field>
-            <input matInput formControlName="confirm" type="password" placeholder="Confirm Password">
-            <mat-error *ngIf="!registerForm.get('password.confirm').value !== '' && registerForm.get('password.confirm').touched">
-              Required
-            </mat-error>
-          </mat-form-field>
-        </div>
-      </div>
+      <mat-card-content *ngIf="showRegisterForm();else activatePanel">
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+          <div>
+            <mat-form-field>
+              <input matInput formControlName="email" placeholder="Email">
+              <mat-error *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched">
+                Valid email required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div formGroupName="password">
+            <div>
+              <mat-form-field>
+                <input matInput formControlName="original" type="password" placeholder="Password">
+                <mat-error *ngIf="!registerForm.get('password.original').valid && registerForm.get('password.original').touched">
+                  Required
+                </mat-error>
+              </mat-form-field>
+            </div>
+        
+            <div>
+              <mat-form-field>
+                <input matInput formControlName="confirm" type="password" placeholder="Confirm Password">
+                <mat-error *ngIf="!registerForm.get('password.confirm').value !== '' && registerForm.get('password.confirm').touched">
+                  Required
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
 
-      <div class="error-msg" *ngIf="passwordMismatch">
-        Your password and confirmation don't match, please try again.
-      </div>
-      
-      <mat-card-actions class="register-container__actions-panel">
-        <button mat-raised-button [disabled]="!registerForm.valid">Register</button>
-      </mat-card-actions>
+          <div class="error-msg" *ngIf="hasError()">
+            {{ errorMessage }}
+          </div>
+          
+          <mat-card-actions class="register-container__actions-panel">
+            <button mat-raised-button [disabled]="!registerForm.valid">Register</button>
+          </mat-card-actions>
 
-      <mat-card-footer>
-        Already have an account? <a [routerLink]="['/login']">Log in</a>
-      </mat-card-footer>
+          <mat-card-footer>
+            Already have an account? <a [routerLink]="['/login']">Log in</a>
+          </mat-card-footer>
+        </form>
+      </mat-card-content>
 
-    </form>
+    <!-- TODO: move this to a separate component so we can have an /activate route -->
+    <ng-template #activatePanel>
+      <mat-card-content>
+        <form [formGroup]="activateForm" (ngSubmit)="onActivate()">
+          <div class="activate-message">
+            <p>
+              Thanks for joining GroundSchool NZ!
+            </p>
+            <p>
+              An email containing your activation code is on its way to
+              <strong>{{ this.registerForm.get('email').value }}</strong>.
+            </p>
+
+            <p>
+              If you don't receive an activation email, please get in touch via the GroundSchool NZ<br>
+              <a href="{{ facebookUrl }}">Facebook page</a>.
+            </p>
+            
+            <!-- Activate form -->
+            <div *ngIf="showActivateForm();else activateSuccess">
+              <div>
+                <mat-form-field>
+                  <input matInput formControlName="email" placeholder="Email">
+                  <mat-error *ngIf="!activateForm.get('email').valid && activateForm.get('email').touched">
+                    Valid email required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div>
+                <mat-form-field>
+                  <input matInput formControlName="code" placeholder="Code">
+                  <mat-error 
+                    *ngIf="!activateForm.get('code').value !== '' && activateForm.get('code').touched">
+                    Required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="error-msg" *ngIf="hasActivationError()">
+                {{ activateErrorMessage }}
+              </div>
+
+              <mat-card-actions>
+                <button mat-raised-button [disabled]="!activateForm.valid">Activate Account</button>
+              </mat-card-actions>
+            </div>
+            <!-- End activate form -->
+
+            <!-- Activate success -->
+            <ng-template #activateSuccess>
+              <div>
+                Your account has been activated.
+              </div>
+            </ng-template>
+            
+          </div>
+          <div class="return-to-login">
+            Return to <a [routerLink]="['/login']">Log in</a>
+          </div>
+        </form>
+      </mat-card-content>
+    </ng-template>
   </mat-card>
 </div>

@@ -36,6 +36,10 @@
     margin-bottom: 20px !important;
 }
 
+.activate-message {
+    line-height: 1.4em;
+}
+
 .error-msg {
     padding: 0px 0 14px 0;
     color: #f44336;
@@ -44,4 +48,8 @@
 .mat-card-footer {
     font-size: 0.8em;
     margin-bottom: 10px;
+}
+
+.return-to-login {
+    font-size: 0.8em;
 }
