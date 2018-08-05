@@ -1,0 +1,272 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["admin-and-operations"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Which certificate is issued when an aircraft is entered onto the New Zealand Register of Aircraft?",
+			"answer": "Certificate of registration.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 47 (47.53 - Application for registration...)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_047_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How long can you hire or lease an aircraft registered by someone else before you're required to re-register it under your name?",
+			"answer": "27 days.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 47 (47.53 - Application for registration...)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_047_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How does CAR Part 1 define the Owner of an aircraft?",
+			"answer": "Any person lawfully entitled to the posittion of the aircraft for 28 days or longer.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Whose name is the certificate of registration issued under?",
+			"answer": "The name of the owner.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 47 (47.55 - Registration and grant of certificate)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_047_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Can an aircraft be flown if its certificate of registration has expired? If yes, for how long?",
+			"answer": "Yes. For 28 days from the date of expiry of the certificate.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 47 (47.59 - Operation of aircraft after expiry of certificate)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_047_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When does the certificate of registration expire?",
+			"answer": "As soon as the holder of the certificate ceases to have lawful entitlement to possession of the aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 47 (47.57 - Change of possession of aircraft)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_047_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Is the certificate of registration normally carried in the aircraft? What may be an exception?",
+			"answer": "No. Overseas flights.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				}
+			]
+		},
+    {
+			"question": "Which CAR Part deals with aircraft markings?",
+			"answer": "CAR Part 47.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 47 (Subpart C - Aircraft Marking)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_047_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Aeroplanes with a MCTOW of _____kg or less, and operating within __________ are not required to display the nationality mark.",
+			"answer": "5700kg. New Zealand.",
+			"references": [
+				{
+				  "text": "Waypoints 2-2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 47 (47.101(b) - Requirement for aircraft marking.)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_047_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When an aircraft has been designed, built, tested, and approved, it's issued with a ________________. Which country is this issued in?",
+			"answer": "Type certificate. The country of origin.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.31 - Type Certificate Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Who normally holds possession of a type certificate?",
+			"answer": "The aircraft manufacturer.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				}
+			]
+		},
+    {
+			"question": "If NZ authorities accept the foreign certification of an aircraft, they can issue a New Zealand ____________________.",
+			"answer": "Type acceptance certificate.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.41 - Type Acceptance Certificate Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Would a Cessna 172 have a NZ type certificate, or type acceptance certificate? Why?",
+			"answer": "Type acceptance certificate. The type certificate was issued in the USA.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 - (21.41 - Type Acceptance Certificate Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "If an airworthiness certificate has been issued, does that mean the aircraft has either a type certificate or type acceptance certificate?",
+			"answer": "Yes.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (43.153 - Review requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Which certificate is issued when the Director is satisfied the certification requirements for a particular category are met?",
+			"answer": "Airworthiness certificate.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (Subpart H - Airworthiness Certificates)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "An airworthiness certificate specific to (a specific aircraft/a model of aircraft).",
+			"answer": "A specific aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (Subpart H - Airworthiness Certificates)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Can an airworthiness certificate be transferred to another aircraft?",
+			"answer": "No.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A person operating an aircraft with an airworthiness certificate has to comply with any ________________ issued with the certificate, and any __________ displayed in the aircraft.",
+			"answer": "Operating limitations. Placards.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+				  "text": "Part 91 (91.101(b) - Aircraft airworthiness)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the four airworthiness certificate categories?",
+			"answer": "Standard, restricted, special, provisional.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.173 - Certificate categories)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
