@@ -49,4 +49,8 @@ export class UserService {
         console.log('UserService: resetPassword called but not implemented.');
         return true;
     }
+
+    registerInterest(name: string, email: string) {
+        console.log('user.service:registerInterest() called. Name:', name, ', Email:', email);
+    }
 }

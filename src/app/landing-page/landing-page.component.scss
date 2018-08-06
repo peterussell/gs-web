@@ -29,11 +29,12 @@
 }
 
 .info {
-    width: 380px;
+    max-width: 380px;
     text-align: left;
     color: #fff;
     display: inline-block;
     right: 0px;
+    padding-bottom: 10px;
 
     h2 {
         font-weight: 400;

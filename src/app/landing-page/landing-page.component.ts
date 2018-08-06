@@ -1,5 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { GlobalVariables } from '../../globals';
+import { UserService } from '../core/services/user.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,8 +10,9 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 })
 export class LandingPageComponent implements OnInit {
   registerInterestForm: FormGroup;
+  private facebookUrl: string = GlobalVariables.FACEBOOK_URL;
 
-  constructor(private renderer: Renderer2) {
+  constructor(private renderer: Renderer2, private userService: UserService) {
     this.renderer.setStyle(document.body, 'background-color', '#36454f');
   }
 
@@ -21,9 +24,10 @@ export class LandingPageComponent implements OnInit {
   }
 
   onRegisterInterest() {
-    console.log('onRegisterInterest() called');
-    console.log('name', this.registerInterestForm.get('name').value);
-    console.log('email', this.registerInterestForm.get('email').value);
+    this.userService.registerInterest(
+      this.registerInterestForm.get('name').value,
+      this.registerInterestForm.get('email').value
+    );
   }
 
 }
