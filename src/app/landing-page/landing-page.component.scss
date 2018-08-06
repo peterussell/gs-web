@@ -1,0 +1,96 @@
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.header-container {
+    background-image: url('/assets/images/landing-page/background.jpg');
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: inline-block;
+    top:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-container {
+    margin-top: 20px;
+}
+
+.devices {
+    padding-top: 30px;
+    vertical-align: top;
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.info {
+    width: 380px;
+    text-align: left;
+    color: #fff;
+    display: inline-block;
+    right: 0px;
+
+    h2 {
+        font-weight: 400;
+        font-size: 1.6em;
+        padding-top: 10px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 0.9em;
+        line-height: 1.6em;
+    }
+}
+
+.register-interest-form {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0 30px 0;
+    position: inline-block;
+}
+
+mat-form-field {
+    margin-right: 30px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0 20px 0;
+
+    &__fb {
+
+        &--logo {
+            width: 16px;
+            vertical-align: top;
+            margin: 0;
+            padding: 2px 4px 0 0;
+        }
+
+        &--text typography {
+            vertical-align: top;
+            color: #fff;
+        }
+    }
+}
+
+.email {
+    width: 300px;
+}
+
+.white {
+    color: #fff;
+}

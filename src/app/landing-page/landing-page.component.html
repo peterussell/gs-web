@@ -1,0 +1,56 @@
+<div class="header-container mat-typography">
+  <div class="logo-container">
+    <img src="/assets/images/landing-page/groundschoolnz-logo-200.png" />
+  </div>
+
+  <div class="content-container">
+    <div class="devices">
+      <img src="/assets/images/landing-page/devices.png" />
+    </div>
+    <div class="info">
+      <h2>Welcome to GroundSchool</h2>
+      <p>
+        Flying is an experience like nothing else, and it’s also serious business. As pilots
+        we need to know our stuff.
+      </p>
+      <p>
+        Whether you’re studying for your first exam, flight review, job interview,
+        or you already have your license and know the importance of keeping current,
+        our mission is to assist you by providing <strong>quality online flight training
+        resources for New Zealand pilots.</strong>
+      </p>  
+      <p>
+        The website is currently in closed beta but if you’d like to keep up to
+        date with progress please enter your name and email, and as soon as it’s ready
+        we’ll let you know. 
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="register-interest-form">
+  <form [formGroup]="registerInterestForm" (ngSubmit)="onRegisterInterest()">
+      <mat-form-field class="sixHundredPx">
+        <input matInput formControlName="name" placeholder="Name">
+        <mat-error *ngIf="!registerInterestForm.get('name').valid && registerInterestForm.get('name').touched">
+          Required
+        </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field class="email">
+        <input matInput formControlName="email" placeholder="Email">
+        <mat-error *ngIf="!registerInterestForm.get('email').valid && registerInterestForm.get('email').touched">
+          Valid email required
+        </mat-error>
+      </mat-form-field>
+
+    <button mat-stroked-button [disabled]="!registerInterestForm.valid" color="primary">
+      Register Interest
+    </button>
+  </form>
+</div>
+
+<div class="footer mat-typography">
+  <img src="/assets/images/landing-page/fb-logo.png" class="footer__fb--logo" />
+  <span class="footer__fb--text">Follow along - <a href="asdfasdf" class="white">facebook.com/groundschoolnz</a></span>
+</div>

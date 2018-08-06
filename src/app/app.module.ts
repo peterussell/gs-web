@@ -28,6 +28,7 @@ import { ResponsiveService } from './core/services/responsive.service';
 import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { UserService } from './core/services/user.service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { UserService } from './core/services/user.service';
     GroundSchoolAppComponent,
     CourseComponent,
     RegisterComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
