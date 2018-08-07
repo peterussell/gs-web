@@ -12,8 +12,7 @@ export class LandingPageComponent implements OnInit {
   registerInterestForm: FormGroup;
   private facebookUrl: string = GlobalVariables.FACEBOOK_URL;
 
-  constructor(private renderer: Renderer2, private userService: UserService) {
-    this.renderer.setStyle(document.body, 'background-color', '#36454f');
+  constructor(private userService: UserService) {
   }
 
   ngOnInit() {

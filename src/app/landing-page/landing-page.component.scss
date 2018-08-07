@@ -22,7 +22,7 @@
 }
 
 .devices {
-    padding-top: 30px;
+    padding-top: 20px;
     vertical-align: top;
     display: inline-block;
     padding-right: 30px;
@@ -34,7 +34,7 @@
     color: #fff;
     display: inline-block;
     right: 0px;
-    padding-bottom: 10px;
+    padding: 10px 10px 20px 10px;
 
     h2 {
         font-weight: 400;
@@ -53,7 +53,7 @@
     width: 100%;
     background-color: #fff;
     text-align: center;
-    padding: 20px 0 30px 0;
+    padding: 20px 0 80px 0;
     position: inline-block;
 }
 
@@ -66,6 +66,10 @@ mat-form-field {
     text-align: center;
     color: #fff;
     padding: 20px 0 20px 0;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid #eee;
 
     &__fb {
 
@@ -85,8 +89,4 @@ mat-form-field {
 
 .email {
     width: 300px;
-}
-
-.white {
-    color: #fff;
 }
