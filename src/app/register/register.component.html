@@ -30,7 +30,7 @@
         <div>
           <mat-form-field>
             <input matInput formControlName="confirm" type="password" placeholder="Confirm Password">
-            <mat-error *ngIf="!registerForm.get('password.confirm').value !== '' && registerForm.get('password.confirm').touched">
+            <mat-error *ngIf="!(registerForm.get('password.confirm').value !== '') && registerForm.get('password.confirm').touched">
               Required
             </mat-error>
           </mat-form-field>
