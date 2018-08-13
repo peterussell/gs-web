@@ -3,51 +3,72 @@
     <img src="/assets/images/landing-page/groundschoolnz-logo-200.png" />
   </div>
 
-  <div class="content-container">
     <div class="devices">
       <img src="/assets/images/landing-page/devices.png" />
     </div>
     <div class="info">
       <h2>Welcome to GroundSchool</h2>
       <p>
-        Flying is an experience like nothing else, and it’s also serious business. As pilots
+        Flying is awesome. It's also serious business. As pilots
         we need to know our stuff.
       </p>
       <p>
         Whether you’re studying for your first exam, flight review, job interview,
-        or you already have your license and know the importance of keeping current,
+        or already have your license and know the importance of keeping current,
         our mission is to assist you by providing <strong>quality online flight training
         resources for New Zealand pilots.</strong>
-      </p>  
-      <p>
-        The website is currently in closed beta but if you’re interested in early access
-        enter your name and email below and we'll let you know as soon as it's ready to
-        try.
       </p>
     </div>
-  </div>
 </div>
 
-<div class="register-interest-form">
-  <form [formGroup]="registerInterestForm" (ngSubmit)="onRegisterInterest()">
-      <mat-form-field class="sixHundredPx">
-        <input matInput formControlName="name" placeholder="Name">
-        <mat-error *ngIf="!registerInterestForm.get('name').valid && registerInterestForm.get('name').touched">
-          Required
-        </mat-error>
-      </mat-form-field>
-      
-      <mat-form-field class="email">
-        <input matInput formControlName="email" placeholder="Email">
-        <mat-error *ngIf="!registerInterestForm.get('email').valid && registerInterestForm.get('email').touched">
-          Valid email required
-        </mat-error>
-      </mat-form-field>
+<div class="register-interest mat-typography">
 
-    <button mat-stroked-button [disabled]="!registerInterestForm.valid" color="basic">
-      Register Interest
-    </button>
-  </form>
+  <div *ngIf="showRegisterForm(); else success">
+    <div class="register-interest__info">
+      <h2>I want in...</h2>
+      <p>
+        GroundSchool is currently in a closed beta. Want to know when it's ready?
+        Pop your email in below and we'll keep you up to date.
+        We won't use your email for any other purpose.
+      </p>
+    </div>
+  
+    <form [formGroup]="registerInterestForm" (ngSubmit)="onRegisterInterest()">
+      <div>
+        <mat-form-field class="email">
+          <input matInput formControlName="email" placeholder="Email">
+          <mat-error *ngIf="!registerInterestForm.get('email').valid && registerInterestForm.get('email').touched">
+            Valid email required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="register-interest__error">
+        {{ errorMessage }}
+      </div>
+
+      <div>
+        <button mat-stroked-button [disabled]="!registerInterestForm.valid" color="basic">
+          Get early access
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <ng-template #success>
+    <div class="register-interest__info">
+      <h2>Thanks for your interest</h2>
+      <p>
+        We're working hard to get GroundSchool ready and you'll be the first you know as soon as it's
+        open to the public.
+      </p>
+      <p>
+        In the meantime, you can follow along with development updates on our
+        <a href="{{ facebookUrl }}" target="_blank">Facebook page</a>.
+      </p>
+    </div>
+  </ng-template>
+
 </div>
 
 <div class="footer mat-typography">

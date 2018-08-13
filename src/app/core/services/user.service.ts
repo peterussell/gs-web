@@ -1,10 +1,12 @@
 import { Injectable } from "@angular/core";
 import { AuthenticateUserResult, AuthenticateUserResultStatus } from "./authenticate-user.result";
 import { RegisterUserResult, RegisterUserResultStatus } from "./register-user.result";
+import { ApiService } from "./api.service";
+import { Observable } from "rxjs/Observable";
+import { RegisterInterestResponse } from "./interfaces/register-interest-response";
 
 @Injectable()
 export class UserService {
-
     private readonly u: { u: string, p: string}[] = [
         { 'u': 'gs1', 'p': 'temp_253' },
         { 'u': 'gs2', 'p': 'temp_919' },
@@ -17,7 +19,9 @@ export class UserService {
         { 'u': 'gs9', 'p': 'temp_186' },
         { 'u': 'gs100', 'p': 'temp_618' },
         { 'u': '100', 'p': 'demo' }
-        ];
+    ];
+
+    constructor(private apiService: ApiService) {}
 
     authenticateUser(email: string, password: string): AuthenticateUserResult {
         if (email === null || password === null) {
@@ -50,7 +54,7 @@ export class UserService {
         return true;
     }
 
-    registerInterest(name: string, email: string) {
-        console.log('user.service:registerInterest() called. Name:', name, ', Email:', email);
+    registerInterest(email: string): Observable<RegisterInterestResponse> {
+        return this.apiService.registerInterest(email);
     }
 }
