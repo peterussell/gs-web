@@ -10,13 +10,13 @@ import { CourseMocker } from "../mocks/course-mocker";
 @Injectable()
 export class CourseResolver implements Resolve<Array<Course>> {
     
-    constructor(private apiService: ApiService, private courseMocker: CourseMocker) {}
+    constructor(private apiService: ApiService/*, private courseMocker: CourseMocker*/) {}
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
         Observable<Array<Course>> | Promise<Array<Course>> | Array<Course> {
-        //     return this.apiService.getCourses();
+            return this.apiService.getCourses();
 
         // tmp
-        return this.courseMocker.getCourses(2);
+        // return this.courseMocker.getCourses(2);
     }
 }

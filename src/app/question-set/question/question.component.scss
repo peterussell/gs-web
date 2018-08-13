@@ -1,5 +1,6 @@
 .mat-expansion-panel {
-    margin-bottom: 16px;
+    margin-bottom: 1px;
+    border: 1px solid #ddd;
 }
 
 .mat-expansion-panel-header {
@@ -7,10 +8,7 @@
     padding-bottom: 16px;
 }
 
-.mat-expansion-panel-header.mat-expanded {
-    border-bottom: 1px solid #ddd;
-}
-
 /deep/ .mat-expansion-panel-body {
-    padding: 10px 24px 10px;
+    padding: 16px 24px 16px;
+    background-color: #f7f7f7;
 }
