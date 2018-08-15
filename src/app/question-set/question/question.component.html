@@ -4,5 +4,9 @@
   </mat-expansion-panel-header>
 
   {{ answerText }}
+
+  <span *ngFor="let reference of question.references">
+    <a href="{{ reference.url }}" target="_blank">{{ reference.text }}</a>
+  </span>
   
 </mat-expansion-panel>
