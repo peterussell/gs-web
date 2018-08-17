@@ -3,10 +3,19 @@
     <mat-panel-title>{{ questionText }}</mat-panel-title>
   </mat-expansion-panel-header>
 
-  {{ answerText }}
+  <div class="answer">
+    <strong>A) </strong> {{ answerText }}
+  </div>
 
-  <span *ngFor="let reference of question.references">
-    <a href="{{ reference.url }}" target="_blank">{{ reference.text }}</a>
-  </span>
+  <div class="references">
+    <span class="title"><strong>References:</strong></span>
+    <ul>
+      <li *ngFor="let reference of question.references">
+          <a href="{{ reference.url }}" target="_blank" *ngIf="reference.url; else noLink">{{ reference.text }}</a>
+          <ng-template #noLink>{{ reference.text }}</ng-template>
+      </li>
+    </ul>
+  </div>
+  <span class="clear"></span>
   
 </mat-expansion-panel>
