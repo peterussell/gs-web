@@ -1,0 +1,70 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "",
+					"url": ""
+				}
+			]
+		},
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "",
+					"url": ""
+				}
+			]
+		},
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "",
+					"url": ""
+				}
+			]
+		},
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "",
+					"url": ""
+				}
+			]
+		},
+	]
+}
