@@ -24,22 +24,6 @@ export class UserService {
 
     constructor(private apiService: ApiService) {}
 
-    // authenticateUser(email: string, password: string): AuthenticateUserResult {
-    //     if (email === null || password === null) {
-    //         return new AuthenticateUserResult(AuthenticateUserResultStatus.Error, "Null username or password.");
-    //     }
-
-    //     // tmp until AWS is working
-    //     for(let i=0; i< this.u.length; i++) {
-    //         if (this.u[i]['u'] === email.toLowerCase()&& this.u[i]['p'] === password.toLowerCase()) {
-    //             return new AuthenticateUserResult(AuthenticateUserResultStatus.Success);
-    //         }
-    //     }
-    //     return new AuthenticateUserResult(
-    //         AuthenticateUserResultStatus.Error, "No matching username/password combination found."
-    //     );
-    // }
-
     authenticateUser(email: string, password: string): Promise<any> {
         return Auth.signIn(email, password);
     }
@@ -55,9 +39,13 @@ export class UserService {
         return Auth.confirmSignUp(email, code);
     }
 
-    resetPassword(email: string): boolean {
-        console.log('UserService: resetPassword called but not implemented.');
-        return true;
+    sendPasswordResetCode(email: string): Promise<any> {
+        return Auth.forgotPassword(email);
+    }
+
+    resetPassword(email: string, code: string, password: string): Promise<any> {
+        console.log(email, code, password);
+        return Auth.forgotPasswordSubmit(email, code, password);
     }
 
     registerInterest(email: string): Observable<RegisterInterestResponse> {

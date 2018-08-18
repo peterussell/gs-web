@@ -34,6 +34,6 @@ export class LoginComponent implements OnInit {
     .catch(err => {
       this.loginForm.enable();
       this.hasAuthError = true;
-    })
+    });
   }
 }

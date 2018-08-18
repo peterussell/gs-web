@@ -8,7 +8,11 @@ import { UserService } from '../core/services/user.service';
   styleUrls: ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent implements OnInit {
-  public resetPasswordForm: FormGroup
+  public resetPasswordForm: FormGroup;
+  public resetPasswordConfirmForm: FormGroup;
+  private hasError: boolean = false;
+  private sendCodeErrorMessage: string;
+  private resetPasswordErrorMessage: string;
   private currentState: ResetPasswordState = ResetPasswordState.Initial;
 
   constructor(private userService: UserService) { }
@@ -17,24 +21,74 @@ export class ResetPasswordComponent implements OnInit {
     this.resetPasswordForm = new FormGroup({
       'email': new FormControl('', [Validators.required, Validators.email])
     });
+    this.resetPasswordConfirmForm = new FormGroup({
+      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'password': new FormGroup({
+        'original': new FormControl(null, Validators.required),
+        'confirm': new FormControl(null, Validators.required)
+      }),
+      'code': new FormControl('', Validators.required)
+    });
+  }
+
+  onSendResetCode() {
+    this.resetPasswordForm.disable();
+    this.hasError = false;
+
+    this.userService.sendPasswordResetCode(
+      this.resetPasswordForm.get('email').value
+    )
+    .then(res => {
+      this.resetPasswordForm.enable();
+      this.currentState = ResetPasswordState.AwaitingConfirmation;
+    })
+    .catch(err => {
+      this.resetPasswordForm.enable();
+      this.currentState = ResetPasswordState.SendConfirmationCodeError;
+      this.hasError = true;
+      this.sendCodeErrorMessage = err.message;
+    });
   }
 
   onResetPassword() {
-    if (this.userService.resetPassword(this.resetPasswordForm.value.email)) {
+    this.resetPasswordConfirmForm.disable();
+    this.hasError = false;
+
+    this.userService.resetPassword(
+      this.resetPasswordConfirmForm.get('email').value,
+      this.resetPasswordConfirmForm.get('code').value,
+      this.resetPasswordConfirmForm.get('password.original').value
+    )
+    .then(res => {
+      this.resetPasswordConfirmForm.enable();
       this.currentState = ResetPasswordState.ResetSuccess;
-    } else {
-      this.currentState = ResetPasswordState.ResetError;
-    }
+    })
+    .catch(err => {
+      this.resetPasswordConfirmForm.enable();
+      this.currentState = ResetPasswordState.ResetPasswordConfirmError;
+      this.resetPasswordErrorMessage = err.message;
+    });
   }
 
-  showResetForm() {
+  showSendCodeForm() {
     return this.currentState === ResetPasswordState.Initial ||
-      this.currentState === ResetPasswordState.ResetError;
+      this.currentState === ResetPasswordState.SendConfirmationCodeError;
+  }
+
+  showResetPasswordForm() {
+    return this.currentState === ResetPasswordState.AwaitingConfirmation ||
+      this.currentState == ResetPasswordState.ResetPasswordConfirmError;
+  }
+
+  showSuccessMessage() {
+    return this.currentState === ResetPasswordState.ResetSuccess;
   }
 }
 
 enum ResetPasswordState {
   Initial,
+  AwaitingConfirmation,
   ResetSuccess,
-  ResetError
+  SendConfirmationCodeError,
+  ResetPasswordConfirmError
 }
