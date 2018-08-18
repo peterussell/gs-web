@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Question } from '../../core/models/question.model';
+import { Reference } from '../../core/models/reference.model';
 
 @Component({
   selector: 'app-question',

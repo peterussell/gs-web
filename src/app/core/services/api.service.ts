@@ -10,7 +10,7 @@ export class ApiService {
     private httpOptions;
 
     private readonly coursesRelPath = 'courses';
-    private readonly questionSetsRelPath = 'question-sets';
+    private readonly questionSetsRelPath = 'question-sets/new';
     private readonly registerInterestRelPath = 'register-interest';
 
     constructor(private http: HttpClient) {
