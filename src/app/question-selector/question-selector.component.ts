@@ -22,7 +22,12 @@ export class QuestionSelectorComponent implements OnInit {
 
   ngOnInit() {
     if (this.course !== undefined && this.course.topics.length > 0) {
-      this.topics = this.course.topics;
+      // todo: extract these to a helper function (sortByTitle(...))
+      this.topics = this.course.topics.sort((a, b) => {
+        if (a.title < b.title) return -1;
+        if (a.title > b.title) return 1;
+        return 0;
+      });
       this.selectTopic(this.topics[0]);
     }
   }
@@ -30,7 +35,11 @@ export class QuestionSelectorComponent implements OnInit {
   selectTopic(topic: Topic) {
     if (topic !== undefined && topic.questionSets.length > 0) {
       this.selectedTopic = topic;
-      this.questionSets = topic.questionSets;
+      this.questionSets = topic.questionSets.sort((a, b) => {
+        if (a.title < b.title) return -1;
+        if (a.title > b.title) return 1;
+        return 0;
+      });
       this.selectQuestionSet(this.questionSets[0]);
     }
   }

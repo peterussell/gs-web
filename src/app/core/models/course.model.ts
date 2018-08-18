@@ -1,8 +1,12 @@
 import { Topic } from "./topic.model";
 
 export class Course {
+    public topics: Array<Topic>;
+
     constructor(
         public courseId: string,
         public title: string,
-        public topics: Array<Topic>) { }
+        topics: Array<Topic>) {
+            this.topics = topics.sort();
+        }
 }

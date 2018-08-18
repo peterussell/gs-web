@@ -4,5 +4,5 @@ export class QuestionSet {
     questionSetId: string;
     topicId: string;
     title: string;
-    questions: Array<Question>;
+    questions: { [id: string] : Question };
 }
