@@ -11,7 +11,6 @@ import { AuthenticateUserResultStatus } from '../core/services/authenticate-user
 })
 export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
-  public isProcessing: boolean = false;
   public hasAuthError: boolean = false;
 
   constructor(private router: Router, private userService: UserService) { }
@@ -24,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    // this.startProcessing();
+    this.loginForm.disable();
     this.hasAuthError = false;
 
     this.userService.authenticateUser(
@@ -32,25 +31,9 @@ export class LoginComponent implements OnInit {
       this.loginForm.get('password').value
     )
     .then(res => this.router.navigate(['/courses', 'cpl']))
-    .catch(err => this.hasAuthError = true);
-
-    // const authResult = this.userService.authenticateUser(
-    //   this.loginForm.value.email, this.loginForm.value.password
-    // );
-    
-    // if (authResult.status === AuthenticateUserResultStatus.Success) {
-    //   this.router.navigate(['/courses', 'cpl']);
-    // } else {
-    //   this.hasAuthError = true;
-    // }
-    // this.isProcessing = false;
-  }
-
-  startProcessing() {
-    this.isProcessing = true;
-  }
-
-  stopProcessing() {
-    this.isProcessing = false;
+    .catch(err => {
+      this.loginForm.enable();
+      this.hasAuthError = true;
+    })
   }
 }

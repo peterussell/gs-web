@@ -56,62 +56,57 @@
     <ng-template #activatePanel>
       <mat-card-content>
         <form [formGroup]="activateForm" (ngSubmit)="onActivate()">
-          <div class="activate-message">
-            <p>
-              Thanks for joining GroundSchool NZ!
-            </p>
-            <p>
-              An email containing your activation code is on its way to
-              <strong>{{ this.registerForm.get('email').value }}</strong>.
-            </p>
+          <div *ngIf="showActivateForm()">
+            <div class="activate-message">
+              <p>
+                An email containing your activation code is on its way to
+                <strong>{{ this.registerForm.get('email').value }}</strong>.
+              </p>
 
-            <p>
-              If you don't receive an activation email, please get in touch via the GroundSchool NZ<br>
-              <a href="{{ facebookUrl }}">Facebook page</a>.
-            </p>
-            
-            <!-- Activate form -->
-            <div *ngIf="showActivateForm();else activateSuccess">
-              <div>
-                <mat-form-field>
-                  <input matInput formControlName="email" placeholder="Email">
-                  <mat-error *ngIf="!activateForm.get('email').valid && activateForm.get('email').touched">
-                    Valid email required
-                  </mat-error>
-                </mat-form-field>
-              </div>
-
-              <div>
-                <mat-form-field>
-                  <input matInput formControlName="code" placeholder="Code">
-                  <mat-error 
-                    *ngIf="!activateForm.get('code').value !== '' && activateForm.get('code').touched">
-                    Required
-                  </mat-error>
-                </mat-form-field>
-              </div>
-
-              <div class="error-msg" *ngIf="hasActivationError()">
-                {{ activateErrorMessage }}
-              </div>
-              <mat-card-actions>
-                <button mat-raised-button [disabled]="!activateForm.valid">Activate Account</button>
-              </mat-card-actions>
+              <p>
+                If you don't receive an activation email, please get in touch via the GroundSchool NZ<br>
+                <a href="{{ facebookUrl }}">Facebook page</a>.
+              </p>
             </div>
-            <!-- End activate form -->
+              
+            <!-- Activate form -->
+            <div>
+              <mat-form-field>
+                <input matInput formControlName="email" placeholder="Email">
+                <mat-error *ngIf="!activateForm.get('email').valid && activateForm.get('email').touched">
+                  Valid email required
+                </mat-error>
+              </mat-form-field>
+            </div>
 
-            <!-- Activate success -->
-            <ng-template #activateSuccess>
-              <div>
-                Your account has been activated.
-              </div>
-            </ng-template>
-            
-          </div>
-          <div class="return-to-login">
-            Return to <a [routerLink]="['/login']">Log in</a>
+            <div>
+              <mat-form-field>
+                <input matInput formControlName="code" placeholder="Code">
+                <mat-error 
+                  *ngIf="!activateForm.get('code').value !== '' && activateForm.get('code').touched">
+                  Required
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="error-msg" *ngIf="hasActivationError()">
+              {{ activateErrorMessage }}
+            </div>
+            <mat-card-actions>
+              <button mat-raised-button [disabled]="!activateForm.valid">Activate Account</button>
+            </mat-card-actions>
+            <!-- End activate form -->
           </div>
         </form>
+
+        <!-- Activate success -->
+        <div *ngIf="showActivateSuccessMessage()">
+          Your account has been activated.
+        </div>
+            
+      <div class="return-to-login">
+        Return to <a [routerLink]="['/login']">Log in</a>
+      </div>
       </mat-card-content>
     </ng-template>
   </mat-card>

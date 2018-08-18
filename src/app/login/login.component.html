@@ -30,10 +30,7 @@
 
       <mat-card-actions class="login-container__actions-panel">
           <button mat-raised-button [disabled]="!loginForm.valid || isProcessing">
-            <mat-progress-spinner *ngIf="isProcessing;else login"></mat-progress-spinner>
-            <ng-template #login>
-              <span #login>Login</span>
-            </ng-template>
+            <span #login>Login</span>
           </button>
       </mat-card-actions>
       

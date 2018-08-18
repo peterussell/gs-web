@@ -24,6 +24,10 @@
     padding: 20px 40px;
 }
 
+mat-form-field {
+    width: 100%;
+}
+
 .error-msg {
     padding: 0px 0 14px 0;
     color: #f44336;
@@ -39,6 +43,5 @@
 }
 
 .mat-card-footer {
-    
     margin-bottom: 10px;
 }

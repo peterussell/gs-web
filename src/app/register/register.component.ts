@@ -38,6 +38,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister() {
+    this.registerForm.disable();
     this.clearError();
 
     if (!this.checkPasswordsMatch()) {
@@ -48,9 +49,11 @@ export class RegisterComponent implements OnInit {
       this.registerForm.get('password.original').value
     )
     .then(res => {
+      this.registerForm.enable();
       this.currentState = RegisterUserState.Activate;
     })
     .catch(err => {
+      this.registerForm.enable();
       switch (err.code) {
         case "UsernameExistsException":
           this.setError("An account with that email already exists.");
@@ -66,12 +69,17 @@ export class RegisterComponent implements OnInit {
   }
 
   onActivate() {
+    this.activateForm.disable();
     this.userService.activateUser(
       this.activateForm.get('email').value,
       this.activateForm.get('code').value
     )
-    .then(res => { this.currentState = RegisterUserState.Success; })
+    .then(res => {
+      this.activateForm.enable();
+      this.currentState = RegisterUserState.ActivateSuccess;
+    })
     .catch(err => {
+      this.activateForm.enable();
       this.setActivateError(err.message);
       this.currentState = RegisterUserState.Activate
     });
@@ -95,6 +103,10 @@ export class RegisterComponent implements OnInit {
 
   showActivateForm() {
     return this.currentState === RegisterUserState.Activate;
+  }
+
+  showActivateSuccessMessage() {
+    return this.currentState == RegisterUserState.ActivateSuccess;
   }
   
   setError(message: string) {
@@ -131,6 +143,6 @@ export class RegisterComponent implements OnInit {
 enum RegisterUserState {
   Initial,
   Activate,
-  Success,
+  ActivateSuccess,
   Error
 }
