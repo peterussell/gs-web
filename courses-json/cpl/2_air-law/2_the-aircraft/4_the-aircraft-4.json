@@ -1,0 +1,162 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft", "maintenance"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "The __________ of an aircraft must ensure that the aircraft is maintained in an airworth condition.",
+			"answer": "Operator.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.603 - General Maintenance Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "With regard to maintenance, what does AD stand for and how does it relate to aircraft airworthiness?",
+			"answer": "Airworthiness Directive. All applicable ADs must be complied with",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.603 - General Maintenance Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "All defects must be rectified before flight, except for which instruments and equipment?",
+			"answer": "Any permitted to be inoperative under part 91.537 (either by MEL, or aircraft under 5700kg and meeting the other conditions of 91.537, or with a special flight permit).",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.603 - General Maintenance Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 91 (91.537 - Inoperative instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "The aircraft must be maintained under a Maintenance Programme approved under: Part 119 (specifically for ___ __________), or Part 91 (specifically for aircraft issued with a __________/__________ airworthiness certificate), or under the __________ maintenance schedule.",
+			"answer": "Air Operations. Special/experimental. Manufacturer's.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.603 - General Maintenance Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 91 (91.607 - Approval of maintenance programmes)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "The aircraft must be inspected in conformity with Part ___, or the __________ __________ __________ (OMM), or in conformity with another approved maintenance programme.",
+			"answer": "91. Operator's Maintenance Manual.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.603 - General Maintenance Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "An inspection must be performed every ___ months, or ___ hours, whichever comes __________. What is the exception to this?",
+			"answer": "12. 100. If the aircraft is maintained under a maintenance schedule which doesn't require an annual or 100 hour inspection.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.603 - General Maintenance Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How often (at least) must the following systems be inspected? Radios, (for operations under IFR): ___ months, static pressure and altimeter systems: ___ months, transponders: ___ months, ELTs: ___ months or ___ hours, whichever is __________.",
+			"answer": "24 months. 24 months. 24 months. 12 months. 100 hours. Sooner.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.605(e) - Maintenance programmes and schedules)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How often must a Review of Airworthiness be carried out?",
+			"answer": "Within the preceeding 12 months, or within the preceding 24 months for an aircraft not operated for hire or reward.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.615 - Review of Airworthiness)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How often must a Maintenance Review be carried out. Maintenance review requirements are in CAR Part ___.",
+			"answer": "Within the preceeding 12 months. 135.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 135 (135.415 - Maintenance Review)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Instruments or equipment permitted to be inoperative must be __________ and details recorded in the __________ __________ __________.",
+			"answer": "Placarded. Aircraft technical log.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.603 - General Maintenance Requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

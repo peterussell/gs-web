@@ -1,5 +1,5 @@
 .mat-expansion-panel {
-    margin-bottom: 16px;
+    border: 1px solid #ddd;
 }
 
 .mat-expansion-panel-header {
@@ -7,10 +7,40 @@
     padding-bottom: 16px;
 }
 
-.mat-expansion-panel-header.mat-expanded {
-    border-bottom: 1px solid #ddd;
+/deep/ .mat-expansion-panel-body {
+    padding: 16px 24px 6px 40px;
+    background-color: #f7f7f7;
 }
 
-/deep/ .mat-expansion-panel-body {
-    padding: 10px 24px 10px;
+.answer {
+    padding-bottom: 10px;
 }
+
+.references {
+    border-top: 1px solid #ddd;
+    font-size: 0.8em;
+    padding: 6px 0 0 0;
+    margin: 0;
+}
+
+span.title {
+    float: left;
+}
+
+ul {
+    float: left;
+    padding: 0;
+    padding-left: 20px;
+    margin: 0;
+}
+
+li {
+    display: inline;
+}
+
+li:not(:first-child):before {
+    content: " | ";
+    padding: 0 10px;
+}
+
+span.clear { clear: left; display: block; }

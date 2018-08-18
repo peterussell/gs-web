@@ -1,0 +1,101 @@
+/* Typography */
+h2 {
+    font-weight: 400;
+    font-size: 1.6em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 0.9em;
+    line-height: 1.6em;
+}
+
+/* Layout */
+.header-container {
+    background-image: url('/assets/images/landing-page/background.jpg');
+    max-width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: inline-block;
+    top:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.devices {
+    padding-top: 20px;
+    vertical-align: top;
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.info {
+    max-width: 380px;
+    text-align: left;
+    color: #fff;
+    display: inline-block;
+    right: 0px;
+    padding: 10px 10px 20px 10px;
+
+    h2 {
+        padding-top: 10px;
+    }
+}
+
+.register-interest {
+    text-align: center;
+    padding: 20px 0 60px 0;
+
+    &__info {
+        max-width: 500px;
+        padding: 0 10px;
+        display: inline-block;
+    }
+
+    &__error {
+        padding: 0 0 14px 0;
+        color: #f44336;
+    }
+
+    form {
+        padding-bottom: 20px;
+    }
+
+    mat-form-field {
+        width: 80%;
+        max-width: 400px;
+        padding-bottom: 0px;
+    }
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+
+    &__fb {
+
+        &--logo {
+            width: 16px;
+            vertical-align: top;
+            margin: 0;
+            padding: 2px 4px 0 0;
+        }
+
+        &--text typography {
+            vertical-align: top;
+            color: #fff;
+        }
+    }
+}

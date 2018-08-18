@@ -8,8 +8,10 @@ import { CourseComponent } from './course/course.component';
 import { CourseResolver } from './course/course-resolver.service';
 import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const appRoutes: Routes = [
+    { path: '', component: LandingPageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
@@ -17,7 +19,7 @@ const appRoutes: Routes = [
         { path: '', component: CoursesDashboardComponent },
         { path: ':title', component: CourseComponent, resolve: {course: CourseResolver} }
     ]},
-    { path: '**', redirectTo: '/login' }
+    { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({

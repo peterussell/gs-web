@@ -1,0 +1,338 @@
+{
+	"question_set_id": "45df69bd-1d06-426d-b21a-5ab54b7e8e25",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["admin-and-operations"],
+	"title": "Administration and Operations",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 1: Administration and Operations",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+		{
+			"question": "How many NOTAM areas are there in the New Zealand FIR?",
+			"answer": "10.",
+			"references": [
+				{
+					"text": "Waypoints 1-5",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Figure GEN 3.1-1: New Zealand Briefing Areas)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What kind of NOTAM is associated with an AIP amendment or SUP publication. When is that NOTAM issued and what is its purpose?",
+			"answer": "Trigger NOTAM. On the AIRAC effective date of the amendment or SUP. To remind users of changes that may affect their operations.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.7.2: Trigger NOTAM)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What information is contained in a Trigger NOTAM?",
+			"answer": "A brief description of the contents of the amendment or supplement, the effective date, and the reference number of the amendment or supplement.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.7.3: Trigger NOTAM)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Unless otherwise requested, how long are in-flight and pre-flight briefing NOTAMs valid for?",
+			"answer": "24 hours from the time of despatch.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.4.4: NOTAM and PIB)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What publication does AIC stand for, and what information do they contain?",
+			"answer": "Aeronautical Information Circular. Information about flight safety, navigation, technical, administrative, or legislative matters, which doesn't qualify for a NOTAM or inclusion in the AIPNZ.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.5: Aeronautical Information Circular)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "When are AICs published?",
+			"answer": "As required, in accordance with the AIRAC cycle.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.5: Aeronautical Information Circular)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "VFR (planning and navigation) and IFR (en-route and area) charts are part of the __________.",
+			"answer": "AIPNZ.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.2: AIP)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What does an AIP Update Bulletin contain?",
+			"answer": "New pages for AIPNZ documents, including past amendments and additions.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Amendments to AIPNZ documents are distributed at least _____ days in advance of the effective date.",
+			"answer": "28.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 3.1 (Section 3.7: AIP Amendments)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "You are able to submit and terminate flight plans via the _____ website.",
+			"answer": "IFIS.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "IFIS Website",
+					"url": "https://www.ifis.airways.co.nz/"
+				}
+			]
+		},
+		{
+			"question": "Weather information (is/is not) available on the IFIS website. The two exceptions are __________ and __________ reports.",
+			"answer": "Is not. SIGMETs. ATIS.",
+			"references": [
+				{
+					"text": "Waypoints 1-6",
+					"url": ""
+				},
+				{
+					"text": "IFIS Website",
+					"url": "https://www.ifis.airways.co.nz/"
+				}
+			]
+		},
+		{
+			"question": "In which CAR part can you find definitions and abbreviations of terms used in aviation documents?",
+			"answer": "CAR Part 1",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Who does the Director refer to?",
+			"answer": "The Director of Civil Aviation.",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Which person is referred to as the Minister?",
+			"answer": "The Minister of Transport (an elected Member of Parliament).",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				},
+				{
+					"text": "CAR Part 1",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "In aviation documents, the terms _____ or _____ indicate a rule that must be complied with, whereas the word _____ means a recommendation is being made.",
+			"answer": "Shall. Must. Should.",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Give the units of measurement used in New Zealand aviation for navigation distances: __________, elevation: __________, altitude and height: __________, speed: __________, vertical speed: __________, dimensions: __________, visibility: __________ or __________, temperature: __________.",
+			"answer": "Nautical miles. Feet. Feet. Knots. Feet per minute. Metres. Metres or kilometres. Degrees celsius.",
+			"references": [
+				{
+					"text": "Waypoints 1-7",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 1: Units of Measurement)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "What time is used for all flights within New Zealand?",
+			"answer": "Co-ordinated universal time (UTC).",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2: Time System)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "NZST stands for ___________________ and is _____ hours (ahead of/behind) UTC. NZDT stands for ____________________ and is _____ hours (ahead of/behind) UTC.",
+			"answer": "New Zealand Standard Time. 12. Ahead. New Zealand Daylight Time. 13. Ahead.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2: Time System)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "When does NZDT begin and end?",
+			"answer": "Begins at 0200 NZST on the last Sunday of September. Ends at 0300 NZDT on the first Sunday in April.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.3: NZDT)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "How can you get accurate time information from a radio broadcast?",
+			"answer": "Radio New Zealand broadcast programmes transmit time pips every hour on the hour.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				}
+			]
+		},
+		{
+			"question": "Decode this date/time group: 080518 UTC.",
+			"answer": "8th day of the month, 5:18am UTC.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.4: Date/Time Groups)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Decode this date/time group: 301442 UTC.",
+			"answer": "30th day of the month, 2:42pm UTC.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.4: Date/Time Groups)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Decode this date/time group: 1109042055 UTC.",
+			"answer": "4 September 2011, 8:55pm UTC.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.4: Date/Time Groups)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		},
+		{
+			"question": "Decode this date/time group: 1412110107.",
+			"answer": "11 December 2014, 1:07am UTC.",
+			"references": [
+				{
+					"text": "Waypoints 1-8",
+					"url": ""
+				},
+				{
+					"text": "AIP NZ GEN 2.1 (Section 2.4: Date/Time Groups)",
+					"url": "http://www.aip.net.nz/pdf/GEN_2.1.pdf"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,77 @@
+<div class="header-container mat-typography">
+  <div class="logo-container">
+    <img src="/assets/images/landing-page/groundschoolnz-logo-200.png" />
+  </div>
+
+    <div class="devices">
+      <img src="/assets/images/landing-page/devices.png" />
+    </div>
+    <div class="info">
+      <h2>Welcome to GroundSchool</h2>
+      <p>
+        Flying is awesome. It's also serious business. As pilots
+        we need to know our stuff.
+      </p>
+      <p>
+        Whether you’re studying for your first exam, flight review, job interview,
+        or already have your license and know the importance of keeping current,
+        our mission is to assist you by providing <strong>quality online flight training
+        resources for New Zealand pilots.</strong>
+      </p>
+    </div>
+</div>
+
+<div class="register-interest mat-typography">
+
+  <div *ngIf="showRegisterForm(); else success">
+    <div class="register-interest__info">
+      <h2>I want in...</h2>
+      <p>
+        GroundSchool is currently in a closed beta. Want to know when it's ready?
+        Pop your email in below and we'll keep you up to date.
+        We won't use your email for any other purpose.
+      </p>
+    </div>
+  
+    <form [formGroup]="registerInterestForm" (ngSubmit)="onRegisterInterest()">
+      <div>
+        <mat-form-field class="email">
+          <input matInput formControlName="email" placeholder="Email">
+          <mat-error *ngIf="!registerInterestForm.get('email').valid && registerInterestForm.get('email').touched">
+            Valid email required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="register-interest__error">
+        {{ errorMessage }}
+      </div>
+
+      <div>
+        <button mat-stroked-button [disabled]="!registerInterestForm.valid" color="basic">
+          Get early access
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <ng-template #success>
+    <div class="register-interest__info">
+      <h2>Thanks for your interest</h2>
+      <p>
+        We're working hard to get GroundSchool ready and you'll be the first you know as soon as it's
+        open to the public.
+      </p>
+      <p>
+        In the meantime, you can follow along with development updates on our
+        <a href="{{ facebookUrl }}" target="_blank">Facebook page</a>.
+      </p>
+    </div>
+  </ng-template>
+
+</div>
+
+<div class="footer mat-typography">
+  <img src="/assets/images/landing-page/fb-logo.png" class="footer__fb--logo" />
+  <a href="{{ facebookUrl }}" class="white" target="_blank">facebook.com/groundschoolnz</a>
+</div>

@@ -1,0 +1,294 @@
+{
+	"question_set_id": "45df69bd-1d06-426d-b21a-5ab54b7e8e25",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["admin-and-operations"],
+	"title": "Administration and Operations",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 1: Administration and Operations",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+		{
+			"question": "What does 'for hire or reward' mean?",
+			"answer": "Remuneration for services rendered, in terms of money, goods, credit, or any other form.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				}
+			]
+		},
+		{
+			"question": "A pilot flying for hire or reward requires a _______________ License, or an _______________ License.",
+			"answer": "Commercial Pilot (License). Air Transport Pilot (License).",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 61 (Subpart E - CPL, Subpart F - ATPL)",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "An Air Operator who wants to provide aeronautical services for hire or reward requires a certificate issued by __________ under CAR Part _____.",
+			"answer": "The Civil Aviation Authority (CAA). 119.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 119",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_119_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "What are the two types of Air Operator Certificates?",
+			"answer": "Airline Air Operator Certificate. General Aviation Air Operator Certificate.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 119 (119.3 - Definitions)",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_119_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "An Airline Air Operator Certificate allows an operator to operate what type of aeroplane?",
+			"answer": "Any.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 119 (119.3 - Definitions)",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_119_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "A General Aviation Operator Certificate allows operations under Part _____, in aeroplanes with seating for _____ passengers or less (including/excluding crew member seats), and a maximum certified __________ weight of _____kg, or all types of __________.",
+			"answer": "135. 9. Excluding. Take-off. 5700kg. Helicopters.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 119 (119.3 - Definitions)",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_119_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Give the names of the following CAR Parts: Part 121 - Air Operations - _______________. Part 125 - Air Operations - _______________. Part 135 - _______________ and _______________.",
+			"answer": "Large aeroplanes. Medium Aeroplanes. Helicopters, small aeroplanes.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 121 - Large aeroplanes",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_121_Consolidation.pdf"
+				},
+				{
+				  "text": "CAR Part 125 - Medium aeroplanes",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_125_Consolidation.pdf"
+				},
+				{
+				  "text": "CAR Part 135 - Helicopters and small aeroplanes",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "What are the two types of Air Operations under Part 125 and 135?",
+			"answer": "Air Transport Operations (ATOs). Commercial Transport Operations (CTOs).",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "What is the definition of an ATO?",
+			"answer": "Air Transport Operation: an operation for the carriage of passengers or goods by air for hire or reward, except commercial transport operations, adventure aviation operations, helicopter external load operations, agricultural aircraft operations, or trial flights.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "What is the definition of a CTO?",
+			"answer": "Commercial Transport Operation: an operation for carriage of passengers or goods for hire or reward, where either i) each passenger is performing or undergoing training to perform a task or duty on the operation, or ii) the passengers or goods are carried to or from a remote aerodrome, except for helicopter load operations, or agricultural operations.",
+			"references": [
+				{
+				  "text": "Waypoints 1-10, 1-11",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "What is the main difference between CTOs and ATOs?",
+			"answer": "In CTOs, 'passengers' perform (or are being trained to perform) functions related to the flight, or the flight is to/from a remote aerodrome. Passengers or goods in ATOs are there for the purpose of being transported from one place to another.",
+			"references": [
+				{
+				  "text": "Waypoints 1-11",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "What is the definition of a crew member?",
+			"answer": "A flight crew member, attendant, or someone performing a duty associated with the aircraft, assigned by the operator. Someone undergoing or giving instruction in control & navigation of the aircraft, or as a flight engineer or attendant. Someone authorised by the Director to exercise a function associated with the operation of the flight. Or a flight examiner.",
+			"references": [
+				{
+				  "text": "Waypoints 1-11",
+				  "url": ""
+				},
+				{
+				  "text": "CAR part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Is a flight examiner considered a crew member?",
+			"answer": "Yes.",
+			"references": [
+				{
+				  "text": "Waypoints 1-11",
+				  "url": ""
+				},
+				{
+				  "text": "CAR part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Are passengers who perform tasks on a CTO considered crew members? (eg. an aerial photographer)",
+			"answer": "Not generally, unless they fall under one of the definitions of 'crew member' in CAR Part 1.",
+			"references": [
+				{
+				  "text": "Waypoints 1-11",
+				  "url": ""
+				},
+				{
+				  "text": "CAR part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "If a flight is operated for hire or reward, but all passengers fit the definition of 'crew members', what CAR Part does that flight operate under? Why?",
+			"answer": "Part 91. Part 121, 125, 135 define flights carrying 'passengers' or goods, and passengers do not include crew members.",
+			"references": [
+				{
+				  "text": "Waypoints 1-11",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "What is the definition of a remote aerodrome?",
+			"answer": "An area of land or water used for take-off or landing which has restricted access by land or water, and doesn't meet standards for aerodromes under Part 139.",
+			"references": [
+				{
+				  "text": "Waypoints 1-11",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "If a rule specifies requirements for Air Operations, they apply to (Air Transport Operations/Commercial Transport Operations/Both).",
+			"answer": "Both.",
+			"references": [
+				{
+				  "text": "Waypoints 1-11",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 1 - Definitions and Abbreviations",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "Air Operations can only be done by operators certified under CAR Part _____, and flown by pilots holding either a _______________ License or an _______________ License",
+			"answer": "(Part) 119. Commercial Pilot (License). Air Transport Pilot (License).",
+			"references": [
+				{
+				  "text": "Waypoints 1-12",
+				  "url": ""
+				},
+				{
+				  "text": "CAR Part 119",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_119_Consolidation.pdf"
+				}
+			]
+		},
+		{
+			"question": "One of the purposes of the CARs is to (summarise/elaborate on) the CAA Act 1990.",
+			"answer": "Elaborate on.",
+			"references": [
+				{
+				  "text": "Waypoints 1-12",
+				  "url": ""
+				}
+			]
+		},
+		{
+			"question": "What does F&PP stand for? Which part of the CAA Act specifies the criteria for this qualification?",
+			"answer": "Fit and Proper Person. Section 10.",
+			"references": [
+				{
+				  "text": "Waypoints 1-12",
+				  "url": ""
+				},
+				{
+				  "text": "CAA Act 1990 - Section 10",
+				  "url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

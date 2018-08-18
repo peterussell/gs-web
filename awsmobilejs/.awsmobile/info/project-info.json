@@ -1,0 +1,19 @@
+{
+	"ProjectName": "web",
+	"ProjectPath": "/Users/pete/dev/groundschool/web",
+	"InitializationTime": "2018-07-28-11-53-16",
+	"LastConfigurationTime": "2018-07-28-11-52-24",
+	"LastNPMInstallTime": "",
+	"FrontendLastBuildTime": "",
+	"LastPublishTime": "",
+	"BackendLastSyncTime": "2018-07-28-13-12-44",
+	"BackendLastBuildTime": "2018-07-28-12-33-33",
+	"BackendLastPushTime": "2018-07-28-12-33-53",
+	"BackendProjectID": "c6eedbf2-c89e-448a-9e4f-74eab5c7d50c",
+	"BackendProjectName": "web-2018-07-28-11-52-24",
+	"BackendProjectConsoleUrl": "https://console.aws.amazon.com/mobilehub/home#/c6eedbf2-c89e-448a-9e4f-74eab5c7d50c/build",
+	"BackendProjectCreationTime": "2018-07-27T23:52:28.182Z",
+	"BackendProjectLastUpdatedTime": "2018-07-28T01:12:17.083Z",
+	"Framework": "angular",
+	"BackendLastSyncToDevTime": "2018-07-28-13-13-06"
+}
