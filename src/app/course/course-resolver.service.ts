@@ -4,7 +4,6 @@ import { Observable } from "rxjs/Observable";
 
 import { Course } from "../core/models/course.model";
 import { ApiService } from "../core/services/api.service";
-import { CourseMocker } from "../mocks/course-mocker";
 
 
 @Injectable()

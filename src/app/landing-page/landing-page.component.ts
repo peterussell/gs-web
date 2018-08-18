@@ -15,7 +15,6 @@ export class LandingPageComponent implements OnInit {
   registerInterestForm: FormGroup;
   private errorMessage: string = "";
   private currentState: RegisterInterestState = RegisterInterestState.Initial;
-  private isProcessing: boolean = false;
   public facebookUrl: string = GlobalVariables.FACEBOOK_URL;
 
   constructor(private userService: UserService) {}
