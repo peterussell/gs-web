@@ -9,6 +9,5 @@ export class Topic {
         public title: string,
         questionSets: Array<QuestionSet>) {
             this.questionSets = questionSets.sort();
-            console.log(questionSets.sort());
         }
 }

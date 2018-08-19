@@ -29,11 +29,14 @@ export class QuestionSelectorComponent implements OnInit {
         return 0;
       });
       this.selectTopic(this.topics[0]);
+
+      this.questionService.onTopicUpdated.subscribe((res: {course: Course, topic: Topic}) => {
+        this.selectTopic(res.topic);
+      })
     }
   }
 
   selectTopic(topic: Topic) {
-    debugger;
     if (topic !== undefined && topic.questionSets.length > 0) {
       this.selectedTopic = topic;
       this.questionSets = topic.questionSets.sort((a, b) => {

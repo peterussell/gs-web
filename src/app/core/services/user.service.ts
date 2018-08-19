@@ -44,7 +44,6 @@ export class UserService {
     }
 
     resetPassword(email: string, code: string, password: string): Promise<any> {
-        console.log(email, code, password);
         return Auth.forgotPasswordSubmit(email, code, password);
     }
 

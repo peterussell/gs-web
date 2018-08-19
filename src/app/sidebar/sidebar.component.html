@@ -2,17 +2,27 @@
   <img src="/assets/images/sidenav/logo.png" alt="GroundSchool NZ">
 </div>
 
-<div class="sidenav__nav-wrapper" role="navigation">
-  <mat-expansion-panel class="gs" [expanded]="true">
-    
-    <!-- Courses -->
-    <mat-expansion-panel-header [expandedHeight]="'40px'" [collapsedHeight]="'40px'">
-        <i class="material-icons">flight_takeoff</i><span>Courses</span>
-    </mat-expansion-panel-header>
+<div class="sidenav__content" role="navigation">
+  <h2>Courses</h2>
 
-    <mat-nav-list>
-      <mat-list-item><i class="material-icons">chevron_right</i> CPL</mat-list-item>
-    </mat-nav-list>
+  <mat-expansion-panel
+    *ngFor="let course of courses"
+    class="mat-elevation-z0 menu-expansion-panel"
+    [expanded]="true">
+
+      <mat-expansion-panel-header
+        class="menu-expansion-panel-header"
+        [expandedHeight]="'20px'"
+        [collapsedHeight]="'20px'">
+          {{ course.title }}
+      </mat-expansion-panel-header>
+
+      <mat-nav-list *ngIf="courses">
+        <a mat-list-item *ngFor="let topic of course.topics" (click)="topicSelected(course, topic)">
+          {{ topic.title }}
+        </a>
+      </mat-nav-list>
 
   </mat-expansion-panel>
+
 </div>
