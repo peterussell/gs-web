@@ -1,12 +1,12 @@
 <div class="paginator__container">
-    Viewing questions {{ CurrentStartIndex+1 }} - {{ CurrentEndIndex }} of {{ TotalQuestionCount }}
+    Viewing questions {{ currentStartIndex+1 }} - {{ currentEndIndex }} of {{ totalQuestionCount }}
     <button mat-button (click)="goToPreviousPage()" class="paginator__button" [disabled]="!canGoPrevious()"><<</button>
     <button mat-button (click)="goToNextPage()" class="paginator__button" [disabled]="!canGoNext()">>></button>
 </div>
 
 <div class="question-set__container">
-    <div *ngIf="CurrentPage; else noQuestions">
-        <app-question *ngFor="let question of CurrentPage" [question]="question">
+    <div *ngIf="currentPage; else noQuestions">
+        <app-question *ngFor="let question of currentPage" [question]="question">
         </app-question>
     </div>
         
@@ -16,7 +16,7 @@
 </div>
 
 <div class="paginator__container">
-    Viewing questions {{ CurrentStartIndex+1 }} - {{ CurrentEndIndex }} of {{ TotalQuestionCount }}
+    Viewing questions {{ currentStartIndex+1 }} - {{ currentEndIndex }} of {{ totalQuestionCount }}
     <button mat-button (click)="goToPreviousPage()" class="paginator__button" [disabled]="!canGoPrevious()"><<</button>
     <button mat-button (click)="goToNextPage()" class="paginator__button" [disabled]="!canGoNext()">>></button>
 </div>

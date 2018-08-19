@@ -14,16 +14,11 @@ export class QuestionService {
 
     updateQuestionSet(questionSetId: string) {
         this.apiService.getQuestions(questionSetId).subscribe((res) => {
-            if (res === {}) {
-                // TODO: should go to a logger (does S3 have something we can use?)
-                console.log(`Error fetching questionSet ${questionSetId}, status code ${res.statusCode}.`);
-            } else {
-                this.questionSet = res;
-                this.onQuestionsUpdated.emit(this.questionSet);
-            }
+            this.questionSet = res;
+            this.onQuestionsUpdated.emit(this.questionSet);
         },
         (error: any) => {
-            console.log(`Error: ${error}`)
+            console.log(`Error: ${error.message}`)
         });
     }
 }
