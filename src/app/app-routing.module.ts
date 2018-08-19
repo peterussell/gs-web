@@ -11,7 +11,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const appRoutes: Routes = [
-    { path: '', component: LandingPageComponent },
+    // { path: '', component: LoginComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
@@ -19,7 +19,7 @@ const appRoutes: Routes = [
         { path: '', component: CoursesDashboardComponent },
         { path: ':title', component: CourseComponent, resolve: {course: CourseResolver} }
     ]},
-    { path: '**', redirectTo: '/' }
+    { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({
