@@ -5,7 +5,21 @@
 <div class="sidenav__content" role="navigation">
   <h2>Courses</h2>
 
-  <mat-expansion-panel
+  <span *ngFor="let course of courses">
+    <h4>{{ course.title }}</h4>
+
+    <span
+      *ngFor="let topic of sortTopics(course.topics)"
+      (click)="topicSelected(course, topic)">
+      <p class="sidenav__content--topic">
+        <i class="material-icons">arrow_right</i>
+        {{ topic.title }}
+      </p>
+    </span>
+  </span>
+
+
+  <!-- <mat-expansion-panel
     *ngFor="let course of courses"
     class="mat-elevation-z0 menu-expansion-panel"
     [expanded]="true">
@@ -13,16 +27,17 @@
       <mat-expansion-panel-header
         class="menu-expansion-panel-header"
         [expandedHeight]="'20px'"
-        [collapsedHeight]="'20px'">
+        [collapsedHeight]="'20px'"
+        style="padding: 0; margin: 0;">
           {{ course.title }}
       </mat-expansion-panel-header>
 
-      <mat-nav-list *ngIf="courses">
-        <a mat-list-item *ngFor="let topic of course.topics" (click)="topicSelected(course, topic)">
+      <span *ngIf="courses">
+        <a mat-list-item *ngFor="let topic of sortTopics(course.topics)" (click)="topicSelected(course, topic)">
           {{ topic.title }}
         </a>
-      </mat-nav-list>
+      </span>
 
-  </mat-expansion-panel>
+  </mat-expansion-panel> -->
 
 </div>
