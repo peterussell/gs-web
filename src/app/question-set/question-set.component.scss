@@ -1,4 +1,19 @@
-.question-set__container {
-    width: 95%;
-    margin-top: 30px;
+.paginator {
+    &__container {
+        width: 95%;
+        text-align: right;
+        padding: 10px 0 6px 0;
+    }
+
+    &__button {
+        min-width: 16px;
+    }
+}
+
+.question-set {
+    &__container {
+        width: 95%;
+        margin: 0;
+        padding: 0;
+    }
 }

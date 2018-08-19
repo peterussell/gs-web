@@ -36,8 +36,8 @@ export class QuestionSelectorComponent implements OnInit {
     if (topic !== undefined && topic.questionSets.length > 0) {
       this.selectedTopic = topic;
       this.questionSets = topic.questionSets.sort((a, b) => {
-        if (a.title < b.title) return -1;
-        if (a.title > b.title) return 1;
+        if (a.Title < b.Title) return -1;
+        if (a.Title > b.Title) return 1;
         return 0;
       });
       this.selectQuestionSet(this.questionSets[0]);
@@ -46,7 +46,7 @@ export class QuestionSelectorComponent implements OnInit {
 
   selectQuestionSet(questionSet: QuestionSet) {
     this.selectedQuestionSet = questionSet;
-    this.questionService.updateQuestionSet(questionSet.questionSetId);
+    this.questionService.updateQuestionSet(questionSet.QuestionSetId);
   }
 
   // Material event handlers

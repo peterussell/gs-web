@@ -2,13 +2,11 @@
     width: 95%;
     padding-bottom: 0;
     padding-left: 0;
-
-    &__topic {
-        width: 40%;
-    }
+    overflow: auto;
 
     &__question-set {
-        width: 40%;
+        float: left;
+        width: 95%;
     }
 }
 
