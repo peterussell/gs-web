@@ -25,4 +25,14 @@ export class QuestionComponent implements OnInit {
   insertDegreeSymbols(input: string): string {
     return input.replace(/&deg;/g, '°');
   }
+
+  sortReferences(references: Array<Reference>): Array<Reference> {
+    return references.sort((a, b) => {
+      if (a.text.toLowerCase().startsWith('waypoints')) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+  }
 }

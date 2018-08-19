@@ -10,7 +10,7 @@
   <div class="references">
     <span class="title"><strong>References:</strong></span>
     <ul>
-      <li *ngFor="let reference of question.references">
+      <li *ngFor="let reference of sortReferences(question.references)">
           <a href="{{ reference.url }}" target="_blank" *ngIf="reference.url; else noLink">{{ reference.text }}</a>
           <ng-template #noLink>{{ reference.text }}</ng-template>
       </li>
