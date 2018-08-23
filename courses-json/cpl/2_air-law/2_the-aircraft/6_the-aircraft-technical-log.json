@@ -1,0 +1,196 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft", "technical log"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "The technical log can be form CA006, or what other form of document?",
+			"answer": "A similar document designed by the operator and approved by the CAA.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.619 - Technical log)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				},
+				{
+					"text": "Form CA006 - Aircraft Technical Log",
+					"url": "https://www.caa.govt.nz/assets/legacy/Forms/CA006-Technical-Log.pdf"
+				}
+			]
+		},
+    {
+			"question": "The operator of an aircraft must provide a technical log with provision for recording what 12 things?",
+			"answer": "1) Name of the operator. 2) Registration mark, type, and model of aircraft. 3) The maintenance programme. 4) Status of maintenance, including date or hours of the next scheduled inspection, and any requirement for an operational flight check to be carried out. 5) Date or hours any other scheduled maintenance is due prior to next scheduled inspection. 6) Date of the next annual review of Airworthiness or Maintenance review is due. 7) Daily hours flown. 8) Total time in service. 9) If applicable: daily cycles used, and total cycles. 10) Any defects found during pre-flight, during flight, or post-flight. 11) Details of rectification of defects between scheduled inspections, and certification for release-to-service for the rectification. 12) Details of any deferred rectification including allowable inoperative equipment.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.619 - Technical log)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				},
+				{
+					"text": "Form CA006 - Aircraft Technical Log",
+					"url": "https://www.caa.govt.nz/assets/legacy/Forms/CA006-Technical-Log.pdf"
+				}
+			]
+		},
+    {
+			"question": "Where must any defects be recorded which are identified by the flight crew during inspections or in flight?",
+			"answer": "The Technical Log.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				}
+			]
+		},
+    {
+			"question": "Are pilots able to complete the Technical Log following approved Pilot Maintenance? eg. a role change.",
+			"answer": "Yes.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				}
+			]
+		},
+    {
+			"question": "Signing the technical log (is/is not) restricted to maintenance engineers.",
+			"answer": "Is not.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (43.101 - Release to Service)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A '__________ to __________' is a __________ statement by the aircraft maintenance engineer (or an authorised __________ after __________ approved maintenance) certifying that the maintenance has been carried out, or defects rectified or deferred (if appropriate), and the aircraft is safe for flight.",
+			"answer": "Release to Service. Signed. Pilot. Pilot.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (43.101 - Release to Service)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A release-to-service must be recorded in the _________ logbook or worksheet, and the _______________ as may be necessary.",
+			"answer": "Maintenance. Technical Log.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (43.105 - Certifying release-to-service after maintenance)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is required before an aircraft which has undergone maintenance can be flown?",
+			"answer": "A release-to-service statement has been made by an authorised person in the aircraft's log book and Technical Log.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.602 - Maintenance requirements before flight)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When must an operational flight check be carried out?",
+			"answer": "When maintenance may have affected the aircraft's flight characteristics.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.613 - Operational flight check)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the licensing requirements for someone performing an operational flight check?",
+			"answer": "They must hold a valid pilot license and type rating for the aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.613 - Operational flight check)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Who can be carried on a flight being conducted for an operational flight check?",
+			"answer": "Only people required to perform an essential function associated with the flight check.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.613(b) - Operational flight check)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What must a person performing an operational flight check specifically check for?",
+			"answer": "That the flight characteristics of the aircraft have not appreciably changed as a result of maintenance.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.613(a)(1) - Operational flight check)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What must a person performing an operational flight check do if they observe any defects?",
+			"answer": "Record them in the Technical Log.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.613(a)(2) - Operational flight check)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
