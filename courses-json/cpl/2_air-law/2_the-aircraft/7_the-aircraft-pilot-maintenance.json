@@ -1,0 +1,154 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft", "pilot maintenance"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Which CAR Part specifies who is allowed to perform maintenance on an aircraft?",
+			"answer": "CAR Part 43.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (43.51 - Persons to perform maintenance)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "For a pilot to perform maintenance allowed under Part 43, the pilot must hold a ________ ________ for the aircraft, be authorised by the __________, and have been adequately trained by ____________________.",
+			"answer": "Type rating. Operator. A trained, licensed, and type-rated engineer.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (43.51(b) - Persons to perform maintenance)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Is pilot maintenance allowed on aircraft used in Air Operations?",
+			"answer": "Yes, although the types of maintenance are restricted.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (43.51(b) - Persons to perform maintenance)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What 11 types of pilot maintenance are allowed on aircraft used to perform Air Operations?",
+			"answer": "1) Greasing and lubrication that does not require disassembly other than removal of access panels, fairings, or cowls. 2) Replacing the aircraft battery. 3) Replacing fuses and lights. 4) GPS equipment maintenance (with restrictions, database updates allowed). 5) Compressor washing (with restrictions). 6) Installation and removal of seats, doors, and role equipment (with restrictions). 7) Completion of repetitive airworthiness directive inspections (with restrictions). 8) Replenishment of engine oil. 9) Deferral of defects relating to inoperative instruments and equipment in accordance with 91.537. 10) Routine maintenance intended by the manufacturer to be performed by the pilot (with restrictions). 11) Operating the self-test function on a 406 MHz ELT.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (Appendix A, A.1 - Aircraft used to perform air operations)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What 10 types of pilot maintenance are allowed on aircraft not used to perform Air Operations (in addition to activities allowed on aircraft used in Air Operations)?",
+			"answer": "1) Replacement of tyres or skids. 2) Temporary fabric patching (with restrictions). 3) Restoration of decorative coatings (with restrictions). 4) Simple or temporary repairs to fairings or non-structural cover plates. 5) Replenishment of hydraulic fluid in hydraulic reservoirs. 6) Replacement of engine oil. 7) Replacement of pressure oil filters. 8) Replacement of turbine engine igniters. 9) Replacement of piston engine spark plugs. 10) Replacement of brake pads.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (Appendix A, A.2 - Aircraft not used to perform air operations)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is a DFR?",
+			"answer": "Daily Flight Record.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.112 - Daily flight records)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Does a Daily Flight Record have to be completed for flights not for hire or reward?",
+			"answer": "Yes.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.112 - Daily flight records)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "An entry in the DFR must be completed for each (flight/day/week).",
+			"answer": "Flight.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.112 - Daily flight records)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Who is responsible for keeping the DFR current?",
+			"answer": "The operator of the aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.112 - Daily flight records)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Name 4 (of a possible 9) pieces of information which must be entered into the DFR.",
+			"answer": "1) Operator name. 2) Name of pilot-in-command. 3) Names of other crew members. 4) Registration markings of the aircraft. 5) Date. 6) Purpose of the flight. 7) Time the flight commenced. 8) Name of departure aerodrome (ADEP). 9) Flight time. ",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.112 - Daily flight records)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
