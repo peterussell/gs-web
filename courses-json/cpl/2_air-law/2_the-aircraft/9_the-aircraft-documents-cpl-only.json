@@ -1,0 +1,32 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft", "aircraft documents", "cpl only"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "What additional documents must be available to the flight crew part of an air operation (ATO or CTO) under CAR Part 135.63, 125.63, and 135.855",
+			"answer": "A cockpit checklist covering normal, non-normal, and emergency procedures for the operation. Details of the operational flight plan. NOTAM, aeronautical information service briefing documentation and meteorological information appropriate to the operation. Notification of dangerous goods if applicable. Copies of relevant charts and plates.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 135 (135.63 - Cockpit check; 135.855 - Documents to be carried)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 125 (125.63 - Flight check system)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_125_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
