@@ -1,7 +1,9 @@
 <div class="paginator__container">
-    Viewing questions {{ currentStartIndex+1 }} - {{ currentEndIndex }} of {{ totalQuestionCount }}
-    <button mat-button (click)="goToPreviousPage()" class="paginator__button" [disabled]="!canGoPrevious()"><<</button>
-    <button mat-button (click)="goToNextPage()" class="paginator__button" [disabled]="!canGoNext()">>></button>
+    <div class="paginator__container--inner">
+        Viewing questions {{ currentStartIndex+1 }} - {{ currentEndIndex }} of {{ totalQuestionCount }}
+        <button mat-button (click)="goToPreviousPage()" class="paginator__button" [disabled]="!canGoPrevious()"><<</button>
+        <button mat-button (click)="goToNextPage()" class="paginator__button" [disabled]="!canGoNext()">>></button>
+    </div>
 </div>
 
 <div class="question-set__container">
@@ -16,7 +18,9 @@
 </div>
 
 <div class="paginator__container">
-    Viewing questions {{ currentStartIndex+1 }} - {{ currentEndIndex }} of {{ totalQuestionCount }}
-    <button mat-button (click)="goToPreviousPage()" class="paginator__button" [disabled]="!canGoPrevious()"><<</button>
-    <button mat-button (click)="goToNextPage()" class="paginator__button" [disabled]="!canGoNext()">>></button>
+    <div class="paginator__container--inner">
+        Viewing questions {{ currentStartIndex+1 }} - {{ currentEndIndex }} of {{ totalQuestionCount }}
+        <button mat-button (click)="goToPreviousPage()" class="paginator__button" [disabled]="!canGoPrevious()"><<</button>
+        <button mat-button (click)="goToNextPage()" class="paginator__button" [disabled]="!canGoNext()">>></button>
+    </div>
 </div>

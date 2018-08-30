@@ -3,6 +3,13 @@
         width: 95%;
         text-align: right;
         padding: 10px 0 6px 0;
+
+        &--inner {
+            display: inline-block;
+            padding-left: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 2px;
+        }
     }
 
     &__button {

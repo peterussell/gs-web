@@ -16,10 +16,11 @@ const appRoutes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
     { path: 'courses', component: GroundSchoolAppComponent, children: [
-        { path: '', component: CoursesDashboardComponent },
-        { path: ':title', component: CourseComponent, resolve: {course: CourseResolver} }
+        { path: '', component: CourseComponent, resolve: {course: CourseResolver} }
+        // { path: '', component: CoursesDashboardComponent }, // TODO: dashboard
+        // { path: ':title', component: CourseComponent, resolve: {course: CourseResolver} } // TODO: direct routes to courses?
     ]},
-    { path: '**', redirectTo: '/login' }
+    { path: '**', redirectTo: '/courses' }
 ];
 
 @NgModule({

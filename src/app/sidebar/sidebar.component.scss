@@ -22,10 +22,11 @@
         &--topic {
             color: #333;
             padding: 0 0 0 10px;
-            margin: 0;
+            margin: 0 20px 0 0;
             cursor: pointer;
             line-height: 2em;
             font-size: 0.9em;
+            border-left: 1px solid #ddd;
         }
     }
 }
