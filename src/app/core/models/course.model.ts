@@ -6,6 +6,7 @@ export class Course {
     constructor(
         public courseId: string,
         public title: string,
+        public order: number,
         topics: Array<Topic>) {
             this.topics = topics.sort();
         }

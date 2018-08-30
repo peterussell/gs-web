@@ -1,0 +1,174 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "What category of airworthiness certificate is required for aircraft used for Air Transport Operations (ATOs)?",
+			"answer": "Standard category.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 135 (135.53 - Aircraft airworthiness)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Can an aircraft with a restricted category airworthiness certificate be used in an ATO or CTO? If yes, under what condition?",
+			"answer": "Yes, only for a CTO. The aircraft flight manual allows such an operation.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 135 (135.53 - Aircraft airworthiness)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the six category groups within the Special category?",
+			"answer": "Special - experimental. Special - exhibition. Special - amateur built. Special - primary. Special - light sport aircraft (LSA). Special - limited.",
+			"references": [
+				{
+				  "text": "Waypoints 2-3",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.173 - Certificate categories)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A flight test called an __________ __________ __________ may be required after maintenance that may have appreciably affected the flight characteristics or operation of the aircraft.",
+			"answer": "Operational flight check.",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 43 (43.103(4) - Requirements for certifying release-to-service)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_043_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Aircaft issued with a special category airworthiness certificate require a legible __________ with wording the same as or similar to wording in CAR 21.205.",
+			"answer": "Placard",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.205 - Placard for special category aircraft.",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When might a provisional airworthiness certificate be issued?",
+			"answer": "When the applicant has applied for a type certificate (or supplemental type certificate).",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.145(a)(1) - Issue of certificate)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When can an aircraft have airworthiness certificates in multiple categories, and which categories are these?",
+			"answer": "When the aircraft can be converted from one configuration to another by removing or adding equipment by simple mechanical means. Standard and restricted categories..",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.177 - Special conditions for issue of certificate)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "If an aircaft with a standard, restricted, special, or provisional certificate is sold, the certificate (is/is not) transferred with the aircraft.",
+			"answer": "Is.",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.181 - Transfer of certificate)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "An airworthiness certificate remains in force unless the certificate __________, is __________ or __________, provided that __________ is performed in accordance with the requirements of Part 91 and 43.",
+			"answer": "Expires. Suspended. Revoked. Maintenance.",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 21 (21.179 - Duration of certificate)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_021_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Even if the airworthiness certificate is valid, an aircraft shouldn't be operated unless it is in an __________ condition.",
+			"answer": "Airworthy.",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				}
+			]
+		},
+    {
+			"question": "A __________ __________ may be issued for a Class II (2-seat) microlight aircraft.",
+			"answer": "Flight permit.",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 103 (103.203 - Requirement for flight permit)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_103_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "The __________ __________ is generally written by the constructor of the aircraft, and contains operational information and recommended handling techniques.",
+			"answer": "Flight manual.",
+			"references": [
+				{
+				  "text": "Waypoints 2-4",
+				  "url": ""
+				}
+			]
+		}
+	]
+}

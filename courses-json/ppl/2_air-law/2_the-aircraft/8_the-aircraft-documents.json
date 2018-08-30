@@ -1,0 +1,56 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft", "aircraft documents"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "What five aircraft documents are required to be carried by NZ-registered aircraft operating in New Zealand?",
+			"answer": "Airworthiness certificate (some exceptions). Flight manual. Weight and balance (form CAA 2173 or equivalent). Radio Station Equipment Approval Levels (form CAA 2129). Technical log (some exceptions).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.111 - Documents to be carried)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What two additional aircraft documents must be carried for a NZ-registered aircraft operation overseas?",
+			"answer": "General User Radio License. Current certificate of registration.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.111(4) - Documents to be carried)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What three additional aircraft documents must be carried for a foreign aircraft operating within New Zealand?",
+			"answer": "Current certificate of registration. Written evidence that the aircraft meets aircraft noise level compliance. Written evidence the aircraft meets engine emission compliance.",
+			"references": [
+				{
+				  "text": "Waypoints 2-5",
+				  "url": ""
+				},
+				{
+					"text": "CAR Part 91 (91.111(5) - Documents to be carried)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

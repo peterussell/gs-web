@@ -11,7 +11,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const appRoutes: Routes = [
-    // { path: '', component: LoginComponent },
+    // { path: '', component: LandingPageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
