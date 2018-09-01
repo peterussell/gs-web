@@ -1,0 +1,112 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft", "cargo and baggage"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "How must baggage be stowed during take-off and landing according to Part 91?",
+			"answer": "Either in a baggage locker, or under a passenger seat in a way that it won't slide forward during crash impact, or hinder evacuation in the event of an emergency.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.213 - Carry-on baggage)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Which type of aircraft is exempt from the baggage storage requirements in part 91.213?",
+			"answer": "Balloons",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.213 - Carry-on baggage)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "According to Part 91.215, where in an aicraft can cargo be carried?",
+			"answer": "On a seat, in a cargo rack or bin, or in a cargo or baggage compartment.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.215(a)(1) - Carriage of cargo)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the restraint requirements for cargo under Part 91.215?",
+			"answer": "Cargo must be secured by a safety belt or other restraining device having enough strength to ensure it doesn't shift under all normally anticipated flight and ground conditions.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.215(a)(2) - Carriage of cargo).",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "91.215 gives requirements for where cargo can be carried in an aircraft, how it must be secured, and what other requirement?",
+			"answer": "It must be packaged and covered to avoid injury to passengers.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.215(a)(3) - Carriage of cargo).",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Cargo must not exceed the ______ __________ of the seat, berth or floor structure as prescribed by the aircraft flight manual or placards.",
+			"answer": "Load limitation.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.215(b)(1) - Carriage of cargo).",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Cargo can't restrict access to or use of any required __________ ______, or use of the aisle between the ______ and __________ compartments.",
+			"answer": "Emergency exits. Crew. Passenger.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.215(b)(2) - Carriage of cargo).",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

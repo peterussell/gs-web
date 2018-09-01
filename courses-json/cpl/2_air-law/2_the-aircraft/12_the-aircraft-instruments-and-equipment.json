@@ -1,0 +1,270 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft", "instruments and equipment"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Any instruments and equipment operated or used by one pilot must be installed so it can be readily __________ and __________ from that pilot's normally seated position.",
+			"answer": "Seen. Operated.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.503(1) - Location of instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Any single instrument or item of equipment operated or used by two pilots must be installed so it can be readily __________ and __________ from each pilot's normally seated position.", 
+			"answer": "Single. Seen. Operated.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.503(2) - Location of instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the seat/berth and safety/restraining belt requirements for an aircraft (other than balloons, and other exceptions mentioned in 91.505(b)).",
+			"answer": "A seat or berth for each person on board; and safety belt for each seat and restraining belts for each berth.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.505(a) - Seating and restraints)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A shoulder harness is required for each seat in __________ aircraft, and for each crew seat in an aircraft with a seating capacity of ____ or more passengers.",
+			"answer": "Aerobatic. 10.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.505(a) - Seating and restraints)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When is a shoulder harness or single diagonal shoulder belt required? (3 scenarios).",
+			"answer": "Each flight crew member seat in a helicopter. Each flight crew member seat of an aeroplane engaged in flight training. Each flight crew member seat when the aircraft is operated on low level flights as listed in Part 91.311(c).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.505(a) - Seating and restraints)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 91 (91.311(c) - Minimum heights for VFR flights)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What two things are required to be available to every flight crew member of the aircraft for day VFR flight? What addition is there for night VFR?",
+			"answer": "An accurate means of indicating the time. Appropriate aeronautical charts. An operable electric torch.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.221 - Flying equipment and operating information)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Checklists are required in aircraft in excess of ______kg or seating capacity for ____ or more passengers.",
+			"answer": "5700. 10.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.221 - Flying equipment and operating information)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "On what type of aircraft are passenger information signs required?",
+			"answer": "Aircraft with a seating capacity for 10 or more passengers, where the crew compartment is separated from the passenger compartment.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.507 - Passenger information signs)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What two pieces of information do passenger information signs notify passengers of?",
+			"answer": "When smoking is prohibited. When safety belts must be fastened.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.507 - Passenger information signs)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What type of aircraft, with an airthworthiness certificate, is exempt from the minimum list of instruments in Part 91.509?",
+			"answer": "Powered glider.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.505(a) - Location of instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A powered aircraft with an airworthiness certificate, except a powered glider, must be equipment with means of indicating what 15 things?",
+			"answer": "1) Airspeed. 2) Mach number (if applicable). 3) Altitude in feet. 4) Magnetic heading. 5) Fuel tank contents. 6) RPM of each engine. 7) Oil pressure of each engine using a pressure lubricating system. 8) Coolant temperature of each liquid-cooled engine. 9) Oil temperature of each engine rated at over 250 BHP using a pressuring lubricating system. 10) Manifold pressure of each supercharged or turbocharged piston engine, and each engine fitted with a constant speed propellor. 11) Cylinder head temperature of each air-cooled piston engine over 250 BHP. 12) Flap position if flaps are fitted, unless they can be determined visually by the flight crew member. 13) Landing gear position if the aircraft has retractable undercarriage. 14) Correct functioning of electrical power generating equipment. 15) Presence of carbon monoxide in the cabin if the aircraft is equipped with an exhaust manifold cabin heater or combustion cabin heater.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.509(a) - Minimum instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When is an aircraft required to be equipped with a way to indicate Mach number?",
+			"answer": "If the speed limitation specified in the aircraft fliht manual is expressed in terms of Mach number.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.509(a) - Minimum instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What fuel tank contents do not require an indicator under Part 91.509?",
+			"answer": "Contents of auxiliary fuel tanks.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.509(a) - Minimum instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under Part 91.509, when are oil temperature indicators required for each engine using a pressure lubricating system?",
+			"answer": "When the engine is rated at over 250 BHP.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.509(a) - Minimum instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under Part 91.509, a manifold pressure indicator is required for each engine that is __________, __________, or is a piston engine fitted with a __________ __________ __________.",
+			"answer": "Supercharged. Turbocharged. Constant speed propellor.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.509(a) - Minimum instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When is a cylinder head temperature indicator required under Part 91.509?",
+			"answer": "For each air-cooled piston engine over 250 BHP.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.509(a) - Minimum instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When is a flap position indicator not required under Part 91.509?",
+			"answer": "When the position of the flaps can be determined visually by the flight crew member.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.509(a) - Minimum instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under 91.509, a carbon monoxide detector is required in the cabin of the aircraft is fitted with a ____________________, or a ____________________.",
+			"answer": "Exhaust manifold cabin heater. Combustion cabin heater.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.509(a) - Minimum instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
