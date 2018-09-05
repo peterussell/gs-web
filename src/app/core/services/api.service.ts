@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 import { RegisterInterestResponse } from "./interfaces/register-interest-response";
+import { Course } from "../models/course.model";
 
 @Injectable()
 export class ApiService {
@@ -10,6 +11,7 @@ export class ApiService {
     private httpOptions;
 
     private readonly coursesRelPath = 'courses';
+    private readonly quizzesRelPath = 'quizzes';
     private readonly questionSetsRelPath = 'question-sets/new';
     private readonly registerInterestRelPath = 'register-interest';
 
@@ -24,6 +26,10 @@ export class ApiService {
 
     public getCourses(): Observable<any> {
         return this.http.get(`${this.awsBasePath}/${this.coursesRelPath}`);
+    }
+
+    public getQuizCourses(): Observable<any> {
+        return this.http.get(`${this.awsBasePath}/${this.quizzesRelPath}`);
     }
 
     public getQuestions(questionSetId: string): Observable<any> {

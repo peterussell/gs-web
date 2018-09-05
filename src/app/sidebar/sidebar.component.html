@@ -9,10 +9,24 @@
     <h4>{{ course.title }}</h4>
 
     <span
-      *ngFor="let topic of sortTopics(course.topics)"
+      *ngFor="let topic of course.topics"
       (click)="topicSelected(course, topic)">
       <p class="sidenav__content--topic">
         <!-- <i class="material-icons">control_point</i> -->
+        {{ topic.title }}
+      </p>
+    </span>
+  </span>
+
+  <h2>Quizzes</h2>
+
+  <span *ngFor="let courseQuiz of courseQuizzes">
+    <h4>{{ courseQuiz.title }}</h4>
+
+    <span
+      *ngFor="let topic of courseQuiz.topics"
+      (click)="quizTopicSelected(courseQuiz, topic)">
+      <p class="sidenav__content--topic">
         {{ topic.title }}
       </p>
     </span>

@@ -29,6 +29,7 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { UserService } from './core/services/user.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     CourseComponent,
     RegisterComponent,
     ResetPasswordComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    QuizzesComponent
   ],
   imports: [
     BrowserModule,

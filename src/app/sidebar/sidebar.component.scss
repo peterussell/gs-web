@@ -7,16 +7,16 @@
 
     &__content {
         width: 240px;
-        margin: 20px 0 0 20px;
+        margin: 0 0 0 20px;
 
         h2 {
-            font-weight: 100;
-            border-bottom: 1px solid #ddd;
-            margin-right: 20px;
+            font-weight: 400;
+            // border-bottom: 1px solid #ddd;
+            margin: 20px 20px 0 0;
         }
 
         h4 {
-            margin: 16px 0 4px 0;
+            margin: 8px 0 4px 0;
         }
 
         &--topic {

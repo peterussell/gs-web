@@ -9,14 +9,16 @@ import { CourseResolver } from './course/course-resolver.service';
 import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
 
 const appRoutes: Routes = [
     // { path: '', component: LandingPageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
-    { path: 'courses', component: GroundSchoolAppComponent, children: [
-        { path: '', component: CourseComponent, resolve: {course: CourseResolver} }
+    { path: '', component: GroundSchoolAppComponent, children: [
+        { path: 'courses', component: CourseComponent, resolve: {course: CourseResolver} },
+        { path: 'quizzes/:quiz-topic-id', component: QuizzesComponent }
         // { path: '', component: CoursesDashboardComponent }, // TODO: dashboard
         // { path: ':title', component: CourseComponent, resolve: {course: CourseResolver} } // TODO: direct routes to courses?
     ]},
