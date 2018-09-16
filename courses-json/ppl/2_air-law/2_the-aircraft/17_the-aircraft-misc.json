@@ -1,0 +1,90 @@
+{
+	"question_set_id": "a34acaa5-d40a-4339-9264-121e74258139",
+	"topic_id": "806e2b8d-2d16-4138-abab-507ce429eacf",
+	"tags": ["the-aircraft", "transponder", "fuelling", "cargo", "baggage"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Transponders are required in order to fly in airspace designated as __________ __________ (TM).",
+			"answer": "Transponder Mandatory.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.247 - Use of transponder and altitude reporting equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "An aircraft required to have a transponder installed shall not be flown unless the transponder has been tested and inspected within the preceding _____ months.",
+			"answer": "24.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.605(e)(3) - Maintenance programmes and schedules.",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "An aircraft may not be refuelled or defuelled with Class 3.1A (AVGAS - piston engine aircraft) when passengers are __________, __________, or __________ the aircraft, or ____________________.",
+			"answer": "Embarking. On board. Dis-embarking. When the engine(s) is running.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.15 - Fuelling of aircraft)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under Part 91, an aircraft may not be refuelled or defuelled with Class 3.1C (Jet A1) or Class 3.1D (diesel) when passengers are __________, __________, or __________ the aircraft. The engine (may/may not) be running during refuelling or defuelling.",
+			"answer": "Embarking. On board. Dis-embarking. May.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.15 - Fuelling of aircraft)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What should you do in the case of fuel spillage on an an impermeable surface?",
+			"answer": "Cease fuelling. Immediately cover the fuel with sand, sawdust, foam, or similar material. Move the aircraft away from the contaminated area prior to engine start if there's a risk to safety.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				}
+			]
+		},
+    {
+			"question": "What is a Class B cargo or baggage compartment?",
+			"answer": "A compartment that's accessible in flight such that a crew member can reach any part with a fire extinguisher, and has a fire warning system installed.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				}
+			]
+		}
+	]
+}

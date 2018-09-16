@@ -1,0 +1,248 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "definitions"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "What CAR part is concerned with pilot licenses and ratings?",
+			"answer": "CAR Part 61.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of a co-pilot?",
+			"answer": "A licensed pilot, serving in any piloting capacity other than as pilot-in-command; does not include a pilot receiving flight instruction from a pilot on board the aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Is a pilot receiving flight instruction considered a co-pilot if they're already rated in the aircraft?",
+			"answer": "No, any pilot receiving flight instruction from a pilot on board the aircraft does not meet the definition of a co-pilot.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of a cross-country flight?",
+			"answer": "A flight which extends more than 25nm in a straight line from the centre of the aerodrome of departure.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What does 'current' mean in respect of a license, rating, or medical certificate?",
+			"answer": "The document is valid and the holder of the document has satisfied all recent experience and medical requirements for the exercise of the privileges.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of day?",
+			"answer": "The hours between morning civil twilight (MCT - when the centre of the sun's disc is 6 degrees below the horizon), and evening civil twilight (ECT - when the centre of the sun's disc is 6 degrees below the horizon).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of dual flight time?",
+			"answer": "Flight time during which a person is receiving flight instruction from an appropriately licensed and rated pilot on board a dual control aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of a flight crew member?",
+			"answer": "An appropriately qualified person assigned by the operator for an aircraft during flight time as a pilot or flight engineer.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Is a person carried for the sole purpose of undergoing or giving instruction in the control and navigation of an aircraft considered a flight crew member?",
+			"answer": "Yes.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of a flight examiner?",
+			"answer": "A person who wholds a flight examiner rating issued under Part 61, or is approved by the Director to conduct specific flight tests.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of flight time?",
+			"answer": "The total time from the moment an aircraft first moves for the purpose of flight until the moment it comes to rest at the end of the flight, including any associated push back, taxiing, and subsequent holding time.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "The duration of time defined as flight time is commonly referred to as '______ to ______'.",
+			"answer": "Chock to chock.",
+			"references": [
+				{
+				  "text": "waypoints volume 5, chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				}
+			]
+		},
+    {
+			"question": "Flight time (does/does not) include time for push back, (does/does not) include time for taxiing, and (does/does not) include any subsequent holding time.",
+			"answer": "Does. Does. Does.",
+			"references": [
+				{
+				  "text": "waypoints volume 5, chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - general definitions)",
+					"url": "https://www.caa.govt.nz/rules/rule_consolidations/part_001_consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of night?",
+			"answer": "The time between the end of evening civil twilight (ECT, when the setting sun's disc is 6 degrees below the horizon) and beginning of morning civil twilight (MCT, when the rising sun's disc is 6 degrees below the horizon).",
+			"references": [
+				{
+				  "text": "waypoints volume 5, chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - general definitions)",
+					"url": "https://www.caa.govt.nz/rules/rule_consolidations/part_001_consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of 'operate' in relation to an aircraft?",
+			"answer": "To fly or use the aircraft, or to cause or permit the aircraft to fly, be used, or be in any place, whether or not the person is present with the aircraft; and 'operator' has a corresponding meaning.",
+			"references": [
+				{
+				  "text": "waypoints volume 5, chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - general definitions)",
+					"url": "https://www.caa.govt.nz/rules/rule_consolidations/part_001_consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of pilot in command, in relation to an aircraft?",
+			"answer": "The pilot responsible for the operation and safety of the aircraft.",
+			"references": [
+				{
+				  "text": "waypoints volume 5, chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - general definitions)",
+					"url": "https://www.caa.govt.nz/rules/rule_consolidations/part_001_consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the definition of rating?",
+			"answer": "An authorisation entered on, or associated with, a license, certificate, or logbook, and forming part of it, stating special conditions, privileges, or limitations relating to the license or certificate.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (1.1 - General definitions)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

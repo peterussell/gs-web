@@ -1,0 +1,202 @@
+{
+	"question_set_id": "2291e11a-56c5-4f99-a48c-868392e5e57f",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-aircraft", "radio", "elt", "inoperative equipment"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "What communication equipment is required for aircraft operating in controlled airspace?",
+			"answer": "Approved two-way radio equipment, capable of continuous communication with the appropriate ATC unit.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.245(c) - Operations in controlled airspace)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Can you fly in B, C, or D airspace without two-way radio communication? If so, when?",
+			"answer": "Yes. If ATC authorises the pilot of an aircraft to operate VFR without two-way communication.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.245(c) - Operations in controlled airspace)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Aircraft operating over water at a distance of ________________________________________ shall be equipped with a radio capable of maintaining continuous two-way communication with an appropriate ATS unit.",
+			"answer": "More than 30 minutes flying time from the nearest shore.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.515(1) - Communication and navigation equipment - VFR over water)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When is a radio required outside controlled airspace?",
+			"answer": "If communication with an ATS unit is required, or operating in airspace requiring radio communications (eg. MBZ).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.135 - Mandatory broadcast zones)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "For aircraft under 5700kg with no Minimum Equipment List (MEL), what equipment must be operative?",
+			"answer": "Any required by day VFR requirements required by the type certificate. Any required by the specific operation. Any required by an airworthiness directive (AD) to be operable.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.537(b) - Inoperative instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Inoperative instruments must be __________ and required __________ recorded in accordance with CAR Part 43.",
+			"answer": "Placarded. Maintenance.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.537 - Inoperative instruments and equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under Part 91 for aircraft with seating capacity for less than 10 passengers, a first aid kit (is/is not) required, a fire extinguisher (is/is not) required, an axe (is/is not) required.",
+			"answer": "Is not. Is not. Is not.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.523 - Emergency equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What do these stand for, and are they activated manually or automatically? ELT(AF). ELT(S). EPIRB. PLB.",
+			"answer": "Emergency Locator Transmitter, attached permanently to the aircraft, activated automatically. Emergency Locator Transmitter (Survival), activated manually. Emergency Position Indicating Radio Beacon, activated manually. Personal Locator Beacon, activated manually.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				}
+			]
+		},
+    {
+			"question": "When is an automatic (406MHz) ELT not required to be carried on an aircraft?",
+			"answer": "1) Single seat aircraft if the pilot has an ELT(S) or PLB. 2) Glider or microlight if at least one person has an ELT(S) or PIB. 3) Glider or powered aircraft with not more than 2 seats, within 10nm of the departure aerodrome. 4) Any aircraft for not more than 7 days if equipped with an ELT(S) or PLB accessible to all occupants. 5) Ferrying an aircraft to have an ELT installed or repaired, no passengers can be carried.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.529 - Aircraft emergency location system (AELS) and ELT)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What rules should you follow when peforming an ELT self-test?",
+			"answer": "Test the ELT in a shielded area under controlled conditions. Restrict testing to three or less audio sweeps. Carry out testing within the first five minutes after each hour. Do not test when airborne.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.245(c) - Operations in controlled airspace)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When should ELT self-tests be performed?",
+			"answer": "Within the first 5 minutes after the hour (eg. between 1500 and 1505).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "AIPNZ GEN 3.6 (6.4 - ELT testing)",
+					"url": "http://www.aip.net.nz/pdf/GEN_3.6.pdf"
+				}
+			]
+		},
+    {
+			"question": "How often is an ELT required to be tested and inspected?",
+			"answer": "A test and inspection under Part 43 every 12 months or 100 hours, whichever comes first. If under a maintenance programme governed by rule 119.63, as per that programme's schedule (not more than 12 months).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.605(e)(4) - Maintenance programmes and schedules)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When is an ELT battery required to be replaced (or recharged, if possible)?",
+			"answer": "When it expires according to the manufacturer's instructions, or when the ELT has been used progressively for 1 hour.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.605(e)(4) - Maintenance programmes and schedules)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Approximately how much does an ELT self test reduce the battery life by?",
+			"answer": "1 minute.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				}
+			]
+		}
+	]
+}

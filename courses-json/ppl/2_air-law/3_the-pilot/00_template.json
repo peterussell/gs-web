@@ -1,0 +1,98 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "definitions"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "",
+			"answer": "",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+	]
+}

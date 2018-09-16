@@ -1,0 +1,28 @@
+{
+	"question_set_id": "a34acaa5-d40a-4339-9264-121e74258139",
+	"topic_id": "806e2b8d-2d16-4138-abab-507ce429eacf",
+	"tags": ["the-aircraft", "night vfr"],
+	"title": "The Aircraft",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 2: The Aircraft",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "What additional items are required for night VFR for the aircraft (91.511) and crew (91.221)?",
+			"answer": "A means of indicating rate of turn and slip (unless equipped with a third attitude indicator usable through 360&deg; of pitch and roll). Position lights. An anti-collision light system. An operable electric torch for each crew member.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 2",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.511 - Night VFR. 91.221(a)(4) - Flying equipment and operating information).",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
