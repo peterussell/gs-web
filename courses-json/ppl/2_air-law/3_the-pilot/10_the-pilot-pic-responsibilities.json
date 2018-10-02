@@ -1,0 +1,192 @@
+{
+	"question_set_id": "ef2e20c0-132d-43f2-bf98-09c4ec7858d6",
+	"topic_id": "806e2b8d-2d16-4138-abab-507ce429eacf",
+	"tags": ["the-pilot", "pic", "pic responsibilities"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "The Civil Aviation Act 1990 specifically says the pilot-in-command is responsible for ______________________________, has the final authority to ______________________________ and for the maintenance of ______________________________, and is responsible for compliance with ______________________________.",
+			"answer": "The safe operation of the aircraft in flight, the safety and wellbeing of all passengers and crew, and the safety of cargo carried. Control the aircraft while in command. Discipline by all persons on board. All relevant requirements (of the Act) and regulations and rules (under the act).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "Civil Aviation Act 1990 (Section 13 - Duties of pilot-in-command)",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html"
+				}
+			]
+		},
+    {
+			"question": "The pilot-in-command may breach rules in the Civil Aviation Act (or made under the act) due to an emergency that arises in flight under what (4) conditions?",
+			"answer": "The emergency involves a danger to life or property. The extent of the breach only goes as far as necessary to deal with the emergency. There is no other reasonable means of dealing with the emergency. The degree of danger of complying with the requirement is clearly greater than the danger involved in deviating from it.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "Civil Aviation Act 1990 (Section 13A - Duties of pilot-in-command and operator during emergencies)",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html"
+				}
+			]
+		},
+    {
+			"question": "For an emergency that does not arise in flight which requires the urgent transportation of persons or medical or other supplies for the protection of life or property, the pilot-in-command may breach the rules of the Civil Aviation Act (or made under the act) under what (7) conditions?",
+			"answer": "The emergency involves a danger to life or property. The extent of the breach only goes as far as necessary to deal with the emergency. There is no other means of dealing with the emergency. The degree of danger of complying with the requirement is clearly greater than the danger involved in deviating from it. The aircraft is registered. The aircraft is airworthy. The pilot is lawfully entitled to operate it.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "Civil Aviation Act 1990 (Section 13A(3 - 5) Duties of pilot-in-command and operator during emergencies)",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html"
+				}
+			]
+		},
+    {
+			"question": "If deviation from rules or regulations is required in an emergency, who must be notified and when?",
+			"answer": "The relevant Air Traffic Control unit, immediately. The Director as soon as practicable. If requested, furnish a written report to the Director.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "Civil Aviation Act 1990 (Section 13A - Duties of pilot-in-command and operator during emergencies)",
+					"url": "http://www.legislation.govt.nz/act/public/1990/0098/latest/whole.html"
+				}
+			]
+		},
+    {
+			"question": "91.203 says the pilot-in-command shall give ______________________________ for the safety of the aircraft and of persons and property carried on the aircraft.",
+			"answer": "Any commands necessary.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.203 - Authority of the pilot-in-command)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Can a pilot-in-command carry someone who appears to be under the influence of drugs or alcohol on a flight other than a search and rescue or ambulance flight?",
+			"answer": "Yes, unless in their opinion the person is likely to endanger the aircraft or its occupants.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.203 - Authority of the pilot-in-command)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "The PIC is to disembark any person, or part of the cargo where, in the opinion of the PIC, ______________________________.",
+			"answer": "Their carriage is likely to endagner the aircraft or its occupants.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.203 - Authority of the pilot-in-command)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under what conditions can a person who appears to be under the influence of drugs or alcohol and likely to be a danger to the aircraft or its occupants be carried?",
+			"answer": "On ambulance or search and rescue flights, if adequate steps have been taken to ensure the safety of the aircraft and occupants.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				}
+			]
+		},
+    {
+			"question": "What must the pilot-in-command specifically be familiar with, with regard to operating limitations and emergency equipment?",
+			"answer": "The aircraft flight manual. Operating limitations on placards, listings, and/or instrument markings. Emergency procedures and equipment.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.219 - Familiarty with operating limitations and emergency equipment)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Before commencing a flight, the pilot-in-command must obtain and become familiar with all information concerning that flight, including what 8 specific things? (NB. 1 of these is a multi-engine requirement).",
+			"answer": "1) Current meteorological information (where practicable). 2) Fuel requirements. 3) Alternatives available. 4) Any known or likey traffic delays notified by ATS. 5) Status of communication and navigation facilities intended to be used. 6) Current conditions of the aerodrome, and runway lengths at aerodromes of intended use. 7) Any take-off and landing distance data contained in the aircraft flight manual. 8) For multi-engine aircraft: engine inoperative procedures and performance data.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.217 - Preflight action)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Persons other than flight crew members may taxi an aircraft on the movement area of an aerodrome provided they have been duly authorised by the operator or maintenance organisation, and meet what other 3 requirements?",
+			"answer": "1) Are competent to taxi the aircraft. 2) Are able to use the radio, if applicable. 3) Are familiar with the aerodrome layout and ground movement procedures.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.119 - Aircraft taxiing)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What controls are required in an aircraft used to give flight instruction (except a balloon)?",
+			"answer": "Dual flight controls, or controls (pitch/roll/yaw, and engine power controls) which can be operated from either crew station.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.123 - Flight instruction)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Who is allowed to manipulate flight controls on an air operation (ATO or CTO) flight?",
+			"answer": "Only a flight crew member, or an authorised representative of the Director who has the permission of the certificate holder and pilot-in-command and is performing a required duty.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.69 - Manipulation of controls)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

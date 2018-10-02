@@ -1,0 +1,144 @@
+{
+	"question_set_id": "ef2e20c0-132d-43f2-bf98-09c4ec7858d6",
+	"topic_id": "806e2b8d-2d16-4138-abab-507ce429eacf",
+	"tags": ["the-pilot", "use of lower license", "recreational pilot license", "rpl"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "How does the 'exercising privileges of a lower license' rule work?",
+			"answer": "If the holder of a CPL or ATPL cannot meet the medical, recent experience, or BFR requirements for that license, but can meet those requirements for a lower license, they may exercise the privileges of that lower license.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.41 - Use of lower pilot license or rating)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "If any pilot license has not been used for 5 years or more, what's required before the privileges of the license can be exercised again?",
+			"answer": "Pass the Air Law written exam, and the appropriate issue flight test.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.37 - Recent flight experience)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the eligibility requirements for a Recreational Pilot License (RPL)?",
+			"answer": "Be at least 17. Hold the appropriate medical certificate. Have at least 50 hours flight time experience as a pilot in an aeroplane. Have completed terrain awareness training. Have passed the written examinations. Have passed the appropriate language proficiency test. Have passed a flight test.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.355 - Eligibility requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the privileges and limitations of a Recreational Pilot License?",
+			"answer": "Act as PIC on an un-pressurised aeroplane of 2000kg or less, carrying not more than one passenger. The passenger must be informed the pilot does not hold a Class 1 or 2 medical. The holder can't act as PIC of an aeroplane outside NZ, for renumeration, hire or reward, or Air Operations, during night or under IFR, for glider towing/parachute drop/banner towing/agricultural operations, for aerobatic flight, in controlled airspace (unless a colour screen test has been passed), for flight over congested areas except for takeoff and landing.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.357 - Privileges and limitations)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the currency requirements for a Recreational Pilot License holder?",
+			"answer": "Continue to meet the required medical standard. In order to carry passengers, complete not less than 3 day take-offs and landings within the previous 90 days in an aircraft of the same time (or ZFT simulator), or demonstrated competency to a Category A or B instructor. Completed a BFR within the last 2 years (may be within a 60 day period prior to the due date).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.361 - Currency requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 61 (61.37 - Recent flight experience)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the maximum time a foreign pilot license can be validator for?",
+			"answer": "6 months.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.9 - Validation permit for a foreign pilot license)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the requirements to have a foreign license validated in New Zealand?",
+			"answer": "Foreign license must be at least a PPL issued by an ICAO Contracting State. The holder must have a current medical appropriate to the license. The pilot has adequate ability speak, read, write and understand English in order to carry out the privileges of the validated license in New Zealand. The pilot passes any written examination deemed appropriate by the Director.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.9(a) - Validation permit for a foreign pilot license)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When does a foriegn pilot license validation document expire?",
+			"answer": "Either the expiry date specified on the document, or if suspended or revoked by the Director, or if the foriegn license is expired, suspended or revoked by the issuing State.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.9(c) - Validation permit for a foreign pilot license)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is true of the privileges of a validated foreign license compared to the privileges of the foreign license?",
+			"answer": "The privileges of the validated license must not be greater than the foreign license.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.9(b)(2) - Validation permit for a foreign pilot license)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,124 @@
+{
+	"question_set_id": "ef2e20c0-132d-43f2-bf98-09c4ec7858d6",
+	"topic_id": "806e2b8d-2d16-4138-abab-507ce429eacf",
+	"tags": ["the-pilot"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "No person shall operate an aircraft unless it has a current __________ certificate, and what other requirement? (NB. with some exceptions, eg. test flights, certificate renewal, validation, special flight permit, etc.)",
+			"answer": "Airworthiness. The aircraft is in an airworthy condition.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.101 - Aircraft airworthiness)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "If an aicraft with a current type certificate/type acceptance certificate is being flown for the issue, renewal, validation, or re-instatement of an airworthiness certificate, what requirements must be met for the flight?",
+			"answer": "The aircraft complies with the requirements of Part 21 (Subpart B and 21.191). A suitably qualified person (43.101(a)(1) to (5)) certifies the aircraft is fit for flight. The PIC is current and appropriately rated. No person is carried unless that person performs an essential function in connection with the operation.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.101(c) - Aircraft airworthiness)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 21 (Subpart B - Type Certificates and Type Acceptance Certificates; 21.191 - Standard and restricted category requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 43 (43.101(a) - Persons to certify release-to-service)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When can flight instruction be given in a restricted category aircraft (3 scenarios).",
+			"answer": "Conversion for a type rating. For an agricultural rating. For a specific operational purpose for which the aircraft is certificated.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.103 - Restricted category airworthiness certificate - operating limitations)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When can an aircraft with a special category airworthiness certificate be operated for hire or reward, and what conditions exist in this scenario?",
+			"answer": "When the person is a flight instructor giving conversion instruction to the operator. The aircraft must be flown away from congested areas (except for take-off and landing, or if otherwise authorised by the Director), and each person carried in the aircraft is informed of the warning specified in the placard required to be installed in the aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.105 - Special category airworthiness crtificates - operating limitations)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "An aircraft must be operated in compliance with the operating limitations specified in the __________ __________ __________.",
+			"answer": "Aircraft flight manual.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.109 - Aircraft flight manual)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A person must not operate an aircraft unless it's registered and displays identification markings in accordance with the requirements of Part _____ or ______________________________.",
+			"answer": "47. The aeronautical authority of an ICAO Contracting State, or another State that has an agreement with the NZ goverment or CAA.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.107 - Aircraft registration)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 47 - Aircraft registration and marking",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_047_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What dictates the minimum number of flight crew members required to operate any given aircraft?",
+			"answer": "The aircraft flight manual.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.113 - Aircraft flight crew members)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

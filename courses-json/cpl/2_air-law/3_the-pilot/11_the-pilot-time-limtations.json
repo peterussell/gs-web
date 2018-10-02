@@ -1,0 +1,106 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "flight and duty time", "time limitations", "flight time", "duty time"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Under Part 135, a holder of an air operator certificate must not cause or permit an air operation to be performed with an aircraft unless a scheme has been established for the regulation of flight and duty times for ______________________________.",
+			"answer": "Every person flying as a flight crew member in the aicraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135i (135.803 - Operator responsibilities)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under Part 135 for Commercial Transport Operations (CTOs), flight crew a) shall not fly in excess of _____ hours in any _____ consecutive days, b) shall not have less than _____ days free of duty in any _____ day period, c) must not have less than _____ consecutive days free of duty in any _____ day period.",
+			"answer": "160. 30. 2. 14. 2. 30.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.308(3) - Operator responsibilities)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "The operator of an aircraft performing an air operation must not case or permit any person to fly as a flight crew member if they have reason to suspect the person is suffering from __________.",
+			"answer": "Fatigue.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.308(b) - Operator responsibilities)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under Part 125, a pilot shall not act as a flight crew member if the aggregate of the flight times exceeds _____ hours in the immediately preceding _____ days, and _____ hours in the immediately preceding _____ days.",
+			"answer": "100. 28. 1000. 365.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 125 (128.805(d) - Flight crew responsibilities)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_125_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under Part 135 and 125, what kind of flights outside of their 'regular' operator count towards their duty and flight time limitations?",
+			"answer": "Any flights performed for hire or reward.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.805(b) - Flight crew responsibilities)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 125 (125.805(b) - Flight crew responsibilities)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_125_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under Part 135 and 125, under what conditions can the flight and duty time limitations be legally exceeded?",
+			"answer": "If the flight is one made in the interests of safety or health of any person. In this case it's the responsibility of the PIC to be satisfied that the safety of the flight will not be endangered due to any flight crew member exceeding their flight time limitations.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.308(d) - Flight crew responsibilities)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 125 (125.803(d) - Operator responsibilities)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_125_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
