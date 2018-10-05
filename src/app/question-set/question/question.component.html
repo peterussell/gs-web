@@ -4,7 +4,15 @@
   </mat-expansion-panel-header>
 
   <div class="answer">
-    <strong>A) </strong> {{ answerText }}
+    <div class="answer__text">
+      <strong>A) </strong> {{ answerText }}
+    </div>
+    <div class="answer__icons">
+      <i
+        class="material-icons answer__icons--report-question"
+        matTooltip="This is wrong/ambiguous"
+        (click)="reportQuestion()">error</i>
+    </div>
   </div>
 
   <div class="references">
@@ -17,5 +25,4 @@
     </ul>
   </div>
   <span class="clear"></span>
-  
 </mat-expansion-panel>

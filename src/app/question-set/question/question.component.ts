@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Question } from '../../core/models/question.model';
 import { Reference } from '../../core/models/reference.model';
+import { MatDialog } from '@angular/material/dialog';
+import { ReportQuestionDialogComponent } from '../report-question-dialog/report-question-dialog.component';
 
 @Component({
   selector: 'app-question',
@@ -14,7 +16,7 @@ export class QuestionComponent implements OnInit {
   public questionText: string;
   public answerText: string;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
     this.questionText = this.insertDegreeSymbols(this.question.question);
@@ -33,6 +35,14 @@ export class QuestionComponent implements OnInit {
       } else {
         return 1;
       }
+    });
+  }
+
+  reportQuestion() {
+    const dialogRef = this.dialog.open(ReportQuestionDialogComponent, {
+      width: '400px',
+      panelClass: 'report-question-container',
+      data: { question: this.question }
     });
   }
 }
