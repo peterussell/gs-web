@@ -29,6 +29,7 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { UserService } from './core/services/user.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ReportQuestionDialogComponent } from './question-set/report-question-dialog/report-question-dialog.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     CourseComponent,
     RegisterComponent,
     ResetPasswordComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ReportQuestionDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +65,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     UserEventsService,
     ResponsiveService,
     CourseResolver
+  ],
+  entryComponents: [
+    ReportQuestionDialogComponent
   ],
   bootstrap: [AppComponent]
 })

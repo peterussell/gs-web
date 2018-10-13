@@ -12,6 +12,7 @@ export class ApiService {
     private readonly coursesRelPath = 'courses';
     private readonly questionSetsRelPath = 'question-sets/new';
     private readonly registerInterestRelPath = 'register-interest';
+    private readonly reportQuestionRelPath = 'report-question';
 
     constructor(private http: HttpClient) {
         this.httpOptions = {
@@ -36,6 +37,22 @@ export class ApiService {
         var body = { 'email': email };
         return this.http.post<RegisterInterestResponse>(
             `${this.awsBasePath}/${this.registerInterestRelPath}`, body, this.httpOptions
+        );
+    }
+
+    public reportQuestion(questionId: string, reason: string, description: string,
+        email: string): Observable<any> {
+        const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
+
+        var body = {
+            'questionId': questionId,
+            'reason': reason,
+            'description': description,
+            'email': email
+        };
+
+        return this.http.post<any>(
+            `${this.awsBasePath}/${this.reportQuestionRelPath}`, body, this.httpOptions
         );
     }
 }

@@ -1,0 +1,68 @@
+<form [formGroup]="reportQuestionForm" (ngSubmit)="onSubmit()">
+<mat-card *ngIf="showForm()" >
+  <mat-card-header>
+    <mat-card-title><h3>Hmm, about that question...</h3></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      Thanks for taking the time to help us improve the questions
+      on GroundSchool NZ.
+    </p>
+    <p>
+      Please select the reason for reporting this question, and
+      optionally a short description of what the problem is.
+    </p>
+
+    <div class="form-row">
+      <mat-radio-group formControlName="reason">
+        <mat-radio-button value="wrong" color="primary">The answer is wrong</mat-radio-button>
+        <mat-radio-button value="ambiguous" color="primary">The wording is ambiguous</mat-radio-button>
+        <mat-radio-button value="reference" color="primary">One or more references are wrong</mat-radio-button>
+        <mat-radio-button value="other" color="primary">Other</mat-radio-button>
+      </mat-radio-group>
+      <mat-error *ngIf="!reportQuestionForm.get('reason').valid && reportQuestionForm.get('reason').touched">
+        Required
+      </mat-error>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <textarea
+          matInput
+          formControlName="description"
+          placeholder="A short description (optional)"
+          maxlength="600"
+          matTextareaAutosize></textarea>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <input matInput formControlName="email" placeholder="Contact email (optional)">
+        <mat-error *ngIf="!reportQuestionForm.get('email').valid && reportQuestionForm.get('email').touched">
+          Must be a valid email address
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [disabled]="!reportQuestionForm.valid">Submit</button>
+    <button mat-button type="button" (click)="onCancelClick()">Cancel</button>
+  </mat-card-actions>
+</mat-card>
+</form>
+
+
+<mat-card *ngIf="showConfirmation()">
+  <mat-card-header>
+    <mat-card-title>
+      <h3>Feedback submitted</h3>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    Your feedback has been submitted. Thanks again for helping to make
+    GroundSchool NZ better.
+  </mat-card-content>
+  <mat-card-actions style="text-align: center">
+    <button mat-button type="button" (click)="onCancelClick()">Close</button>
+  </mat-card-actions>
+</mat-card>
