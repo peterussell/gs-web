@@ -1,0 +1,140 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "passengers"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Passenger seats shall be in the approved position for each __________ and __________.",
+			"answer": "Take-off. Landing.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.207(c) - Occupation of seats and wearing or restraints)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When must passengers be in their seat or berth with a safety belt/restraining belt/shoulder harness fastened? (5)",
+			"answer": "During each take-off and landing. When flying below 1000' AGL. When the PIC considers it necessary. During aerobatic flight. At all times in open cockpit aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.207 - Occupation of seats and wearing of restraints)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Infants under the age of ____ do not require a separate seat or berth provided 1) ____________________, and 2) ____________________.",
+			"answer": "The child is held by an adult occupying a seat or berth. The child is attached by a safety belt to the adult's safety belt.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.207(d) - Occupation of seats and wearing of restraints)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A shoulder harness or single diagonal shoulder belt must be used by each flight crew member of a __________, each flight crew member engaged in __________ __________, each crew member in an aeroplane on bona fide operations __________ __________.",
+			"answer": "Helicopter. Flight training. Below 500'",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.505(a)(4) - Seating and restraints)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Under what conditions can a passenger's shoulder harness or diagonal shoulder belot be unfastened during take-off, landing, or flight below 1000' AGL?",
+			"answer": "If the PIC is satisfied that such an action is necessary for the passenger's performance of an essential function associated with the purpose of the flight.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.207(b) - Occupation of seats and wearing of restraints)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What 5 topics must the PIC ensure the passengers are briefed on?",
+			"answer": "1) Conditions under which smoking is permitted. 2) Location and use of emergency equipment and exits. 3) Procedures in the case of an emergency landing. 4) Use of portable electronic devices. 5) The requirement to comply with lighted signs.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.211 - Passenger briefing)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When is a passenger briefing not required?",
+			"answer": "If the pilot-in-command determines that all passengers are familiar with the contents of the briefing.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.211(b)(6) - Passenger briefing)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "During take-off and landing, carry-on baggage shall be stowed ______________________________, or under the passenger seat provided ______________________________.",
+			"answer": "In a baggage locker. It does not slide forward under crash impact or hinder evacuation in the event of an emergency.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.213 - Carry-on baggage)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Passengers, other than persons required to be carried for the purpose of the flight, are not to be carried when it is the intention of the pilot to carry out what 7 activities?",
+			"answer": "1) Practiced forced landings commencing from above 1000' AGL and descending below 500' AGL in a designated low flying area. 2) Authorised low flying in a designated low flying zone. 3) A flight check following maintenance. 4) A tow operation involving any object other than a glider. 5) Aerobatic flight unless the PIC holds an aerobatic rating. 6) Display flying at an aviation event. 7) Any other type of flying specified by the Director.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.617, 91.701, and others)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_091_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
