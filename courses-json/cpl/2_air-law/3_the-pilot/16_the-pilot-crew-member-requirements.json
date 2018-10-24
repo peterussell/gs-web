@@ -1,0 +1,154 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "definitions"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Who is responsible for ensuring flight crew members meet the licensing, medical, experience, competency and route requirements for an air operation?",
+			"answer": "The holder of the air operator certificate (the operator).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (Subpart H: 135.503(a) - Assignment of flight crew duties)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Whose responsibility is it to assign a pilot-in-command and any required flight crew for an air operation?",
+			"answer": "The holder of the air operator certificate (the operator).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (Subpart H: 135.503(b) - Assignment of flight crew duties)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What consolidation of operating experience is required before an operator can designate a pilot as PIC of a single engine aircraft on an air operation?",
+			"answer": "5 hours flight time and 5 take-offs and landing on the same make and basic model of aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.505 - Pilot-in-command consolidation of operating experience on type)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What consolidation of operating experience is required before an operator can designate a pilot as PIC of a multi-engine aircraft on an air operation?",
+			"answer": "10 hours flight time and 10 take-offs and landing on the same make and basic model of aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.505 - Pilot-in-command consolidation of operating experience on type)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What consolidation of operating experience is required before an operator can designate a pilot as PIC of a turbojet or turbofan aircraft on an air operation?",
+			"answer": "15 hours flight time and 10 take-offs and landing on the same make and basic model of aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.505 - Pilot-in-command consolidation of operating experience on type)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Consolidation of operating experience required under Part 135 must be completed within ______ days of the competency check.",
+			"answer": "180.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.505(b)(5) - Pilot-in-command consolidation of operating experience on type)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "If a pilot fails to complete the required consolidation of operating experience on or before the 180th day following a competency check, what is required to complete the consolidation of operating experience?",
+			"answer": "They must pass a competency check before recommencing the required consolidation of operating experience.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.505(b)(6) - Pilot-in-command consolidation of operating experience on type)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How should a flight crew member enter time accrued during consolidation of operating experience if the aircraft used is a single-pilot aircraft?",
+			"answer": "Pilot-in-command under supervision, and it must be certified by the supervising PIC.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.505(c)(2) - Pilot-in-command consolidation of operating experience on type)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "During what flights can consolidation of operating experience take place, unless the aircraft is certificated for ____ or less passenger seats.",
+			"answer": "In flight during air operations performed, unless the aircraft hasn't previously been used for air operations under the holder's certificate, in which case proving flights or ferry flights may be used. 2.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.505(b)(1), (2), (d) - Pilot-in-command consolidation of operating experience on type)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Which manoeuvres are not authorised while carrying passengers?",
+			"answer": "Any abnormal, unusual, or emergency training manoeuvres, specifically: 1) simulated engine failure; 2) simulated asymmetric flight; 3) any simulated aircraft system failure which activates a visual or oral warning system that can be seen or overheard by passengers; 4) any other simulated system failure that can compromise the safe operation or the flight.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.563 - Manoeuvres not authorised while carrying passengers)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

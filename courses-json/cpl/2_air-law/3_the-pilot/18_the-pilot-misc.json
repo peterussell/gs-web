@@ -1,0 +1,80 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "cost sharing flights", "kdr", "knowledge deficiency reports"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "To carry persons or goods by air for hire or reward, pilots must hold at least a current __________ pilot license.",
+			"answer": "Commercial.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.205 - Privileges and limitations)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the requirements for a flight to be classified as a 'cost sharing' flight? (4 requirements).",
+			"answer": "1) The flight is not advertised to the public. 2) Crew members receive no payment or other reward for their services. 3) Persons carried, including crew members, share equally in the cost of the flight. 4) No payment or other reward is required of a person on the flight other than specified in (3).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (Cost sharing flight)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Can a PPL holder conduct a cost sharing flight?",
+			"answer": "Yes.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 1 (Cost sharing flight)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_001_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is a knowledge deficiency report?",
+			"answer": "A list of questions incorrectly answered by a candidate during a written exam.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				}
+			]
+		},
+    {
+			"question": "With regard to a knowledge deficiency report, what must be done before a flight test may be conducted, and who can do this?",
+			"answer": "The KDR must show evidence that the candidate has reached satisfactory level of knowledge on the deficient topics. This can be completed by an A or B category instructor who must certify the candidate has demonstrated satisfactory improvement in each topic.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.21(a)(5) - Flight tests)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

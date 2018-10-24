@@ -1,0 +1,108 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "competency requirements", "competency checks"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Competency checks must be carried out, for each pilot acting as pilot-in-command, within the preceding ____ (days/weeks/months/years).",
+			"answer": "12 months.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.607 - Flight crew competency requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Competency checks for each pilot acting as PIC include a ground-based procedure check over 1 __________ __________, and a flight check with one or more landings at an ______________________________.",
+			"answer": "Route segment. Aerodrome representative of the operations to be flown.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.607(1)(i) - Flight crew competency requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is covered in a competency check for each pilot conducting VFR operations?",
+			"answer": "Normal, non-normal, and emergency procedures in an aircraft type normally used by the pilot in the operation.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.607(2) - Flight crew competency requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Each pilot required to take a flight crew competency check must successfully complete a written or ______ test of the pilot's knowledge of what topics (6 topics).",
+			"answer": "1) CARs. 2) Aircraft (systems, performance, operating procedures). 3) Navigation, ATC, meteorology. 4) Special flight operations appropriate to the type of operation normally conducted by the pilot. 5) New equipment, procedures, techniques. 6) Location and operation of emergency equipment of the aircraft.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.607(4) - Flight crew competency requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Does a flight crew member with a current competency check need to complete a BFR?",
+			"answer": "No.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				}
+			]
+		},
+    {
+			"question": "Can a flight competency check be carried out in a simulator?",
+			"answer": "Yes, if it's approved for the purpose.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.607(6) - Flight crew competency requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Who is responsible for keeping accurate records of competency assements?",
+			"answer": "The holder of the air operator certificate.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.613 - Competency and testing records)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,224 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "logbooks", "crediting of flight time"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Who must keep an up-to-date logbook?",
+			"answer": "Student pilots, and holders of pilot licenses.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(a) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Is a flight instructor or safety pilot's name required to be entered in the pilot's logbook?",
+			"answer": "Yes.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(b)(2)(v) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Can logbook entries be in pencil?",
+			"answer": "No, they're required to be in indelible ink.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(c)(1) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What information is specifically required to be entered in a logbook for training flights?",
+			"answer": "Details of the training exercise.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(8) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A pilot logbook must be retained __________ by the pilot license holder, unless the license is revoked, in which case the log book must be retained for a period of at least ____ (days/weeks/months) from the date of revocation.",
+			"answer": "Permanently. 12 months.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(c)(4) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "If a computer-generated report is inserted into a logbook, what else is required?",
+			"answer": "The pilot must make a written logbook entry summarising the total flight time of the flights listed in the report.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(d) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What is the approved way to alter an incorrect logbook entry?",
+			"answer": "Put a line through the entry, and add the correct information either beside the entry or on a new line.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(e) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Before a pilot submits his or her logbook to the Director for any reason, what must they do?",
+			"answer": "Total each column on each page. Enter total flight experience in spaces provided. Sign below the last entry to verify the correctness of the entries.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(f) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "How soon after the completion of a flight must logbook entries be made (hint: there are three scenarios).",
+			"answer": "1) Within 7 days normally. 2) Within 14 days in the case of flight on an international air transport operation. 3) If the pilot is engaged in an operation away from the base where the logbook is normally kept, within 48 hours after return to base.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.29(g) - Pilot logbooks - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A co-pilot in an aircraft required to be operated with a co-pilot cannot credit more than ____% of the co-pilot flight time towards the total flight time experience required for an air transport pilot license.",
+			"answer": "50%.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.31 - Pilot logbooks - crediting flight time)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When can you log instrument flight time?",
+			"answer": "When the aircraft is flown solely by reference to instruments (either in simulated or actual IMC).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.31(c) - Pilot logbooks - crediting flight time)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When can a flight instructor, or pilot-in-command supervising a co-pilot, log instrument flight time?",
+			"answer": "Any time in IMC.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.31(d) and (e) - Pilot logbooks - crediting flight time)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "Category A and B instructors supervising a pilot during a CPL cross country flight test (may/may not) credit all pilot in command flight time.",
+			"answer": "May.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.31(f) - Pilot logbooks - crediting flight time)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "A pilot (may/may not) credit instrument, cross country, or night flight time, or any combination, simultaneously for the purposes of meeting experience requirements for a higher license type or rating.",
+			"answer": "May not.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.31(h) - Pilot logbooks - crediting flight time)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When can time be logged as 'ground time' and be credited towards requirements for a higher license or rating, or renewal of a rating??",
+			"answer": "If the pilot is under the supervision of an appropriately qualified instructor in an approved synthetic trainer, but only if the instructor certifies the time in the pilot's logbook.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.33 - Pilot logbooks - crediting ground time)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

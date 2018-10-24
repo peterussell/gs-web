@@ -1,0 +1,144 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "airport security", "bfr"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Airport security areas require aircrew members to carry either an airport __________ __________, or a valid __________ __________, unless authorised not to carry them.",
+			"answer": "Identity (or security) card. Pilot license.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 19 (19.357 - Airport identity cards)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_019_Consolidation.pdf"
+				},
+				{
+					"text": "CAR Part 140 (A.13 - Check point security)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_140_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When can a passenger enter an airport security area?",
+			"answer": "If they're being escorted by a crew member, representative of the operator, or pilot.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 19 (19.357(g) - Airport identity cards)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_019_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "If required, how often must a biennial flight review (BFR) be done?",
+			"answer": "Every 24 months.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.39 - Biennial flight review)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When may a pilot be required to take an extra examination or test, other than the ones normally required for issue of licenses, ratings, for BFRs, etc.?",
+			"answer": "If required by the Director, based that the Director believes on reasonable grounds that the privileges of the license or rating being exercised are being carried out in an incompetent manner.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.43 - Examination for proficiency)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the safety pilot requirements for simulated instrument flight in VMC?",
+			"answer": "Must hold a current pilot license. Must have adequate vision forward and sideways (or a competent observer to supplement the safety pilot's vision). Aircraft is equipped with fully functioning dual controls or controls that can be operated from either pilot position (some exceptions in uncontrolled airspace).",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 9 (91.125 - Simulated instrument flight)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "When can an aircraft without dual controls or controls that can be operated from either pilot station be used for simulated instrument flight in VMC?",
+			"answer": "If the flight is outside controlled airspace, and the means of simulating instrument flight can be removed rapidly by the pilot-in-command.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 91 (91.125(b) - Simulated instrument flight)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the rating requirements for a safety pilot when simulated instrument flight is toward required flight time for the issue or recent experience requirements of an instrument rating?",
+			"answer": "The safety pilot must have a current pilot license and aircraft type rating for the aircraft type.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.25(c)(3) - Flight training and testing - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What rating requirements exist for a safety pilot when simulated instrument flight is at night, and toward required flight time for the issue or recent experience requirements of an instrument rating?",
+			"answer": "The safety pilot must have a current pilot license, aircraft type rating for the aircraft type, and a current instrument rating.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.25(c)(3)(iii) - Flight training and testing - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What are the aircraft and pilot requirements for logging flight experience in IMC toward the required instrument flight time for issue or recent experience requirements of an instrument rating?",
+			"answer": "Aircraft must be approved for IFR flight. Fully functioning dual controls if 2 pilots are required. Pilot either has a current instrument rating for the category of aircraft, or undergoing instrument flight instruction and the pilot-in-command holds a flight instructor rating and current instrument rating.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 61 (61.25(d) - Flight training and testing - general requirements)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_061_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}

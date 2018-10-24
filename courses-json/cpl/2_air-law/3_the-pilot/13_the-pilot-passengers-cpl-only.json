@@ -1,0 +1,42 @@
+{
+	"question_set_id": "83e55230-f1bf-4fd3-90cb-b56748004395",
+	"topic_id": "8ef497bd-5de4-4884-8c46-0f1122629dec",
+	"tags": ["the-pilot", "passengers", "passenger safety", "cpl only"],
+	"title": "The Pilot",
+	"references": [
+		{
+			"text": "Waypoints Vol 05: PPL/CPL Air Law. Chapter 3: The Pilot",
+			"url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+		}
+	],
+	"questions": [
+    {
+			"question": "Disabled passengers must be appropriately cared for and seated in a position which facilities ______________________________.",
+			"answer": "Evacuation in the case of emergency.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.65(a)(2) - Passenger safety)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		},
+    {
+			"question": "What must an operator ensure with regard to carrying escorted passengers?",
+			"answer": "They don't constitute a safety hazard to other passengers, and prior arrangement for their carriage must have been made.",
+			"references": [
+				{
+				  "text": "Waypoints Volume 5, Chapter 3",
+				  "url": "https://www.waypoints.nz/products/vol-05-ppl-cpl-air-law-january-2017"
+				},
+				{
+					"text": "CAR Part 135 (135.65(a)(3) - Passenger safety)",
+					"url": "https://www.caa.govt.nz/rules/Rule_Consolidations/Part_135_Consolidation.pdf"
+				}
+			]
+		}
+	]
+}
