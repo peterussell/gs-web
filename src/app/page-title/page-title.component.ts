@@ -4,6 +4,9 @@ import { ResponsiveService, ViewportSize } from '../core/services/responsive.ser
 import { QuestionService } from '../core/services/question.service';
 import { Topic } from '../core/models/topic.model';
 import { Course } from '../core/models/course.model';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-page-title',
@@ -17,6 +20,7 @@ export class PageTitleComponent implements OnInit {
   topic: string;
 
   constructor(
+    public dialog: MatDialog,
     public userEventsService: UserEventsService,
     public responsiveService: ResponsiveService,
     public questionService: QuestionService) { }
@@ -43,10 +47,20 @@ export class PageTitleComponent implements OnInit {
   }
 
   onLoginClicked() {
-    console.log('login clicked');
+    const dialogRef = this.dialog.open(LoginComponent, {
+      width: '380px',
+      panelClass: 'container-no-padding',
+      position: { top: '30px' }
+      // data: { question: this.question }
+    });
   }
-  
+
   onSignUpClicked() {
-    console.log('signup clicked');
+    const dialogRef = this.dialog.open(RegisterComponent, {
+      width: '380px',
+      panelClass: 'container-no-padding',
+      position: { top: '30px' }
+      // data: { question: this.question }
+    });
   }
 }

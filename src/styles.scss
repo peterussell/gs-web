@@ -12,6 +12,7 @@ body {
     background-color: #f7f7f7;
 }
 
-.report-question-container .mat-dialog-container {
+.container-no-padding .mat-dialog-container {
     padding: 0;
+    max-height: 100vh;
 }

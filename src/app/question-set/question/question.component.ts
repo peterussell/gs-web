@@ -41,7 +41,7 @@ export class QuestionComponent implements OnInit {
   reportQuestion() {
     const dialogRef = this.dialog.open(ReportQuestionDialogComponent, {
       width: '400px',
-      panelClass: 'report-question-container',
+      panelClass: 'container-no-padding',
       data: { question: this.question }
     });
   }
