@@ -12,6 +12,7 @@ import { Course } from '../core/models/course.model';
 })
 export class PageTitleComponent implements OnInit {
   menuButtonVisible: boolean;
+  accountSectionVisible: boolean;
   course: string;
   topic: string;
 
@@ -21,9 +22,14 @@ export class PageTitleComponent implements OnInit {
     public questionService: QuestionService) { }
 
   ngOnInit() {
+    // set up initial viewport size related things
     this.menuButtonVisible = this.responsiveService.getViewportSize() === ViewportSize.Small;
+    this.accountSectionVisible = !this.menuButtonVisible;
+
+    // subscribe to viewport size changes
     this.responsiveService.onViewportChange.subscribe((newViewportSize: ViewportSize) => {
       this.menuButtonVisible = newViewportSize === ViewportSize.Small;
+      this.accountSectionVisible = !this.menuButtonVisible;
     });
 
     this.questionService.onTopicUpdated.subscribe((res: { course: Course, topic: Topic }) => {
@@ -34,5 +40,13 @@ export class PageTitleComponent implements OnInit {
 
   toggleSidenav() {
     this.userEventsService.toggleSidenav();
+  }
+
+  onLoginClicked() {
+    console.log('login clicked');
+  }
+  
+  onSignUpClicked() {
+    console.log('signup clicked');
   }
 }

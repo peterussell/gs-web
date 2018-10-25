@@ -16,10 +16,14 @@
         margin-right: 20px;
         justify-content: space-between;
 
-        .mat-raised-button {
+        .mat-raised-button, .mat-flat-button {
             background-color: #869f9d;
             color: #fff;
             font-weight: 200;
+        }
+
+        .mat-stroked-button {
+            color: #333;
         }
 
         i {
