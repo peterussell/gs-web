@@ -5,8 +5,7 @@ import { QuestionService } from '../core/services/question.service';
 import { Topic } from '../core/models/topic.model';
 import { Course } from '../core/models/course.model';
 import { MatDialog } from '@angular/material/dialog';
-import { LoginComponent } from '../login/login.component';
-import { RegisterComponent } from '../register/register.component';
+import { AccountDialogState, AccountDialogComponent } from '../account-dialog/account-dialog.component';
 
 @Component({
   selector: 'app-page-title',
@@ -47,20 +46,20 @@ export class PageTitleComponent implements OnInit {
   }
 
   onLoginClicked() {
-    const dialogRef = this.dialog.open(LoginComponent, {
+    const dialogRef = this.dialog.open(AccountDialogComponent, {
       width: '380px',
       panelClass: 'container-no-padding',
-      position: { top: '30px' }
-      // data: { question: this.question }
+      position: { top: '30px' },
+      data: { initialState: AccountDialogState.Login }
     });
   }
 
   onSignUpClicked() {
-    const dialogRef = this.dialog.open(RegisterComponent, {
+    const dialogRef = this.dialog.open(AccountDialogComponent, {
       width: '380px',
       panelClass: 'container-no-padding',
-      position: { top: '30px' }
-      // data: { question: this.question }
+      position: { top: '30px' },
+      data: { initialState: AccountDialogState.Register }
     });
   }
 }

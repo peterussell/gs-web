@@ -30,6 +30,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { UserService } from './core/services/user.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ReportQuestionDialogComponent } from './question-set/report-question-dialog/report-question-dialog.component';
+import { AccountDialogComponent } from './account-dialog/account-dialog.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ReportQuestionDialogComponent } from './question-set/report-question-di
     RegisterComponent,
     ResetPasswordComponent,
     LandingPageComponent,
-    ReportQuestionDialogComponent
+    ReportQuestionDialogComponent,
+    AccountDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ import { ReportQuestionDialogComponent } from './question-set/report-question-di
     CourseResolver
   ],
   entryComponents: [
-    ReportQuestionDialogComponent
+    ReportQuestionDialogComponent,
+    AccountDialogComponent
   ],
   bootstrap: [AppComponent]
 })
