@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../core/services/user.service';
 import { RegisterUserResultStatus } from '../core/services/register-user.result';
@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  @Output() onShowLoginForm = new EventEmitter<any>();
+
   public registerForm: FormGroup;
   public activateForm: FormGroup;
   private currentState: RegisterUserState = RegisterUserState.Initial;
@@ -103,6 +105,10 @@ export class RegisterComponent implements OnInit {
 
   showActivateForm() {
     return this.currentState === RegisterUserState.Activate;
+  }
+
+  showLoginForm() {
+    this.onShowLoginForm.emit();
   }
 
   showActivateSuccessMessage() {

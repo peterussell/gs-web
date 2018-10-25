@@ -45,7 +45,7 @@
         </mat-card-actions>
 
         <mat-card-footer>
-          Already have an account? <a [routerLink]="['/login']">Log in</a>
+          Already have an account? <a routerLink="" (click)="showLoginForm()">Log in</a>
         </mat-card-footer>
       </form>
     </mat-card-content>
@@ -103,7 +103,7 @@
       </div>
 
     <div class="return-to-login">
-      Return to <a [routerLink]="['/login']">Log in</a>
+      Return to <a routerLink="" (click)="showLoginForm()">Log in</a>
     </div>
     </mat-card-content>
   </ng-template>

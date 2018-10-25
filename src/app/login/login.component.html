@@ -35,11 +35,11 @@
 
     <mat-card-footer>
       <span class="forgot-password">
-        <a [routerLink]="['/reset-password']">Forgot password?</a>
+        <a routerLink="" (click)="showForgotPasswordForm()">Forgot password?</a>
       </span>
 
       <span class="create-account">
-        <a mat-stroked-button color="primary" [routerLink]="['/register']">Create an account</a><br>
+        <a mat-stroked-button color="primary" (click)="showRegisterForm()">Create an account</a><br>
       </span>
       
     </mat-card-footer>

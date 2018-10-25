@@ -9,8 +9,13 @@
         </button>
 
         <div class="title-container__account" *ngIf="accountSectionVisible">
-            <button mat-stroked-button (click)="onSignUpClicked()">Sign up</button>
-            <button mat-flat-button (click)="onLoginClicked()">Log in</button>
+            <div *ngIf="currentUser; else loggedOut">
+                Logged in
+            </div>
+            <ng-template #loggedOut>
+                <button mat-stroked-button (click)="onSignUpClicked()">Sign up</button>
+                <button mat-flat-button (click)="onLoginClicked()">Log in</button>
+            </ng-template>
         </div>
     </div>
 </div>

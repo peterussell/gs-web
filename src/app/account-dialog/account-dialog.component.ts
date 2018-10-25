@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-account-dialog',
@@ -9,6 +10,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class AccountDialogComponent implements OnInit {
   currentState: AccountDialogState;
+  public accountDialogState = AccountDialogState;
 
   constructor(
     public dialogRef: MatDialogRef<AccountDialogComponent>,
@@ -20,21 +22,25 @@ export class AccountDialogComponent implements OnInit {
   ngOnInit() {
   }
 
+  closeDialog() {
+    this.dialogRef.close();
+  }
+
   showRegisterForm() {
-    return this.currentState === AccountDialogState.Register;
+    this.currentState = AccountDialogState.Register;
   }
 
   showLoginForm() {
-    return this.currentState === AccountDialogState.Login;
+    this.currentState = AccountDialogState.Login;
   }
 
   showForgotPasswordForm() {
-    return this.currentState === AccountDialogState.ForgotPassword;
+    this.currentState = AccountDialogState.ResetPassword;
   }
 }
 
 export enum AccountDialogState {
   Register,
   Login,
-  ForgotPassword
+  ResetPassword
 }

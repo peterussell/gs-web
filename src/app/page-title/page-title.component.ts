@@ -6,6 +6,9 @@ import { Topic } from '../core/models/topic.model';
 import { Course } from '../core/models/course.model';
 import { MatDialog } from '@angular/material/dialog';
 import { AccountDialogState, AccountDialogComponent } from '../account-dialog/account-dialog.component';
+import { UserService } from '../core/services/user.service';
+import { CognitoUser } from 'amazon-cognito-identity-js';
+import { User } from '../core/models/user.model';
 
 @Component({
   selector: 'app-page-title',
@@ -17,12 +20,16 @@ export class PageTitleComponent implements OnInit {
   accountSectionVisible: boolean;
   course: string;
   topic: string;
+  currentUser: User;
 
   constructor(
     public dialog: MatDialog,
+    public userService: UserService,
     public userEventsService: UserEventsService,
     public responsiveService: ResponsiveService,
-    public questionService: QuestionService) { }
+    public questionService: QuestionService) {
+      this.currentUser = this.userService.getCurrentUser();
+    }
 
   ngOnInit() {
     // set up initial viewport size related things
