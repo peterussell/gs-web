@@ -26,7 +26,7 @@ export class QuestionEditorComponent implements OnInit {
 
   ngOnInit() {
     this.addQuestionForm = new FormGroup({
-      'questionSet': new FormControl(null, Validators.required),
+      'questionSet': new FormControl(null),
       'questionText': new FormControl(null, Validators.required),
       'answerText': new FormControl(null, Validators.required)
     });
@@ -51,12 +51,29 @@ export class QuestionEditorComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('submitted!');
+    const questionSetId = this.selectedQuestionSet.questionSetId;
+    const questionText = this.addQuestionForm.get('questionText').value;
+    const answerText = this.addQuestionForm.get('answerText').value;
+
+    // TODO: working here -- need to bind the text fields for each reference
+    // to the reference objects, or possibly create them as separate formGroup
+    // objects and iterate them
+    let refs = new Array<Reference>();
+    for (let i=0; i<this.references.length; i++) {
+      const r = this.references[i];
+      console.log(r);
+      if (r.text !== '') { refs.push(new Reference(r.text, r.url)); }
+    }
+
+    console.log(questionSetId);
+    console.log(questionText);
+    console.log(answerText);
+    console.log(refs);
   }
 
   onReset() {
     this.addQuestionForm.reset();
-    console.log('resetting');
+    this.initializeBlankReferences(2);
   }
 
   initializeBlankReferences(count: number) {

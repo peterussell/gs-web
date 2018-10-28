@@ -85,7 +85,7 @@
 
     <!-- Buttons -->
     <div class="form-row">
-      <button mat-flat-button color="primary">Save</button>
+      <button mat-flat-button color="primary" [disabled]="!addQuestionForm.valid">Save</button>
       <button type="button" mat-stroked-button (click)="onReset()">Reset</button>
     </div>
   </form>
