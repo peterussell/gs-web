@@ -23,3 +23,15 @@ textarea {
     border-color: #333;
     margin-left: 10px;
 }
+
+.add-reference {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+
+    &__button {
+        background-color: #390;
+        display: block;
+        float: right;
+    }
+}

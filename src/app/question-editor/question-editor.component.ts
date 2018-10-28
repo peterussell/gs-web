@@ -5,6 +5,7 @@ import { MatSelectChange } from '@angular/material/select';
 import { Course } from '../core/models/course.model';
 import { Topic } from '../core/models/topic.model';
 import { ApiService } from '../core/services/api.service';
+import { Reference } from '../core/models/reference.model';
 
 @Component({
   selector: 'app-question-editor',
@@ -19,6 +20,7 @@ export class QuestionEditorComponent implements OnInit {
   selectedCourse: Course;
   selectedTopic: Topic;
   selectedQuestionSet: QuestionSet;
+  references: Array<Reference>;
 
   constructor(private apiService: ApiService) { }
 
@@ -28,6 +30,9 @@ export class QuestionEditorComponent implements OnInit {
       'questionText': new FormControl(null, Validators.required),
       'answerText': new FormControl(null, Validators.required)
     });
+
+    // add some empty references so some empty fields are displayed
+    this.initializeBlankReferences(2);
 
     this.apiService.getCourses().subscribe((response: any) => {
       let courses: Array<Course> = response.courses;
@@ -52,6 +57,19 @@ export class QuestionEditorComponent implements OnInit {
   onReset() {
     this.addQuestionForm.reset();
     console.log('resetting');
+  }
+
+  initializeBlankReferences(count: number) {
+    this.references = new Array<Reference>();
+    for (let i=0; i<count; i++) {
+      this.addBlankReference();
+    }
+  }
+
+  addBlankReference() {
+    const length = this.references.push(new Reference('', ''));
+    this.addQuestionForm.addControl(`reference${length-1}Text`, new FormControl(null));
+    this.addQuestionForm.addControl(`reference${length-1}Url`, new FormControl(null));
   }
 
   // Material event handlers

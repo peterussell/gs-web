@@ -49,12 +49,38 @@
         <textarea
           matInput
           formControlName="answerText"
-          placeholder="Answer..."
+          placeholder="Answer text"
           matTextareaAutosize></textarea>
       </mat-form-field>
       <mat-error *ngIf="!addQuestionForm.get('answerText').valid && addQuestionForm.get('answerText').touched">
         Required
       </mat-error>
+    </div>
+
+    <h3>References</h3>
+    <!-- Answer text -->
+    <div class="form-row" *ngFor="let reference of references; let i = index">
+      {{i+1}}.
+      <mat-form-field>
+        <input
+          matInput
+          formControlName="reference{{i}}Text"
+          placeholder="Text"
+          class="reference-text">
+      </mat-form-field>
+      <mat-form-field>
+          <input
+            matInput
+            formControlName="reference{{i}}Url"
+            placeholder="URL"
+            class="reference-url">
+        </mat-form-field>
+    </div>
+    <div class="form-row add-reference">
+      <button
+        type="button" mat-mini-fab
+        class="add-reference__button"
+        (click)="addBlankReference()">+</button>
     </div>
 
     <!-- Buttons -->
