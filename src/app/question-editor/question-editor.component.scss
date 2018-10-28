@@ -1,0 +1,25 @@
+.form-container {
+    width: 500px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form-row {
+    padding: 6px 0;
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+textarea {
+    line-height: 1.4em;
+}
+
+.mat-stroked-button {
+    color: #333;
+    border-color: #333;
+    margin-left: 10px;
+}

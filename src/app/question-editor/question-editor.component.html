@@ -1,0 +1,66 @@
+<app-page-title title="Question editor"></app-page-title>
+
+<mat-card class="form-container">
+  <form [formGroup]="addQuestionForm" (ngSubmit)="onSubmit()">
+    <!-- Topic selector -->
+    <mat-form-field>
+      <mat-select placeholder="Course" (change)="matSelectCourse($event)" [value]="selectedCourse">
+        <mat-option *ngFor="let course of courses" [value]="course">
+          {{ course.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Topic selector -->
+    <mat-form-field>
+      <mat-select placeholder="Topic" (change)="matSelectTopic($event)" [value]="selectedTopic">
+        <mat-option *ngFor="let topic of topics" [value]="topic">
+          {{ topic.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Question set selector -->
+    <mat-form-field>
+      <mat-select placeholder="Question Set" (change)="matSelectQuestionSet($event)" [value]="selectedQuestionSet">
+        <mat-option *ngFor="let questionSet of questionSets" [value]="questionSet">
+          {{ questionSet.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Question text -->
+    <div class="form-row">
+      <mat-form-field>
+        <textarea
+          matInput
+          formControlName="questionText"
+          placeholder="Question text"
+          matTextareaAutosize></textarea>
+      </mat-form-field>
+      <mat-error *ngIf="!addQuestionForm.get('questionText').valid && addQuestionForm.get('questionText').touched">
+        Required
+      </mat-error>
+    </div>
+
+    <!-- Answer text -->
+    <div class="form-row">
+      <mat-form-field>
+        <textarea
+          matInput
+          formControlName="answerText"
+          placeholder="Answer..."
+          matTextareaAutosize></textarea>
+      </mat-form-field>
+      <mat-error *ngIf="!addQuestionForm.get('answerText').valid && addQuestionForm.get('answerText').touched">
+        Required
+      </mat-error>
+    </div>
+
+    <!-- Buttons -->
+    <div class="form-row">
+      <button mat-flat-button color="primary">Save</button>
+      <button type="button" mat-stroked-button (click)="onReset()">Reset</button>
+    </div>
+  </form>
+</mat-card>

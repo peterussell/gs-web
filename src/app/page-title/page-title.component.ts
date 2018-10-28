@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserEventsService } from '../core/services/user-events.service';
 import { ResponsiveService, ViewportSize } from '../core/services/responsive.service';
 import { QuestionService } from '../core/services/question.service';
@@ -11,6 +11,8 @@ import { Course } from '../core/models/course.model';
   styleUrls: ['./page-title.component.scss']
 })
 export class PageTitleComponent implements OnInit {
+  @Input() title: string;
+
   menuButtonVisible: boolean;
   course: string;
   topic: string;
@@ -26,10 +28,12 @@ export class PageTitleComponent implements OnInit {
       this.menuButtonVisible = newViewportSize === ViewportSize.Small;
     });
 
-    this.questionService.onTopicUpdated.subscribe((res: { course: Course, topic: Topic }) => {
-      this.course = res.course.title;
-      this.topic = res.topic.title;
-    });
+    if (this.title === undefined || this.title === '') {
+      // tmp - TODO: the question set (?) component should compile the title and pass it in as an Input
+      this.questionService.onTopicUpdated.subscribe((res: { course: Course, topic: Topic }) => {
+        this.title = `${res.course.title} - ${res.topic.title}`;
+      });
+    }
   }
 
   toggleSidenav() {
