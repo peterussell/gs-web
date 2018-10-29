@@ -22,6 +22,9 @@ export class QuestionEditorComponent implements OnInit {
   selectedQuestionSet: QuestionSet;
   references: FormArray;
 
+  addingQuestionReturnedSuccess: boolean = false;
+  addingQuestionReturnedError: boolean = false;
+
   constructor(private formBuilder: FormBuilder, private apiService: ApiService) { }
 
   ngOnInit() {
@@ -52,6 +55,9 @@ export class QuestionEditorComponent implements OnInit {
   }
 
   onSubmit() {
+    this.addingQuestionReturnedSuccess = false;
+    this.addingQuestionReturnedError = false;
+
     const questionSetId = this.selectedQuestionSet.questionSetId;
     const questionText = this.addQuestionForm.get('questionText').value;
     const answerText = this.addQuestionForm.get('answerText').value;
@@ -59,11 +65,14 @@ export class QuestionEditorComponent implements OnInit {
 
     this.apiService.addQuestion(questionSetId, questionText, answerText, references)
       .subscribe((response: any) => {
-        debugger;
+        this.addingQuestionReturnedSuccess = true;
+        this.addingQuestionReturnedError = false;
+        this.resetForm();
       }, (error: any) => {
-        debugger;
+        console.log(error);
+        this.addingQuestionReturnedSuccess = false;
+        this.addingQuestionReturnedError = true;
       });
-    this.resetForm();
   }
 
   resetForm() {

@@ -92,5 +92,13 @@
       <button mat-flat-button [disabled]="!addQuestionForm.valid">Save</button>
       <button type="button" mat-stroked-button (click)="resetForm()">Reset</button>
     </div>
+
+    <!-- Success/error message -->
+    <div class="form-row">
+      <span *ngIf="addingQuestionReturnedSuccess">Question added successfully</span>
+      <span *ngIf="addingQuestionReturnedError" class="error">
+        There was an error adding the question, check the console for details.
+      </span>
+    </div>
   </form>
 </mat-card>
