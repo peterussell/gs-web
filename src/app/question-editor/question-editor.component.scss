@@ -1,6 +1,6 @@
 .form-container {
     width: 500px;
-    margin: 0 0 30px 20px;
+    margin: 0 0 10px 20px;
     padding: 20px;
     background-color: #fff;
 }
@@ -8,6 +8,28 @@
 .form-row {
     padding: 6px 0;
     width: 100%;
+}
+
+.question-sets {
+    font-size: 0.8em;
+
+    h5 {
+        padding: 16px 0 10px 0;
+        margin: 0;
+    }
+
+    p {
+        padding: 0;
+        margin: 0 0 0 10px;
+    }
+
+    .mat-button {
+        padding: 0 10px;
+        margin: 0;
+        min-width: 0;
+        font-size: 0.8em;
+        line-height: 3em;
+    }
 }
 
 mat-form-field {

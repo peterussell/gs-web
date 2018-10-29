@@ -22,6 +22,8 @@ export class QuestionEditorComponent implements OnInit {
   selectedQuestionSet: QuestionSet;
   references: FormArray;
 
+  questionSetsToUpdate: Array<QuestionSetToUpdate> = new Array<QuestionSetToUpdate>();
+
   addingQuestionReturnedSuccess: boolean = false;
   addingQuestionReturnedError: boolean = false;
 
@@ -63,16 +65,18 @@ export class QuestionEditorComponent implements OnInit {
     const answerText = this.addQuestionForm.get('answerText').value;
     const references = this.mapReferenceFieldsToReferences();
 
-    this.apiService.addQuestion(questionSetId, questionText, answerText, references)
-      .subscribe((response: any) => {
-        this.addingQuestionReturnedSuccess = true;
-        this.addingQuestionReturnedError = false;
-        this.resetForm();
-      }, (error: any) => {
-        console.log(error);
-        this.addingQuestionReturnedSuccess = false;
-        this.addingQuestionReturnedError = true;
-      });
+    this.questionSetsToUpdate.forEach(qs => {
+      this.apiService.addQuestion(qs.questionSetId, questionText, answerText, references)
+        .subscribe((response: any) => {
+          this.addingQuestionReturnedSuccess = true;
+          this.addingQuestionReturnedError = false;
+          this.resetForm();
+        }, (error: any) => {
+          console.log(error);
+          this.addingQuestionReturnedSuccess = false;
+          this.addingQuestionReturnedError = true;
+        });
+    });
   }
 
   resetForm() {
@@ -89,6 +93,25 @@ export class QuestionEditorComponent implements OnInit {
       text: '',
       url: ''
     });
+  }
+
+  addSelectedQuestionSet() {
+    // Don't add question sets we're already updating
+    if (this.questionSetsToUpdate.some(
+      q => q.questionSetId === this.selectedQuestionSet.questionSetId)
+    ) {
+      return;
+    }
+
+    let toUpdate = new QuestionSetToUpdate();
+    toUpdate.questionSetId = this.selectedQuestionSet.questionSetId;
+    toUpdate.description =
+      `${this.selectedCourse.title} > ${this.selectedTopic.title} > ${this.selectedQuestionSet.title}`;
+    this.questionSetsToUpdate.push(toUpdate);
+  }
+
+  removeQuestionSet(index: number) {
+    this.questionSetsToUpdate.splice(index, 1);
   }
 
   addPartToReference(referenceIndex: number, partNumber: string) {
@@ -158,4 +181,9 @@ export class QuestionEditorComponent implements OnInit {
     if (questionSet === null) { return; }
     this.selectedQuestionSet = questionSet;
   }
+}
+
+class QuestionSetToUpdate {
+  description: string;
+  questionSetId: string;
 }
