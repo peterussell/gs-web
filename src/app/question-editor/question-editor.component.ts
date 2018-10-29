@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionSet } from '../core/models/question-set.model';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
 import { Course } from '../core/models/course.model';
 import { Topic } from '../core/models/topic.model';
@@ -20,19 +20,17 @@ export class QuestionEditorComponent implements OnInit {
   selectedCourse: Course;
   selectedTopic: Topic;
   selectedQuestionSet: QuestionSet;
-  references: Array<Reference>;
+  references: FormArray;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private formBuilder: FormBuilder, private apiService: ApiService) { }
 
   ngOnInit() {
     this.addQuestionForm = new FormGroup({
       'questionSet': new FormControl(null),
       'questionText': new FormControl(null, Validators.required),
-      'answerText': new FormControl(null, Validators.required)
+      'answerText': new FormControl(null, Validators.required),
+      'references': this.formBuilder.array([])
     });
-
-    // add some empty references so some empty fields are displayed
-    this.initializeBlankReferences(2);
 
     this.apiService.getCourses().subscribe((response: any) => {
       let courses: Array<Course> = response.courses;
@@ -48,45 +46,50 @@ export class QuestionEditorComponent implements OnInit {
         this.selectCourse(this.courses[0]);
       }
     });
+
+    // Initialise some blank reference fields
+    for (let i=0; i<2; i++) { this.addBlankReference(); }
   }
 
   onSubmit() {
     const questionSetId = this.selectedQuestionSet.questionSetId;
     const questionText = this.addQuestionForm.get('questionText').value;
     const answerText = this.addQuestionForm.get('answerText').value;
+    const references = this.mapReferenceFieldsToReferences();
 
-    // TODO: working here -- need to bind the text fields for each reference
-    // to the reference objects, or possibly create them as separate formGroup
-    // objects and iterate them
-    let refs = new Array<Reference>();
-    for (let i=0; i<this.references.length; i++) {
-      const r = this.references[i];
-      console.log(r);
-      if (r.text !== '') { refs.push(new Reference(r.text, r.url)); }
-    }
-
-    console.log(questionSetId);
-    console.log(questionText);
-    console.log(answerText);
-    console.log(refs);
+    this.apiService.addQuestion(questionSetId, questionText, answerText, references)
+      .subscribe((response: any) => {
+        debugger;
+      }, (error: any) => {
+        debugger;
+      });
+    this.resetForm();
   }
 
-  onReset() {
+  resetForm() {
     this.addQuestionForm.reset();
-    this.initializeBlankReferences(2);
-  }
-
-  initializeBlankReferences(count: number) {
-    this.references = new Array<Reference>();
-    for (let i=0; i<count; i++) {
-      this.addBlankReference();
-    }
   }
 
   addBlankReference() {
-    const length = this.references.push(new Reference('', ''));
-    this.addQuestionForm.addControl(`reference${length-1}Text`, new FormControl(null));
-    this.addQuestionForm.addControl(`reference${length-1}Url`, new FormControl(null));
+    this.references = this.addQuestionForm.get('references') as FormArray;
+    this.references.push(this.createReference());
+  }
+
+  createReference(): FormGroup {
+    return this.formBuilder.group({
+      text: '',
+      url: ''
+    });
+  }
+
+  mapReferenceFieldsToReferences(): Array<Reference> {
+    let referencesToSubmit = new Array<Reference>();
+    this.references.controls.forEach(r => {
+      if (r.value['text'] !== '') {
+        referencesToSubmit.push(new Reference(r.value['text'], r.value['url']));
+      }
+    });
+    return referencesToSubmit;
   }
 
   // Material event handlers

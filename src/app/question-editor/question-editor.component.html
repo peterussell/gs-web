@@ -57,9 +57,9 @@
       </mat-error>
     </div>
 
+    <!-- References -->
     <h3>References</h3>
-    <!-- Answer text -->
-    <div class="form-row" *ngFor="let reference of references; let i = index">
+    <!-- <div class="form-row" *ngFor="let reference of references; let i = index">
       {{i+1}}.
       <mat-form-field>
         <input
@@ -75,6 +75,20 @@
             placeholder="URL"
             class="reference-url">
         </mat-form-field>
+    </div> -->
+
+    <div
+      formArrayName="references"
+      *ngFor="let reference of addQuestionForm.get('references').controls; let i = index;">
+        <div [formGroupName]="i">
+          {{i+1}}.
+          <mat-form-field>
+            <input matInput formControlName="text" placeholder="Text">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="url" placeholder="Url">
+          </mat-form-field>
+        </div>
     </div>
     <div class="form-row add-reference">
       <button
@@ -85,8 +99,8 @@
 
     <!-- Buttons -->
     <div class="form-row">
-      <button mat-flat-button color="primary" [disabled]="!addQuestionForm.valid">Save</button>
-      <button type="button" mat-stroked-button (click)="onReset()">Reset</button>
+      <button mat-flat-button [disabled]="!addQuestionForm.valid">Save</button>
+      <button type="button" mat-stroked-button (click)="resetForm()">Reset</button>
     </div>
   </form>
 </mat-card>
