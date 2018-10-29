@@ -82,6 +82,18 @@ export class QuestionEditorComponent implements OnInit {
     });
   }
 
+  addPartToReference(referenceIndex: number, partNumber: string) {
+    const text = `CAR Part ${partNumber} (...)`;
+    const paddedPartNumber = partNumber.padStart(3, '0');
+    const url = `https://www.caa.govt.nz/rules/Rule_Consolidations/Part_${paddedPartNumber}_Consolidation.pdf`;
+
+    let referenceToUpdate = this.references.controls[referenceIndex] as FormArray;
+    let textControl = referenceToUpdate.controls['text'] as FormControl;
+    let urlControl = referenceToUpdate.controls['url'] as FormControl;
+    textControl.setValue(text);
+    urlControl.setValue(url);
+  }
+
   mapReferenceFieldsToReferences(): Array<Reference> {
     let referencesToSubmit = new Array<Reference>();
     this.references.controls.forEach(r => {

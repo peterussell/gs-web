@@ -24,6 +24,21 @@ textarea {
     margin-left: 10px;
 }
 
+.quick-reference-buttons {
+    display: inline;
+    margin-left: 20px;
+
+    button {
+        border-color: #ccc;
+        color: #333;
+        font-size: 0.8em;
+        line-height: 26px;
+        margin: 0;
+        padding: 0 6px;
+        min-width: 0px;
+    }
+}
+
 .add-reference {
     width: 100%;
     display: inline-block;

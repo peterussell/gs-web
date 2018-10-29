@@ -59,29 +59,19 @@
 
     <!-- References -->
     <h3>References</h3>
-    <!-- <div class="form-row" *ngFor="let reference of references; let i = index">
-      {{i+1}}.
-      <mat-form-field>
-        <input
-          matInput
-          formControlName="reference{{i}}Text"
-          placeholder="Text"
-          class="reference-text">
-      </mat-form-field>
-      <mat-form-field>
-          <input
-            matInput
-            formControlName="reference{{i}}Url"
-            placeholder="URL"
-            class="reference-url">
-        </mat-form-field>
-    </div> -->
-
     <div
       formArrayName="references"
       *ngFor="let reference of addQuestionForm.get('references').controls; let i = index;">
         <div [formGroupName]="i">
           {{i+1}}.
+          <div class="quick-reference-buttons">
+            <button type="button" mat-stroked-button (click)="addPartToReference(i, '1')">Part 1</button>
+            <button type="button" mat-stroked-button (click)="addPartToReference(i, '61')">Part 61</button>
+            <button type="button" mat-stroked-button (click)="addPartToReference(i, '91')">Part 91</button>
+            <button type="button" mat-stroked-button (click)="addPartToReference(i, '135')">Part 135</button>
+            <button type="button" mat-stroked-button (click)="addPartToReference(i, '125')">Part 125</button>
+            <button type="button" mat-stroked-button (click)="addPartToReference(i, '121')">Part 121</button>
+          </div>
           <mat-form-field>
             <input matInput formControlName="text" placeholder="Text">
           </mat-form-field>
