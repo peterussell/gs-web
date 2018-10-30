@@ -60,7 +60,6 @@ export class QuestionEditorComponent implements OnInit {
     this.addingQuestionReturnedSuccess = false;
     this.addingQuestionReturnedError = false;
 
-    const questionSetId = this.selectedQuestionSet.questionSetId;
     const questionText = this.addQuestionForm.get('questionText').value;
     const answerText = this.addQuestionForm.get('answerText').value;
     const references = this.mapReferenceFieldsToReferences();
