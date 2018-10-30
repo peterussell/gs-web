@@ -79,7 +79,7 @@
   <h3>References</h3>
   <div
     formArrayName="references"
-    *ngFor="let reference of addQuestionForm.get('references').controls; let i = index;">
+    *ngFor="let reference of getFormReferences().controls; let i = index;">
       <div [formGroupName]="i">
         {{i+1}}.
         <div class="quick-reference-buttons">

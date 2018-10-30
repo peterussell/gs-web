@@ -135,6 +135,10 @@ export class QuestionEditorComponent implements OnInit {
     return referencesToSubmit;
   }
 
+  getFormReferences(): FormArray {
+    return this.addQuestionForm.get('references') as FormArray;
+  }
+
   // Material event handlers
   matSelectCourse(event: MatSelectChange) {
     this.selectCourse(event.value);
