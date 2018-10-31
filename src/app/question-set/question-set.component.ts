@@ -25,9 +25,9 @@ export class QuestionSetComponent implements OnInit {
     this.currentPage = [];
     this.questionService.onQuestionsUpdated.subscribe((questionSet: QuestionSet) => {
       this.questionSet = questionSet;
-      this.currentStartIndex = 0;
-      this.currentEndIndex = this.currentStartIndex + this.questionSetSize;
       this.totalQuestionCount = Object.keys(this.questionSet.questions).length;
+      this.currentStartIndex = 0;
+      this.currentEndIndex = Math.min(this.currentStartIndex + this.questionSetSize, this.totalQuestionCount);
       this.updateCurrentPage();
     });
   }
@@ -35,14 +35,14 @@ export class QuestionSetComponent implements OnInit {
   goToPreviousPage() {
     if (!this.canGoPrevious()) return;
     this.currentStartIndex -= this.questionSetSize;
-    this.currentEndIndex = this.currentStartIndex + this.questionSetSize;
+    this.currentEndIndex = Math.min(this.currentStartIndex + this.questionSetSize, this.totalQuestionCount);
     this.updateCurrentPage();
   }
 
   goToNextPage() {
     if (!this.canGoNext()) return;
     this.currentStartIndex = this.currentStartIndex + this.questionSetSize;
-    const newEndIndex = this.currentEndIndex + this.questionSetSize;
+    const newEndIndex = Math.min(this.currentEndIndex + this.questionSetSize, this.totalQuestionCount);
     this.currentEndIndex = newEndIndex > this.totalQuestionCount ?
       this.totalQuestionCount :
       newEndIndex;
@@ -51,7 +51,12 @@ export class QuestionSetComponent implements OnInit {
 
   updateCurrentPage() {
     let result: { [id: number] : Question } = [];
+
     for (let i=0; i<this.currentEndIndex-this.currentStartIndex; i++) {
+      if (this.questionSet.questions[i+this.currentStartIndex] === undefined) {
+        // return if there are less questions than the page size
+        break;
+      }
       result[i] = this.questionSet.questions[i+this.currentStartIndex];
     }
     this.currentPage = result;
