@@ -62,6 +62,10 @@ export class QuestionSetComponent implements OnInit {
     this.currentPage = result;
   }
 
+  currentPageHasQuestions(): boolean {
+    return this.currentPage !== null && Object.keys(this.currentPage).length > 0;
+  }
+
   canGoPrevious(): boolean {
     return this.currentStartIndex > 1;
   }
