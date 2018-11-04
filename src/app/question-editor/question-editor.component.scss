@@ -61,6 +61,13 @@ textarea {
     }
 }
 
+.waypoints-reference {
+    mat-form-field {
+        width: 40px;
+        margin: 0 10px;;
+    }
+}
+
 .add-reference {
     width: 100%;
     display: inline-block;

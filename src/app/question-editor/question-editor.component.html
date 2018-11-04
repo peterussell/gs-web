@@ -76,6 +76,28 @@
 
 <mat-card class="form-container">
   <!-- References -->
+  <h3>Waypoints Reference</h3>
+  <!-- Waypoints reference -->
+  <div class="waypoints-reference">
+    Volume
+    <mat-form-field >
+      <input matInput formControlName="waypointsVolume">
+    </mat-form-field>
+    Chapter
+    <mat-form-field>
+      <input matInput formControlName="waypointsChapter">
+    </mat-form-field>
+    <button
+      type="button" mat-mini-fab
+      class="add-reference__button"
+      (click)="addWaypointsReference()">+</button>
+  </div>
+  <div *ngIf="waypointsReferenceValuesMissing" class="error">
+    Waypoints volume and chapter required.
+  </div>
+</mat-card>
+
+<mat-card class="form-container">
   <h3>References</h3>
   <div
     formArrayName="references"
@@ -83,12 +105,12 @@
       <div [formGroupName]="i">
         {{i+1}}.
         <div class="quick-reference-buttons">
-          <button type="button" mat-stroked-button (click)="addPartToReference(i, '1')">Part 1</button>
-          <button type="button" mat-stroked-button (click)="addPartToReference(i, '61')">Part 61</button>
-          <button type="button" mat-stroked-button (click)="addPartToReference(i, '91')">Part 91</button>
-          <button type="button" mat-stroked-button (click)="addPartToReference(i, '135')">Part 135</button>
-          <button type="button" mat-stroked-button (click)="addPartToReference(i, '125')">Part 125</button>
-          <button type="button" mat-stroked-button (click)="addPartToReference(i, '121')">Part 121</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '1')">Part 1</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '61')">Part 61</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '91')">Part 91</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '135')">Part 135</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '125')">Part 125</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '121')">Part 121</button>
         </div>
         <mat-form-field>
           <input matInput formControlName="text" placeholder="Text">

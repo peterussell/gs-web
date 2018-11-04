@@ -21,6 +21,7 @@ export class QuestionEditorComponent implements OnInit {
   selectedTopic: Topic;
   selectedQuestionSet: QuestionSet;
   references: FormArray;
+  waypointsReferenceValuesMissing: boolean = false;
 
   questionSetsToUpdate: Array<QuestionSetToUpdate> = new Array<QuestionSetToUpdate>();
 
@@ -34,7 +35,9 @@ export class QuestionEditorComponent implements OnInit {
       'questionSet': new FormControl(null),
       'questionText': new FormControl(null, Validators.required),
       'answerText': new FormControl(null, Validators.required),
-      'references': this.formBuilder.array([])
+      'references': this.formBuilder.array([]),
+      'waypointsVolume': new FormControl(null),
+      'waypointsChapter': new FormControl(null)
     });
 
     this.apiService.getCourses().subscribe((response: any) => {
@@ -82,18 +85,6 @@ export class QuestionEditorComponent implements OnInit {
     this.addQuestionForm.reset();
   }
 
-  addBlankReference() {
-    this.references = this.addQuestionForm.get('references') as FormArray;
-    this.references.push(this.createReference());
-  }
-
-  createReference(): FormGroup {
-    return this.formBuilder.group({
-      text: '',
-      url: ''
-    });
-  }
-
   addSelectedQuestionSet() {
     // Don't add question sets we're already updating
     if (this.questionSetsToUpdate.some(
@@ -113,8 +104,52 @@ export class QuestionEditorComponent implements OnInit {
     this.questionSetsToUpdate.splice(index, 1);
   }
 
-  addPartToReference(referenceIndex: number, partNumber: string) {
-    const text = `CAR Part ${partNumber} (...)`;
+  addBlankReference() {
+    this.references = this.addQuestionForm.get('references') as FormArray;
+    this.references.push(this.createReference());
+  }
+
+  createReference(text: string='', url: string=''): FormGroup {
+    return this.formBuilder.group({
+      text: text,
+      url: url,
+    });
+  }
+
+  addWaypointsReference() {
+    this.waypointsReferenceValuesMissing = false;
+
+    let volume = this.addQuestionForm.get('waypointsVolume').value;
+    let chapter = this.addQuestionForm.get('waypointsChapter').value;
+
+    if (volume === null || chapter === null) {
+      this.waypointsReferenceValuesMissing = true;
+      return;
+    }
+
+    const text = (volume === 'hf' ? `Human factors` : `Waypoints Volume ${volume}`) + `, Chapter ${chapter}`;
+
+    const url = this.getWaypointsUrl(volume);
+    this.references.insert(0, this.createReference(text, url));
+  }
+
+  getWaypointsUrl(volume: string): string {
+    const urls: { [volume: string]: string } = {
+      '1': 'https://www.waypoints.nz/collections/private-pilots-licence-1/products/vol-01-ppl-aircraft-technical-knowledge-april-2013',
+      '2': 'https://www.waypoints.nz/collections/private-pilots-licence-1/products/vol-02-ppl-cpl-navigation-and-flight-planning-march-2012',
+      '3': 'https://www.waypoints.nz/collections/private-pilots-licence-1/products/vol-03-ppl-weather-to-fly-meteorology-june-2014',
+      '4': 'https://www.waypoints.nz/collections/private-pilots-licence-1/products/vol-04-flight-radio-for-pilots-july-2016',
+      '5': 'https://www.waypoints.nz/collections/private-pilots-licence-1/products/vol-05-ppl-cpl-air-law-january-2017',
+      '6': 'https://www.waypoints.nz/collections/commercial-pilots-licence/products/vol-06-cpl-atpl-meteorology-for-professional-pilots-january-2016',
+      '7': 'https://www.waypoints.nz/collections/commercial-pilots-licence/products/vol-07-cpl-principles-of-flight-and-performance-march-2016',
+      '8': 'https://www.waypoints.nz/collections/commercial-pilots-licence/products/vol-08-cpl-general-aircraft-technical-knowledge-february-2016',
+      'hf': 'https://www.waypoints.nz/collections/private-pilots-licence-1/products/aviation-medicine-and-other-human-factors-for-pilots-6th-edn-2008'
+    };
+    return urls[volume];
+  }
+
+  addCARReference(referenceIndex: number, partNumber: string) {
+    const text = `Cart Part ${partNumber}` + (partNumber !== '1' ? '(...)' : '');
     const paddedPartNumber = partNumber.padStart(3, '0');
     const url = `https://www.caa.govt.nz/rules/Rule_Consolidations/Part_${paddedPartNumber}_Consolidation.pdf`;
 
