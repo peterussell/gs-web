@@ -149,7 +149,7 @@ export class QuestionEditorComponent implements OnInit {
   }
 
   addCARReference(referenceIndex: number, partNumber: string) {
-    const text = `Cart Part ${partNumber}` + (partNumber !== '1' ? '(...)' : '');
+    const text = `Cart Part ${partNumber}` + (partNumber !== '1' ? ' (...)' : '');
     const paddedPartNumber = partNumber.padStart(3, '0');
     const url = `https://www.caa.govt.nz/rules/Rule_Consolidations/Part_${paddedPartNumber}_Consolidation.pdf`;
 
@@ -164,7 +164,12 @@ export class QuestionEditorComponent implements OnInit {
     let referencesToSubmit = new Array<Reference>();
     this.references.controls.forEach(r => {
       if (r.value['text'] !== '') {
-        referencesToSubmit.push(new Reference(r.value['text'], r.value['url']));
+        let text = r.value['text'];
+        let url = r.value['url'];
+        if (url === undefined || url === null) {
+          url = '';
+        };
+        referencesToSubmit.push(new Reference(text, url));
       }
     });
     return referencesToSubmit;
