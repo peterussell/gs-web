@@ -55,8 +55,8 @@ export class QuestionEditorComponent implements OnInit {
       }
     });
 
-    // Initialise some blank reference fields
-    for (let i=0; i<2; i++) { this.addBlankReference(); }
+    // Initialise an empty reference (user can add more as required)
+    this.addBlankReference();
   }
 
   onSubmit() {
@@ -149,7 +149,10 @@ export class QuestionEditorComponent implements OnInit {
   }
 
   addCARReference(referenceIndex: number, partNumber: string) {
+    // Add placeholder parentheses to all CAR parts except part 1
     const text = `Cart Part ${partNumber}` + (partNumber !== '1' ? ' (...)' : '');
+
+    // Build the URL
     const paddedPartNumber = partNumber.padStart(3, '0');
     const url = `https://www.caa.govt.nz/rules/Rule_Consolidations/Part_${paddedPartNumber}_Consolidation.pdf`;
 
