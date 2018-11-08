@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 import { RegisterInterestResponse } from "./interfaces/register-interest-response";
+import { Reference } from "../models/reference.model";
 
 @Injectable()
 export class ApiService {
@@ -12,6 +13,7 @@ export class ApiService {
     private readonly coursesRelPath = 'courses';
     private readonly questionSetsRelPath = 'question-sets/new';
     private readonly registerInterestRelPath = 'register-interest';
+    private readonly addQuestionRelPath = 'question';
     private readonly reportQuestionRelPath = 'report-question';
 
     constructor(private http: HttpClient) {
@@ -37,6 +39,26 @@ export class ApiService {
         var body = { 'email': email };
         return this.http.post<RegisterInterestResponse>(
             `${this.awsBasePath}/${this.registerInterestRelPath}`, body, this.httpOptions
+        );
+    }
+
+    public addQuestion(questionSetId: string, question: string, answer: string,
+        references: Array<Reference>): Observable<any> {
+        const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
+
+        var body = {
+            'question_set_id': questionSetId,
+            'question': question,
+            'answer': answer,
+            'references': []
+        };
+        references.forEach(r => {
+            if (r.text === null) { return; }
+            body['references'].push({ 'text': r.text, 'url': r.url });
+        });
+
+        return this.http.post<any>(
+            `${this.awsBasePath}/${this.addQuestionRelPath}`, body, this.httpOptions
         );
     }
 

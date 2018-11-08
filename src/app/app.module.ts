@@ -30,6 +30,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { UserService } from './core/services/user.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ReportQuestionDialogComponent } from './question-set/report-question-dialog/report-question-dialog.component';
+import { QuestionEditorComponent } from './question-editor/question-editor.component';
 import { AccountDialogComponent } from './account-dialog/account-dialog.component';
 
 
@@ -49,7 +50,8 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     ResetPasswordComponent,
     LandingPageComponent,
     ReportQuestionDialogComponent,
-    AccountDialogComponent
+    AccountDialogComponent,
+    QuestionEditorComponent
   ],
   imports: [
     BrowserModule,

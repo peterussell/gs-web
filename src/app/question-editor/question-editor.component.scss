@@ -1,0 +1,85 @@
+.form-container {
+    width: 500px;
+    margin: 0 0 10px 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form-row {
+    padding: 6px 0;
+    width: 100%;
+}
+
+.question-sets {
+    font-size: 0.8em;
+
+    h5 {
+        padding: 16px 0 10px 0;
+        margin: 0;
+    }
+
+    p {
+        padding: 0;
+        margin: 0 0 0 10px;
+    }
+
+    .mat-button {
+        padding: 0 10px;
+        margin: 0;
+        min-width: 0;
+        font-size: 0.8em;
+        line-height: 3em;
+    }
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+textarea {
+    line-height: 1.4em;
+}
+
+.mat-stroked-button {
+    color: #333;
+    border-color: #333;
+    margin-left: 10px;
+}
+
+.quick-reference-buttons {
+    display: inline;
+    margin-left: 20px;
+
+    button {
+        border-color: #ccc;
+        color: #333;
+        font-size: 0.8em;
+        line-height: 26px;
+        margin: 0;
+        padding: 0 6px;
+        min-width: 0px;
+    }
+}
+
+.waypoints-reference {
+    mat-form-field {
+        width: 40px;
+        margin: 0 10px;;
+    }
+}
+
+.add-reference {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+
+    &__button {
+        background-color: #390;
+        display: block;
+        float: right;
+    }
+}
+
+.error {
+    color: #f44336;
+}

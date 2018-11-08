@@ -1,0 +1,144 @@
+<app-page-title title="Question editor"></app-page-title>
+
+<form [formGroup]="addQuestionForm" (ngSubmit)="onSubmit()">
+
+<mat-card class="form-container">
+  <h3>Question set</h3>
+  <!-- Topic selector -->
+  <mat-form-field>
+    <mat-select placeholder="Course" (change)="matSelectCourse($event)" [value]="selectedCourse">
+      <mat-option *ngFor="let course of courses" [value]="course">
+        {{ course.title }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Topic selector -->
+  <mat-form-field>
+    <mat-select placeholder="Topic" (change)="matSelectTopic($event)" [value]="selectedTopic">
+      <mat-option *ngFor="let topic of topics" [value]="topic">
+        {{ topic.title }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Question set selector -->
+  <mat-form-field>
+    <mat-select placeholder="Question Set" (change)="matSelectQuestionSet($event)" [value]="selectedQuestionSet">
+      <mat-option *ngFor="let questionSet of questionSets" [value]="questionSet">
+        {{ questionSet.title }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button type="button" mat-flat-button (click)="addSelectedQuestionSet()">
+    Add to this question set
+  </button>
+
+  <div class="question-sets">
+    <h5>Selected:</h5>
+      <p *ngFor="let qs of questionSetsToUpdate; let i = index;">
+        {{ qs.description }} <button type="button" mat-button color="warn" (click)="removeQuestionSet(i)">Remove</button>
+      </p>
+  </div>
+</mat-card>
+
+<mat-card class="form-container">
+  <h3>Question</h3>
+  <!-- Question text -->
+  <div class="form-row">
+    <mat-form-field>
+      <textarea
+        matInput
+        formControlName="questionText"
+        placeholder="Question text"
+        matTextareaAutosize></textarea>
+    </mat-form-field>
+    <mat-error *ngIf="!addQuestionForm.get('questionText').valid && addQuestionForm.get('questionText').touched">
+      Required
+    </mat-error>
+  </div>
+
+  <!-- Answer text -->
+  <div class="form-row">
+    <mat-form-field>
+      <textarea
+        matInput
+        formControlName="answerText"
+        placeholder="Answer text"
+        matTextareaAutosize></textarea>
+    </mat-form-field>
+    <mat-error *ngIf="!addQuestionForm.get('answerText').valid && addQuestionForm.get('answerText').touched">
+      Required
+    </mat-error>
+  </div>
+</mat-card>
+
+<mat-card class="form-container">
+  <!-- References -->
+  <h3>Waypoints Reference</h3>
+  <!-- Waypoints reference -->
+  <div class="waypoints-reference">
+    Volume
+    <mat-form-field >
+      <input matInput formControlName="waypointsVolume">
+    </mat-form-field>
+    Chapter
+    <mat-form-field>
+      <input matInput formControlName="waypointsChapter">
+    </mat-form-field>
+    <button
+      type="button" mat-mini-fab
+      class="add-reference__button"
+      (click)="addWaypointsReference()">+</button>
+  </div>
+  <div *ngIf="waypointsReferenceValuesMissing" class="error">
+    Waypoints volume and chapter required.
+  </div>
+</mat-card>
+
+<mat-card class="form-container">
+  <h3>References</h3>
+  <div
+    formArrayName="references"
+    *ngFor="let reference of getFormReferences().controls; let i = index;">
+      <div [formGroupName]="i">
+        {{i+1}}.
+        <div class="quick-reference-buttons">
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '1')">Part 1</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '61')">Part 61</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '91')">Part 91</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '135')">Part 135</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '125')">Part 125</button>
+          <button type="button" mat-stroked-button (click)="addCARReference(i, '121')">Part 121</button>
+        </div>
+        <mat-form-field>
+          <input matInput formControlName="text" placeholder="Text">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="url" placeholder="Url">
+        </mat-form-field>
+      </div>
+  </div>
+  <div class="form-row add-reference">
+    <button
+      type="button" mat-mini-fab
+      class="add-reference__button"
+      (click)="addBlankReference()">+</button>
+  </div>
+</mat-card>
+
+<mat-card class="form-container">
+  <!-- Buttons -->
+  <div class="form-row">
+    <button mat-flat-button [disabled]="!addQuestionForm.valid">Save</button>
+    <button type="button" mat-stroked-button (click)="resetForm()">Reset</button>
+  </div>
+
+  <!-- Success/error message -->
+  <span *ngIf="addingQuestionReturnedSuccess">Question added successfully</span>
+  <span *ngIf="addingQuestionReturnedError" class="error">
+    There was an error adding the question, check the console for details.
+  </span>
+</mat-card>
+</form>
