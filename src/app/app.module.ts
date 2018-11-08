@@ -32,6 +32,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ReportQuestionDialogComponent } from './question-set/report-question-dialog/report-question-dialog.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
 import { AccountDialogComponent } from './account-dialog/account-dialog.component';
+import { ActivateComponent } from './activate/activate.component';
+import { ActivateFullPageComponent } from './activate-full-page/activate-full-page.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     LandingPageComponent,
     ReportQuestionDialogComponent,
     AccountDialogComponent,
-    QuestionEditorComponent
+    QuestionEditorComponent,
+    ActivateComponent,
+    ActivateFullPageComponent
   ],
   imports: [
     BrowserModule,

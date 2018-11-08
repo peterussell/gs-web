@@ -10,12 +10,14 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
+import { ActivateFullPageComponent } from './activate-full-page/activate-full-page.component';
 
 const appRoutes: Routes = [
     // { path: '', component: LandingPageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
+    { path: 'activate', component: ActivateFullPageComponent },
     { path: 'courses', component: GroundSchoolAppComponent, children: [
         { path: '', component: CourseComponent, resolve: {course: CourseResolver} }
     ]},

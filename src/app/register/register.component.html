@@ -53,58 +53,23 @@
   <!-- TODO: move this to a separate component so we can have an /activate route -->
   <ng-template #activatePanel>
     <mat-card-content>
-      <form [formGroup]="activateForm" (ngSubmit)="onActivate()">
-        <div *ngIf="showActivateForm()">
-          <div class="activate-message">
-            <p>
-              An email containing your activation code is on its way to
-              <strong>{{ this.registerForm.get('email').value }}</strong>.
-            </p>
+      <div *ngIf="showActivateMessage()">
+        <div class="activate-message">
+          <p>
+            An email containing your activation code is on its way to
+            <strong>{{ this.registerForm.get('email').value }}</strong>.
+          </p>
 
-            <p>
-              If you don't receive an activation email, please get in touch via the GroundSchool NZ<br>
-              <a href="{{ facebookUrl }}">Facebook page</a>.
-            </p>
-          </div>
-
-          <!-- Activate form -->
-          <div>
-            <mat-form-field>
-              <input matInput formControlName="email" placeholder="Email">
-              <mat-error *ngIf="!activateForm.get('email').valid && activateForm.get('email').touched">
-                Valid email required
-              </mat-error>
-            </mat-form-field>
-          </div>
-
-          <div>
-            <mat-form-field>
-              <input matInput formControlName="code" placeholder="Code">
-              <mat-error
-                *ngIf="!activateForm.get('code').value !== '' && activateForm.get('code').touched">
-                Required
-              </mat-error>
-            </mat-form-field>
-          </div>
-
-          <div class="error-msg" *ngIf="hasActivationError()">
-            {{ activateErrorMessage }}
-          </div>
-          <mat-card-actions>
-            <button mat-raised-button [disabled]="!activateForm.valid">Activate Account</button>
-          </mat-card-actions>
-          <!-- End activate form -->
+          <p>
+            If you don't receive an activation email, please get in touch via the GroundSchool NZ<br>
+            <a href="{{ facebookUrl }}">Facebook page</a>.
+          </p>
         </div>
-      </form>
 
-      <!-- Activate success -->
-      <div class="activate-success" *ngIf="showActivateSuccessMessage()">
-        Your account has been activated.
+        <div class="return-to-login">
+          Return to <a routerLink="" (click)="showLoginForm()">Log in</a>
+        </div>
       </div>
-
-    <div class="return-to-login">
-      Return to <a routerLink="" (click)="showLoginForm()">Log in</a>
-    </div>
     </mat-card-content>
   </ng-template>
 </mat-card>
