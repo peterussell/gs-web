@@ -83,6 +83,7 @@ export class QuestionEditorComponent implements OnInit {
 
   resetForm() {
     this.addQuestionForm.reset();
+    this.resetReferences();
   }
 
   addSelectedQuestionSet() {
@@ -102,6 +103,15 @@ export class QuestionEditorComponent implements OnInit {
 
   removeQuestionSet(index: number) {
     this.questionSetsToUpdate.splice(index, 1);
+  }
+
+  resetReferences() {
+    this.addQuestionForm.setControl('references', this.formBuilder.array([]));
+    this.addBlankReference();
+  }
+
+  getFormReferences(): FormArray {
+    return this.addQuestionForm.get('references') as FormArray;
   }
 
   addBlankReference() {
@@ -176,10 +186,6 @@ export class QuestionEditorComponent implements OnInit {
       }
     });
     return referencesToSubmit;
-  }
-
-  getFormReferences(): FormArray {
-    return this.addQuestionForm.get('references') as FormArray;
   }
 
   // Material event handlers
