@@ -37,6 +37,7 @@ export class RegisterComponent implements OnInit {
     this.clearError();
 
     if (!this.checkPasswordsMatch()) {
+      this.registerForm.enable();
       return;
     }
     const registerResult = this.userService.registerUser(
