@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserEventsService } from '../core/services/user-events.service';
+import { UIEventsService } from '../core/services/ui-events.service';
 import { ResponsiveService, ViewportSize } from '../core/services/responsive.service';
 import { QuestionService } from '../core/services/question.service';
 import { Topic } from '../core/models/topic.model';
@@ -27,7 +27,7 @@ export class PageTitleComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     public userService: UserService,
-    public userEventsService: UserEventsService,
+    public uiEventsService: UIEventsService,
     public responsiveService: ResponsiveService,
     public questionService: QuestionService) {
       this.currentUser = this.userService.getCurrentUser();
@@ -53,7 +53,7 @@ export class PageTitleComponent implements OnInit {
   }
 
   toggleSidenav() {
-    this.userEventsService.toggleSidenav();
+    this.uiEventsService.toggleSidenav();
   }
 
   onLoginClicked() {

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { UserEventsService } from '../core/services/user-events.service';
+import { UIEventsService } from '../core/services/ui-events.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { BreakpointState } from '@angular/cdk/layout';
 import { ResponsiveService, ViewportSize } from '../core/services/responsive.service';
@@ -16,7 +16,7 @@ export class GroundSchoolAppComponent implements OnInit {
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
   constructor(
-    public userEventsService: UserEventsService,
+    public uiEventsService: UIEventsService,
     public responsiveService: ResponsiveService) { }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class GroundSchoolAppComponent implements OnInit {
     this.responsiveService.onViewportChange.subscribe((newViewportSize: ViewportSize) => {
       this.setMenuMode(newViewportSize);
     });
-    this.userEventsService.onToggleSidenav.subscribe(() => { this.toggleSidenav(); });
+    this.uiEventsService.onToggleSidenav.subscribe(() => { this.toggleSidenav(); });
   }
 
   private toggleSidenav() {

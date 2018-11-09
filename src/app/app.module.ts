@@ -23,7 +23,7 @@ import { CourseResolver } from './course/course-resolver.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 
-import { UserEventsService } from './core/services/user-events.service';
+import { UIEventsService } from './core/services/ui-events.service';
 import { ResponsiveService } from './core/services/responsive.service';
 import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
@@ -70,7 +70,7 @@ import { ActivateFullPageComponent } from './activate-full-page/activate-full-pa
     ApiService,
     UserService,
     QuestionService,
-    UserEventsService,
+    UIEventsService,
     ResponsiveService,
     CourseResolver
   ],
