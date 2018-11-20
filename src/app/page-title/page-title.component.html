@@ -2,7 +2,7 @@
     <div class="title-container__title">
         <h2>{{ title }}</h2>
     </div>
-    
+
     <div class="title-container__menu-icon">
         <button mat-raised-button (click)="toggleSidenav()" *ngIf="menuButtonVisible">
             <i class="material-icons">menu</i> Menu
@@ -10,7 +10,7 @@
 
         <div class="title-container__account" *ngIf="accountSectionVisible">
             <div *ngIf="currentUser; else loggedOut">
-                Logged in
+                <button mat-stroked-button (click)="onLogOutClicked()">Log out</button>
             </div>
             <ng-template #loggedOut>
                 <button mat-stroked-button (click)="onSignUpClicked()">Sign up</button>

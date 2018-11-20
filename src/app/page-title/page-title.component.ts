@@ -9,6 +9,7 @@ import { AccountDialogState, AccountDialogComponent } from '../account-dialog/ac
 import { UserService } from '../core/services/user.service';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { User } from '../core/models/user.model';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-page-title',
@@ -22,16 +23,14 @@ export class PageTitleComponent implements OnInit {
   accountSectionVisible: boolean;
   course: string;
   topic: string;
-  currentUser: User;
+  currentUser: CognitoUser;
 
   constructor(
     public dialog: MatDialog,
     public userService: UserService,
     public uiEventsService: UIEventsService,
     public responsiveService: ResponsiveService,
-    public questionService: QuestionService) {
-      this.currentUser = this.userService.getCurrentUser();
-    }
+    public questionService: QuestionService) { }
 
   ngOnInit() {
     // set up initial viewport size related things
@@ -45,11 +44,15 @@ export class PageTitleComponent implements OnInit {
     });
 
     if (this.title === undefined || this.title === '') {
-      // tmp - TODO: the question set (?) component should compile the title and pass it in as an Input
+      // TODO: the question set (?) component should compile the title and pass it in as an Input
       this.questionService.onTopicUpdated.subscribe((res: { course: Course, topic: Topic }) => {
         this.title = `${res.course.title} - ${res.topic.title}`;
       });
     }
+
+    this.userService.currentUser$.subscribe(
+      (newUser: CognitoUser) => { this.currentUser = newUser; }
+    )
   }
 
   toggleSidenav() {
@@ -72,5 +75,9 @@ export class PageTitleComponent implements OnInit {
       position: { top: '30px' },
       data: { initialState: AccountDialogState.Register }
     });
+  }
+
+  onLogOutClicked() {
+    this.userService.signOut();
   }
 }
