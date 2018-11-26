@@ -6,16 +6,16 @@
     </div>
 </div>
 
-<div class="question-set__container">
+<div class="topic__container">
     <div *ngIf="currentPageHasQuestions(); else noQuestions">
         <app-question *ngFor="let question of currentPage" [question]="question">
         </app-question>
     </div>
         
     <ng-template #noQuestions>
-        <p class="question-set__container--no-questions" *ngIf="questionSet === undefined">Loading...</p>
-        <p class="question-set__container--no-questions" *ngIf="questionSet !== undefined">
-            Sorry, no questions found for '{{ questionSet.title }}'.
+        <p class="topic__container--no-questions" *ngIf="topic === undefined">Loading...</p>
+        <p class="topic__container--no-questions" *ngIf="topic !== undefined">
+            Sorry, no questions found for '{{ topic.title }}'.
         </p>
     </ng-template>
 </div>

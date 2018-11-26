@@ -22,23 +22,23 @@
     </mat-select>
   </mat-form-field>
 
-  <!-- Question set selector -->
+  <!-- Topic selector -->
   <mat-form-field>
-    <mat-select placeholder="Question Set" (change)="matSelectQuestionSet($event)" [value]="selectedQuestionSet">
-      <mat-option *ngFor="let questionSet of questionSets" [value]="questionSet">
-        {{ questionSet.title }}
+    <mat-select placeholder="Topic" (change)="matSelectTopic($event)" [value]="selectedTopic">
+      <mat-option *ngFor="let topic of topics" [value]="topic">
+        {{ topic.title }}
       </mat-option>
     </mat-select>
   </mat-form-field>
 
-  <button type="button" mat-flat-button (click)="addSelectedQuestionSet()">
-    Add to this question set
+  <button type="button" mat-flat-button (click)="addSelectedTopic()">
+    Add to this topic
   </button>
 
-  <div class="question-sets">
+  <div class="topics">
     <h5>Selected:</h5>
-      <p *ngFor="let qs of questionSetsToUpdate; let i = index;">
-        {{ qs.description }} <button type="button" mat-button color="warn" (click)="removeQuestionSet(i)">Remove</button>
+      <p *ngFor="let qs of topicsToUpdate; let i = index;">
+        {{ qs.description }} <button type="button" mat-button color="warn" (click)="removeTopic(i)">Remove</button>
       </p>
   </div>
 </mat-card>

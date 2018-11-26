@@ -1,48 +1,48 @@
 import { Component, OnInit } from '@angular/core';
 
-import { QuestionSet } from '../core/models/question-set.model';
+import { Topic } from '../core/models/topic.model';
 import { QuestionService } from '../core/services/question.service';
 import { Question } from '../core/models/question.model';
 
 @Component({
-  selector: 'app-question-set',
-  templateUrl: './question-set.component.html',
-  styleUrls: ['./question-set.component.scss']
+  selector: 'app-topic',
+  templateUrl: './topic.component.html',
+  styleUrls: ['./topic.component.scss']
 })
-export class QuestionSetComponent implements OnInit {
-  public questionSet: QuestionSet;
+export class TopicComponent implements OnInit {
+  public topic: Topic;
   public currentPage: { [id: number] : Question };
 
   // Pagination
   public totalQuestionCount: number;
   public currentStartIndex: number = 0;
   public currentEndIndex: number = 0;
-  public questionSetSize: number = 10;
+  public topicSize: number = 10;
 
   constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
     this.currentPage = [];
-    this.questionService.onQuestionsUpdated.subscribe((questionSet: QuestionSet) => {
-      this.questionSet = questionSet;
-      this.totalQuestionCount = Object.keys(this.questionSet.questions).length;
+    this.questionService.onQuestionsUpdated.subscribe((topic: Topic) => {
+      this.topic = topic;
+      this.totalQuestionCount = Object.keys(this.topic.questions).length;
       this.currentStartIndex = 0;
-      this.currentEndIndex = Math.min(this.currentStartIndex + this.questionSetSize, this.totalQuestionCount);
+      this.currentEndIndex = Math.min(this.currentStartIndex + this.topicSize, this.totalQuestionCount);
       this.updateCurrentPage();
     });
   }
 
   goToPreviousPage() {
     if (!this.canGoPrevious()) return;
-    this.currentStartIndex -= this.questionSetSize;
-    this.currentEndIndex = Math.min(this.currentStartIndex + this.questionSetSize, this.totalQuestionCount);
+    this.currentStartIndex -= this.topicSize;
+    this.currentEndIndex = Math.min(this.currentStartIndex + this.topicSize, this.totalQuestionCount);
     this.updateCurrentPage();
   }
 
   goToNextPage() {
     if (!this.canGoNext()) return;
-    this.currentStartIndex = this.currentStartIndex + this.questionSetSize;
-    const newEndIndex = Math.min(this.currentEndIndex + this.questionSetSize, this.totalQuestionCount);
+    this.currentStartIndex = this.currentStartIndex + this.topicSize;
+    const newEndIndex = Math.min(this.currentEndIndex + this.topicSize, this.totalQuestionCount);
     this.currentEndIndex = newEndIndex > this.totalQuestionCount ?
       this.totalQuestionCount :
       newEndIndex;
@@ -53,11 +53,11 @@ export class QuestionSetComponent implements OnInit {
     let result: { [id: number] : Question } = [];
 
     for (let i=0; i<this.currentEndIndex-this.currentStartIndex; i++) {
-      if (this.questionSet.questions[i+this.currentStartIndex] === undefined) {
+      if (this.topic.questions[i+this.currentStartIndex] === undefined) {
         // return if there are less questions than the page size
         break;
       }
-      result[i] = this.questionSet.questions[i+this.currentStartIndex];
+      result[i] = this.topic.questions[i+this.currentStartIndex];
     }
     this.currentPage = result;
   }

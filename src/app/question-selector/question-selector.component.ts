@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../core/models/course.model';
 import { Subject } from '../core/models/subject.model';
-import { QuestionSet } from '../core/models/question-set.model';
+import { Topic } from '../core/models/topic.model';
 import { QuestionService } from '../core/services/question.service';
 import { MatSelectChange } from '@angular/material/select';
 
@@ -13,10 +13,10 @@ import { MatSelectChange } from '@angular/material/select';
 export class QuestionSelectorComponent implements OnInit {
   @Input() course: Course;
   public subjects: Array<Subject>;
-  public questionSets: Array<QuestionSet>;
+  public topics: Array<Topic>;
 
   public selectedSubject: Subject;
-  public selectedQuestionSet: QuestionSet;
+  public selectedTopic: Topic;
   
   constructor(private questionService: QuestionService) { }
 
@@ -37,20 +37,20 @@ export class QuestionSelectorComponent implements OnInit {
   }
 
   selectSubject(subject: Subject) {
-    if (subject !== undefined && subject.questionSets.length > 0) {
+    if (subject !== undefined && subject.topics.length > 0) {
       this.selectedSubject = subject;
-      this.questionSets = subject.questionSets.sort((a, b) => {
+      this.topics = subject.topics.sort((a, b) => {
         if (a.title < b.title) return -1;
         if (a.title > b.title) return 1;
         return 0;
       });
-      this.selectQuestionSet(this.questionSets[0]);
+      this.selectTopic(this.topics[0]);
     }
   }
 
-  selectQuestionSet(questionSet: QuestionSet) {
-    this.selectedQuestionSet = questionSet;
-    this.questionService.updateQuestionSet(questionSet.questionSetId);
+  selectTopic(topic: Topic) {
+    this.selectedTopic = topic;
+    this.questionService.updateTopic(topic.topicId);
   }
 
   // Material event handlers
@@ -58,7 +58,7 @@ export class QuestionSelectorComponent implements OnInit {
     this.selectSubject(event.value);
   }
 
-  matSelectQuestionSet(event: MatSelectChange) {
-    this.selectQuestionSet(event.value);
+  matSelectTopic(event: MatSelectChange) {
+    this.selectTopic(event.value);
   }
 }

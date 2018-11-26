@@ -1,6 +1,6 @@
 import { Injectable, Output, EventEmitter } from "@angular/core";
 import { Subject } from "../models/subject.model";
-import { QuestionSet } from "../models/question-set.model";
+import { Topic } from "../models/topic.model";
 import { ApiService } from "./api.service";
 import { Course } from "../models/course.model";
 
@@ -8,11 +8,11 @@ import { Course } from "../models/course.model";
 
 @Injectable()
 export class QuestionService {
-    questionSet: QuestionSet;
+    topic: Topic;
 
     @Output() onSubjectUpdated: EventEmitter<{course: Course, subject: Subject}>
         = new EventEmitter<{course: Course, subject: Subject}>();
-    @Output() onQuestionsUpdated: EventEmitter<QuestionSet> = new EventEmitter<QuestionSet>();
+    @Output() onQuestionsUpdated: EventEmitter<Topic> = new EventEmitter<Topic>();
 
     constructor(private apiService: ApiService) {}
 
@@ -20,10 +20,10 @@ export class QuestionService {
         this.onSubjectUpdated.emit({ course: course, subject: subject });
     }
 
-    updateQuestionSet(questionSetId: string) {
-        this.apiService.getQuestions(questionSetId).subscribe((res) => {
-            this.questionSet = res;
-            this.onQuestionsUpdated.emit(this.questionSet);
+    updateTopic(topicId: string) {
+        this.apiService.getQuestions(topicId).subscribe((res) => {
+            this.topic = res;
+            this.onQuestionsUpdated.emit(this.topic);
         },
         (error: any) => {
             console.log(`Error: ${error.message}`)

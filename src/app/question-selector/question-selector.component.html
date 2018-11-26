@@ -1,10 +1,10 @@
 <mat-card class="question-selector">
 
-  <!-- Question Set -->
-  <mat-form-field class="question-selector__question-set">
-    <mat-select placeholder="Question Set" (change)="matSelectQuestionSet($event)" [value]="selectedQuestionSet">
-      <mat-option *ngFor="let questionSet of questionSets" [value]="questionSet">
-        {{ questionSet.title }}
+  <!-- Topic -->
+  <mat-form-field class="question-selector__topic">
+    <mat-select placeholder="Topic" (change)="matSelectTopic($event)" [value]="selectedTopic">
+      <mat-option *ngFor="let topic of topics" [value]="topic">
+        {{ topic.title }}
       </mat-option>
     </mat-select>
   </mat-form-field>

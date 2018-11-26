@@ -29,7 +29,7 @@ export class PageTitleComponent implements OnInit {
     });
 
     if (this.title === undefined || this.title === '') {
-      // tmp - TODO: the question set (?) component should compile the title and pass it in as an Input
+      // tmp - TODO: the topic (?) component should compile the title and pass it in as an Input
       this.questionService.onSubjectUpdated.subscribe((res: { course: Course, subject: Subject }) => {
         this.title = `${res.course.title} - ${res.subject.title}`;
       });

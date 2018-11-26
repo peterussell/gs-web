@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestionSet } from '../core/models/question-set.model';
+import { Topic } from '../core/models/topic.model';
 import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
 import { Course } from '../core/models/course.model';
@@ -16,14 +16,14 @@ export class QuestionEditorComponent implements OnInit {
   addQuestionForm: FormGroup;
   courses: Array<Course>;
   subjects: Array<Subject>;
-  questionSets: Array<QuestionSet>;
+  topics: Array<Topic>;
   selectedCourse: Course;
   selectedSubject: Subject;
-  selectedQuestionSet: QuestionSet;
+  selectedTopic: Topic;
   references: FormArray;
   waypointsReferenceValuesMissing: boolean = false;
 
-  questionSetsToUpdate: Array<QuestionSetToUpdate> = new Array<QuestionSetToUpdate>();
+  topicsToUpdate: Array<TopicToUpdate> = new Array<TopicToUpdate>();
 
   addingQuestionReturnedSuccess: boolean = false;
   addingQuestionReturnedError: boolean = false;
@@ -32,7 +32,7 @@ export class QuestionEditorComponent implements OnInit {
 
   ngOnInit() {
     this.addQuestionForm = new FormGroup({
-      'questionSet': new FormControl(null),
+      'topic': new FormControl(null),
       'questionText': new FormControl(null, Validators.required),
       'answerText': new FormControl(null, Validators.required),
       'references': this.formBuilder.array([]),
@@ -67,8 +67,8 @@ export class QuestionEditorComponent implements OnInit {
     const answerText = this.addQuestionForm.get('answerText').value;
     const references = this.mapReferenceFieldsToReferences();
 
-    this.questionSetsToUpdate.forEach(qs => {
-      this.apiService.addQuestion(qs.questionSetId, questionText, answerText, references)
+    this.topicsToUpdate.forEach(qs => {
+      this.apiService.addQuestion(qs.topicId, questionText, answerText, references)
         .subscribe((response: any) => {
           this.addingQuestionReturnedSuccess = true;
           this.addingQuestionReturnedError = false;
@@ -86,23 +86,23 @@ export class QuestionEditorComponent implements OnInit {
     this.resetReferences();
   }
 
-  addSelectedQuestionSet() {
-    // Don't add question sets we're already updating
-    if (this.questionSetsToUpdate.some(
-      q => q.questionSetId === this.selectedQuestionSet.questionSetId)
+  addSelectedTopic() {
+    // Don't add topics we're already updating
+    if (this.topicsToUpdate.some(
+      q => q.topicId === this.selectedTopic.topicId)
     ) {
       return;
     }
 
-    let toUpdate = new QuestionSetToUpdate();
-    toUpdate.questionSetId = this.selectedQuestionSet.questionSetId;
+    let toUpdate = new TopicToUpdate();
+    toUpdate.topicId = this.selectedTopic.topicId;
     toUpdate.description =
-      `${this.selectedCourse.title} > ${this.selectedSubject.title} > ${this.selectedQuestionSet.title}`;
-    this.questionSetsToUpdate.push(toUpdate);
+      `${this.selectedCourse.title} > ${this.selectedSubject.title} > ${this.selectedTopic.title}`;
+    this.topicsToUpdate.push(toUpdate);
   }
 
-  removeQuestionSet(index: number) {
-    this.questionSetsToUpdate.splice(index, 1);
+  removeTopic(index: number) {
+    this.topicsToUpdate.splice(index, 1);
   }
 
   resetReferences() {
@@ -197,8 +197,8 @@ export class QuestionEditorComponent implements OnInit {
     this.selectSubject(event.value);
   }
 
-  matSelectQuestionSet(event: MatSelectChange) {
-    this.selectQuestionSet(event.value);
+  matSelectTopic(event: MatSelectChange) {
+    this.selectTopic(event.value);
   }
 
   selectCourse(course: Course) {
@@ -219,23 +219,23 @@ export class QuestionEditorComponent implements OnInit {
     if (subject === null) { return; }
     this.selectedSubject = subject;
     // TODO: extract to utility class
-    this.questionSets = this.selectedSubject.questionSets.sort((a, b) => {
+    this.topics = this.selectedSubject.topics.sort((a, b) => {
       if (a.title < b.title) return -1;
       if (a.title > b.title) return 1;
       return 0;
     });
-    if (this.selectedSubject.questionSets !== null && this.selectedSubject.questionSets.length > 0) {
-      this.selectQuestionSet(this.selectedSubject.questionSets[0]);
+    if (this.selectedSubject.topics !== null && this.selectedSubject.topics.length > 0) {
+      this.selectTopic(this.selectedSubject.topics[0]);
     }
   }
 
-  selectQuestionSet(questionSet: QuestionSet) {
-    if (questionSet === null) { return; }
-    this.selectedQuestionSet = questionSet;
+  selectTopic(topic: Topic) {
+    if (topic === null) { return; }
+    this.selectedTopic = topic;
   }
 }
 
-class QuestionSetToUpdate {
+class TopicToUpdate {
   description: string;
-  questionSetId: string;
+  topicId: string;
 }

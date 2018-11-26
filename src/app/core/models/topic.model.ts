@@ -1,7 +1,7 @@
 import { Question } from "./question.model";
 
-export class QuestionSet {
-    questionSetId: string;
+export class Topic {
+    topicId: string;
     subjectId: string;
     title: string;
     questions: { [id: number] : Question };

@@ -1,5 +1,5 @@
 // import { Question } from "../core/models/question.model";
-// import { QuestionSet } from "../core/models/question-set.model";
+// import { Topic } from "../core/models/topic.model";
 // import { Reference } from "../core/models/reference.model";
 // import { Subject } from "../core/models/subject.model";
 // import { Course } from "../core/models/course.model";
@@ -26,20 +26,20 @@
 //                 courseId,
 //                 `${i}`,
 //                 `This is subject ${i}`,
-//                 this.getQuestionSets(10)
+//                 this.getTopics(10)
 //             ));
 //         }
 //         return subjects;
 //     }
 
-//     // getQuestionSets(count: number): Array<QuestionSet> {
-//     //     var questionSets = new Array<QuestionSet>();
+//     // getTopics(count: number): Array<Topic> {
+//     //     var topics = new Array<Topic>();
 //     //     for (let i=1; i<=count; i++) {
-//     //         var qs = new QuestionSet();
+//     //         var qs = new Topic();
 //     //         this.getQuestions(8).forEach(q => qs.questions.push(q));
-//     //         questionSets.push(qs);
+//     //         topics.push(qs);
 //     //     }
-//     //     return questionSets;
+//     //     return topics;
 //     // }
 
 //     getQuestions(count: number): Array<Question> {
