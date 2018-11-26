@@ -3,7 +3,7 @@ import { QuestionSet } from '../core/models/question-set.model';
 import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
 import { Course } from '../core/models/course.model';
-import { Topic } from '../core/models/topic.model';
+import { Subject } from '../core/models/subject.model';
 import { ApiService } from '../core/services/api.service';
 import { Reference } from '../core/models/reference.model';
 
@@ -15,10 +15,10 @@ import { Reference } from '../core/models/reference.model';
 export class QuestionEditorComponent implements OnInit {
   addQuestionForm: FormGroup;
   courses: Array<Course>;
-  topics: Array<Topic>;
+  subjects: Array<Subject>;
   questionSets: Array<QuestionSet>;
   selectedCourse: Course;
-  selectedTopic: Topic;
+  selectedSubject: Subject;
   selectedQuestionSet: QuestionSet;
   references: FormArray;
   waypointsReferenceValuesMissing: boolean = false;
@@ -97,7 +97,7 @@ export class QuestionEditorComponent implements OnInit {
     let toUpdate = new QuestionSetToUpdate();
     toUpdate.questionSetId = this.selectedQuestionSet.questionSetId;
     toUpdate.description =
-      `${this.selectedCourse.title} > ${this.selectedTopic.title} > ${this.selectedQuestionSet.title}`;
+      `${this.selectedCourse.title} > ${this.selectedSubject.title} > ${this.selectedQuestionSet.title}`;
     this.questionSetsToUpdate.push(toUpdate);
   }
 
@@ -193,8 +193,8 @@ export class QuestionEditorComponent implements OnInit {
     this.selectCourse(event.value);
   }
   
-  matSelectTopic(event: MatSelectChange) {
-    this.selectTopic(event.value);
+  matSelectSubject(event: MatSelectChange) {
+    this.selectSubject(event.value);
   }
 
   matSelectQuestionSet(event: MatSelectChange) {
@@ -205,27 +205,27 @@ export class QuestionEditorComponent implements OnInit {
     if (course === null) { return; }
     this.selectedCourse = course;
     // TODO: extract to utility class
-    this.topics = this.selectedCourse.topics.sort((a, b) => {
+    this.subjects = this.selectedCourse.subjects.sort((a, b) => {
       if (a.title < b.title) return -1;
       if (a.title > b.title) return 1;
       return 0;
     });
-    if (this.selectedCourse.topics !== null && this.selectedCourse.topics.length > 0) {
-      this.selectTopic(this.selectedCourse.topics[0]);
+    if (this.selectedCourse.subjects !== null && this.selectedCourse.subjects.length > 0) {
+      this.selectSubject(this.selectedCourse.subjects[0]);
     }
   }
 
-  selectTopic(topic: Topic) {
-    if (topic === null) { return; }
-    this.selectedTopic = topic;
+  selectSubject(subject: Subject) {
+    if (subject === null) { return; }
+    this.selectedSubject = subject;
     // TODO: extract to utility class
-    this.questionSets = this.selectedTopic.questionSets.sort((a, b) => {
+    this.questionSets = this.selectedSubject.questionSets.sort((a, b) => {
       if (a.title < b.title) return -1;
       if (a.title > b.title) return 1;
       return 0;
     });
-    if (this.selectedTopic.questionSets !== null && this.selectedTopic.questionSets.length > 0) {
-      this.selectQuestionSet(this.selectedTopic.questionSets[0]);
+    if (this.selectedSubject.questionSets !== null && this.selectedSubject.questionSets.length > 0) {
+      this.selectQuestionSet(this.selectedSubject.questionSets[0]);
     }
   }
 

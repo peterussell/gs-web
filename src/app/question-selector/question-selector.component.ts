@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../core/models/course.model';
-import { Topic } from '../core/models/topic.model';
+import { Subject } from '../core/models/subject.model';
 import { QuestionSet } from '../core/models/question-set.model';
 import { QuestionService } from '../core/services/question.service';
 import { MatSelectChange } from '@angular/material/select';
@@ -12,34 +12,34 @@ import { MatSelectChange } from '@angular/material/select';
 })
 export class QuestionSelectorComponent implements OnInit {
   @Input() course: Course;
-  public topics: Array<Topic>;
+  public subjects: Array<Subject>;
   public questionSets: Array<QuestionSet>;
 
-  public selectedTopic: Topic;
+  public selectedSubject: Subject;
   public selectedQuestionSet: QuestionSet;
   
   constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
-    if (this.course !== undefined && this.course.topics.length > 0) {
+    if (this.course !== undefined && this.course.subjects.length > 0) {
       // todo: extract these to a helper function (sortByTitle(...))
-      this.topics = this.course.topics.sort((a, b) => {
+      this.subjects = this.course.subjects.sort((a, b) => {
         if (a.title < b.title) return -1;
         if (a.title > b.title) return 1;
         return 0;
       });
-      this.selectTopic(this.topics[0]);
+      this.selectSubject(this.subjects[0]);
 
-      this.questionService.onTopicUpdated.subscribe((res: {course: Course, topic: Topic}) => {
-        this.selectTopic(res.topic);
+      this.questionService.onSubjectUpdated.subscribe((res: {course: Course, subject: Subject}) => {
+        this.selectSubject(res.subject);
       })
     }
   }
 
-  selectTopic(topic: Topic) {
-    if (topic !== undefined && topic.questionSets.length > 0) {
-      this.selectedTopic = topic;
-      this.questionSets = topic.questionSets.sort((a, b) => {
+  selectSubject(subject: Subject) {
+    if (subject !== undefined && subject.questionSets.length > 0) {
+      this.selectedSubject = subject;
+      this.questionSets = subject.questionSets.sort((a, b) => {
         if (a.title < b.title) return -1;
         if (a.title > b.title) return 1;
         return 0;
@@ -54,8 +54,8 @@ export class QuestionSelectorComponent implements OnInit {
   }
 
   // Material event handlers
-  matSelectTopic(event: MatSelectChange) {
-    this.selectTopic(event.value);
+  matSelectSubject(event: MatSelectChange) {
+    this.selectSubject(event.value);
   }
 
   matSelectQuestionSet(event: MatSelectChange) {
