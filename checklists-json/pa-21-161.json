@@ -1,0 +1,152 @@
+{
+    "pa-21-161": {
+        "title": "Piper Warrior III (glass)",
+        "manufacturer": "Piper",
+        "model": "PA-28-161",
+        "glass-cockpit": true,
+        "author": "Canterbury Aero Club",
+        "author-url": "https://www.cac.co.nz",
+        "normal": [
+            {
+                "title": "Pre Start Procedures",
+                "items": [
+                    { "item": "Brakes", "value": "On" },
+                    { "item": "Flaps", "value": "Check" },
+                    { "item": "Trim", "value": "Check" },
+                    { "item": "Mixture", "value": "Rich" },
+                    { "item": "Carb heat", "value": "Off" },
+                    { "item": "Master switch & alt", "value": "On" },
+                    { "item": "Nav lights", "value": "On" },
+                    { "item": "Fuel pump", "value": "On" },
+                    { "item": "Engine", "value": "Prime" },
+                    { "item": "Throttle", "value": "Set" },
+                    { "item": "Propellor", "value": "Check clear" },
+                    { "item": "Starter ", "value": "Engage" }
+                ]
+            },
+            {
+                "title": "After Start Procedures",
+                "items": [
+                    { "item": "Throttle", "value": "900 RPM" },
+                    { "item": "Oil pressure", "value": "Check", "style": [{ "color": "green" }] },
+                    { "item": "Oil temperature", "value": "Check", "style": [{ "color": "green"}] },
+                    { "item": "Fuel pump", "value": "Off" },
+                    { "item": "Fuel pressure", "value": "Check" },
+                    { "item": "Mags", "value": "L, R, Off, Both" },
+                    { "item": "Radio master", "value": "On" },
+                    { "item": "Transponder", "value": "Standby" },
+                    { "item": "ATIS", "value": "Copied" }
+                ]
+            },
+            {
+                "title": "Taxi Procedures",
+                "items": [
+                    { "item": "Wait for AHRS alignment", "value": "" },
+                    { "item": "Brakes", "value": "Check" },
+                    { "item": "Instruments", "value": "PFD check" }
+                ]
+            },
+            {
+                "title": "Run Up Procedures",
+                "items": [
+                    { "item": "Brakes", "value": "On" },
+                    { "item": "Fuel pump", "value": "On" },
+                    { "item": "Fuel", "value": "Fullest tank" },
+                    { "item": "Fuel pump", "value": "Off" },
+                    { "item": "Ts & Ps", "value": "Check", "style": [{ "color": "green" }] },
+                    { "item": "Mags", "value": "L, R, Both" },
+                    { "item": "All clear", "value": "Check" },
+                    { "item": "Throttle", "value": "1800 RPM" },
+                    { "item": "Brakes", "value": "Holding" },
+                    { "item": "Ts & Ps", "value": "Check" },
+                    { "item": "Carb heat", "value": "Check" },
+                    { "item": "Mags", "value": "L, Both, R, Both" },
+                    { "item": "Voltmeter", "value": "Check" },
+                    { "item": "Ammeter", "value": "Check" },
+                    { "item": "Throttle", "value": "Close" },
+                    { "item": "Slow running", "value": "500-700 RPM" },
+                    { "item": "Carb heat", "value": "Check" },
+                    { "item": "Oil pressure", "value": "Check", "style": [{ "color": "green" }] },
+                    { "item": "Throttle", "value": "1000 RPM" }
+                ]
+            },
+            {
+                "title": "Pre Take-off Procedures",
+                "items": [
+                    { "item": "Trim", "value": "Set" },
+                    { "item": "Throttle friction", "value": "Set" },
+                    { "item": "Mixture", "value": "Rich" },
+                    { "item": "Carb heat", "value": "Off", "style": [{ "indent": "true" }] },
+                    { "item": "Fuel", "value": "" },
+                    { "item": "Cock", "value": "Check", "style": [{ "indent": "true" }] },
+                    { "item": "Contents", "value": "Check land by time", "style": [{ "indent": "true" }] },
+                    { "item": "Pump", "value": "On", "style": [{ "indent": "true" }] },
+                    { "item": "Pressure", "value": "Check", "style": [{ "indent": "true" }] },
+                    { "item": "Primer", "value": "Covered", "style": [{ "indent": "true" }] },
+                    { "item": "Flaps", "value": "10&deg;" },
+                    { "item": "Ignition", "value": "Both" },
+                    { "item": "Instruments", "value": "Check" },
+                    { "item": "Circuit breakers", "value": "Check", "style": [{ "indent": "true" }] },
+                    { "item": "Hatches & harnesses", "value": "Secure" },
+                    { "item": "Controls", "value": "Full & free" },
+                    { "item": "Radio", "value": "Set" }
+                ]
+            },
+            {
+                "title": "Line Up Procedures",
+                "items": [
+                    { "item": "Traffic", "value": "Check" },
+                    { "item": "Windsock", "value": "Check" },
+                    { "item": "Transponder", "value": "ALT" },
+                    { "item": "Lights", "value": "As required" },
+                    { "item": "Compass", "value": "Check" }
+                ]
+            },
+            {
+                "title": "Pre Landing Procedures",
+                "initial-style": [{ "color": "red" }],
+                "items": [
+                    { "item": "Brakes", "value": "Check & off" },
+                    { "item": "Undercarriage", "value": "Down" },
+                    { "item": "Mixture", "value": "Rich" },
+                    { "item": "Pitch", "value": "Set" },
+                    { "item": "Fuel pump", "value": "On" },
+                    { "item": "Harnesses", "value": "Secure" },
+                    { "item": "Radio", "value": "Make call" }
+                ]
+            },
+            {
+                "title": "After Landing Procedures",
+                "items": [
+                    { "item": "Transponder", "value": "Standby" },
+                    { "item": "Lights", "value": "Off" },
+                    { "item": "Flaps", "value": "Retract" },
+                    { "item": "Fuel pump", "value": "Off" }
+                ]
+            },
+            {
+                "title": "Shut Down Procedures",
+                "items": [
+                    { "item": "Brakes", "value": "On" },
+                    { "item": "Throttle", "value": "1000 RPM" },
+                    { "item": "Radio master", "value": "Check & off" },
+                    { "item": "Mags", "value": "L, R, Off, Both" },
+                    { "item": "Mixture", "value": "Idle cut off" },
+                    { "item": "Throttle", "value": "Close" },
+                    { "item": "Mags", "value": "Off" },
+                    { "item": "Lights", "value": "Off" },
+                    { "item": "Master", "value": "Off" }
+                ]
+            },
+            {
+                "title": "Before Vacating Aircraft",
+                "items": [
+                    { "item": "All switches", "value": "Check off" },
+                    { "item": "Master switch", "value": "Off" },
+                    { "item": "Brakes", "value": "On" },
+                    { "item": "Aircraft secure", "value": "Check" }
+                ]
+            }
+        ]
+    }
+}
