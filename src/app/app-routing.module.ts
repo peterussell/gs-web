@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
+import { ChecklistTrainerComponent } from './checklist-trainer/checklist-trainer.component';
 
 const appRoutes: Routes = [
     // { path: '', component: LandingPageComponent },
@@ -18,6 +19,9 @@ const appRoutes: Routes = [
     { path: 'reset-password', component: ResetPasswordComponent },
     { path: 'courses', component: GroundSchoolAppComponent, children: [
         { path: '', component: CourseComponent, resolve: {course: CourseResolver} }
+    ]},
+    { path: 'checklist-trainer', component: GroundSchoolAppComponent, children: [
+        { path: '', component: ChecklistTrainerComponent }
     ]},
     { path: 'admin', component: GroundSchoolAppComponent, children: [
         { path: 'question-editor', component: QuestionEditorComponent },

@@ -32,6 +32,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ReportQuestionDialogComponent } from './question-set/report-question-dialog/report-question-dialog.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
 import { AccountDialogComponent } from './account-dialog/account-dialog.component';
+import { ChecklistTrainerComponent } from './checklist-trainer/checklist-trainer.component';
+import { ChecklistComponent } from './checklist-trainer/checklist/checklist.component';
+import { ChecklistItemComponent } from './checklist-trainer/checklist/checklist-item/checklist-item.component';
+import { ChecklistService } from './core/services/checklist.service';
 
 
 @NgModule({
@@ -51,7 +55,10 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     LandingPageComponent,
     ReportQuestionDialogComponent,
     AccountDialogComponent,
-    QuestionEditorComponent
+    QuestionEditorComponent,
+    ChecklistTrainerComponent,
+    ChecklistComponent,
+    ChecklistItemComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +75,8 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     QuestionService,
     UserEventsService,
     ResponsiveService,
-    CourseResolver
+    CourseResolver,
+    ChecklistService
   ],
   entryComponents: [
     ReportQuestionDialogComponent,

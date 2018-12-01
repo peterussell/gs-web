@@ -7,9 +7,10 @@
 
     &__content {
         width: 240px;
-        margin: 20px 0 0 20px;
+        margin: 0 0 0 20px;
 
         h2 {
+            margin-top: 20px;
             font-weight: 100;
             border-bottom: 1px solid #ddd;
             margin-right: 20px;
@@ -27,6 +28,10 @@
             line-height: 2em;
             font-size: 0.9em;
             border-left: 1px solid #ddd;
+        }
+
+        &--other {
+            cursor: pointer;
         }
     }
 }
