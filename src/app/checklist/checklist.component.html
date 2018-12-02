@@ -1,6 +1,12 @@
 <app-page-title [title]="'Checklist Trainer'"></app-page-title>
 
 <div class="procedure-container">
+    <div class="info">
+        <p>
+            <a href="{{ checklist.authorUrl }}" target="_blank">{{ checklist.author }}</a> > 
+            {{ checklist.title }}
+        </p>
+    </div>
     <div class="navbar">
         <span class="navbar__previous">
             <button

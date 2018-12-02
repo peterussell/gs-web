@@ -1,5 +1,16 @@
 .procedure-container {
     width: 400px;
+    margin-left: 20px;
+}
+
+.info {
+    width: 100%;
+    color: #333;
+    margin: 0 0 20px 0;
+
+    p {
+        margin: 0px;
+    }
 }
 
 .navbar {
