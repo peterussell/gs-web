@@ -24,7 +24,6 @@ export class Checklist {
         
         let normalProcedures = json.normal;
         if (normalProcedures !== undefined) {
-            console.log(normalProcedures);
             normalProcedures.forEach((normalProcedure) => {
                 this.procedures.push(new Procedure(normalProcedure));
             });

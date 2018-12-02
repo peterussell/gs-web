@@ -28,12 +28,12 @@ export class PageTitleComponent implements OnInit {
       this.menuButtonVisible = newViewportSize === ViewportSize.Small;
     });
 
-    if (this.title === undefined || this.title === '') {
-      // tmp - TODO: the question set (?) component should compile the title and pass it in as an Input
-      this.questionService.onTopicUpdated.subscribe((res: { course: Course, topic: Topic }) => {
-        this.title = `${res.course.title} - ${res.topic.title}`;
-      });
-    }
+    // if (this.title === undefined || this.title === '') {
+    //   // tmp - TODO: the question set (?) component should compile the title and pass it in as an Input
+    //   this.questionService.onTopicUpdated.subscribe((res: { course: Course, topic: Topic }) => {
+    //     this.title = `${res.course.title} - ${res.topic.title}`;
+    //   });
+    // }
   }
 
   toggleSidenav() {

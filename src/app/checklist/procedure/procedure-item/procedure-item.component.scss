@@ -1,0 +1,30 @@
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 100%;
+    padding: 10px 30px 0px 30px;
+    margin: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.procedure-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.1em;
+    
+
+    &__item {
+        flex: 1 1 auto;
+    }
+
+    &__value {
+        flex: 1 1 auto;
+        text-align: right;
+    }
+}
+
+.hidden {
+    color: #999;
+}
+

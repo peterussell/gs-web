@@ -32,9 +32,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ReportQuestionDialogComponent } from './question-set/report-question-dialog/report-question-dialog.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
 import { AccountDialogComponent } from './account-dialog/account-dialog.component';
-import { ChecklistTrainerComponent } from './checklist-trainer/checklist-trainer.component';
-import { ChecklistComponent } from './checklist-trainer/checklist/checklist.component';
-import { ChecklistItemComponent } from './checklist-trainer/checklist/checklist-item/checklist-item.component';
+import { ChecklistComponent } from './checklist/checklist.component';
+import { ProcedureComponent } from './checklist/procedure/procedure.component';
+import { ProcedureItemComponent } from './checklist/procedure/procedure-item/procedure-item.component';
 import { ChecklistService } from './core/services/checklist.service';
 
 
@@ -56,9 +56,9 @@ import { ChecklistService } from './core/services/checklist.service';
     ReportQuestionDialogComponent,
     AccountDialogComponent,
     QuestionEditorComponent,
-    ChecklistTrainerComponent,
     ChecklistComponent,
-    ChecklistItemComponent
+    ProcedureComponent,
+    ProcedureItemComponent
   ],
   imports: [
     BrowserModule,

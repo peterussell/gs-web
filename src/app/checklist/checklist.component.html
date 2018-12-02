@@ -1,0 +1,36 @@
+<app-page-title [title]="'Checklist Trainer'"></app-page-title>
+
+<div class="procedure-container">
+    <div class="navbar">
+        <span class="navbar__previous">
+            <button
+                mat-button
+                (click)="goToPreviousProcedure()"
+                class="navbar-button"
+                [disabled]="!canGoPrevious()">
+                <<
+            </button>
+        </span>
+        <span class="navbar__title">
+            <h3 *ngIf="currentProcedure; else loading">
+                {{ currentProcedure.title }}
+            </h3>
+            <ng-template #loading>
+                <h3>
+                    Loading...
+                </h3>
+            </ng-template>
+        </span>
+        <span class="navbar__next">
+            <button
+                mat-button
+                (click)="goToNextProcedure()"
+                class="navbar-button"
+                [disabled]="!canGoNext()">
+                >>
+            </button>
+        </span>
+    </div>
+
+    <app-procedure [procedure]="currentProcedure"></app-procedure>
+</div>

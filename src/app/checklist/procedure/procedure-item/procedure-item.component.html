@@ -1,0 +1,14 @@
+<div (click)="toggleVisibility()" class="container">
+
+  <div *ngIf="isVisible; else hiddenMessage" class="procedure-item">
+    <p class="procedure-item__item">{{ procedureItem.item }}</p>
+    <p class="procedure-item__value">{{ procedureItem.value }}</p>
+  </div>
+
+  <ng-template #hiddenMessage>
+    <div class="procedure-item">
+      <p class="hidden">Click to show</p>
+    </div>
+    </ng-template>
+</div>
+
