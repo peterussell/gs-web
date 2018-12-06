@@ -160,7 +160,7 @@ export class QuestionEditorComponent implements OnInit {
 
   addCARReference(referenceIndex: number, partNumber: string) {
     // Add placeholder parentheses to all CAR parts except part 1
-    const text = `Cart Part ${partNumber}` + (partNumber !== '1' ? ' (...)' : '');
+    const text = `CAR Part ${partNumber}` + (partNumber !== '1' ? ' ()' : '');
 
     // Build the URL
     const paddedPartNumber = partNumber.padStart(3, '0');
