@@ -11,7 +11,7 @@ export class ApiService {
     private httpOptions;
 
     private readonly coursesRelPath = 'courses';
-    private readonly questionSetsRelPath = 'question-sets/new';
+    private readonly topicsRelPath = 'topics';
     private readonly registerInterestRelPath = 'register-interest';
     private readonly addQuestionRelPath = 'question';
     private readonly reportQuestionRelPath = 'report-question';
@@ -29,8 +29,8 @@ export class ApiService {
         return this.http.get(`${this.awsBasePath}/${this.coursesRelPath}`);
     }
 
-    public getQuestions(questionSetId: string): Observable<any> {
-        return this.http.get(`${this.awsBasePath}/${this.questionSetsRelPath}/${questionSetId}`);
+    public getQuestions(topicId: string): Observable<any> {
+        return this.http.get(`${this.awsBasePath}/${this.topicsRelPath}/${topicId}`);
     }
 
     public registerInterest(email: string): Observable<any> {
@@ -42,12 +42,12 @@ export class ApiService {
         );
     }
 
-    public addQuestion(questionSetId: string, question: string, answer: string,
+    public addQuestion(topicId: string, question: string, answer: string,
         references: Array<Reference>): Observable<any> {
         const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
 
         var body = {
-            'question_set_id': questionSetId,
+            'question_set_id': topicId,
             'question': question,
             'answer': answer,
             'references': []

@@ -3,12 +3,21 @@
 <form [formGroup]="addQuestionForm" (ngSubmit)="onSubmit()">
 
 <mat-card class="form-container">
-  <h3>Question set</h3>
-  <!-- Topic selector -->
+  <h3>Course</h3>
+  <!-- Course selector -->
   <mat-form-field>
     <mat-select placeholder="Course" (change)="matSelectCourse($event)" [value]="selectedCourse">
       <mat-option *ngFor="let course of courses" [value]="course">
         {{ course.title }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Subject selector -->
+  <mat-form-field>
+    <mat-select placeholder="Subject" (change)="matSelectSubject($event)" [value]="selectedSubject">
+      <mat-option *ngFor="let subject of subjects" [value]="subject">
+        {{ subject.title }}
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -22,23 +31,14 @@
     </mat-select>
   </mat-form-field>
 
-  <!-- Question set selector -->
-  <mat-form-field>
-    <mat-select placeholder="Question Set" (change)="matSelectQuestionSet($event)" [value]="selectedQuestionSet">
-      <mat-option *ngFor="let questionSet of questionSets" [value]="questionSet">
-        {{ questionSet.title }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <button type="button" mat-flat-button (click)="addSelectedQuestionSet()">
-    Add to this question set
+  <button type="button" mat-flat-button (click)="addSelectedTopic()">
+    Add to this topic
   </button>
 
-  <div class="question-sets">
+  <div class="topics">
     <h5>Selected:</h5>
-      <p *ngFor="let qs of questionSetsToUpdate; let i = index;">
-        {{ qs.description }} <button type="button" mat-button color="warn" (click)="removeQuestionSet(i)">Remove</button>
+      <p *ngFor="let qs of topicsToUpdate; let i = index;">
+        {{ qs.description }} <button type="button" mat-button color="warn" (click)="removeTopic(i)">Remove</button>
       </p>
   </div>
 </mat-card>

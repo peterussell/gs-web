@@ -9,11 +9,11 @@
     <h4>{{ course.title }}</h4>
 
     <span
-      *ngFor="let topic of sortTopics(course.topics)"
-      (click)="topicSelected(course, topic)">
-      <p class="sidenav__content--topic">
+      *ngFor="let subject of sortSubjects(course.subjects)"
+      (click)="subjectSelected(course, subject)">
+      <p class="sidenav__content--subject">
         <!-- <i class="material-icons">control_point</i> -->
-        {{ topic.title }}
+        {{ subject.title }}
       </p>
     </span>
   </span>
@@ -33,8 +33,8 @@
       </mat-expansion-panel-header>
 
       <span *ngIf="courses">
-        <a mat-list-item *ngFor="let topic of sortTopics(course.topics)" (click)="topicSelected(course, topic)">
-          {{ topic.title }}
+        <a mat-list-item *ngFor="let subject of sortSubjects(course.subjects)" (click)="subjectSelected(course, subject)">
+          {{ subject.title }}
         </a>
       </span>
 

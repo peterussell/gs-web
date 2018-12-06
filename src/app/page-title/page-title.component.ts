@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { UserEventsService } from '../core/services/user-events.service';
 import { ResponsiveService, ViewportSize } from '../core/services/responsive.service';
 import { QuestionService } from '../core/services/question.service';
-import { Topic } from '../core/models/topic.model';
+import { Subject } from '../core/models/subject.model';
 import { Course } from '../core/models/course.model';
 
 @Component({
@@ -15,7 +15,7 @@ export class PageTitleComponent implements OnInit {
 
   menuButtonVisible: boolean;
   course: string;
-  topic: string;
+  subject: string;
 
   constructor(
     public userEventsService: UserEventsService,
@@ -29,9 +29,9 @@ export class PageTitleComponent implements OnInit {
     });
 
     if (this.title === undefined || this.title === '') {
-      // tmp - TODO: the question set (?) component should compile the title and pass it in as an Input
-      this.questionService.onTopicUpdated.subscribe((res: { course: Course, topic: Topic }) => {
-        this.title = `${res.course.title} - ${res.topic.title}`;
+      // tmp - TODO: the topic (?) component should compile the title and pass it in as an Input
+      this.questionService.onSubjectUpdated.subscribe((res: { course: Course, subject: Subject }) => {
+        this.title = `${res.course.title} - ${res.subject.title}`;
       });
     }
   }

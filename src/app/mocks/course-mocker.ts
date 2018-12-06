@@ -1,7 +1,7 @@
 // import { Question } from "../core/models/question.model";
-// import { QuestionSet } from "../core/models/question-set.model";
-// import { Reference } from "../core/models/reference.model";
 // import { Topic } from "../core/models/topic.model";
+// import { Reference } from "../core/models/reference.model";
+// import { Subject } from "../core/models/subject.model";
 // import { Course } from "../core/models/course.model";
 // import { Injectable } from "@angular/core";
 
@@ -13,33 +13,33 @@
 //             courses.push(new Course(
 //                 `${i}`,
 //                 `This is course ${i}`,
-//                 this.getTopics(`${i}`, 4)
+//                 this.getSubjects(`${i}`, 4)
 //             ));
 //         }
 //         return courses;
 //     }
 
-//     getTopics(courseId: string, count: number): Array<Topic> {
-//         var topics = new Array<Topic>();
+//     getSubjects(courseId: string, count: number): Array<Subject> {
+//         var subjects = new Array<Subject>();
 //         for (let i=1; i<=count; i++) {
-//             topics.push(new Topic(
+//             subjects.push(new Subject(
 //                 courseId,
 //                 `${i}`,
-//                 `This is topic ${i}`,
-//                 this.getQuestionSets(10)
+//                 `This is subject ${i}`,
+//                 this.getTopics(10)
 //             ));
 //         }
-//         return topics;
+//         return subjects;
 //     }
 
-//     // getQuestionSets(count: number): Array<QuestionSet> {
-//     //     var questionSets = new Array<QuestionSet>();
+//     // getTopics(count: number): Array<Topic> {
+//     //     var topics = new Array<Topic>();
 //     //     for (let i=1; i<=count; i++) {
-//     //         var qs = new QuestionSet();
+//     //         var qs = new Topic();
 //     //         this.getQuestions(8).forEach(q => qs.questions.push(q));
-//     //         questionSets.push(qs);
+//     //         topics.push(qs);
 //     //     }
-//     //     return questionSets;
+//     //     return topics;
 //     // }
 
 //     getQuestions(count: number): Array<Question> {

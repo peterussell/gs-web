@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../core/services/api.service';
 import { Course } from '../core/models/course.model';
-import { Topic } from '../core/models/topic.model';
+import { Subject } from '../core/models/subject.model';
 import { QuestionService } from '../core/services/question.service';
 
 @Component({
@@ -18,9 +18,9 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.apiService.getCourses().subscribe(res => {
       this.courses = res.courses;
-      this.questionService.updateTopic(
+      this.questionService.updateSubject(
         this.sortCourses(res.courses)[0],
-        this.sortTopics(res.courses[0].topics)[0]
+        this.sortSubjects(res.courses[0].subjects)[0]
       );
     },
     (error: any) => {
@@ -28,8 +28,8 @@ export class SidebarComponent implements OnInit {
     });
   }
 
-  topicSelected(course: Course, topic: Topic) {
-    this.questionService.updateTopic(course, topic);
+  subjectSelected(course: Course, subject: Subject) {
+    this.questionService.updateSubject(course, subject);
   }
 
   sortCourses(courses: Array<Course>): Array<Course> {
@@ -40,8 +40,8 @@ export class SidebarComponent implements OnInit {
     });
   }
 
-  sortTopics(topics: Array<Topic>): Array<Topic> {
-    return topics.sort((a, b) => {
+  sortSubjects(subjects: Array<Subject>): Array<Subject> {
+    return subjects.sort((a, b) => {
       if (a.title > b.title) return 1;
       if (a.title < b.title) return -1;
       return 0;

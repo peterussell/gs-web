@@ -9,8 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { PageTitleComponent } from './page-title/page-title.component';
 import { QuestionSelectorComponent } from './question-selector/question-selector.component';
-import { QuestionSetComponent } from './question-set/question-set.component';
-import { QuestionComponent } from './question-set/question/question.component';
+import { TopicComponent } from './topic/topic.component';
+import { QuestionComponent } from './topic/question/question.component';
 import { ApiService } from './core/services/api.service';
 import { QuestionService } from './core/services/question.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +29,7 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { UserService } from './core/services/user.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { ReportQuestionDialogComponent } from './question-set/report-question-dialog/report-question-dialog.component';
+import { ReportQuestionDialogComponent } from './topic/report-question-dialog/report-question-dialog.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
 import { AccountDialogComponent } from './account-dialog/account-dialog.component';
 
@@ -40,7 +40,7 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     SidebarComponent,
     PageTitleComponent,
     QuestionSelectorComponent,
-    QuestionSetComponent,
+    TopicComponent,
     QuestionComponent,
     LoginComponent,
     CoursesDashboardComponent,

@@ -1,13 +1,13 @@
-import { Topic } from "./topic.model";
+import { Subject } from "./subject.model";
 
 export class Course {
-    public topics: Array<Topic>;
+    public subjects: Array<Subject>;
 
     constructor(
         public courseId: string,
         public title: string,
         public order: number,
-        topics: Array<Topic>) {
-            this.topics = topics.sort();
+        subjects: Array<Subject>) {
+            this.subjects = subjects.sort();
         }
 }

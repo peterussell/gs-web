@@ -1,13 +1,8 @@
-import { QuestionSet } from "./question-set.model";
+import { Question } from "./question.model";
 
 export class Topic {
-    public questionSets: Array<QuestionSet>;
-    
-    constructor(
-        public courseId: string,
-        public topicId: string,
-        public title: string,
-        questionSets: Array<QuestionSet>) {
-            this.questionSets = questionSets.sort();
-        }
+    topicId: string;
+    subjectId: string;
+    title: string;
+    questions: { [id: number] : Question };
 }
