@@ -11,7 +11,7 @@ export class ApiService {
     private httpOptions;
 
     private readonly coursesRelPath = 'courses';
-    private readonly topicsRelPath = 'topics/new';
+    private readonly topicsRelPath = 'topics';
     private readonly registerInterestRelPath = 'register-interest';
     private readonly addQuestionRelPath = 'question';
     private readonly reportQuestionRelPath = 'report-question';
