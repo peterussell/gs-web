@@ -28,3 +28,23 @@
         }
     }
 }
+
+.topic-selector {
+    width: 95%;
+    padding-bottom: 0;
+    padding-left: 0;
+    overflow: auto;
+
+    &__topic {
+        float: left;
+        width: 95%;
+    }
+}
+
+.mat-card {
+    padding-right: 0px;
+}
+
+.mat-form-field {
+    margin-left: 30px;
+}

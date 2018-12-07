@@ -27,6 +27,7 @@
             line-height: 2em;
             font-size: 0.9em;
             border-left: 1px solid #ddd;
+            display: block;
         }
     }
 }
@@ -35,50 +36,3 @@
     vertical-align: middle;
     font-size: 1em;
 }
-
-// .menu-expansion-panel {
-//     width: 95%;
-//     margin: 0 20px 0 0;
-//     background-color: #fff;
-// }
-
-// .menu-expansion-panel-header {
-//     padding: 10px;
-//     margin: 0;
-// }
-
-// .mat-list-item {
-//     font-size: 0.9em;
-// }
-
-// .mat-expansion-panel {
-
-//     -webkit-box-shadow: none !important;
-// 	-moz-box-shadow: none !important;
-//     box-shadow: none !important;
-    
-//     i {
-//         padding-right: 16px;
-//         font-size: 1.3em;
-//     }
-
-//     .mat-expansion-panel-header {
-//         color: #fff;
-//         background-color: #6b7a8f;
-//         font-weight: 200;
-
-//         &:hover {
-//             background-color: #576272;
-//         }
-//     }
-//     ::ng-deep .mat-expansion-indicator:after {
-//       color: white;
-//     }
-// }
-
-// .mat-nav-list {
-//     .mat-list-item {
-//         font-size: 0.9em;
-//         height: 30px;
-//     }
-// }

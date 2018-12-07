@@ -23,17 +23,14 @@ export class PageTitleComponent implements OnInit {
     public questionService: QuestionService) { }
 
   ngOnInit() {
+    this.setupMenuButton();
+  }
+
+  setupMenuButton() {
     this.menuButtonVisible = this.responsiveService.getViewportSize() === ViewportSize.Small;
     this.responsiveService.onViewportChange.subscribe((newViewportSize: ViewportSize) => {
       this.menuButtonVisible = newViewportSize === ViewportSize.Small;
     });
-
-    if (this.title === undefined || this.title === '') {
-      // tmp - TODO: the topic (?) component should compile the title and pass it in as an Input
-      this.questionService.onSubjectUpdated.subscribe((res: { course: Course, subject: Subject }) => {
-        this.title = `${res.course.title} - ${res.subject.title}`;
-      });
-    }
   }
 
   toggleSidenav() {

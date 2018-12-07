@@ -14,8 +14,5 @@ export class CourseResolver implements Resolve<Array<Course>> {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
         Observable<Array<Course>> | Promise<Array<Course>> | Array<Course> {
             return this.apiService.getCourses();
-
-        // tmp
-        // return this.courseMocker.getCourses(2);
     }
 }

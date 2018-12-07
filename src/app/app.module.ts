@@ -9,17 +9,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { PageTitleComponent } from './page-title/page-title.component';
 import { QuestionSelectorComponent } from './question-selector/question-selector.component';
-import { TopicComponent } from './topic/topic.component';
-import { QuestionComponent } from './topic/question/question.component';
+import { SubjectComponent } from './subject/subject.component';
+import { QuestionComponent } from './subject/question/question.component';
 import { ApiService } from './core/services/api.service';
 import { QuestionService } from './core/services/question.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { CoursesDashboardComponent } from './courses-dashboard/courses-dashboard.component';
+import { ReviseDashboardComponent } from './revise-dashboard/revise-dashboard.component';
 import { GroundSchoolAppComponent } from './ground-school-app/ground-school-app.component';
-import { CourseComponent } from './course/course.component';
+import { CourseComponent } from './revise/course.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CourseResolver } from './course/course-resolver.service';
+import { CourseResolver } from './revise/course-resolver.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -29,7 +29,7 @@ import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { UserService } from './core/services/user.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { ReportQuestionDialogComponent } from './topic/report-question-dialog/report-question-dialog.component';
+import { ReportQuestionDialogComponent } from './subject/report-question-dialog/report-question-dialog.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
 import { AccountDialogComponent } from './account-dialog/account-dialog.component';
 
@@ -40,10 +40,10 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     SidebarComponent,
     PageTitleComponent,
     QuestionSelectorComponent,
-    TopicComponent,
+    SubjectComponent,
     QuestionComponent,
     LoginComponent,
-    CoursesDashboardComponent,
+    ReviseDashboardComponent,
     GroundSchoolAppComponent,
     CourseComponent,
     RegisterComponent,

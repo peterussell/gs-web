@@ -7,6 +7,7 @@ export class Subject {
         public courseId: string,
         public subjectId: string,
         public title: string,
+        public path: string,
         topics: Array<Topic>) {
             this.topics = topics.sort();
         }

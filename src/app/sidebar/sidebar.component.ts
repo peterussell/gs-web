@@ -17,19 +17,11 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getCourses().subscribe(res => {
-      this.courses = res.courses;
-      this.questionService.updateSubject(
-        this.sortCourses(res.courses)[0],
-        this.sortSubjects(res.courses[0].subjects)[0]
-      );
+      this.courses = this.sortCourses(res.courses);
     },
     (error: any) => {
       console.log(error.message);
     });
-  }
-
-  subjectSelected(course: Course, subject: Subject) {
-    this.questionService.updateSubject(course, subject);
   }
 
   sortCourses(courses: Array<Course>): Array<Course> {

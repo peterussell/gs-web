@@ -16,9 +16,9 @@ export class QuestionService {
 
     constructor(private apiService: ApiService) {}
 
-    updateSubject(course: Course, subject: Subject) {
-        this.onSubjectUpdated.emit({ course: course, subject: subject });
-    }
+    // updateSubject(course: Course, subject: Subject) {
+    //     this.onSubjectUpdated.emit({ course: course, subject: subject });
+    // }
 
     updateTopic(topicId: string) {
         this.apiService.getQuestions(topicId).subscribe((res) => {
