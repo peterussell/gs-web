@@ -3,7 +3,7 @@
 </div>
 
 <div class="sidenav__content" role="navigation">
-  <h2>Revise</h2>
+  <h2>Review Questions</h2>
 
   <span *ngFor="let course of courses">
     <h4>{{ course.title }}</h4>
@@ -11,33 +11,10 @@
     <span *ngFor="let subject of sortSubjects(course.subjects)">
       <a
         class="sidenav__content--subject"
-        [routerLink]="['/revise', course.path, subject.path]">
-        <!-- <i class="material-icons">control_point</i> -->
+        [routerLink]="['/review', course.path, subject.path]">
         {{ subject.title }}
       </a>
     </span>
   </span>
-
-
-  <!-- <mat-expansion-panel
-    *ngFor="let course of courses"
-    class="mat-elevation-z0 menu-expansion-panel"
-    [expanded]="true">
-
-      <mat-expansion-panel-header
-        class="menu-expansion-panel-header"
-        [expandedHeight]="'20px'"
-        [collapsedHeight]="'20px'"
-        style="padding: 0; margin: 0;">
-          {{ course.title }}
-      </mat-expansion-panel-header>
-
-      <span *ngIf="courses">
-        <a mat-list-item *ngFor="let subject of sortSubjects(course.subjects)" (click)="subjectSelected(course, subject)">
-          {{ subject.title }}
-        </a>
-      </span>
-
-  </mat-expansion-panel> -->
 
 </div>

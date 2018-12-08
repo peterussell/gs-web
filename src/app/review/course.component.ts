@@ -14,14 +14,12 @@ import { QuestionService } from '../core/services/question.service';
 export class CourseComponent implements OnInit {
   public allCourses: Array<Course>;
   public selectedSubject: Subject;
+  public title: string;
 
   private coursePath: string;
   private subjectPath: string;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private questionService: QuestionService) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.updatePathsForNewRoute();
@@ -53,9 +51,10 @@ export class CourseComponent implements OnInit {
     if (subject === undefined) { this.router.navigate(['/']); }
 
     this.selectedSubject = subject;
+    this.updateTitle(course.title, subject.title);
   }
 
-  onTopicSelected(newTopic: Topic) {
-    this.questionService.updateTopic(newTopic.topicId);
+  updateTitle(courseTitle: string, subjectTitle: string) {
+    this.title = `${courseTitle} ${subjectTitle}`;
   }
 }

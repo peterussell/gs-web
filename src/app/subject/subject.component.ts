@@ -5,6 +5,9 @@ import { Subject } from '../core/models/subject.model';
 import { Topic } from '../core/models/topic.model';
 import { MatSelectChange } from '@angular/material/select';
 import { ApiService } from '../core/services/api.service';
+import { ActivatedRoute } from '@angular/router';
+
+import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'app-subject',
@@ -12,7 +15,23 @@ import { ApiService } from '../core/services/api.service';
   styleUrls: ['./subject.component.scss']
 })
 export class SubjectComponent implements OnInit {
-  @Input() subject: Subject;
+  // We need to subscribe to changes on the Subject Input value so we can
+  // automatically load the first topic when a routerlink is clicked.
+  private _subject: Subject;
+  @Input()
+    set subject(subject: Subject) {
+      this._subject = subject;
+      if (this._subject !== undefined && this._subject.topics.length > 0) {
+        this._subject.topics = this._subject.topics.sort((a, b) => {
+          if (a.title < b.title) return -1;
+          if (a.title > b.title) return 1;
+          return 0;
+        });
+        this.selectTopic(this._subject.topics[0]);
+      }
+    }
+    get subject() { return this._subject; }
+
   public selectedTopic: Topic;
   public isLoading: boolean;
   
@@ -23,20 +42,10 @@ export class SubjectComponent implements OnInit {
   public currentEndIndex: number = 0;
   public topicSize: number = 10;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.currentPage = [];
-    if (this.subject !== undefined && this.subject.topics.length > 0) {
-      this.selectTopic(this.subject.topics[0]);
-    }
-    // this.questionService.onQuestionsUpdated.subscribe((topic: Topic) => {
-    //   this.topic = topic;
-    //   this.totalQuestionCount = Object.keys(this.topic.questions).length;
-    //   this.currentStartIndex = 0;
-    //   this.currentEndIndex = Math.min(this.currentStartIndex + this.topicSize, this.totalQuestionCount);
-    //   this.updateCurrentPage();
-    // });
   }
 
   selectTopic(topic: Topic) {
@@ -44,7 +53,11 @@ export class SubjectComponent implements OnInit {
 
     this.apiService.getQuestions(topic.topicId).subscribe(
       (topicWithQuestions: Topic) => {
-        this.selectedTopic = topicWithQuestions;
+
+        // TODO: ideally we'd just get just the questions from the API
+        this.selectedTopic = topic;
+        this.selectedTopic.questions = topicWithQuestions.questions;
+
         this.totalQuestionCount = Object.keys(this.selectedTopic.questions).length;
         this.currentStartIndex = 0;
         this.currentEndIndex = Math.min(this.currentStartIndex + this.topicSize, this.totalQuestionCount);

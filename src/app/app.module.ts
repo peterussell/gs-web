@@ -8,18 +8,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { PageTitleComponent } from './page-title/page-title.component';
-import { QuestionSelectorComponent } from './question-selector/question-selector.component';
 import { SubjectComponent } from './subject/subject.component';
 import { QuestionComponent } from './subject/question/question.component';
 import { ApiService } from './core/services/api.service';
 import { QuestionService } from './core/services/question.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { ReviseDashboardComponent } from './revise-dashboard/revise-dashboard.component';
+import { ReviewDashboardComponent } from './review-dashboard/review-dashboard.component';
 import { GroundSchoolAppComponent } from './ground-school-app/ground-school-app.component';
-import { CourseComponent } from './revise/course.component';
+import { CourseComponent } from './review/course.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CourseResolver } from './revise/course-resolver.service';
+import { CourseResolver } from './review/course-resolver.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -39,11 +38,10 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     AppComponent,
     SidebarComponent,
     PageTitleComponent,
-    QuestionSelectorComponent,
     SubjectComponent,
     QuestionComponent,
     LoginComponent,
-    ReviseDashboardComponent,
+    ReviewDashboardComponent,
     GroundSchoolAppComponent,
     CourseComponent,
     RegisterComponent,
