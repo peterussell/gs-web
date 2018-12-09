@@ -2,8 +2,8 @@ import { Injectable } from "@angular/core";
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";
 import { Observable } from "rxjs/Observable";
 
-import { Course } from "../core/models/course.model";
-import { ApiService } from "../core/services/api.service";
+import { Course } from "../../models/course.model";
+import { ApiService } from "../api.service";
 
 
 @Injectable()

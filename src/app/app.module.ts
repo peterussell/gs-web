@@ -14,12 +14,12 @@ import { ApiService } from './core/services/api.service';
 import { QuestionService } from './core/services/question.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { ReviewDashboardComponent } from './review-dashboard/review-dashboard.component';
+import { ReviewDashboardComponent } from './review/review-dashboard/review-dashboard.component';
 import { GroundSchoolAppComponent } from './ground-school-app/ground-school-app.component';
 import { CourseComponent } from './review/course.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CourseResolver } from './review/course-resolver.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { CourseResolver } from './core/services/resolvers/course-resolver.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { UserEventsService } from './core/services/user-events.service';
@@ -31,6 +31,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ReportQuestionDialogComponent } from './subject/report-question-dialog/report-question-dialog.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
 import { AccountDialogComponent } from './account-dialog/account-dialog.component';
+import { FlashcardsComponent } from './flashcards/flashcards.component';
+import { FlashcardsBuilderComponent } from './flashcards/flashcards-builder/flashcards-builder.component';
+import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
 
 
 @NgModule({
@@ -49,7 +52,10 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     LandingPageComponent,
     ReportQuestionDialogComponent,
     AccountDialogComponent,
-    QuestionEditorComponent
+    QuestionEditorComponent,
+    FlashcardsComponent,
+    FlashcardsBuilderComponent,
+    FlashcardsViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +64,7 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     LayoutModule
   ],
   providers: [

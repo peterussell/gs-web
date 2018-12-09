@@ -1,0 +1,17 @@
+<div *ngIf="showBuilder()">
+  <app-flashcards-builder
+    [courses]="allCourses"
+    (submitted)="onBuilderSubmit($event)">
+  </app-flashcards-builder>
+</div>
+
+<div *ngIf="showViewer()">
+  <app-flashcards-viewer
+    [questions]="currentQuestions">
+  </app-flashcards-viewer>
+</div>
+
+
+<span *ngFor="let t of topics">
+  {{ t }}<br>
+</span>

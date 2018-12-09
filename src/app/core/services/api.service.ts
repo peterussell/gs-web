@@ -12,6 +12,7 @@ export class ApiService {
 
     private readonly coursesRelPath = 'courses';
     private readonly topicsRelPath = 'topics';
+    private readonly flashcardsRelPath = 'flashcards'
     private readonly registerInterestRelPath = 'register-interest';
     private readonly addQuestionRelPath = 'question';
     private readonly reportQuestionRelPath = 'report-question';
@@ -33,10 +34,20 @@ export class ApiService {
         return this.http.get(`${this.awsBasePath}/${this.topicsRelPath}/${topicId}`);
     }
 
+    public getFlashcards(numberOfQuestions: number, topicIdsToInclude: Array<string>) {
+        const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
+        const body = {
+            'numberOfQuestions': numberOfQuestions,
+            'topicIdsToInclude': topicIdsToInclude
+        };
+        return this.http.post(
+            `${this.awsBasePath}/${this.flashcardsRelPath}`, body, this.httpOptions
+        );
+    }
+
     public registerInterest(email: string): Observable<any> {
         const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
-
-        var body = { 'email': email };
+        const body = { 'email': email };
         return this.http.post<RegisterInterestResponse>(
             `${this.awsBasePath}/${this.registerInterestRelPath}`, body, this.httpOptions
         );
