@@ -2,6 +2,42 @@ h3 {
     margin: 30px 0 10px 0;
 }
 
+.form-row {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+    &__label {
+        flex: 0 0 100px;
+        vertical-align: middle;
+
+        h3 {
+            padding: 0;
+            margin: 0;
+        }
+
+        &--pad-top {
+            @extend .form-row__label;
+            padding-top: 12px;
+        }
+    }
+
+    &__field {
+        flex: 1 0 auto;
+
+        &--no-subjects {
+            @extend .form-row__field;
+            margin-top: 4px;
+        }
+    }
+
+    &__submit {
+        @extend .form-row;
+
+    }
+}
+
 .set-size {
     &__radio {
         margin-right: 30px;

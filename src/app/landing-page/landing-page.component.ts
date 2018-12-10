@@ -20,7 +20,11 @@ export class LandingPageComponent implements OnInit {
   ngOnInit() {
     this.apiService.getCourses().subscribe(
       (data) => {
-        this.allCourses = data.courses;
+        this.allCourses = data.courses.sort((a, b) => {
+          if (a.order > b.order) return 1;
+          if (a.order < b.order) return -1;
+          return 0;
+        })
       },
       (error) => {
         console.log(error); // TODO: log this properly

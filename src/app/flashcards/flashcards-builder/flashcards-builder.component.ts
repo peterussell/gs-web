@@ -62,6 +62,10 @@ export class FlashcardsBuilderComponent implements OnInit {
     s.topics.forEach(t => t.selected = event.checked);
   }
 
+  hasSubjects() {
+    return this.subjectsState.length > 0;
+  }
+
   onTopicToggled(event: MatCheckboxChange, topicId: string) {
   }
 

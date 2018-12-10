@@ -1,40 +1,55 @@
-<mat-form-field class="topic-selector__topic">
-    <mat-select placeholder="Course" (change)="matSelectCourse($event)" [value]="selectedCourse">
-    <mat-option *ngFor="let course of courses" [value]="course">
-        {{ course.title }}
-    </mat-option>
-    </mat-select>
-</mat-form-field>
-
-<div class="set-size">
-  <h3>Number of flashcards</h3>
-  <mat-radio-group [(ngModel)]="numberOfQuestions">
-    <mat-radio-button class="set-size__radio" *ngFor="let n of numberOfQuestionsOptions" [value]="n">
-      {{ n }}
-    </mat-radio-button>
-  </mat-radio-group>
+<div class="form-row">
+  <div class="form-row__label--pad-top"><h3>Course</h3></div>
+  <div class="form-row__field">
+      <mat-form-field class="topic-selector__topic">
+          <mat-select placeholder="Course" (change)="matSelectCourse($event)" [value]="selectedCourse">
+          <mat-option *ngFor="let course of courses" [value]="course">
+              {{ course.title }}
+          </mat-option>
+          </mat-select>
+      </mat-form-field>
+    </div>
 </div>
 
-<div>
-  <h3>Subjects</h3>
-  <div *ngFor="let subject of subjectsState">
-    <mat-checkbox
-      [(ngModel)]="subject.selected"
-      (change)="onSubjectToggled($event, subject.id)">
-      <strong>{{ subject.title }}</strong>
-    </mat-checkbox>
-  
-    <div *ngFor="let topic of subject.topics">
-      <mat-checkbox
-        [(ngModel)]="topic.selected"
-        (change)="onTopicToggled($event, topic.id)">
-        {{ topic.title }}
-      </mat-checkbox>
+<div class="form-row">
+    <div class="form-row__label"><h3>Cards</h3></div>
+    <div class="form-row__field">
+      <mat-radio-group [(ngModel)]="numberOfQuestions">
+          <mat-radio-button class="set-size__radio" *ngFor="let n of numberOfQuestionsOptions" [value]="n">
+            {{ n }}
+          </mat-radio-button>
+        </mat-radio-group>
     </div>
+</div>
+
+<div class="form-row">
+  <div class="form-row__label"><h3>Subjects</h3></div>
+  <div class="form-row__field">
+    <div *ngIf="subjectsState.length > 0; else nosubjects">
+      <div *ngFor="let subject of subjectsState">
+        <mat-checkbox
+          [(ngModel)]="subject.selected"
+          (change)="onSubjectToggled($event, subject.id)">
+          <strong>{{ subject.title }}</strong>
+        </mat-checkbox>
+      
+        <div *ngFor="let topic of subject.topics">
+          <mat-checkbox
+            [(ngModel)]="topic.selected"
+            (change)="onTopicToggled($event, topic.id)">
+            {{ topic.title }}
+          </mat-checkbox>
+        </div>
+      </div>
+    </div>
+    <ng-template #nosubjects class="form-row__field--no-subjects">
+      <p class="form-row__field--no-subjects">
+          (Select a course to load subjects)
+      </p>
+    </ng-template>
   </div>
 </div>
 
-
-<div>
-  <button mat-flat-button (click)="onSubmit()">Start</button>
+<div class="form-row__submit">
+  <button mat-flat-button (click)="onSubmit()">Get Flashcards</button>
 </div>

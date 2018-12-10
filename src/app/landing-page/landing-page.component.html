@@ -6,9 +6,9 @@
     <div class="info mat-typography">
       <h2>WELCOME TO GROUND SCHOOL</h2>
       <p>
-        New to aviation, experienced pilot,
-        or just after a refresher? We want to help by providing
-        <strong>quality online flight training resources
+        Whether you're new to aviation, an experienced pilot,
+        or just want a refresher, we want to help you study by
+        providing <strong>quality online flight training resources
         for New Zealand pilots.</strong>
       </p>
     </div>
@@ -19,23 +19,24 @@
   <div class="content__wrapper">
 
     <div class="content__info">
-      <h2>Flashcards (PPL & CPL)</h2>
-      <ul>
-        <li><p>Generated from over 1,400 questions.</p></li>
-        <li><p>Cards include reference links, eg. Waypoints, CARs, AIPNZ.</p></li>
-        <li><p>New questions added weekly.</p></li>
-      </ul>
-
       <mat-card>
-          <mat-card-header>
-            <mat-card-title>
-              
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <app-flashcards-builder [courses]="allCourses"></app-flashcards-builder>
-          </mat-card-content>
-        </mat-card>
+
+        <mat-card-header>
+          <mat-card-title>
+            <h2>PPL & CPL Flashcards</h2>
+            <ul>
+              <li><p>Question bank of 1,400+ questions</p></li>
+              <li><p>Cards include reference links (Waypoints, CARs, AIPNZ, ...)</p></li>
+              <li><p>New questions added weekly</p></li>
+            </ul>
+          </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <app-flashcards-builder [courses]="allCourses"></app-flashcards-builder>
+        </mat-card-content>
+
+      </mat-card>
     </div>
     
     
