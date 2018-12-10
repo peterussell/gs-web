@@ -1,10 +1,10 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
-import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { GlobalVariables } from '../../globals';
-import { UserService } from '../core/services/user.service';
 import { RegisterInterestResponse } from '../core/services/interfaces/register-interest-response';
 import { HttpErrorResponse } from '@angular/common/http';
 import 'rxjs/add/operator/finally';
+import { ApiService } from '../core/services/api.service';
+import { Course } from '../core/models/course.model';
 
 @Component({
   selector: 'app-landing-page',
@@ -13,10 +13,18 @@ import 'rxjs/add/operator/finally';
 })
 export class LandingPageComponent implements OnInit {
   public facebookUrl: string = GlobalVariables.FACEBOOK_URL;
+  public allCourses: Array<Course>;
 
-  constructor() {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
-
+    this.apiService.getCourses().subscribe(
+      (data) => {
+        this.allCourses = data.courses;
+      },
+      (error) => {
+        console.log(error); // TODO: log this properly
+      }
+    )
   }
 }
