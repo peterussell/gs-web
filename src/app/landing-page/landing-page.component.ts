@@ -14,8 +14,9 @@ import 'rxjs/add/operator/finally';
 export class LandingPageComponent implements OnInit {
   public facebookUrl: string = GlobalVariables.FACEBOOK_URL;
 
-  constructor(private userService: UserService) {}
+  constructor() {}
 
   ngOnInit() {
+
   }
 }
