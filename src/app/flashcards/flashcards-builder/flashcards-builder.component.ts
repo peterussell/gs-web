@@ -77,6 +77,11 @@ export class FlashcardsBuilderComponent implements OnInit {
       });
     }));
 
+    if (selectedTopicIds === undefined || selectedTopicIds.length === 0) {
+      // TODO: show an error
+      return;
+    }
+
     let req = new FlashcardsBuilderRequest();
     req.numberOfQuestions = this.numberOfQuestions;
     req.topicIdsToInclude = selectedTopicIds;

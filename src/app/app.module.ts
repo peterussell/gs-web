@@ -34,6 +34,7 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
 import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { FlashcardsBuilderComponent } from './flashcards/flashcards-builder/flashcards-builder.component';
 import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
+import { FlashcardComponent } from './flashcards/flashcards-viewer/flashcard/flashcard.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashc
     QuestionEditorComponent,
     FlashcardsComponent,
     FlashcardsBuilderComponent,
-    FlashcardsViewerComponent
+    FlashcardsViewerComponent,
+    FlashcardComponent
   ],
   imports: [
     BrowserModule,

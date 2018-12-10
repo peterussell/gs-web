@@ -1,4 +1,4 @@
-<div *ngIf="showBuilder()">
+<div>
   <app-flashcards-builder
     [courses]="allCourses"
     (submitted)="onBuilderSubmit($event)">
@@ -7,7 +7,8 @@
 
 <div *ngIf="showViewer()">
   <app-flashcards-viewer
-    [questions]="currentQuestions">
+    [numberOfQuestions]="numberOfQuestions"
+    [topicIdsToInclude]="topicIdsToInclude">
   </app-flashcards-viewer>
 </div>
 

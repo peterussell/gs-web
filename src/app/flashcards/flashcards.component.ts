@@ -11,14 +11,11 @@ import { Question } from '../core/models/question.model';
   styleUrls: ['./flashcards.component.scss']
 })
 export class FlashcardsComponent implements OnInit {
-  public builderError: string;
-
   private currentState: FlashcardsState = FlashcardsState.ShowBuilder;
   private allCourses: Array<Course>;
-  private currentQuestions: Array<Question>;
 
-  // tmp
-  private topics: Array<string> = new Array<string>();
+  private numberOfQuestions: number;
+  private topicIdsToInclude: Array<string>;
 
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
@@ -33,25 +30,13 @@ export class FlashcardsComponent implements OnInit {
   }
 
   onBuilderSubmit(request: FlashcardsBuilderRequest) {
-    this.apiService.getFlashcards(request.numberOfQuestions, request.topicIdsToInclude).subscribe(
-      (response) => {
-        if (response['status'] === 200) {
-          this.loadQuestions(response['body']['questions']);
-        }
-      },
-      (error) => {
-        this.builderError = "There was a problem loading flashcards, please try again.";
-        console.log(error); // TODO: log this properly
-      }
-    );
-  }
-
-  loadQuestions(questions: Array<Question>) {
-    if (questions === undefined || questions.length === 0) {
-      this.builderError = "No questions were found.";
-      return;
+    if (request === undefined ||
+        request.topicIdsToInclude === undefined ||
+        request.topicIdsToInclude.length === 0) {
+      return; // Prevent switching to the viewer
     }
-    this.currentQuestions = questions;
+    this.numberOfQuestions = request.numberOfQuestions;
+    this.topicIdsToInclude = request.topicIdsToInclude;
     this.currentState = FlashcardsState.ShowViewer;
   }
 

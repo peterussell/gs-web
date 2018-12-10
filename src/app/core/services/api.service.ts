@@ -34,11 +34,13 @@ export class ApiService {
         return this.http.get(`${this.awsBasePath}/${this.topicsRelPath}/${topicId}`);
     }
 
-    public getFlashcards(numberOfQuestions: number, topicIdsToInclude: Array<string>) {
-        const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
+    public getRandomQuestion(topicIdsToInclude: Array<string>,
+                             topicIdsSeen: Array<string>,
+                             questionIdsSeen: Array<string>) {
         const body = {
-            'numberOfQuestions': numberOfQuestions,
-            'topicIdsToInclude': topicIdsToInclude
+            'topicsToInclude': topicIdsToInclude,
+            'topicsAlreadySeen': topicIdsSeen,
+            'questionsAlreadySeen': questionIdsSeen
         };
         return this.http.post(
             `${this.awsBasePath}/${this.flashcardsRelPath}`, body, this.httpOptions
@@ -46,7 +48,6 @@ export class ApiService {
     }
 
     public registerInterest(email: string): Observable<any> {
-        const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
         const body = { 'email': email };
         return this.http.post<RegisterInterestResponse>(
             `${this.awsBasePath}/${this.registerInterestRelPath}`, body, this.httpOptions
@@ -55,8 +56,6 @@ export class ApiService {
 
     public addQuestion(topicId: string, question: string, answer: string,
         references: Array<Reference>): Observable<any> {
-        const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
-
         var body = {
             'question_set_id': topicId,
             'question': question,
@@ -75,8 +74,6 @@ export class ApiService {
 
     public reportQuestion(questionId: string, reason: string, description: string,
         email: string): Observable<any> {
-        const headers = new HttpHeaders({ 'Content-Type': 'application/json;' });
-
         var body = {
             'questionId': questionId,
             'reason': reason,
