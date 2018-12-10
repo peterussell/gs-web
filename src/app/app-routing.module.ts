@@ -11,9 +11,12 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FlashcardsComponent } from './flashcards/flashcards.component';
+import { GroundschoolComponent } from './groundschool/groundschool.component';
 
 const appRoutes: Routes = [
-    { path: '', component: LandingPageComponent },
+    { path: '', component: GroundschoolComponent, children: [
+        { path: '', component: LandingPageComponent }
+    ]},
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },

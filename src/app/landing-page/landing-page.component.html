@@ -1,73 +1,43 @@
-<div class="header-container mat-typography">
-  <div class="logo-container">
-    <img src="/assets/images/landing-page/groundschoolnz-logo-200.png" />
-  </div>
+<div class="header-container">
 
-    <div class="devices">
-      <img src="/assets/images/landing-page/devices.png" />
+    <div class="logo-container">
+      <img src="/assets/images/landing-page/groundschoolnz-logo-200.png" />
     </div>
-    <div class="info">
-      <h2>Welcome to GroundSchool</h2>
+    <div class="info mat-typography">
+      <h2>WELCOME TO GROUND SCHOOL</h2>
       <p>
-        Flying is awesome. It's also serious business. As pilots
-        we need to know our stuff.
-      </p>
-      <p>
-        Whether you’re studying for your first exam, flight review, job interview,
-        or already have your license and know the importance of keeping current,
-        our mission is to assist you by providing <strong>quality online flight training
-        resources for New Zealand pilots.</strong>
+        New to aviation, experienced pilot,
+        or just after a refresher? We want to help by providing
+        <strong>quality online flight training resources
+        for New Zealand pilots.</strong>
       </p>
     </div>
 </div>
 
-<div class="register-interest mat-typography">
+<div class="content mat-typography">
 
-  <div *ngIf="showRegisterForm(); else success">
-    <div class="register-interest__info">
-      <h2>I want in...</h2>
-      <p>
-        GroundSchool is currently in a closed beta. Want to know when it's ready?
-        Pop your email in below and we'll keep you up to date.
-        We won't use your email for any other purpose.
-      </p>
+  <div class="content__wrapper">
+
+    <div class="content__info">
+      <h2>Flashcards (PPL & CPL)</h2>
+        <ul>
+          <li><p>Generated from a question bank of over 1,400 questions</p></li>
+          <li><p>Stuck? Each card includes links to relevant references like Waypoints, CARs, and AIPNZ</p></li>
+          <li><p>New questions added weekly</p></li>
+        </ul>
     </div>
-  
-    <form [formGroup]="registerInterestForm" (ngSubmit)="onRegisterInterest()">
-      <div>
-        <mat-form-field class="email">
-          <input matInput formControlName="email" placeholder="Email">
-          <mat-error *ngIf="!registerInterestForm.get('email').valid && registerInterestForm.get('email').touched">
-            Valid email required
-          </mat-error>
-        </mat-form-field>
-      </div>
-
-      <div class="register-interest__error">
-        {{ errorMessage }}
-      </div>
-
-      <div>
-        <button mat-stroked-button [disabled]="!registerInterestForm.valid" color="basic">
-          Get early access
-        </button>
-      </div>
-    </form>
+    
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <app-flashcards-builder></app-flashcards-builder>
+      </mat-card-content>
+    </mat-card>
   </div>
-
-  <ng-template #success>
-    <div class="register-interest__info">
-      <h2>Thanks for your interest</h2>
-      <p>
-        We're working hard to get GroundSchool ready and you'll be the first you know as soon as it's
-        open to the public.
-      </p>
-      <p>
-        In the meantime, you can follow along with development updates on our
-        <a href="{{ facebookUrl }}" target="_blank">Facebook page</a>.
-      </p>
-    </div>
-  </ng-template>
 
 </div>
 

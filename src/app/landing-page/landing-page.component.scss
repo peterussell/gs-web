@@ -25,15 +25,14 @@ p {
     right:0;
     overflow:hidden;
     z-index:-1;
-    padding-top: 20px;
+    padding: 40px 0 30px 0;
     text-align: center;
 }
 
-.devices {
-    padding-top: 20px;
+.logo-container {
     vertical-align: top;
     display: inline-block;
-    padding-right: 30px;
+    margin-right: 30px;
 }
 
 .info {
@@ -42,36 +41,55 @@ p {
     color: #fff;
     display: inline-block;
     right: 0px;
-    padding: 10px 10px 20px 10px;
+    padding: 30px 10px 20px 10px;
 
     h2 {
-        padding-top: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 2em;
+        font-weight: 400 !important;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.6em;
+
+        strong {
+            font-weight: 500 !important;
+        }
     }
 }
 
-.register-interest {
-    text-align: center;
+.content {
     padding: 20px 0 60px 0;
+    display: flex;
+    justify-content: center;
+
+    &__wrapper {
+        width: 900px;
+        flex: 0 0 auto;
+    }
 
     &__info {
-        max-width: 500px;
-        padding: 0 10px;
-        display: inline-block;
-    }
-
-    &__error {
-        padding: 0 0 14px 0;
-        color: #f44336;
-    }
-
-    form {
         padding-bottom: 20px;
+
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 1.1em;
+        }
     }
 
-    mat-form-field {
-        width: 80%;
-        max-width: 400px;
-        padding-bottom: 0px;
+    
+    
+    mat-card {
+        box-shadow: 0 1px 1px -1px rgba(0,0,0,.1), 0 1px 1px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.12);
+
+        
     }
 }
 

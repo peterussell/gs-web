@@ -1,0 +1,53 @@
+.navbar {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #15354e;
+    color: #fff;
+
+    &__inner {
+        width: 900px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &--left,
+        &--right {
+            flex: 0 0 auto;
+        }
+
+        &--left {
+            display: flex;
+            direction: row;
+
+            .title {
+                margin-right: 40px;
+                a {
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 1.1em;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+
+            .buttons{
+                flex: 0 0 auto;
+                font-weight: 200;
+
+                .mat-button {
+                    font-weight: 200;
+                }
+            }
+        }
+
+        &--right {
+            .accounts {
+                .mat-stroked-button {
+                    color: #fff;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}

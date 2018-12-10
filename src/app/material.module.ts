@@ -8,6 +8,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -24,6 +25,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
+        MatToolbarModule,
         MatProgressSpinnerModule,
         MatTooltipModule,
         MatDialogModule,
@@ -39,6 +41,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
+        MatToolbarModule,
         MatProgressSpinnerModule,
         MatTooltipModule,
         MatDialogModule,

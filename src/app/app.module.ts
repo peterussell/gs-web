@@ -35,6 +35,8 @@ import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { FlashcardsBuilderComponent } from './flashcards/flashcards-builder/flashcards-builder.component';
 import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
 import { FlashcardComponent } from './flashcards/flashcards-viewer/flashcard/flashcard.component';
+import { GroundschoolComponent } from './groundschool/groundschool.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { FlashcardComponent } from './flashcards/flashcards-viewer/flashcard/fla
     FlashcardsComponent,
     FlashcardsBuilderComponent,
     FlashcardsViewerComponent,
-    FlashcardComponent
+    FlashcardComponent,
+    GroundschoolComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

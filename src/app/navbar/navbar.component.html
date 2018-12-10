@@ -1,0 +1,22 @@
+<mat-toolbar class="navbar">
+  <div class="navbar__inner">
+
+    <div class="navbar__inner--left">
+      <div class="title">
+        <a routerLink="/">GroundSchool NZ</a>
+      </div>
+      <div class="buttons">
+        <button mat-button [routerLink]="['/flashcards']">Flashcards</button>
+        <button mat-button [routerLink]="['/about']">About</button>
+        <button mat-button [routerLink]="['/contact']">Contact</button>
+      </div>
+    </div>
+
+    <div class="navbar__inner--right">
+      <div class="accounts">
+        <button mat-stroked-button>Register</button>
+        <button mat-stroked-button>Sign In</button>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
