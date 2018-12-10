@@ -34,7 +34,7 @@ h3 {
 
     &__submit {
         @extend .form-row;
-
+        justify-content: center;
     }
 }
 
