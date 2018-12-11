@@ -25,24 +25,66 @@ h3 {
 
     &__field {
         flex: 1 0 auto;
+        max-width: calc(100% - 100px);
 
         &--no-subjects {
             @extend .form-row__field;
             margin-top: 4px;
         }
 
-        &--cb-label {
-            padding: 2px 0 0 10px;
+        .subject {
+            &__checkbox-row {
+                display: inline-block;
+
+                p {
+                    padding-left: 20px;
+                    margin: 0;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .topic {
+            &__checkbox-row {
+                display: flex;
+                margin-left: 6px;
+
+                mat-checkbox {
+                    flex: 0 0 20px;
+                }
+
+                p {
+                    flex: 0 0 calc(100% - 100px);
+                    font-size: 0.8em;
+                    line-height: 1.2em;
+                    padding: 6px 0 6px 20px;
+                    margin: 0;
+                }
+            }
         }
 
         mat-accordion {
             max-width: 100%;
+        }
+
+        mat-expansion-panel {
+            box-shadow: 0 1px 1px -3px rgba(0,0,0,.1), 0 1px 1px 0 
+                rgba(0,0,0,0), 0 1px 1px 0 rgba(0,0,0,.12);
+            width: 100%;
+        }
+
+        mat-expansion-panel-content {
+            max-width: 400px;
         }
     }
 
     &__submit {
         @extend .form-row;
         justify-content: center;
+
+        .mat-flat-button {
+            background-color: #15354e;
+        }
     }
 }
 

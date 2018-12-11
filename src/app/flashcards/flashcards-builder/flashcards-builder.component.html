@@ -15,7 +15,11 @@
     <div class="form-row__label"><h3>Cards</h3></div>
     <div class="form-row__field">
       <mat-radio-group [(ngModel)]="numberOfQuestions">
-          <mat-radio-button class="set-size__radio" *ngFor="let n of numberOfQuestionsOptions" [value]="n">
+          <mat-radio-button
+            class="set-size__radio"
+            *ngFor="let n of numberOfQuestionsOptions"
+            [value]="n"
+            color="primary">
             {{ n }}
           </mat-radio-button>
         </mat-radio-group>
@@ -26,45 +30,35 @@
   <div class="form-row__label"><h3>Subjects</h3></div>
   <div class="form-row__field">
     <div *ngIf="subjectsState.length > 0; else nosubjects">
-      <mat-accordion>
+
+        <!-- Subject (heading) -->
         <mat-expansion-panel *ngFor="let subject of subjectsState">
           <mat-expansion-panel-header>
-            <mat-panel-title>
+            <mat-panel-title class="subject__checkbox-row">
                 <mat-checkbox
                   [(ngModel)]="subject.selected"
                   (change)="toggleSubject($event, subject.id)"
                   (click)="$event.stopPropagation();"
                   color="primary">
               </mat-checkbox>
-              <p class="form-row__field--cb-label">{{ subject.title }}</p>
+              <p>{{ subject.title }}</p>
             </mat-panel-title>
           </mat-expansion-panel-header>
 
-          <div *ngFor="let topic of subject.topics">
+          <!-- Topics for subject (body) -->
+          <div *ngFor="let topic of subject.topics" class="topic__checkbox-row">
             <mat-checkbox
               [(ngModel)]="topic.selected"
-              (click)="$event.stopPropagation();">
-              {{ topic.title }}
+              (click)="$event.stopPropagation();"
+              color="primary">
             </mat-checkbox>
+            <p>{{ topic.title }}</p>
           </div>
           
         </mat-expansion-panel>
-      </mat-accordion>
-      <mat-expansion-panel></mat-expansion-panel>
-
-
-
-      <!-- <div *ngFor="let subject of subjectsState">
-        <mat-checkbox
-          [(ngModel)]="subject.selected"
-          (change)="onSubjectToggled($event, subject.id)">
-          <strong>{{ subject.title }}</strong>
-        </mat-checkbox>
       
-        
-        </div> -->
-      <!-- </div> -->
     </div>
+
     <ng-template #nosubjects class="form-row__field--no-subjects">
       <p class="form-row__field--no-subjects">
           (Select a course to load subjects)
