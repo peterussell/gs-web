@@ -30,6 +30,14 @@ h3 {
             @extend .form-row__field;
             margin-top: 4px;
         }
+
+        &--cb-label {
+            padding: 2px 0 0 10px;
+        }
+
+        mat-accordion {
+            max-width: 100%;
+        }
     }
 
     &__submit {

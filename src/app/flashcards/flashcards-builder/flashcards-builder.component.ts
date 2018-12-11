@@ -37,7 +37,11 @@ export class FlashcardsBuilderComponent implements OnInit {
     
     // Populate the checkbox states for Subjects and Topics
     if (this.selectedCourse.subjects !== null && this.selectedCourse.subjects.length > 0) {
-      this.selectedCourse.subjects.forEach((subject: Subject) => {
+      this.selectedCourse.subjects.sort((a, b) => {
+        if (a.title > b.title) { return 1; }
+        if (a.title < b.title) { return -1; }
+        return 0;
+      }).forEach((subject: Subject) => {
         // Subject
         let s = { id: subject.subjectId, title: subject.title, selected: true, topics: [] };
 
@@ -56,7 +60,7 @@ export class FlashcardsBuilderComponent implements OnInit {
     this.selectCourse(event.value);
   }
 
-  onSubjectToggled(event: MatCheckboxChange, subjectId: string) {
+  toggleSubject(event: MatCheckboxChange, subjectId: string) {
     // Toggle the topics for the subject that was selected/deselected
     let s = this.subjectsState.find(s => s.id === subjectId);
     s.topics.forEach(t => t.selected = event.checked);
@@ -64,9 +68,6 @@ export class FlashcardsBuilderComponent implements OnInit {
 
   hasSubjects() {
     return this.subjectsState.length > 0;
-  }
-
-  onTopicToggled(event: MatCheckboxChange, topicId: string) {
   }
 
   onSubmit() {

@@ -26,21 +26,44 @@
   <div class="form-row__label"><h3>Subjects</h3></div>
   <div class="form-row__field">
     <div *ngIf="subjectsState.length > 0; else nosubjects">
-      <div *ngFor="let subject of subjectsState">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let subject of subjectsState">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                <mat-checkbox
+                  [(ngModel)]="subject.selected"
+                  (change)="toggleSubject($event, subject.id)"
+                  (click)="$event.stopPropagation();"
+                  color="primary">
+              </mat-checkbox>
+              <p class="form-row__field--cb-label">{{ subject.title }}</p>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div *ngFor="let topic of subject.topics">
+            <mat-checkbox
+              [(ngModel)]="topic.selected"
+              (click)="$event.stopPropagation();">
+              {{ topic.title }}
+            </mat-checkbox>
+          </div>
+          
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-expansion-panel></mat-expansion-panel>
+
+
+
+      <!-- <div *ngFor="let subject of subjectsState">
         <mat-checkbox
           [(ngModel)]="subject.selected"
           (change)="onSubjectToggled($event, subject.id)">
           <strong>{{ subject.title }}</strong>
         </mat-checkbox>
       
-        <div *ngFor="let topic of subject.topics">
-          <mat-checkbox
-            [(ngModel)]="topic.selected"
-            (change)="onTopicToggled($event, topic.id)">
-            {{ topic.title }}
-          </mat-checkbox>
-        </div>
-      </div>
+        
+        </div> -->
+      <!-- </div> -->
     </div>
     <ng-template #nosubjects class="form-row__field--no-subjects">
       <p class="form-row__field--no-subjects">
