@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalVariables } from '../../globals';
 import { RegisterInterestResponse } from '../core/services/interfaces/register-interest-response';
 import { HttpErrorResponse } from '@angular/common/http';
 import 'rxjs/add/operator/finally';
@@ -12,7 +11,6 @@ import { Course } from '../core/models/course.model';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-  public facebookUrl: string = GlobalVariables.FACEBOOK_URL;
   public allCourses: Array<Course>;
 
   constructor(private apiService: ApiService) {}

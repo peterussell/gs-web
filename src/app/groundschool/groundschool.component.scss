@@ -1,11 +1,24 @@
-.page-container {
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid #eee;
 
-}
+    &__fb {
 
-.navbar-container {
+        &--logo {
+            width: 16px;
+            vertical-align: top;
+            margin: 0;
+            padding: 2px 4px 0 0;
+        }
 
-}
-
-.content-container {
-    
+        &--text typography {
+            vertical-align: top;
+            color: #fff;
+        }
+    }
 }

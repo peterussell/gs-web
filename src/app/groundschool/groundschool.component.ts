@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalVariables } from '../../globals';
 
 @Component({
   selector: 'app-groundschool',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./groundschool.component.scss']
 })
 export class GroundschoolComponent implements OnInit {
-
+  public facebookUrl: string = GlobalVariables.FACEBOOK_URL;
+  
   constructor() { }
 
   ngOnInit() {
