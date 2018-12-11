@@ -1,18 +1,29 @@
-<div>
-  <app-flashcards-builder
-    [courses]="allCourses"
-    (submitted)="onBuilderSubmit($event)">
-  </app-flashcards-builder>
+<div class="wrapper">
+  <div class="content-wrapper">
+    <div class="title">
+      <app-page-title>Flashcards</app-page-title>
+    </div>
+
+    <div *ngIf="isBuilderState()" class="builder">
+      <mat-card>
+        <app-flashcards-builder
+          [courses]="allCourses"
+          (submitted)="onBuilderSubmit($event)">
+        </app-flashcards-builder>
+      </mat-card>
+    </div>
+    
+    
+    <div *ngIf="isViewerState()" class="viewer">
+      <app-flashcards-viewer
+        [numberOfQuestions]="numberOfQuestions"
+        [topicIdsToInclude]="topicIdsToInclude">
+      </app-flashcards-viewer>
+    </div>
+    
+    
+    <span *ngFor="let t of topics">
+      {{ t }}<br>
+    </span>
+  </div>
 </div>
-
-<div *ngIf="showViewer()">
-  <app-flashcards-viewer
-    [numberOfQuestions]="numberOfQuestions"
-    [topicIdsToInclude]="topicIdsToInclude">
-  </app-flashcards-viewer>
-</div>
-
-
-<span *ngFor="let t of topics">
-  {{ t }}<br>
-</span>

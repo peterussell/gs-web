@@ -33,7 +33,10 @@
         </mat-card-header>
 
         <mat-card-content>
-          <app-flashcards-builder [courses]="allCourses"></app-flashcards-builder>
+          <app-flashcards-builder
+            [courses]="allCourses"
+            (submitted)="onBuilderSubmit($event)">
+          </app-flashcards-builder>
         </mat-card-content>
 
       </mat-card>

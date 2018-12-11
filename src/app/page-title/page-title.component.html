@@ -1,11 +1,5 @@
 <div class="title-container">
     <div class="title-container__title">
-        <h2>{{ title }}</h2>
-    </div>
-    
-    <div class="title-container__menu-icon" *ngIf="menuButtonVisible">
-        <button mat-raised-button (click)="toggleSidenav()">
-            <i class="material-icons">menu</i> Menu
-        </button>
+        <h2><ng-content></ng-content></h2>
     </div>
 </div>

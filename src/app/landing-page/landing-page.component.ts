@@ -4,6 +4,9 @@ import { HttpErrorResponse } from '@angular/common/http';
 import 'rxjs/add/operator/finally';
 import { ApiService } from '../core/services/api.service';
 import { Course } from '../core/models/course.model';
+import { StoreService } from '../core/services/store.service';
+import { FlashcardsBuilderRequest } from '../flashcards/flashcards-builder/flashcards-builder.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -13,7 +16,9 @@ import { Course } from '../core/models/course.model';
 export class LandingPageComponent implements OnInit {
   public allCourses: Array<Course>;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService,
+              private storeService: StoreService,
+              private router: Router) {}
 
   ngOnInit() {
     this.apiService.getCourses().subscribe(
@@ -28,5 +33,10 @@ export class LandingPageComponent implements OnInit {
         console.log(error); // TODO: log this properly
       }
     )
+  }
+
+  onBuilderSubmit(builderRequest: FlashcardsBuilderRequest) {
+    this.storeService.pushPendingFlashcardsBuilderRequest(builderRequest);
+    this.router.navigate(['/flashcards/']);
   }
 }

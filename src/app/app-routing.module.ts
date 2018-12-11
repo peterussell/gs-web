@@ -15,14 +15,15 @@ import { GroundschoolComponent } from './groundschool/groundschool.component';
 
 const appRoutes: Routes = [
     { path: '', component: GroundschoolComponent, children: [
-        { path: '', component: LandingPageComponent }
+        { path: '', component: LandingPageComponent },
+        { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } }
     ]},
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
-    { path: 'flashcards', component: GroundSchoolAppComponent, children: [
-        { path: '', component: FlashcardsComponent, resolve: {course: CourseResolver} }
-    ]},
+    // { path: 'flashcards', component: GroundSchoolAppComponent, children: [
+    //     { path: '', component: FlashcardsComponent, resolve: {course: CourseResolver} }
+    // ]},
     { path: 'review', component: GroundSchoolAppComponent, children: [
         { path: ':course/:subject', component: CourseComponent, resolve: {course: CourseResolver} }
     ]},

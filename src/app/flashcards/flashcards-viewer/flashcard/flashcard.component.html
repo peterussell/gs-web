@@ -1,4 +1,27 @@
-<div *ngIf="question">
-  {{ question.question }}<br>
-  {{ question.answer }}<br>
+<div *ngIf="flashcardViewerQuestion; else loading">
+  <mat-card>
+
+    <!-- Title -->
+    <mat-card-title>
+      <h3 *ngIf="isQuestionState()">Question</h3>
+      <h3 *ngIf="isAnswerState()">Answer</h3>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <p>{{ flashcardViewerQuestion.subjectTitle }} > {{ flashcardViewerQuestion.topicTitle }}</p>
+    </mat-card-subtitle>
+
+    <!-- Question -->
+    <mat-card-content *ngIf="isQuestionState()" (click)="toggleState()" class="question">
+      {{ flashcardViewerQuestion.question.question }}
+    </mat-card-content>
+    
+    <!-- Answer -->
+    <mat-card-content *ngIf="isAnswerState()" (click)="toggleState()" class="answer">
+      {{ flashcardViewerQuestion.question.answer }}<br>
+    </mat-card-content>
+  </mat-card>
 </div>
+
+<ng-template #loading>
+  <h2>Loading...</h2>
+</ng-template>

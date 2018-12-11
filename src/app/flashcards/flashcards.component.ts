@@ -4,6 +4,7 @@ import { Course } from '../core/models/course.model';
 import { ApiService } from '../core/services/api.service';
 import { FlashcardsBuilderRequest } from './flashcards-builder/flashcards-builder.component';
 import { Question } from '../core/models/question.model';
+import { StoreService } from '../core/services/store.service';
 
 @Component({
   selector: 'app-flashcards',
@@ -17,7 +18,9 @@ export class FlashcardsComponent implements OnInit {
   private numberOfQuestions: number;
   private topicIdsToInclude: Array<string>;
 
-  constructor(private route: ActivatedRoute, private apiService: ApiService) { }
+  constructor(private route: ActivatedRoute,
+              private apiService: ApiService,
+              private storeService: StoreService) { }
 
   ngOnInit() {
     this.route.data.subscribe((data: Data) => {
@@ -27,6 +30,12 @@ export class FlashcardsComponent implements OnInit {
         return 0;
       })
     });
+
+    // Check for any pending requests (allows builders to link from other pages)
+    const pendingBuilderRequest = this.storeService.popPendingFlashcardsBuilderRequest();
+    if (pendingBuilderRequest !== undefined) {
+      this.onBuilderSubmit(pendingBuilderRequest);
+    }
   }
 
   onBuilderSubmit(request: FlashcardsBuilderRequest) {
@@ -40,11 +49,11 @@ export class FlashcardsComponent implements OnInit {
     this.currentState = FlashcardsState.ShowViewer;
   }
 
-  showBuilder() {
+  isBuilderState() {
     return this.currentState === FlashcardsState.ShowBuilder;
   }
 
-  showViewer() {
+  isViewerState() {
     return this.currentState === FlashcardsState.ShowViewer;
   }
 }

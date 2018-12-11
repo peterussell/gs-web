@@ -37,6 +37,7 @@ import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashc
 import { FlashcardComponent } from './flashcards/flashcards-viewer/flashcard/flashcard.component';
 import { GroundschoolComponent } from './groundschool/groundschool.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { StoreService } from './core/services/store.service';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   providers: [
     ApiService,
     UserService,
+    StoreService,
     QuestionService,
     UserEventsService,
     ResponsiveService,

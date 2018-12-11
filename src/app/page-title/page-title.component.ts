@@ -11,29 +11,7 @@ import { Course } from '../core/models/course.model';
   styleUrls: ['./page-title.component.scss']
 })
 export class PageTitleComponent implements OnInit {
-  @Input() title: string;
-
-  menuButtonVisible: boolean;
-  course: string;
-  subject: string;
-
-  constructor(
-    public userEventsService: UserEventsService,
-    public responsiveService: ResponsiveService,
-    public questionService: QuestionService) { }
-
   ngOnInit() {
-    this.setupMenuButton();
-  }
-
-  setupMenuButton() {
-    this.menuButtonVisible = this.responsiveService.getViewportSize() === ViewportSize.Small;
-    this.responsiveService.onViewportChange.subscribe((newViewportSize: ViewportSize) => {
-      this.menuButtonVisible = newViewportSize === ViewportSize.Small;
-    });
-  }
-
-  toggleSidenav() {
-    this.userEventsService.toggleSidenav();
+    
   }
 }

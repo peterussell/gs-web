@@ -15,11 +15,11 @@ export class FlashcardsViewerComponent implements OnChanges {
   public questionIdsSeen: Array<string>;
   public topicIdsSeen: Array<string>;
 
-  public questions: Array<Question>;
+  public questions: Array<FlashcardsViewerQuestion>;
   public currentQuestionIndex: number;
 
   constructor(private apiService: ApiService) {
-    this.questions = new Array<Question>();
+    this.questions = new Array<FlashcardsViewerQuestion>();
     this.questionIdsSeen = new Array<string>();
     this.topicIdsSeen = new Array<string>();
     this.currentQuestionIndex = 0;
@@ -49,7 +49,6 @@ export class FlashcardsViewerComponent implements OnChanges {
     if (this.canGoToPreviousQuestion()) {
       this.currentQuestionIndex--;
     }
-    console.log(this.currentQuestionIndex);
   }
 
   private getNextQuestion(shouldProgress: boolean) {
@@ -66,13 +65,20 @@ export class FlashcardsViewerComponent implements OnChanges {
             return;
           }
           
-          this.questions.push(new Question(
+          const q = new Question(
             question.QuestionId,
             question.Question,
             question.Answer,
             question.References,
             question.TopicId
-          ));
+          );
+
+          let fvQuestion = new FlashcardsViewerQuestion();
+          fvQuestion.question = q;
+          fvQuestion.subjectTitle = res['body'].SubjectTitle;
+          fvQuestion.topicTitle = res['body'].TopicTitle;
+
+          this.questions.push(fvQuestion);
 
           this.questionIdsSeen.push(question.QuestionId);
           this.topicIdsSeen.push(question.TopicId);
@@ -80,7 +86,6 @@ export class FlashcardsViewerComponent implements OnChanges {
           if (shouldProgress) {
             this.currentQuestionIndex++;
           }
-          console.log(this.currentQuestionIndex);
         }
       },
       (error) => {
@@ -88,4 +93,10 @@ export class FlashcardsViewerComponent implements OnChanges {
       }
     );
   }
+}
+
+export class FlashcardsViewerQuestion {
+  public question: Question;
+  public subjectTitle: string;
+  public topicTitle: string;
 }

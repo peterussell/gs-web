@@ -1,18 +1,6 @@
-<app-flashcard [question]="questions[currentQuestionIndex]"></app-flashcard>
+<app-flashcard [flashcardViewerQuestion]="questions[currentQuestionIndex]"></app-flashcard>
 
-<button mat-flat-button (click)="goToPreviousQuestion()">Previous</button>
-<button mat-flat-button (click)="goToNextQuestion()">Next</button>
-
-<h3>Debug info:</h3>
-<hr>
-<br>
-<strong>Topics to include:</strong><br>
-{{ topicIdsToInclude }}<br><br>
-
-<strong>Questions seen:</strong><br>
-<span *ngFor="let qs of questionIdsSeen">{{ qs }}<br></span>
-<br>
-
-<strong>Topics seen:</strong><br>
-<span *ngFor="let ts of topicIdsSeen">{{ ts }}<br></span>
-<br>
+<div class="nav-buttons">
+    <button mat-flat-button (click)="goToPreviousQuestion()">Previous</button>
+    <button mat-flat-button (click)="goToNextQuestion()">Next</button>
+</div>
