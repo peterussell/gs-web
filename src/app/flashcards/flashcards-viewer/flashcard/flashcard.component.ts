@@ -17,10 +17,15 @@ export class FlashcardComponent implements OnInit, OnChanges {
   ngOnInit() { }
 
   ngOnChanges() {
-    this.flashcardViewerQuestion.question.question =
-      this.insertDegreeSymbols(this.flashcardViewerQuestion.question.question);
-    this.flashcardViewerQuestion.question.answer = 
-      this.insertDegreeSymbols(this.flashcardViewerQuestion.question.answer);
+    
+    if (this.flashcardViewerQuestion !== undefined) {
+      this.flashcardViewerQuestion.question.question =
+        this.insertDegreeSymbols(this.flashcardViewerQuestion.question.question);
+
+      this.flashcardViewerQuestion.question.answer = 
+        this.insertDegreeSymbols(this.flashcardViewerQuestion.question.answer);
+    }
+    
     this.currentState = FlashcardViewerState.Question;
   }
 
