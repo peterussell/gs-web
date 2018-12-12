@@ -21,6 +21,7 @@ h1, h2, h3, h4 {
 
 }
 
-.report-question-container .mat-dialog-container {
+.container-no-padding .mat-dialog-container {
     padding: 0;
+    max-height: 100vh;
 }

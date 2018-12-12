@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { UserService } from '../core/services/user.service';
 
@@ -8,6 +8,8 @@ import { UserService } from '../core/services/user.service';
   styleUrls: ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent implements OnInit {
+  @Output() onShowLoginForm = new EventEmitter<any>();
+  
   public resetPasswordForm: FormGroup;
   public resetPasswordConfirmForm: FormGroup;
   private hasError: boolean = false;
@@ -82,6 +84,10 @@ export class ResetPasswordComponent implements OnInit {
 
   showSuccessMessage() {
     return this.currentState === ResetPasswordState.ResetSuccess;
+  }
+
+  showLoginForm() {
+    this.onShowLoginForm.emit();
   }
 }
 

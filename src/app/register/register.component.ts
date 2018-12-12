@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../core/services/user.service';
 import { RegisterUserResultStatus } from '../core/services/register-user.result';
@@ -11,11 +11,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  @Output() onShowLoginForm = new EventEmitter<any>();
+
   public registerForm: FormGroup;
-  public activateForm: FormGroup;
   private currentState: RegisterUserState = RegisterUserState.Initial;
   private errorMessage: string;
-  private activateErrorMessage: string; // todo: move to a separate component
   private facebookUrl: string = GlobalVariables.FACEBOOK_URL;
 
   private readonly _errPasswordMismatch: string = "Password and confirmation don't match, please try again.";
@@ -30,11 +30,6 @@ export class RegisterComponent implements OnInit {
         'confirm': new FormControl(null, Validators.required)
       })
     });
-
-    this.activateForm = new FormGroup({
-      'email': new FormControl(null, Validators.required),
-      'code': new FormControl(null, Validators.required)
-    });
   }
 
   onRegister() {
@@ -42,6 +37,7 @@ export class RegisterComponent implements OnInit {
     this.clearError();
 
     if (!this.checkPasswordsMatch()) {
+      this.registerForm.enable();
       return;
     }
     const registerResult = this.userService.registerUser(
@@ -65,23 +61,6 @@ export class RegisterComponent implements OnInit {
           return;
       }
       this.setError(err.message);
-    })
-  }
-
-  onActivate() {
-    this.activateForm.disable();
-    this.userService.activateUser(
-      this.activateForm.get('email').value,
-      this.activateForm.get('code').value
-    )
-    .then(res => {
-      this.activateForm.enable();
-      this.currentState = RegisterUserState.ActivateSuccess;
-    })
-    .catch(err => {
-      this.activateForm.enable();
-      this.setActivateError(err.message);
-      this.currentState = RegisterUserState.Activate
     });
   }
 
@@ -101,12 +80,12 @@ export class RegisterComponent implements OnInit {
       this.currentState === RegisterUserState.Error;
   }
 
-  showActivateForm() {
+  showActivateMessage() {
     return this.currentState === RegisterUserState.Activate;
   }
 
-  showActivateSuccessMessage() {
-    return this.currentState == RegisterUserState.ActivateSuccess;
+  showLoginForm() {
+    this.onShowLoginForm.emit();
   }
   
   setError(message: string) {
@@ -122,27 +101,10 @@ export class RegisterComponent implements OnInit {
   hasError() {
     return this.currentState === RegisterUserState.Error;
   }
-
-  // todo: move this to a separate component
-  hasActivationError() {
-    return this.activateErrorMessage !== "";
-  }
-
-  // todo: move this to a separate component
-  setActivateError(message: string) {
-    this.activateErrorMessage = message;
-    this.currentState = RegisterUserState.Activate;
-  }
-
-  clearActivateError() {
-    this.activateErrorMessage = "";
-    this.currentState = RegisterUserState.Activate;
-  }
 }
 
 enum RegisterUserState {
   Initial,
   Activate,
-  ActivateSuccess,
   Error
 }

@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { UserService } from '../core/services/user.service';
 import { AuthenticateUserResultStatus } from '../core/services/authenticate-user.result';
+import { CognitoUser } from 'amazon-cognito-identity-js';
+import { map, catchError } from 'rxjs/operators';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +13,10 @@ import { AuthenticateUserResultStatus } from '../core/services/authenticate-user
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  @Output() onAuthenticationSuccess = new EventEmitter<any>();
+  @Output() onShowForgotPasswordForm = new EventEmitter<any>();
+  @Output() onShowRegisterForm = new EventEmitter<any>();
+
   public loginForm: FormGroup;
   public hasAuthError: boolean = false;
 
@@ -23,17 +30,30 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    this.loginForm.disable();
     this.hasAuthError = false;
+    this.loginForm.disable();
 
-    this.userService.authenticateUser(
+    this.userService.signIn(
       this.loginForm.get('email').value,
       this.loginForm.get('password').value
     )
-    .then(res => this.router.navigate(['/courses', 'cpl']))
-    .catch(err => {
-      this.loginForm.enable();
-      this.hasAuthError = true;
-    });
+    .subscribe(
+      (cognitoUser: CognitoUser) => {
+        this.userService.setCurrentUser(cognitoUser);
+        this.onAuthenticationSuccess.emit();
+      },
+      (error: any) => {
+        this.hasAuthError = true;
+        this.loginForm.enable();
+      }
+    );
+  }
+
+  showRegisterForm() {
+    this.onShowRegisterForm.emit();
+  }
+
+  showForgotPasswordForm() {
+    this.onShowForgotPasswordForm.emit();
   }
 }

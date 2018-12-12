@@ -1,7 +1,7 @@
 import { Injectable, Output, EventEmitter } from "@angular/core";
 
 @Injectable()
-export class UserEventsService {
+export class UIEventsService {
     @Output() onToggleSidenav: EventEmitter<any> = new EventEmitter<any>();
 
     toggleSidenav() {

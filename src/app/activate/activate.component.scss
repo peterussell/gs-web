@@ -2,7 +2,7 @@
     background-image: url('/assets/images/login/logo.png');
 }
 
-.register-container {
+.activate-container {
     width: 300px;
     display: inline-block;
     padding: 20px 40px;
@@ -18,8 +18,7 @@ mat-form-field {
 }
 
 .activate-message {
-    line-height: 1.6em;
-    margin-bottom: 30px;
+    line-height: 1.4em;
 }
 
 .error-msg {
@@ -30,6 +29,11 @@ mat-form-field {
 .mat-card-footer {
     font-size: 0.8em;
     margin-bottom: 10px;
+}
+
+.activate-success {
+    padding-bottom: 20px;
+    line-height: 1.6em;
 }
 
 .return-to-login {
