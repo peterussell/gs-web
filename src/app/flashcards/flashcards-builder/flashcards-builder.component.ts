@@ -16,12 +16,12 @@ export class FlashcardsBuilderComponent implements OnInit {
   @Output() submitted: EventEmitter<FlashcardsBuilderRequest> =
     new EventEmitter<FlashcardsBuilderRequest>();
 
-  private selectedCourse: Course;
+  public selectedCourse: Course;
 
-  private numberOfQuestionsOptions: number[] = [5, 10, 20];
-  private numberOfQuestions: number = 5;
+  public numberOfQuestionsOptions: number[] = [5, 10, 20];
+  public numberOfQuestions: number = 5;
 
-  private subjectsState = [];
+  public subjectsState = [];
 
   constructor() { }
 
