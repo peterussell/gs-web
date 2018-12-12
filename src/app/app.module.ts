@@ -89,7 +89,8 @@ import { ActivateFullPageComponent } from './activate-full-page/activate-full-pa
   ],
   entryComponents: [
     ReportQuestionDialogComponent,
-    AccountDialogComponent
+    AccountDialogComponent,
+    ActivateComponent
   ],
   bootstrap: [AppComponent]
 })
