@@ -1,6 +1,34 @@
-<app-flashcard [flashcardViewerQuestion]="questions[currentQuestionIndex]"></app-flashcard>
 
-<div class="nav-buttons">
-    <button mat-flat-button (click)="goToPreviousQuestion()">Previous</button>
-    <button mat-flat-button (click)="goToNextQuestion()">Next</button>
+<div *ngIf="isInProgress(); else results">
+    <div class="progress-bar">
+        <mat-progress-bar
+            [mode]="determinate"
+            [value]="progress">
+        </mat-progress-bar>
+    </div>
+
+    <app-flashcard
+        [flashcardViewerQuestion]="questions[currentQuestionIndex]"
+        [questionNumber]="currentQuestionIndex+1"
+        [numberOfQuestions]="numberOfQuestions">
+    </app-flashcard>
+
+    <div class="nav-buttons">
+        <button mat-flat-button
+            (click)="goToPreviousQuestion()"
+            [disabled]="!canGoToPreviousQuestion()">
+            Previous
+        </button>
+        <button mat-flat-button (click)="goToNextQuestion()">
+            <span *ngIf="canGoToNextQuestion(); else finish">Next</span>
+            <ng-template #finish><span>Finish</span></ng-template>
+        </button>
+    </div>
 </div>
+
+<ng-template #results>
+    <mat-card>
+        <h3>All done!</h3>
+        <button mat-button (click)="allDone()">Get more flashcards...</button>
+    </mat-card>
+</ng-template>

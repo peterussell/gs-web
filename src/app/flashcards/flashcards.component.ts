@@ -49,6 +49,10 @@ export class FlashcardsComponent implements OnInit {
     this.currentState = FlashcardsState.ShowViewer;
   }
 
+  onViewerComplete() {
+    this.currentState = FlashcardsState.ShowBuilder;
+  }
+
   isBuilderState() {
     return this.currentState === FlashcardsState.ShowBuilder;
   }

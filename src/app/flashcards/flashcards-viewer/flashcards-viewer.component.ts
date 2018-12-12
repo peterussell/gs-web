@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { Question } from '../../core/models/question.model';
 import { ApiService } from '../../core/services/api.service';
 import { ConsoleLogger } from '@aws-amplify/core';
@@ -12,33 +12,55 @@ export class FlashcardsViewerComponent implements OnChanges {
   @Input() numberOfQuestions: number;
   @Input() topicIdsToInclude: Array<string>;
 
+  @Output() complete: EventEmitter<any> = new EventEmitter<any>();
+
   public questionIdsSeen: Array<string>;
   public topicIdsSeen: Array<string>;
-
   public questions: Array<FlashcardsViewerQuestion>;
   public currentQuestionIndex: number;
+  get progress(): number {
+    if (this.questions.length === 0) {
+      return 0;
+    }
+    return ((this.currentQuestionIndex + 1) / this.numberOfQuestions) * 100;
+  };
+
+  public currentState: FlashcardsViewerState;
 
   constructor(private apiService: ApiService) {
     this.questions = new Array<FlashcardsViewerQuestion>();
     this.questionIdsSeen = new Array<string>();
     this.topicIdsSeen = new Array<string>();
     this.currentQuestionIndex = 0;
+    this.currentState = FlashcardsViewerState.InProgress;
   }
 
   ngOnChanges() {
     this.getNextQuestion(false); // Don't progress for the first question
   }
 
-  canGoToNextQuestion() {
-    // TODO: check the index against the number of questions. Redirect
-    // to the final page if the set is finished.
-    return true;
+  canGoToNextQuestion(): boolean {
+    return this.currentQuestionIndex < (this.numberOfQuestions - 1);
   }
 
   goToNextQuestion() {
     if (this.canGoToNextQuestion()) {
+
+      // Don't fetch a new question if we already have it
+      // (eg. after clicking Previous then Next)
+      if (this.nextQuestionIsAlreadyInStore()) {
+        this.currentQuestionIndex++;
+        // this.updateProgress();
+        return;
+      }
       this.getNextQuestion(true);
+    } else {
+      this.showResults();
     }
+  }
+
+  nextQuestionIsAlreadyInStore(): boolean {
+    return this.currentQuestionIndex < this.questions.length - 1;
   }
 
   canGoToPreviousQuestion() {
@@ -48,6 +70,7 @@ export class FlashcardsViewerComponent implements OnChanges {
   goToPreviousQuestion() {
     if (this.canGoToPreviousQuestion()) {
       this.currentQuestionIndex--;
+      // this.updateProgress();
     }
   }
 
@@ -86,6 +109,7 @@ export class FlashcardsViewerComponent implements OnChanges {
           if (shouldProgress) {
             this.currentQuestionIndex++;
           }
+          // this.updateProgress();
         }
       },
       (error) => {
@@ -93,10 +117,35 @@ export class FlashcardsViewerComponent implements OnChanges {
       }
     );
   }
+
+  // updateProgress() {
+  //   if (this.currentQuestionIndex === 0) {
+  //     this.progress = 0;
+  //     return;
+  //   }
+  //   this.progress = ((this.currentQuestionIndex + 1) / (this.numberOfQuestions) * 100;
+  // }
+
+  showResults() {
+    this.currentState = FlashcardsViewerState.ShowResults;
+  }
+
+  isInProgress() {
+    return this.currentState === FlashcardsViewerState.InProgress;
+  }
+
+  allDone() {
+    this.complete.emit();
+  }
 }
 
 export class FlashcardsViewerQuestion {
   public question: Question;
   public subjectTitle: string;
   public topicTitle: string;
+}
+
+enum FlashcardsViewerState {
+  InProgress,
+  ShowResults
 }

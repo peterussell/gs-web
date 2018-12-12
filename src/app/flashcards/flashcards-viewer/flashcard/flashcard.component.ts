@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FlashcardsViewerQuestion } from '../flashcards-viewer.component';
-import { Question } from '../../../core/models/question.model';
 
 @Component({
   selector: 'app-flashcard',
@@ -9,6 +8,8 @@ import { Question } from '../../../core/models/question.model';
 })
 export class FlashcardComponent implements OnInit, OnChanges {
   @Input() flashcardViewerQuestion: FlashcardsViewerQuestion;
+  @Input() questionNumber: number;
+  @Input() numberOfQuestions: number;
   
   private currentState: FlashcardViewerState;
 

@@ -17,7 +17,8 @@
     <div *ngIf="isViewerState()" class="viewer">
       <app-flashcards-viewer
         [numberOfQuestions]="numberOfQuestions"
-        [topicIdsToInclude]="topicIdsToInclude">
+        [topicIdsToInclude]="topicIdsToInclude"
+        (complete)="onViewerComplete()">
       </app-flashcards-viewer>
     </div>
     
