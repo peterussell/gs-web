@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ActivateComponent } from '../activate/activate.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -7,7 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './activate-full-page.component.html',
   styleUrls: ['./activate-full-page.component.scss']
 })
-export class ActivateFullPageComponent {
+export class ActivateFullPageComponent implements OnDestroy {
   private dialogRef;
 
   constructor(private dialog: MatDialog) {
@@ -20,4 +20,7 @@ export class ActivateFullPageComponent {
   }
 
   // TODO (working here): close the dialog on router change events
+  ngOnDestroy() {
+    this.dialogRef.close();
+  }
 }
