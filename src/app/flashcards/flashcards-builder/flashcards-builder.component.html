@@ -68,5 +68,7 @@
 </div>
 
 <div class="form-row__submit">
-  <button mat-flat-button (click)="onSubmit()">Study</button>
+  <button mat-flat-button
+    (click)="onSubmit()"
+    [disabled]="!hasSelectedCourse()">Study</button>
 </div>

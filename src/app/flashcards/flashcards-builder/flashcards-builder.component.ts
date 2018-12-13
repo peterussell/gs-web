@@ -66,6 +66,11 @@ export class FlashcardsBuilderComponent implements OnInit {
     s.topics.forEach(t => t.selected = event.checked);
   }
 
+  hasSelectedCourse() {
+    // TODO: should check 1+ topics are selected, this will do for now
+    return this.selectedCourse !== undefined;
+  }
+
   hasSubjects() {
     return this.subjectsState.length > 0;
   }
