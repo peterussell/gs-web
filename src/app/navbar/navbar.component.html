@@ -14,8 +14,13 @@
 
     <div class="navbar__inner--right">
       <div class="accounts">
-        <button mat-stroked-button (click)="registerClick()">Register</button>
-        <button mat-stroked-button (click)="signInClick()">Sign In</button>
+        <span *ngIf="currentUser; else loggedOut">
+          <button mat-stroked-button (click)="signOutClick()">Sign Out</button>
+        </span>
+        <ng-template #loggedOut>
+          <button mat-stroked-button (click)="registerClick()">Register</button>
+          <button mat-stroked-button (click)="signInClick()">Sign In</button>
+        </ng-template>
       </div>
     </div>
   </div>
