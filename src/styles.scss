@@ -24,3 +24,7 @@ h1, h2, h3, h4 {
 .report-question-container .mat-dialog-container {
     padding: 0;
 }
+
+.mat-flat-button {
+    background-color: #307ab3 !important; // TODO: override in the theme
+}

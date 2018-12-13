@@ -81,10 +81,6 @@ h3 {
     &__submit {
         @extend .form-row;
         justify-content: center;
-
-        .mat-flat-button {
-            background-color: #15354e;
-        }
     }
 }
 
