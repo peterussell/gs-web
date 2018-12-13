@@ -1,2 +1,14 @@
-<app-register *ngIf="showRegisterForm()"></app-register>
-<app-login *ngIf="showLoginForm()"></app-login>
+<app-register
+    *ngIf="currentState === accountDialogState.Register"
+    (onShowLoginForm)="showLoginForm()">
+</app-register>
+<app-login
+    *ngIf="currentState === accountDialogState.Login"
+    (onAuthenticationSuccess)="closeDialog()"
+    (onShowForgotPasswordForm)="showForgotPasswordForm()"
+    (onShowRegisterForm)="showRegisterForm()">
+</app-login>
+<app-reset-password
+    *ngIf="currentState === accountDialogState.ResetPassword"
+    (onShowLoginForm)="showLoginForm()">
+</app-reset-password>

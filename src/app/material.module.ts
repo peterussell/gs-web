@@ -14,6 +14,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
     imports: [
@@ -30,7 +31,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
         MatTooltipModule,
         MatDialogModule,
         MatRadioModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatProgressBarModule
     ],
     exports: [
         MatSidenavModule,
@@ -46,7 +48,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
         MatTooltipModule,
         MatDialogModule,
         MatRadioModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatProgressBarModule
     ]
 })
 export class MaterialModule {}
