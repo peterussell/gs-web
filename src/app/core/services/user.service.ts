@@ -20,7 +20,10 @@ export class UserService {
     constructor(private apiService: ApiService) {
         from(Auth.currentAuthenticatedUser()).subscribe(
             (cognitoUser: CognitoUser) => { this._currentUser.next(cognitoUser); },
-            (error: any) => { console.log(error); } // tmp - TODO: log this properly or show an error
+            (error: any) =>
+            {
+                // Not logged because 'not authenticated' returns an error
+            }
         );
     }
 

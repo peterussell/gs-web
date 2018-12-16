@@ -5,8 +5,36 @@
 
 .question, .answer {
     font-size: 1.2em;
+    line-height: 1.6em;
     text-align: center;
     cursor: pointer;
     padding: 20px 30px;
 }
 
+.references {
+    font-size: 0.8em;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 20px;
+
+    .title {
+        display: inline;
+        font-weight: bold;
+    }
+
+    ul {
+        display: inline;
+        padding: 0 0 0 20px;
+        margin: 0;
+    }
+    
+    li {
+        display: inline;
+    }
+    
+    li:not(:first-child):before {
+        content: " | ";
+        padding: 0 10px;
+    }
+}

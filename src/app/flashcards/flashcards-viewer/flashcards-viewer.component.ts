@@ -47,10 +47,9 @@ export class FlashcardsViewerComponent implements OnChanges {
     if (this.canGoToNextQuestion()) {
 
       // Don't fetch a new question if we already have it
-      // (eg. after clicking Previous then Next)
+      // eg. after clicking Previous then Next
       if (this.nextQuestionIsAlreadyInStore()) {
         this.currentQuestionIndex++;
-        // this.updateProgress();
         return;
       }
       this.getNextQuestion(true);
@@ -70,7 +69,6 @@ export class FlashcardsViewerComponent implements OnChanges {
   goToPreviousQuestion() {
     if (this.canGoToPreviousQuestion()) {
       this.currentQuestionIndex--;
-      // this.updateProgress();
     }
   }
 
@@ -109,7 +107,6 @@ export class FlashcardsViewerComponent implements OnChanges {
           if (shouldProgress) {
             this.currentQuestionIndex++;
           }
-          // this.updateProgress();
         }
       },
       (error) => {
@@ -117,14 +114,6 @@ export class FlashcardsViewerComponent implements OnChanges {
       }
     );
   }
-
-  // updateProgress() {
-  //   if (this.currentQuestionIndex === 0) {
-  //     this.progress = 0;
-  //     return;
-  //   }
-  //   this.progress = ((this.currentQuestionIndex + 1) / (this.numberOfQuestions) * 100;
-  // }
 
   showResults() {
     this.currentState = FlashcardsViewerState.ShowResults;

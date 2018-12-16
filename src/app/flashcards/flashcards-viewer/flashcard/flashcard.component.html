@@ -14,13 +14,28 @@
     </mat-card-subtitle>
 
     <!-- Question -->
-    <mat-card-content *ngIf="isQuestionState()" (click)="toggleState()" class="question">
-      {{ flashcardViewerQuestion.question.question }}
+    <mat-card-content *ngIf="isQuestionState()" (click)="toggleState()">
+      <div class="question">
+        {{ flashcardViewerQuestion.question.question }}
+      </div>
     </mat-card-content>
     
     <!-- Answer -->
-    <mat-card-content *ngIf="isAnswerState()" (click)="toggleState()" class="answer">
-      {{ flashcardViewerQuestion.question.answer }}<br>
+    <mat-card-content *ngIf="isAnswerState()" (click)="toggleState()">
+      <div class="answer">
+        {{ flashcardViewerQuestion.question.answer }}<br>
+      </div>
+
+      <!-- References -->
+      <div class="references">
+        <span class="title">References:</span>
+        <ul>
+          <li *ngFor="let reference of flashcardViewerQuestion.question.references">
+            <a href="{{ reference.Url }}" target="_blank" *ngIf="reference.Url; else noLink">{{ reference.Text }}</a>
+            <ng-template #noLink>{{ reference.Text }}</ng-template>
+          </li>
+        </ul>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

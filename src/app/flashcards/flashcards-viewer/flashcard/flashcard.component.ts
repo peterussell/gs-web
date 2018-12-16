@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FlashcardsViewerQuestion } from '../flashcards-viewer.component';
+import { Reference } from '../../../core/models/reference.model';
 
 @Component({
   selector: 'app-flashcard',
@@ -24,7 +25,7 @@ export class FlashcardComponent implements OnInit, OnChanges {
         this.insertDegreeSymbols(this.flashcardViewerQuestion.question.question);
 
       this.flashcardViewerQuestion.question.answer = 
-        this.insertDegreeSymbols(this.flashcardViewerQuestion.question.answer);
+        this.insertDegreeSymbols(this.flashcardViewerQuestion.question.answer);)
     }
     
     this.currentState = FlashcardViewerState.Question;
@@ -33,6 +34,16 @@ export class FlashcardComponent implements OnInit, OnChanges {
   // TODO: move this to a util class
   insertDegreeSymbols(input: string): string {
     return input.replace(/&deg;/g, '°');
+  }
+
+  sortReferences(references: Array<Reference>): Array<Reference> {
+    return references.sort((a, b) => {
+      if (a.Text.toLowerCase().startsWith('waypoints')) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
   }
 
   toggleState() {
