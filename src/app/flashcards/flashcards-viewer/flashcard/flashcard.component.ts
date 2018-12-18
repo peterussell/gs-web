@@ -25,7 +25,7 @@ export class FlashcardComponent implements OnInit, OnChanges {
         this.insertDegreeSymbols(this.flashcardViewerQuestion.question.question);
 
       this.flashcardViewerQuestion.question.answer = 
-        this.insertDegreeSymbols(this.flashcardViewerQuestion.question.answer);)
+        this.insertDegreeSymbols(this.flashcardViewerQuestion.question.answer);
     }
     
     this.currentState = FlashcardViewerState.Question;

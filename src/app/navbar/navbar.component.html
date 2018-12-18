@@ -5,7 +5,9 @@
       <div class="title">
         <a routerLink="/">GroundSchool NZ</a>
       </div>
-      <div class="buttons">
+
+      <!-- Menu links: >= medium -->
+      <div class="buttons" fxShow="true" fxHide.lt-md="true">
         <button mat-button [routerLink]="['/flashcards']">Flashcards</button>
         <button mat-button [routerLink]="['/about']">About</button>
         <button mat-button [routerLink]="['/contact']">Contact</button>
@@ -13,7 +15,8 @@
     </div>
 
     <div class="navbar__inner--right">
-      <div class="accounts">
+      <!-- Account buttons: >= medium -->
+      <div class="accounts" fxShow="true" fxHide.lt-md="true">
         <span *ngIf="currentUser; else loggedOut">
           <button mat-stroked-button (click)="signOutClick()">Sign Out</button>
         </span>
@@ -22,6 +25,12 @@
           <button mat-stroked-button (click)="signInClick()">Sign In</button>
         </ng-template>
       </div>
+
+      <!-- Menu icon: <= small -->
+      <div class="menu-icon" fxShow="true" fxHide.gt-sm="true">
+          <i class="material-icons">menu</i>
+      </div>
     </div>
+
   </div>
 </mat-toolbar>

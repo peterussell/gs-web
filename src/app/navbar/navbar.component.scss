@@ -8,7 +8,6 @@
     background-color: #15354e;
     color: #fff;
 
-
     &__inner {
         width: 900px;
         display: flex;
@@ -35,7 +34,7 @@
                 }
             }
 
-            .buttons{
+            .buttons {
                 flex: 0 0 auto;
                 font-weight: 200;
 
@@ -50,6 +49,13 @@
                 .mat-stroked-button {
                     color: #fff;
                     font-weight: 200;
+                }
+            }
+
+            .menu-icon {
+                padding-top: 4px;
+                i {
+                    cursor: pointer;
                 }
             }
         }

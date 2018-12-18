@@ -21,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CourseResolver } from './core/services/resolvers/course-resolver.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { UIEventsService } from './core/services/ui-events.service';
 import { ResponsiveService } from './core/services/responsive.service';
@@ -76,7 +77,8 @@ import { ActivateFullPageComponent } from './activate-full-page/activate-full-pa
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    LayoutModule
+    LayoutModule,
+    FlexLayoutModule
   ],
   providers: [
     ApiService,
@@ -85,7 +87,8 @@ import { ActivateFullPageComponent } from './activate-full-page/activate-full-pa
     QuestionService,
     UIEventsService,
     ResponsiveService,
-    CourseResolver
+    CourseResolver,
+    FlexLayoutModule
   ],
   entryComponents: [
     ReportQuestionDialogComponent,

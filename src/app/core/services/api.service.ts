@@ -63,8 +63,8 @@ export class ApiService {
             'references': []
         };
         references.forEach(r => {
-            if (r.text === null) { return; }
-            body['references'].push({ 'text': r.text, 'url': r.url });
+            if (r.Text === null) { return; }
+            body['references'].push({ 'text': r.Text, 'url': r.Url });
         });
 
         return this.http.post<any>(

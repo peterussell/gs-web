@@ -30,7 +30,7 @@ export class QuestionComponent implements OnInit {
 
   sortReferences(references: Array<Reference>): Array<Reference> {
     return references.sort((a, b) => {
-      if (a.text.toLowerCase().startsWith('waypoints')) {
+      if (a.Text.toLowerCase().startsWith('waypoints')) {
         return -1;
       } else {
         return 1;
