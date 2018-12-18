@@ -17,6 +17,7 @@
       <mat-radio-group [(ngModel)]="numberOfQuestions">
           <mat-radio-button
             class="set-size__radio"
+            ngClass.xs="set-size__radio-xs"
             *ngFor="let n of numberOfQuestionsOptions"
             [value]="n"
             color="primary">

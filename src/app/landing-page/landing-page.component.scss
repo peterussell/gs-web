@@ -63,15 +63,18 @@ p {
     padding: 20px 0 60px 0;
     display: flex;
     justify-content: center;
+    margin: 0 20px;
 
     &__wrapper {
-        width: 500px;
-        flex: 0 0 auto;
+        max-width: 500px;
+        flex: 1 1 auto;
+        display: flex;
     }
 
     &__info {
         padding-bottom: 20px;
-        width: 500px;
+        max-width: 500px;
+        flex: 1 1 auto;
 
         h2 {
             padding: 0;
