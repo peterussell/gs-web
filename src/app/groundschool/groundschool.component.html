@@ -1,14 +1,28 @@
-<div>
-  <div class="navbar">
-    <app-navbar></app-navbar>
+<mat-sidenav-container fullscreen class="wrapper">
+
+  <!-- Sidebar -->
+  <mat-sidenav
+    [fixedInViewport]="true"
+    class="sidebar-container"
+    (click)="sidenav.toggle()"
+    #sidenav>
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <div>
+    <div class="navbar">
+      <app-navbar></app-navbar>
+    </div>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="footer mat-typography">
+      <img src="/assets/images/landing-page/fb-logo.png" class="footer__fb--logo" />
+      <a href="{{ facebookUrl }}" class="white" target="_blank">facebook.com/groundschoolnz</a>
+    </div>
   </div>
 
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-
-  <div class="footer mat-typography">
-    <img src="/assets/images/landing-page/fb-logo.png" class="footer__fb--logo" />
-    <a href="{{ facebookUrl }}" class="white" target="_blank">facebook.com/groundschoolnz</a>
-  </div>
-</div>
+</mat-sidenav-container>

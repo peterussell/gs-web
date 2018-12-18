@@ -3,6 +3,7 @@ import { AccountDialogState, AccountDialogComponent } from '../account-dialog/ac
 import { MatDialog } from '@angular/material/dialog';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { UserService } from '../core/services/user.service';
+import { UIEventsService } from '../core/services/ui-events.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,11 @@ import { UserService } from '../core/services/user.service';
 export class NavbarComponent implements OnInit {
   public currentUser: CognitoUser;
 
-  constructor(private userService: UserService, public dialog: MatDialog) { }
+  constructor(
+    private userService: UserService,
+    private uiEventsService: UIEventsService,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit() {
     this.userService.currentUser$.subscribe(
@@ -42,5 +47,9 @@ export class NavbarComponent implements OnInit {
 
   signOutClick() {
     this.userService.signOut();
+  }
+
+  showMenu() {
+    this.uiEventsService.toggleSidenav();
   }
 }

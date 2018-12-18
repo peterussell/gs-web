@@ -3,18 +3,9 @@
 </div>
 
 <div class="sidenav__content" role="navigation">
-  <h2>Review Questions</h2>
-
-  <span *ngFor="let course of courses">
-    <h4>{{ course.title }}</h4>
-
-    <span *ngFor="let subject of sortSubjects(course.subjects)">
-      <a
-        class="sidenav__content--subject"
-        [routerLink]="['/review', course.path, subject.path]">
-        {{ subject.title }}
-      </a>
-    </span>
-  </span>
-
+  <h2>Navigation</h2>
+  <h3><a routerLink="/">Home</a></h3>
+  <h3><a routerLink="/flashcards">Flashcards</a></h3>
+  <h3><a routerLink="/about">About</a></h3>
+  <h3><a routerLink="/contact">Contact</a></h3>
 </div>

@@ -11,28 +11,15 @@
 
         h2 {
             font-weight: 100;
-            border-bottom: 1px solid #ddd;
             margin-right: 20px;
         }
 
-        h4 {
-            margin: 16px 0 4px 0;
-        }
-
-        &--subject {
-            color: #333;
-            padding: 0 0 0 10px;
-            margin: 0 20px 0 0;
-            cursor: pointer;
-            line-height: 2em;
-            font-size: 0.9em;
-            border-left: 1px solid #ddd;
-            display: block;
+        h3 {
+            margin: 16px 0 4px 10px;
+            a {
+                text-decoration: none;
+                color: #333;
+            }
         }
     }
-}
-
-.material-icons {
-    vertical-align: middle;
-    font-size: 1em;
 }
