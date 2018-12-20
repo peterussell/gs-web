@@ -33,3 +33,7 @@ h1, h2, h3, h4 {
 .mat-flat-button:disabled {
     color: #8298a9 !important; // TODO: override in the theme
 }
+
+.mat-content {
+    overflow: visible !important;
+}
