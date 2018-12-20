@@ -33,7 +33,7 @@
       <div class="references">
         <span class="title">References:</span>
         <ul>
-          <li *ngFor="let reference of flashcardViewerQuestion.question.references">
+          <li *ngFor="let reference of sortReferences(flashcardViewerQuestion.question.references)">
             <a href="{{ reference.Url }}" target="_blank" *ngIf="reference.Url; else noLink">{{ reference.Text }}</a>
             <ng-template #noLink>{{ reference.Text }}</ng-template>
           </li>

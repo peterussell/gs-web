@@ -38,11 +38,11 @@ export class FlashcardComponent implements OnInit, OnChanges {
 
   sortReferences(references: Array<Reference>): Array<Reference> {
     return references.sort((a, b) => {
+      // Waypoints references should always come first
       if (a.Text.toLowerCase().startsWith('waypoints')) {
         return -1;
-      } else {
-        return 1;
       }
+      return 1;
     });
   }
 
