@@ -40,9 +40,11 @@
                   [(ngModel)]="subject.selected"
                   (change)="toggleSubject($event, subject.id)"
                   (click)="$event.stopPropagation();"
-                  color="primary">
+                  color="primary"
+                  class="allow-wrap">
+                  {{ subject.title }}
               </mat-checkbox>
-              <p>{{ subject.title }}</p>
+
             </mat-panel-title>
           </mat-expansion-panel-header>
 
@@ -57,7 +59,10 @@
           </div>
           
         </mat-expansion-panel>
-      
+
+        <p class="form-row__field--instructions">
+          Expand to show topics for a subject
+        </p>
     </div>
 
     <ng-template #nosubjects class="form-row__field--no-subjects">

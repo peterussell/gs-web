@@ -37,3 +37,9 @@ h1, h2, h3, h4 {
 .mat-content {
     overflow: visible !important;
 }
+
+.allow-wrap .mat-checkbox-label {
+    line-height: 1.4em;
+    white-space: normal;
+    margin: 16px 0 16px 10px;
+}

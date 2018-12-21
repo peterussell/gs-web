@@ -46,7 +46,11 @@ export class FlashcardsBuilderComponent implements OnInit {
         let s = { id: subject.subjectId, title: subject.title, selected: true, topics: [] };
 
         // Topics for this subject
-        subject.topics.forEach((topic: Topic) => {
+        subject.topics.sort((a, b) => {
+          if (a.title > b.title) { return 1; }
+          if (a.title < b.title) { return -1; }
+          return 0;
+         }).forEach((topic: Topic) => {
           s.topics.push({ id: topic.topicId, title: topic.title, selected: true });
         });
 
