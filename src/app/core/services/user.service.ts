@@ -6,11 +6,9 @@ import { ApiService } from "./api.service";
 import { Observable } from "rxjs/Observable";
 import { RegisterInterestResponse } from "./interfaces/register-interest-response";
 import { CognitoUser } from "amazon-cognito-identity-js";
-import { User } from "../models/user.model";
 import { fromPromise } from "rxjs/observable/fromPromise";
 import { from } from "rxjs/observable/from";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
-// import { AnalysisOptions } from "aws-sdk/clients/cloudsearch";
 
 @Injectable()
 export class UserService {
@@ -22,7 +20,7 @@ export class UserService {
             (cognitoUser: CognitoUser) => { this._currentUser.next(cognitoUser); },
             (error: any) =>
             {
-                // Not logged because 'not authenticated' returns an error
+                // 'Not authenticated' returns as an error, so don't log errors for now.
             }
         );
     }

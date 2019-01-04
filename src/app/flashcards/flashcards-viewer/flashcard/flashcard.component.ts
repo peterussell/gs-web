@@ -1,6 +1,10 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FlashcardsViewerQuestion } from '../flashcards-viewer.component';
 import { Reference } from '../../../core/models/reference.model';
+import { ApiService } from '../../../core/services/api.service';
+import { UserService } from '../../../core/services/user.service';
+import { CognitoUser } from 'amazon-cognito-identity-js';
+import { QuestionSet } from '../../../core/models/question-set.model';
 
 @Component({
   selector: 'app-flashcard',
@@ -13,13 +17,27 @@ export class FlashcardComponent implements OnInit, OnChanges {
   @Input() numberOfQuestions: number;
   
   private currentState: FlashcardViewerState;
+  private currentUser: CognitoUser;
+  private reviewSet: QuestionSet;
 
-  constructor() { }
+  constructor(public apiService: ApiService, public userService: UserService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.userService.currentUser$.subscribe(
+      (newUser: CognitoUser) => {
+        this.currentUser = newUser;
+
+        if (newUser) {
+          this.apiService.getReviewSetForUser(this.currentUser['username']).subscribe(
+            (reviewSet: QuestionSet) => {
+            this.reviewSet = reviewSet;
+          });
+        }
+      }
+    );
+  }
 
   ngOnChanges() {
-    
     if (this.flashcardViewerQuestion !== undefined) {
       this.flashcardViewerQuestion.question.question =
         this.insertDegreeSymbols(this.flashcardViewerQuestion.question.question);
@@ -60,6 +78,37 @@ export class FlashcardComponent implements OnInit, OnChanges {
 
   isAnswerState(): boolean {
     return this.currentState === FlashcardViewerState.Answer;
+  }
+
+  isInReviewSet() {
+    if (this.reviewSet.QuestionIds === undefined) { return false; }
+
+    return this.reviewSet.QuestionIds.indexOf(
+      this.flashcardViewerQuestion.question.questionId) > -1;
+  }
+
+  addToReviewSet() {
+    if (this.currentUser === null) {
+      // show login required dialog
+      console.log('login required');
+      return;
+    }
+    this.apiService.addToReviewSet(
+      this.currentUser['username'],
+      this.reviewSet.QuestionSetId,
+      this.flashcardViewerQuestion.question.questionId
+    );
+  }
+
+  removeFromReviewSet() {
+    if (this.currentUser === null) {
+      return;
+    }
+    this.apiService.removeFromReviewSet(
+      this.currentUser['username'],
+      this.reviewSet.QuestionSetId,
+      this.flashcardViewerQuestion.question.questionId
+    );
   }
 }
 

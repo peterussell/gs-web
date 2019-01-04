@@ -1,7 +1,9 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { Question } from '../../core/models/question.model';
 import { ApiService } from '../../core/services/api.service';
 import { ConsoleLogger } from '@aws-amplify/core';
+import { CognitoUser } from 'amazon-cognito-identity-js';
+import { QuestionSet } from '../../core/models/question-set.model';
 
 @Component({
   selector: 'app-flashcards-viewer',
@@ -11,12 +13,14 @@ import { ConsoleLogger } from '@aws-amplify/core';
 export class FlashcardsViewerComponent implements OnChanges {
   @Input() numberOfQuestions: number;
   @Input() topicIdsToInclude: Array<string>;
+  @Input() reviewSet: QuestionSet;
 
   @Output() complete: EventEmitter<any> = new EventEmitter<any>();
 
+  public questions: Array<FlashcardsViewerQuestion>;
   public questionIdsSeen: Array<string>;
   public topicIdsSeen: Array<string>;
-  public questions: Array<FlashcardsViewerQuestion>;
+
   public currentQuestionIndex: number;
   get progress(): number {
     if (this.questions.length === 0) {

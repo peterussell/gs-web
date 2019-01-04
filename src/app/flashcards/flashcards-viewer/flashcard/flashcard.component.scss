@@ -4,6 +4,21 @@
     text-align: center;
 }
 
+.actions-bar {
+    text-align: right;
+
+    span {
+        i {
+            vertical-align: middle;
+            margin-top: -4px;
+        }
+        font-size: 0.6em;
+        color: #333;
+        font-weight: 100;
+        cursor: pointer;
+    }
+}
+
 .question, .answer {
     font-size: 1.2em;
     line-height: 1.6em;

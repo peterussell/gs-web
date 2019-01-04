@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http
 import { Observable } from "rxjs/Observable";
 import { RegisterInterestResponse } from "./interfaces/register-interest-response";
 import { Reference } from "../models/reference.model";
+import { QuestionSet } from "../models/question-set.model";
 
 @Injectable()
 export class ApiService {
@@ -16,6 +17,7 @@ export class ApiService {
     private readonly registerInterestRelPath = 'register-interest';
     private readonly addQuestionRelPath = 'question';
     private readonly reportQuestionRelPath = 'report-question';
+    private readonly memberInfoRelPath = 'member';
 
     constructor(private http: HttpClient) {
         this.httpOptions = {
@@ -32,6 +34,22 @@ export class ApiService {
 
     public getQuestions(topicId: string): Observable<any> {
         return this.http.get(`${this.awsBasePath}/${this.topicsRelPath}/${topicId}`);
+    }
+
+    public getReviewSetForUser(userId: string): Observable<QuestionSet> {
+        return this.http.get<QuestionSet>(`${this.awsBasePath}/${this.memberInfoRelPath}/${userId}/review-sets`)
+    }
+
+    public addToReviewSet(userId: string, questionSetId: string, questionId: string): Observable<any> {
+        // TODO: tmp
+        console.log(`Adding to review set: ${userId}, ${questionSetId}, ${questionId}`);
+        return null;
+    }
+
+    public removeFromReviewSet(userId: string, questionSetId: string, questionId: string): Observable<any> {
+        // TODO: tmp
+        console.log(`Removing from review set: ${userId}, ${questionSetId}, ${questionId}`);
+        return null;
     }
 
     public getRandomQuestion(topicIdsToInclude: Array<string>,

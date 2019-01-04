@@ -27,7 +27,7 @@
 
 <ng-template #results>
     <mat-card class="results">
-        <h3>All done!</h3>
-        <button mat-stroked-button (click)="allDone()">Get more flashcards...</button>
+        <h3>{{ numberOfQuestions }} questions done... nice.</h3>
+        <button mat-button (click)="allDone()">Another round?</button>
     </mat-card>
 </ng-template>
