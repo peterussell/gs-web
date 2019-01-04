@@ -3,19 +3,19 @@
     <!-- Title -->
     <mat-card-title>
       <div class="actions-bar">
-            <span
-              (click)="addToReviewSet(flashcardViewerQuestion)"
-              *ngIf="!isInReviewSet(); else inReviewSet"
-              style="cursor: pointer">
-              <i class="material-icons">playlist_add</i>
-                Save to review list
-            </span>
-            <ng-template #inReviewSet>
-              <span (click)="removeFromReviewSet(flashcardViewerQuestion)">
-                <i class="material-icons">playlist_add_check</i>
-                Remove from review list<br>
-              </span>
-            </ng-template>
+        <button mat-button
+          (click)="addToReviewSet(flashcardViewerQuestion)"
+          *ngIf="!isInReviewSet(); else inReviewSet"
+          style="cursor: pointer">
+          <i class="material-icons">playlist_add</i>
+            Save to review list
+        </button>
+        <ng-template #inReviewSet>
+          <button mat-button (click)="removeFromReviewSet(flashcardViewerQuestion)">
+            <i class="material-icons">playlist_add_check</i>
+            Remove from review list<br>
+          </button>
+        </ng-template>
       </div>
       <h3>
         <span *ngIf="isQuestionState()">Question</span>
