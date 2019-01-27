@@ -1,0 +1,56 @@
+.wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+
+    .content-wrapper {
+        max-width: 900px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title, .content {
+        flex: 1 0 auto;
+
+        .mat-card {
+            font-weight: 100;
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin-top: 0px;
+            }
+
+            strong {
+                font-weight: 400;
+            }
+            
+            .description {
+                flex: 1 1 70%;
+                display: block;
+                line-height: 1.6em;
+            }
+
+            .social-row {
+                display: flex;
+                align-items: center;
+                margin-left: 20px;
+
+                &__logo {
+                    height: 30px;
+                    padding-right: 20px;
+                }
+
+                h3 {
+                    padding-top: 2px;
+                }
+            }
+
+            h3 {
+                display: inline;
+            }
+        }
+    }
+}

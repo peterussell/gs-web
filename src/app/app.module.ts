@@ -41,6 +41,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { StoreService } from './core/services/store.service';
 import { ActivateComponent } from './activate/activate.component';
 import { ActivateFullPageComponent } from './activate-full-page/activate-full-page.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { ActivateFullPageComponent } from './activate-full-page/activate-full-pa
     GroundschoolComponent,
     NavbarComponent,
     ActivateComponent,
-    ActivateFullPageComponent
+    ActivateFullPageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

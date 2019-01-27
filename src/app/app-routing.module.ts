@@ -12,6 +12,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { GroundschoolComponent } from './groundschool/groundschool.component';
 import { ActivateFullPageComponent } from './activate-full-page/activate-full-page.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
     
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     { path: '', component: GroundschoolComponent, children: [
         { path: '', component: LandingPageComponent },
         { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
-        { path: 'activate', component: ActivateFullPageComponent }
+        { path: 'activate', component: ActivateFullPageComponent },
+        { path: 'contact', component: ContactComponent }
     ]},
     { path: '**', redirectTo: '' }
 ];
