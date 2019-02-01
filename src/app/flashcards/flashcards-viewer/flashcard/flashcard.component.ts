@@ -81,7 +81,9 @@ export class FlashcardComponent implements OnInit, OnChanges {
   }
 
   isInReviewSet() {
-    if (this.reviewSet.QuestionIds === undefined) { return false; }
+    if (this.reviewSet === undefined || this.reviewSet.QuestionIds === undefined) {
+      return false;
+    }
 
     return this.reviewSet.QuestionIds.indexOf(
       this.flashcardViewerQuestion.question.questionId) > -1;
