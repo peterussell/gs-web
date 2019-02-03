@@ -43,3 +43,12 @@ h1, h2, h3, h4 {
     white-space: normal;
     margin: 16px 0 16px 10px;
 }
+
+.gs-snackbar {
+    font-weight: 100;
+}
+
+.gs-snackbar-warning {
+    @extend .gs-snackbar;
+    background-color: #f57c00;
+}

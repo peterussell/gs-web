@@ -4,8 +4,7 @@
     <mat-card-title>
       <div class="actions-bar">
 
-        <!-- TMP: review set stuff. -->
-        <!-- <button mat-button
+        <button mat-button
           (click)="addToReviewSet(flashcardViewerQuestion)"
           *ngIf="!isInReviewSet(); else inReviewSet"
           style="cursor: pointer">
@@ -17,7 +16,7 @@
             <i class="material-icons">playlist_add_check</i>
             Remove from review list<br>
           </button>
-        </ng-template> -->
+        </ng-template>
       </div>
       <h3>
         <span *ngIf="isQuestionState()">Question</span>

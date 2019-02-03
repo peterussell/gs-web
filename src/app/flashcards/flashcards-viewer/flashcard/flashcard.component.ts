@@ -5,6 +5,7 @@ import { ApiService } from '../../../core/services/api.service';
 import { UserService } from '../../../core/services/user.service';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { QuestionSet } from '../../../core/models/question-set.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-flashcard',
@@ -20,7 +21,10 @@ export class FlashcardComponent implements OnInit, OnChanges {
   private currentUser: CognitoUser;
   private reviewSet: QuestionSet;
 
-  constructor(public apiService: ApiService, public userService: UserService) { }
+  constructor(
+    private snackBar: MatSnackBar,
+    public apiService: ApiService,
+    public userService: UserService) { }
 
   ngOnInit() {
     this.userService.currentUser$.subscribe(
@@ -91,8 +95,15 @@ export class FlashcardComponent implements OnInit, OnChanges {
 
   addToReviewSet() {
     if (this.currentUser === null) {
-      // show login required dialog
-      console.log('login required');
+      // TODO: working here - show snackbar with 'login required'
+      this.snackBar.open(
+        'Please sign in to add questions to a review list.',
+        null,
+        {
+          duration: 3000,
+          panelClass: 'gs-snackbar-warning'
+        }
+      );
       return;
     }
     this.apiService.addToReviewSet(
@@ -111,6 +122,10 @@ export class FlashcardComponent implements OnInit, OnChanges {
       this.reviewSet.QuestionSetId,
       this.flashcardViewerQuestion.question.questionId
     );
+  }
+
+  showAccountDialog() {
+    
   }
 }
 
