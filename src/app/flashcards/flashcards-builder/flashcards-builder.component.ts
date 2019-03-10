@@ -18,8 +18,7 @@ export class FlashcardsBuilderComponent implements OnInit {
 
   public selectedCourse: Course;
 
-  public numberOfQuestionsOptions: number[] = [5, 10, 20];
-  public numberOfQuestions: number = 5;
+  public numberOfQuestions: number = 20;
 
   public subjectsState = [];
 

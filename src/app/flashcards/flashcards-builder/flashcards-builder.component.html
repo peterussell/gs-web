@@ -12,22 +12,6 @@
 </div>
 
 <div class="form-row">
-    <div class="form-row__label"><h3>Cards</h3></div>
-    <div class="form-row__field">
-      <mat-radio-group [(ngModel)]="numberOfQuestions">
-          <mat-radio-button
-            class="set-size__radio"
-            ngClass.xs="set-size__radio-xs"
-            *ngFor="let n of numberOfQuestionsOptions"
-            [value]="n"
-            color="primary">
-            {{ n }}
-          </mat-radio-button>
-        </mat-radio-group>
-    </div>
-</div>
-
-<div class="form-row">
   <div class="form-row__label"><h3>Subjects</h3></div>
   <div class="form-row__field">
     <div *ngIf="subjectsState.length > 0; else nosubjects">
