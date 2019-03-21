@@ -42,6 +42,9 @@ import { StoreService } from './core/services/store.service';
 import { ActivateComponent } from './activate/activate.component';
 import { ActivateFullPageComponent } from './activate-full-page/activate-full-page.component';
 import { ContactComponent } from './contact/contact.component';
+import { CourseIndexComponent } from './course-index/course-index.component';
+import { SubjectCardComponent } from './course-index/subject-card/subject-card.component';
+import { SubjectResolver } from './core/services/resolvers/subject-resolver.service';
 
 
 @NgModule({
@@ -69,7 +72,9 @@ import { ContactComponent } from './contact/contact.component';
     NavbarComponent,
     ActivateComponent,
     ActivateFullPageComponent,
-    ContactComponent
+    ContactComponent,
+    CourseIndexComponent,
+    SubjectCardComponent
   ],
   imports: [
     BrowserModule,
@@ -90,6 +95,7 @@ import { ContactComponent } from './contact/contact.component';
     UIEventsService,
     ResponsiveService,
     CourseResolver,
+    SubjectResolver,
     FlexLayoutModule
   ],
   entryComponents: [

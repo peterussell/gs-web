@@ -14,25 +14,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-  public allCourses: Array<Course>;
 
   constructor(private apiService: ApiService,
               private storeService: StoreService,
               private router: Router) {}
 
   ngOnInit() {
-    this.apiService.getCourses().subscribe(
-      (data) => {
-        this.allCourses = data.courses.sort((a, b) => {
-          if (a.order > b.order) return 1;
-          if (a.order < b.order) return -1;
-          return 0;
-        })
-      },
-      (error) => {
-        console.log(error); // TODO: log this properly
-      }
-    )
   }
 
   onBuilderSubmit(builderRequest: FlashcardsBuilderRequest) {

@@ -1,0 +1,11 @@
+<div *ngIf="!allCourses; else courseIndex">
+  Loading courses...
+</div>
+
+<div *ngFor="let course of allCourses" #courseIndex>
+  <h2>{{ course.title }}</h2>
+
+  <div *ngFor="let subject of course.subjects">
+    <app-subject-card [subject]=subject [parentPath]=course.path></app-subject-card>
+  </div>
+</div>

@@ -13,6 +13,8 @@ import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { GroundschoolComponent } from './groundschool/groundschool.component';
 import { ActivateFullPageComponent } from './activate-full-page/activate-full-page.component';
 import { ContactComponent } from './contact/contact.component';
+import { SubjectResolver } from './core/services/resolvers/subject-resolver.service';
+import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
 
 const appRoutes: Routes = [
     
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
     ]},
     { path: '', component: GroundschoolComponent, children: [
         { path: '', component: LandingPageComponent },
+        { path: ':course/:subject', component: FlashcardsComponent },
         { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
         { path: 'activate', component: ActivateFullPageComponent },
         { path: 'contact', component: ContactComponent }

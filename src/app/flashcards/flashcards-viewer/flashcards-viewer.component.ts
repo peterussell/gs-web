@@ -1,69 +1,75 @@
-import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter, OnInit } from '@angular/core';
 import { Question } from '../../core/models/question.model';
 import { ApiService } from '../../core/services/api.service';
 import { ConsoleLogger } from '@aws-amplify/core';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { QuestionSet } from '../../core/models/question-set.model';
+import { Subject } from '../../core/models/subject.model';
+import { Topic } from '../../core/models/topic.model';
 
 @Component({
   selector: 'app-flashcards-viewer',
   templateUrl: './flashcards-viewer.component.html',
   styleUrls: ['./flashcards-viewer.component.scss']
 })
-export class FlashcardsViewerComponent implements OnChanges {
-  @Input() numberOfQuestions: number;
-  @Input() topicIdsToInclude: Array<string>;
+export class FlashcardsViewerComponent implements OnInit, OnChanges {
+  @Input() subject: Subject;
   @Input() reviewSet: QuestionSet;
 
   @Output() complete: EventEmitter<any> = new EventEmitter<any>();
 
   public questions: Array<FlashcardsViewerQuestion>;
-  public questionIdsSeen: Array<string>;
-  public topicIdsSeen: Array<string>;
-
   public currentQuestionIndex: number;
+  public currentState: FlashcardsViewerState;
+  
   get progress(): number {
-    if (this.questions.length === 0) {
+    if (this.questions === undefined || this.questions.length === 0) {
       return 0;
     }
-    return ((this.currentQuestionIndex + 1) / this.numberOfQuestions) * 100;
+    return ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
   };
-
-  public currentState: FlashcardsViewerState;
 
   constructor(private apiService: ApiService) {
     this.questions = new Array<FlashcardsViewerQuestion>();
-    this.questionIdsSeen = new Array<string>();
-    this.topicIdsSeen = new Array<string>();
+  }
+
+  ngOnInit() {
+    this.loadQuestions();
     this.currentQuestionIndex = 0;
     this.currentState = FlashcardsViewerState.InProgress;
   }
 
   ngOnChanges() {
-    this.getNextQuestion(false); // Don't progress for the first question
   }
 
+  loadQuestions() {
+    if (!this.subject) return;
+    this.subject.topics.forEach((t: Topic) => {
+      for (let questionId in t.questions) {
+        let q = t.questions[questionId];
+        let fvq = new FlashcardsViewerQuestion();
+        fvq.question = q;
+        fvq.subjectTitle = this.subject.title;
+        fvq.topicTitle = t.title;
+        this.questions.push(fvq);
+      }
+    });
+  }
+
+  hasQuestions() {
+    return this.questions.length > 0;
+  }
   canGoToNextQuestion(): boolean {
-    return this.currentQuestionIndex < (this.numberOfQuestions - 1);
+    return this.questions.length > 0 &&
+      this.currentQuestionIndex < (this.questions.length -1);
   }
 
   goToNextQuestion() {
     if (this.canGoToNextQuestion()) {
-
-      // Don't fetch a new question if we already have it
-      // eg. after clicking Previous then Next
-      if (this.nextQuestionIsAlreadyInStore()) {
-        this.currentQuestionIndex++;
-        return;
-      }
-      this.getNextQuestion(true);
+      this.currentQuestionIndex++;
     } else {
       this.showResults();
     }
-  }
-
-  nextQuestionIsAlreadyInStore(): boolean {
-    return this.currentQuestionIndex < this.questions.length - 1;
   }
 
   canGoToPreviousQuestion() {
@@ -74,49 +80,6 @@ export class FlashcardsViewerComponent implements OnChanges {
     if (this.canGoToPreviousQuestion()) {
       this.currentQuestionIndex--;
     }
-  }
-
-  private getNextQuestion(shouldProgress: boolean) {
-    this.apiService.getRandomQuestion(
-      this.topicIdsToInclude,
-      this.topicIdsSeen,
-      this.questionIdsSeen
-    ).subscribe(
-      (res) => {
-        if (res['status'] === 200) {
-          const question = res['body'].Question;
-          if (question === undefined)
-          {
-            return;
-          }
-          
-          const q = new Question(
-            question.QuestionId,
-            question.Question,
-            question.Answer,
-            question.References,
-            question.TopicId
-          );
-
-          let fvQuestion = new FlashcardsViewerQuestion();
-          fvQuestion.question = q;
-          fvQuestion.subjectTitle = res['body'].SubjectTitle;
-          fvQuestion.topicTitle = res['body'].TopicTitle;
-
-          this.questions.push(fvQuestion);
-
-          this.questionIdsSeen.push(question.QuestionId);
-          this.topicIdsSeen.push(question.TopicId);
-
-          if (shouldProgress) {
-            this.currentQuestionIndex++;
-          }
-        }
-      },
-      (error) => {
-        console.log(error); // TODO: log this properly
-      }
-    );
   }
 
   showResults() {

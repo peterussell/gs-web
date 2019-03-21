@@ -8,11 +8,12 @@ import { QuestionSet } from "../models/question-set.model";
 @Injectable()
 export class ApiService {
     private readonly basePath = 'http://localhost:4200/assets';
-    private readonly awsBasePath = 'https://wbr0qbew2b.execute-api.us-west-2.amazonaws.com/prod/v1';
+    private readonly awsBasePath = 'https://wbr0qbew2b.execute-api.us-west-2.amazonaws.com/prod/v2';
     private httpOptions;
 
     private readonly coursesRelPath = 'courses';
     private readonly topicsRelPath = 'topics';
+    private readonly topicRelPath = 'topic';
     private readonly flashcardsRelPath = 'flashcards'
     private readonly registerInterestRelPath = 'register-interest';
     private readonly addQuestionRelPath = 'question';
@@ -33,7 +34,7 @@ export class ApiService {
     }
 
     public getQuestions(topicId: string): Observable<any> {
-        return this.http.get(`${this.awsBasePath}/${this.topicsRelPath}/${topicId}`);
+        return this.http.get(`${this.awsBasePath}/${this.topicRelPath}/${topicId}`);
     }
 
     public getReviewSetForUser(userId: string): Observable<QuestionSet> {

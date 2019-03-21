@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
 import { Course } from '../core/models/course.model';
 import { ApiService } from '../core/services/api.service';
 import { FlashcardsBuilderRequest } from './flashcards-builder/flashcards-builder.component';
 import { Question } from '../core/models/question.model';
 import { StoreService } from '../core/services/store.service';
+import { Subject } from '../core/models/subject.model';
+import { Topic } from '../core/models/topic.model';
 
 @Component({
   selector: 'app-flashcards',
@@ -12,41 +14,51 @@ import { StoreService } from '../core/services/store.service';
   styleUrls: ['./flashcards.component.scss']
 })
 export class FlashcardsComponent implements OnInit {
-  private currentState: FlashcardsState = FlashcardsState.ShowBuilder;
-  private allCourses: Array<Course>;
+  @Input() initialState: FlashcardsState;
+  private currentState: FlashcardsState = FlashcardsState.ShowViewer; // TODO: possibly deprecate
+
+  public currentSubject: Subject;
 
   private numberOfQuestions: number;
-  private topicIdsToInclude: Array<string>;
+  // private topicIdsToInclude: Array<string>;
 
   constructor(private route: ActivatedRoute,
               private apiService: ApiService,
               private storeService: StoreService) { }
 
   ngOnInit() {
-    this.route.data.subscribe((data: Data) => {
-      this.allCourses = data.course.courses.sort((a, b) => {
-        if (a.order > b.order) return 1;
-        if (a.order < b.order) return -1;
-        return 0;
-      })
+    const coursePath: string = this.route.snapshot.params["course"];
+    const subjectPath: string = this.route.snapshot.params["subject"];
+
+    this.currentState = FlashcardsState.Loading;
+
+    this.apiService.getCourses().subscribe((res) => {
+      // find the matching course
+      let matchingCourse: Course;
+      res.courses.forEach((c: Course) => {
+          if (c.path === coursePath) {
+              matchingCourse = c;
+              return;
+          }
+      });
+
+      // find the matching subject
+      matchingCourse.subjects.forEach((s: Subject) => {
+          if (s.path === subjectPath) {
+              this.currentSubject = s;
+              return;
+          }
+      });
+
+      // load the topics for this subject
+      let questions: Array<Question> = new Array<Question>()
+      this.currentSubject.topics.forEach((t: Topic) => {
+          this.apiService.getQuestions(t.topicId).subscribe((topic) => {
+              t.questions = topic.questions;
+              this.currentState = FlashcardsState.ShowViewer;
+          });
+      });
     });
-
-    // Check for any pending requests (allows builders to link from other pages)
-    const pendingBuilderRequest = this.storeService.popPendingFlashcardsBuilderRequest();
-    if (pendingBuilderRequest !== undefined) {
-      this.onBuilderSubmit(pendingBuilderRequest);
-    }
-  }
-
-  onBuilderSubmit(request: FlashcardsBuilderRequest) {
-    if (request === undefined ||
-        request.topicIdsToInclude === undefined ||
-        request.topicIdsToInclude.length === 0) {
-      return; // Prevent switching to the viewer
-    }
-    this.numberOfQuestions = request.numberOfQuestions;
-    this.topicIdsToInclude = request.topicIdsToInclude;
-    this.currentState = FlashcardsState.ShowViewer;
   }
 
   onViewerComplete() {
@@ -57,12 +69,17 @@ export class FlashcardsComponent implements OnInit {
     return this.currentState === FlashcardsState.ShowBuilder;
   }
 
+  isLoadingState() {
+    return this.currentState === FlashcardsState.Loading;
+  }
+
   isViewerState() {
     return this.currentState === FlashcardsState.ShowViewer;
   }
 }
 
 enum FlashcardsState {
+  Loading,
   ShowBuilder,
   ShowViewer
 }

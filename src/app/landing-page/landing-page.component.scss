@@ -66,14 +66,14 @@ p {
     margin: 0 20px;
 
     &__wrapper {
-        max-width: 500px;
+        max-width: 900px;
         flex: 1 1 auto;
         display: flex;
     }
 
     &__info {
         padding-bottom: 20px;
-        max-width: 500px;
+        // max-width: 500px;
         flex: 1 1 auto;
 
         h2 {

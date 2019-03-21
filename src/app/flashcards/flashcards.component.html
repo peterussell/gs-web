@@ -3,33 +3,14 @@
     <div class="title">
       <app-page-title>Flashcards</app-page-title>
     </div>
-
-    <div *ngIf="isBuilderState()" class="builder">
-      <mat-card>
-        <div class="description">
-          <p>
-            GroundSchool Flashcards are a way to revise material covered by the
-            <a href="https://www.waypoints.nz/" target="_blank">Waypoints Aviation textbooks</a>.
-            Content is separated by course (eg. PPL), subject (eg. Air Law), and topic (eg. Airspace).
-          </p>
-          <p>
-            To start, select a course, the number of cards to generate, and one or more subjects.
-            You can study specific subjects or topics by selecting/deslecting them below.
-          </p>
-        </div>
-
-        <app-flashcards-builder
-          [courses]="allCourses"
-          (submitted)="onBuilderSubmit($event)">
-        </app-flashcards-builder>
-      </mat-card>
-    </div>
     
+    <div *ngIf="isLoadingState()">
+      Loading...
+    </div>
     
     <div *ngIf="isViewerState()" class="viewer">
       <app-flashcards-viewer
-        [numberOfQuestions]="numberOfQuestions"
-        [topicIdsToInclude]="topicIdsToInclude"
+        [subject]="currentSubject"
         (complete)="onViewerComplete()">
       </app-flashcards-viewer>
     </div>
