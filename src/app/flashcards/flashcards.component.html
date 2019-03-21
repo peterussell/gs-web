@@ -1,11 +1,8 @@
 <div class="wrapper">
   <div class="content-wrapper">
     <div class="title">
-      <app-page-title>Flashcards</app-page-title>
-    </div>
-    
-    <div *ngIf="isLoadingState()">
-      Loading...
+      <app-page-title *ngIf="isLoadingState()">Loading flashcards...</app-page-title>
+      <app-page-title *ngIf="isViewerState()">{{ currentCourse.title }} > {{ currentSubject.title }}</app-page-title>
     </div>
     
     <div *ngIf="isViewerState()" class="viewer">

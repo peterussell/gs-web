@@ -17,6 +17,7 @@ export class FlashcardsComponent implements OnInit {
   @Input() initialState: FlashcardsState;
   private currentState: FlashcardsState = FlashcardsState.ShowViewer; // TODO: possibly deprecate
 
+  public currentCourse: Course;
   public currentSubject: Subject;
 
   private numberOfQuestions: number;
@@ -34,16 +35,15 @@ export class FlashcardsComponent implements OnInit {
 
     this.apiService.getCourses().subscribe((res) => {
       // find the matching course
-      let matchingCourse: Course;
       res.courses.forEach((c: Course) => {
           if (c.path === coursePath) {
-              matchingCourse = c;
+              this.currentCourse = c;
               return;
           }
       });
 
       // find the matching subject
-      matchingCourse.subjects.forEach((s: Subject) => {
+      this.currentCourse.subjects.forEach((s: Subject) => {
           if (s.path === subjectPath) {
               this.currentSubject = s;
               return;
