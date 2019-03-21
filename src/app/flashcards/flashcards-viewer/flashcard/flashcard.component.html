@@ -28,6 +28,7 @@
     </mat-card-title>
     <mat-card-subtitle>
       <p>{{ flashcardViewerQuestion.subjectTitle }} > {{ flashcardViewerQuestion.topicTitle }}</p>
+      <p>Syllabus reference: {{ flashcardViewerQuestion.question.syllabusRef }}</p>
     </mat-card-subtitle>
 
     <!-- Question -->
@@ -52,8 +53,8 @@
         <span class="title">References:</span>
         <ul>
           <li *ngFor="let reference of sortReferences(flashcardViewerQuestion.question.references)">
-            <a href="{{ reference.Url }}" target="_blank" *ngIf="reference.Url; else noLink">{{ reference.Text }}</a>
-            <ng-template #noLink>{{ reference.Text }}</ng-template>
+            <a href="{{ reference.url }}" target="_blank" *ngIf="reference.url; else noLink">{{ reference.text }}</a>
+            <ng-template #noLink>{{ reference.text }}</ng-template>
           </li>
         </ul>
       </div>

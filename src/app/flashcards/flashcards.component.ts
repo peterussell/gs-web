@@ -20,9 +20,6 @@ export class FlashcardsComponent implements OnInit {
   public currentCourse: Course;
   public currentSubject: Subject;
 
-  private numberOfQuestions: number;
-  // private topicIdsToInclude: Array<string>;
-
   constructor(private route: ActivatedRoute,
               private apiService: ApiService,
               private storeService: StoreService) { }
@@ -63,10 +60,6 @@ export class FlashcardsComponent implements OnInit {
 
   onViewerComplete() {
     this.currentState = FlashcardsState.ShowBuilder;
-  }
-
-  isBuilderState() {
-    return this.currentState === FlashcardsState.ShowBuilder;
   }
 
   isLoadingState() {
