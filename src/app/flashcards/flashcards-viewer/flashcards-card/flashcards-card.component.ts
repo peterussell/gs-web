@@ -8,11 +8,11 @@ import { QuestionSet } from '../../../core/models/question-set.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'app-flashcard',
-  templateUrl: './flashcard.component.html',
-  styleUrls: ['./flashcard.component.scss']
+  selector: 'app-flashcards-card',
+  templateUrl: './flashcards-card.component.html',
+  styleUrls: ['./flashcards-card.component.scss']
 })
-export class FlashcardComponent implements OnInit, OnChanges {
+export class FlashcardsCardComponent implements OnInit, OnChanges {
   @Input() flashcardViewerQuestion: FlashcardsViewerQuestion;
   @Input() questionNumber: number;
   @Input() numberOfQuestions: number;

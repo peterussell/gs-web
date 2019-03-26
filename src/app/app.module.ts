@@ -35,7 +35,7 @@ import { AccountDialogComponent } from './account-dialog/account-dialog.componen
 import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { FlashcardsBuilderComponent } from './flashcards/flashcards-builder/flashcards-builder.component';
 import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
-import { FlashcardComponent } from './flashcards/flashcards-viewer/flashcard/flashcard.component';
+import { FlashcardsCardComponent } from './flashcards/flashcards-viewer/flashcards-card/flashcards-card.component';
 import { GroundschoolComponent } from './groundschool/groundschool.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StoreService } from './core/services/store.service';
@@ -67,7 +67,7 @@ import { SubjectResolver } from './core/services/resolvers/subject-resolver.serv
     FlashcardsComponent,
     FlashcardsBuilderComponent,
     FlashcardsViewerComponent,
-    FlashcardComponent,
+    FlashcardsCardComponent,
     GroundschoolComponent,
     NavbarComponent,
     ActivateComponent,

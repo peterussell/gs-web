@@ -1,0 +1,820 @@
+Subject:Radio Wave Propagation
+Section:2.2 Radio Wave Propagation
+
+Q:How can VHF transmission and reception range be improved?
+A:By climbing to a higher altitude.
+Syllabus Reference:2.2.2
+Study Reference:Waypoints Volume 4 Chapter 9
+
+Q:Which characteristic of the HF band allows for greater transmission and reception range?
+A:Sky waves.
+Syllabus Reference:2.2.2
+Study Reference:Waypoints Volume 4 Chapter 9
+
+Subject:Radio Equipment
+Section:2.4 Transceivers
+
+Q:If an aircraft is equipped with a headset and boom microphone which is "live" at all times for the intercom but must be activated by a button on the control column for outward transmission, what will happen if a pilot presses this control column button while talking to their instructor?
+A:The conversation will be broadcast and will prevent other stations within VHF range from using the frequency.
+Syllabus Reference:2.4.
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What action should be taken in the event of a generator failure requiring the radio to be switch off to conserve battery power?
+A:Advise the nearest ground station of the intentions and the expected time of resumption of listening watch.  Report when watch is resumed.
+Syllabus Reference:2.4.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is the purpose of the squelch control?
+A:To eliminate unwanted signals, such as static.
+Syllabus Reference:2.4.2
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:What is the procedure for correctly setting the squelch?
+A:Turn squelch to full (lots of static), then reduce squelch until static disappears.
+Syllabus Reference:2.4.2
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:Where should the microphone be positioned for the best voice transmission?
+A:In front of and close to your mouth.
+Syllabus Reference:2.4.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:When holding down the microphone button, or the "push to talk" button, will the frequency in use be blocked for other transmissions?
+A:Yes.
+Syllabus Reference:2.4.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:When transmitting a message, what volume and speed should be used to speak into the microphone?
+A:A slightly slower pace than normal speech and at normal volume.
+Syllabus Reference:2.4.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:If after turning the VHF radio on a continuous loud static is heard through the aircraft speaker, what should the pilot do?
+A:Turn the squelch control down.
+Syllabus Reference:2.4.2
+Study Reference:Waypoints Volume 4 Chapter 1
+
+
+Section:2.6 SSR Transponders
+
+Q:What function should be selected on a typical transponder to transmit Mode A?
+A:ON.
+Syllabus Reference:2.6.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:A radar controller gives an aircraft the following instructions "Alfa Bravo Charlie, Stop Squawking Charlie - Wrong Indication".  What action does the radar controller require the pilot to take?
+A:De-select Mode C.
+Syllabus Reference:2.6.2
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:Most aircraft transponders have a function switch with five functions.  What are they?
+A:Off, Standby, On, Alt and Test.
+Syllabus Reference:2.6.2
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:What information will Mode A send to the radar controller?
+A:Position information and identification.
+Syllabus Reference:2.6.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:What information will Mode C (Alt) send to the radar controller?
+A:Position information, altitude information and identification.
+Syllabus Reference:2.6.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:When asked by the controller to "SQUAWK IDENT", what does the pilot need to do?
+A:Press and release the 'ident' button on the transponder, no verbal response is required.
+Syllabus Reference:2.6.8
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:In an emergency, what transponder code should be set.
+A:7700.
+Syllabus Reference:2.6.6
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:What transponder code should be set in the event of unlawful interference?
+A:7500.
+Syllabus Reference:2.6.6
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:What transponder code should be set in the event of communications failure? 
+A:7600.
+Syllabus Reference:2.6.6
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:What does it mean when ATC ask an aircraft to "SQUAWK CHARLIE"?
+A:Set Mode C or Alt on the transponder.
+Syllabus Reference:2.6.8
+Study Reference:Waypoints Volume 4 Chapter 6
+
+Q:What transponder code should be set when operating in the circuit at a controlled aerodrome?
+A:2200.
+Syllabus Reference:2.6.2
+Study Reference:Waypoints Volume 4 Chapter 6
+
+Q:What does it mean when ATC ask an aircraft to "RESET SQUAWK"?
+A:The controller wants the pilot to reset the assigned squawk code on the transponder.
+Syllabus Reference:2.6.8
+Study Reference:Waypoints Volume 4 Chapter 6
+
+Q:ATC tells an aircraft to "SQUAWK STANDBY", what should the pilot do?
+A:Select the 'STBY' function on the transponder.
+Syllabus Reference:2.6.8
+Study Reference:Waypoints Volume 4 Chapter 6
+
+Q:What transponder code must be set when operating in the circuit at an uncontrolled aerodrome?
+A:1200.
+Syllabus Reference:2.6.2
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:Helicopters operating under VFR should set which transponder code?
+A:1500.
+Syllabus Reference:2.6.2
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:Under what conditions is an aircraft able to operate in transponder mandatory airspace without an operable transponder?
+A:Only with specific authorisation from the ATC unit controlling the airspace.
+Syllabus Reference:2.6.12
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:If the transponder failures, is the pilot required to notify anyone?
+A:Yes, immediately notify the ATC unit controlling the airspace.
+Syllabus Reference:2.6.12
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:Is it necessary for all the aircraft in a formation flight to operate a transponder?
+A:No, unless otherwise instructed by ATC.
+Syllabus Reference:2.6.8
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Section:2.8 Emergency Locator Transmitter(ELT)
+
+Q:On what frequencies does an ELT transmit?
+A:121.5 MHz and 406MHz.
+Syllabus Reference:2.8.2
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:Does a manned free balloon have to carry an ELT?
+A:No.
+Syllabus Reference:2.8.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:When will an automatic ELT be activated?
+A:When a given rate of deceleration is experienced.
+Syllabus Reference:2.8.6
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:Can the ELT be manually activated?
+A:Yes.
+Syllabus Reference:2.8.6
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:How long will the ELT battery last for if it is not used?
+A:Five years.
+Syllabus Reference:2.8.8
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:Do ELT systems have their own power source, or do they use the aircraft's electrical systems for operation?
+A:ELT's have internal battery/batteries, and operate independent of the aircraft electrical system.
+Syllabus Reference:2.8.8
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:Your ELT was used intermittently for a total of one hour, are you required to replace the battery?
+A:Yes.
+Syllabus Reference:2.8.8
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:In the event of an emergency, to which position must the ELT remote switch be selected?
+A:"ON".
+Syllabus Reference:2.8.8
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:If the ELT's remote switch is selected to "ARM", how will the ELT be activated?
+A:At a specific rate of deceleration ("g" switch") during an accident or hard landing.
+Syllabus Reference:2.8.8
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:When may an ELT be tested? 
+A:During the first 5 minutes after the hour, for a maximum of three audio sweeps.
+Syllabus Reference:2.8.10
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:If you carry a portable ELT, does the aircraft still require an ELT to be installed before you go flying?
+A:No.
+Syllabus Reference:2.8.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:You plan a flight in a microlight aircraft with only two seats and operating within 10nm from where you departed.  Do you require an ELT?
+A:No.
+Syllabus Reference:2.8.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:Are you allowed to self test your ELT in flight?
+A:No.
+Syllabus Reference:2.8.10
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:If You suspect your ELT has been activated after a hard landing, what should your actions be?
+A:Check 121.5 for an ELT signal.  If a signal is heard, hold the switch to "ON" for no more than 5 seconds, then switch back to "ARM".  Contact ATC and RCCNZ asap.
+Syllabus Reference:2.8.12
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Subject:Practices, Rules and Procedures
+Section:2.10 Practices and Rules.
+
+Q:Which language must you use when making a radio call?
+A:English.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:The time is 0934.  How will you transmit this time?
+A:Tree Fower.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 
+
+Q:Are you allowed to use plain language if you don't know or have forgotten the correct phraseology?
+A:Yes.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:When giving altitude information, is it necessary for each number to be spoken individually?
+A:No.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you respond if you receive a clearance or instruction that you cannot comply with?
+A:Use the phrase 'UNABLE' and give a reason.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:Where is UNICOM available?
+A:At some unattended aerodromes.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:May UNICOM give you instruction regarding circuit joining?
+A:No.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:What information will UNICOM provide?
+A:Basic weather information, wind, visibility, cloud, temperature, QNH, aerodrome information and conditions, base radio service, telephone service.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:Where will you find ATIS?
+A:Controlled aerodromes.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:What does ATIS stand for?
+A:Automatic Terminal Information Service.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:Where are ATIS frequencies published?
+A:Aerodrome chart, AIPNZ Vol. 4
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:When do you have to listen to ATIS?
+A:Before making initial contact with the applicable ATC.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:What does AFRU stand for?
+A:Aerodrome frequency response unit.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:What is the purpose of the AFRU?
+A:Provides confirmation that pilots are on the correct frequency and that the radio is performing properly.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:How will AFRU ensure that the pilot knows if the correct frequency has been selected?
+A:AFRU transmits aerodrome callsign and frequency when there has been no transmissions in a specified time period. (usually 5min)
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:Where will you find AWIB?
+A:Uncontrolled aerodromes.
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:Where will you find out how to obtain AWIB information?
+A:Aerodrome chart, AIPNZ Vol. 4
+Syllabus Reference:2.10.6
+Study Reference:Waypoints Volume 4 Chapter 5
+
+Q:Apart from getting NOTAM and weather information before flight, is there any requirement by law to obtain the status of communication facilities to be used?
+A:Yes, under CAR part 91.217(5).
+Syllabus Reference:2.10.4
+Study Reference:CAR Part 91.217(5)
+Reference: 
+
+Q:When operating as pilot in command in Class C or D airspace, what are the requirements regarding radio communication.
+A:Must maintain two-way radio communication with appropriate ATC on appropriate frequency, unless otherwise authorised.
+Syllabus Reference:2.10.4
+Study Reference:Waypoints Volume 4 Chapter 6
+
+Q:When operating on the boundary of two different airspaces, the pilot in command of an aircraft may comply with the requirements of which airspace?
+A:The less restrictive airspace.
+Syllabus Reference:2.10.4
+Study Reference:Waypoints Volume 4 Chapter 6
+
+Q:An aircraft operating under VFR wishing to communicate with any ATS unit must be equipped with radio equipment that meets what level?
+A:Level 1 or level 2.
+Syllabus Reference:2.10.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:What are the requirements regarding radio equipment for an aircraft to operate under VFR in Class B,C,D or Class E airspace at night.
+A:Radio equipment meets level 1 or 2 standards and is capable of providing continuous two-way communications with an appropriate ATC.
+Syllabus Reference:2.10.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:When operating an aircraft over water under VFR more than 30 minutes flying time from shore, what are the requirements regarding radio equipment?
+A:Radio equipment meets level 1 or 2 standards and is capable of providing continuous two-way communications with an appropriate ATC.
+Syllabus Reference:2.10.4
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:What is meant by the term 'HOW DO YOU READ'?
+A:What is the readability of my transmission?
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What does readability 3 mean?
+A:Readable, but with difficulty.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What does readability 2 mean?
+A:Readable now and then.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What does readability 1 mean?
+A:Unreadable.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What does readability 4 mean?
+A:Readable.
+Syllabus Reference:2.10.2
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What does readability 5 mean?
+A:Perfectly readable.
+Syllabus Reference:2.12.
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Section:2.12 Phraseology and Procedures
+
+Q:ATC advises you of a change in QNH to 995 hPa, how should the QNH be read back?
+A:Niner Niner Fife.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you pronounce the following callsign, ANB?
+A:Alfa, November, Bravo.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you phonetically pronounce the callsign OCP?
+A:Oscar, Charlie, Papa.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you phonetically pronounce the callsign QRD?
+A:Quebec, Romeo, Delta.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you pronounce the following callsign, ESF?
+A:Echo, Sierra, Foxtrot.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you pronounce the following callsign, TGU?
+A:Tango, Golf, Uniform.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you pronounce the following callsign, HVI?
+A:Hotel, Victor, India.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you pronounce the following callsign, JWK?
+A:Juliet, Whiskey, Kilo.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you pronounce the following callsign, XLY?
+A:X-Ray, Lima, Yankee.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you pronounce the following callsign, YMZ?
+A:Yankee, Mike, Zulu.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should the following frequency be transmitted, 127.30?
+A:Wun Too Seven Day see mal Tree Zero.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What does the term "BREAK BREAK" mean?
+A:It indicates a separation between messages transmitted to different aircraft.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:If a previous clearance is no longer applicable, what term will ATC use to indicate this?
+A:CANCEL.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What term can ATC use to indicate a separation between portions of a message to an aircraft?
+A:BREAK.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:You are at 1200 feet when Tower asks you to report your altitude, how would you
+read your altitude? 
+A:Wun Tousand Too Hundred feet.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:On request, ATC gives you a unique transponder code of 2461, how would you read back this code correctly.
+A:Too Fower Six Wun.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:Just prior to receiving your landing clearance Tower gives you a report of the current wind velocity at 340o 16 kts.  How will they read this to you?
+A:Tree Fower Zero degrees Wun Six knots.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:The time now is 12:47 and your estimated time of arrival (ETA) at your destination is 13:22.  How will you transmit your ETA?
+A:Too Too next hour.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:How should you respond to a question if the answer is YES?
+A:AFFIRM.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:When communicating with ATC, how should you respond to a question if the answer is NO?
+A:NEGATIVE.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What does it mean when Tower asks you to ‘ACKNOWLEDGE’?
+A:Let them know that you have received and understood the message.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:With what phrase will ATC reply to grant you permission for an action?
+A:APPROVED.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'CHECK'?
+A:Examine a system or procedure.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'CLEARED'?
+A:Authorisation under specified conditions.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'CONFIRM'?
+A:Verification of a request.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'CONTACT'?
+A:To establish communication.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'CORRECT'?
+A:True or accurate.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'CORRECTION'?
+A:An error has been made and the version follows.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'DISREGARD'?
+A:Ignore.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'GO AHEAD'?
+A:Proceed with your message.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'I SAY AGAIN'?
+A:I repeat for clarity of emphasis.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'MONITOR'?
+A:Listen out on a specified frequency.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'READ BACK'?
+A:Repeat the message, or specified part, exactly as received.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'RE-CLEARED'?
+A:A change has been made to your last clearance and this now supersedes your previous clearance.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'REPORT'?
+A:Pass me the specified information.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'REQUEST'?
+A:I would like to know or, I wish to obtain.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'ROGER'?
+A:I have received all of your last transmission.  Not to be used as part of a read back or an answer in the affirmative or negative.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'SAY AGAIN'?
+A:Repeat all or part (as specified) of your message.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'STANDBY'?
+A:Wait and I will call you.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'UNABLE'?
+A:Unable to comply with request, instruction or clearance.  Normally followed by reason.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'WILCO'?
+A:I understand your message and will comply.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What is meant by the term 'WORDS TWICE'?
+A:Please send every word or group of words twice, or, I am sending every word or group of words twice.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:When can we use the term 'IMMEDIATE'?
+A:Only when immediate action is required for reasons of safety.
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:What does the term 'EXPEDITE' mean?
+A:Proceed as quickly as safely possible
+Syllabus Reference:2.12.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Section:2.14 Distress and Urgency Communications
+
+Q:In what situation will it be most appropriate to make a MAYDAY call?
+A:Any emergency situation that requires immediate assistance.
+Syllabus Reference:2.14.2
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:At what level of urgency is it appropriate to make a PAN-PAN call?
+A:In a condition concerning the safety of the aircraft, another aircraft, person on board or in sight, but not requiring immediate assistance.
+Syllabus Reference:2.14.2
+Study Reference:Waypoints Volume 4 Chapter 2
+
+Q:Which frequencies should you make a MAYDAY call on?
+A:The air-ground frequency in use, an appropriate monitored frequency, or 121.5.
+Syllabus Reference:2.14.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:When making a PAN-PAN call, which frequencies should you use.
+A:The air-ground frequency in use, an appropriate monitored frequency, or 121.5.
+Syllabus Reference:2.14.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:At what pace should you make an emergency transmission?
+A:At a slow deliberate rate.
+Syllabus Reference:2.14.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:Total engine failure, structural failure, incapacitation of the pilot, fire or smoke are examples of situations that warrant what type of emergency radio call?
+A:MAYDAY.
+Syllabus Reference:2.14.2
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:What is the ideal sequence of a MAYDAY call?
+A:Mayday (spoken three times), name of station addressed, callsign, nature of distress, intentions, position altitude and heading.
+Syllabus Reference:2.14.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:What is the ideal sequence of a PAN-PAN call?
+A:PAN-PAN (spoken three times), name of station addressed, callsign, nature of urgency, intentions, position altitude and heading, any other useful information.
+Syllabus Reference:2.14.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:On hearing a distress message broadcast on the frequency you have set at the time, what do you need to do?
+A:Maintain radio silence and a listening watch on the frequency until satisfactory assistance is established.
+Syllabus Reference:2.14.4
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Q:As the pilot in command of an aircraft responding to a distress call in the absence of ATS, are you allowed to impose radio silence on other aircraft.
+A:Yes.
+Syllabus Reference:2.14.6
+Study Reference:Waypoints Volume 4 Chapter 7
+
+Section:2.16 Loss of Communication – Aircraft Equipment
+
+Q:On first encountering a suspected radio failure, how would you check the radio power sources?
+A:Check that the master switch and/or avionics master switch (if fitted) is ON, and check that the radio ON/OFF switch is ON, lastly check the circuit breaker.
+Syllabus Reference:2.16.2
+Study Reference:Waypoints Volume 4 Chapter 1
+
+Q:Troubleshooting the radio function settings following a suspected radio failure, what should be checked?
+A:Squelch not set too low, correct frequency set and volume at audible level.
+Syllabus Reference:2.16.
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:On suspecting a radio failure, how can you be sure that it is not the microphone or headset that is at fault?
+A:If using a headset and boom microphone, switch to the cockpit speaker and hand held microphone or vice versa.
+Syllabus Reference:2.16.2
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What actions should you take in the event of a communications failure in controlled airspace?
+A:Continue as last cleared, and avoiding high traffic density, divert to a suitable unattended aerodrome.  If unable to divert, make an overhead join no lower than 1500 feet AGL.  Follow communications failure procedures as published in AIPNZ Vol 4 AD chart.  Squawk 7600.  Listen to ATIS.  Use a mobile phone if available to contact ATS.
+Syllabus Reference:2.16.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What actions should you take in the event of a communications failure in uncontrolled airspace?
+A:Remain clear of controlled airspace and land at the nearest suitable aerodrome.  Use a mobile phone if available to contact ATS.  
+Syllabus Reference:2.16.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What action should you take if experiencing a communications failure in an MBZ?
+A:Divert to an aerodrome outside of the MBZ unless the situation demands remaining in the MBZ.  Use a mobile phone if available to contact ATS.
+Syllabus Reference:2.16.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What are the corrective actions should be taken with regard to the frequency set on the radio in the event of a communications failure.
+A:Change the frequency to the alternate for the applicable station (if available), or change the frequency to another station within VHF range.
+Syllabus Reference:2.16.6
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What actions should you take if you are experiencing  a communications failure and you are certain that the receiver is unserviceable but the transmitter might be working?
+A:Make radio calls as required, prefixing each call with the words ‘TRANSMITTING BLIND’.
+Syllabus Reference:2.16.6
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What actions could you take if you are flying through mountainous terrain and you are having difficulty establishing communications even though your radio is serviceable?
+A:Climb to a higher altitude to increase the range of your radio.
+Syllabus Reference:2.16.6
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:How should you reply YES (affirmative) to a question from ATC if you are using the speechless technique?
+A:Activate the 'push to talk' once.
+Syllabus Reference:2.16.8
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:How should you reply NO (negative) to a question from ATC if you are using the speechless technique?
+A:Activate the transmitter two times.
+Syllabus Reference:2.16.8
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:How should you ask ATC to repeat their last transmission if you are using the speechless technique?
+A:Activate the transmitter three times.
+Syllabus Reference:2.16.8
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:ATC have cleared you to track to and report at a certain position, how will you let them know that you have reached this point using the speechless technique?
+A:Activate the transmitter four times.
+Syllabus Reference:2.16.8
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:In the event of a comms failure in controlled airspace, how will the control tower indicate that you are cleared to land?
+A:By signalling a steady green light.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:In the event of a comms failure, how will the control tower indicate that you are cleared for takeoff?
+A:By signalling a steady green light.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What does a steady red light signal from the control tower indicate if you are airborne?
+A:Give way to other aircraft and continue circuiting.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What do you have to do if you see a steady red light signal shown to you by the control tower while you are on the ground?
+A:Stop.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:While experiencing a radio failure in the circuit at a controlled aerodrome, the control tower signals you with a series of green flashes.  What do you need to do?
+A:Return for landing.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:While holding prior to taxiing to the runway, the control tower sends you a series of green flashes with a signal light.  What does this mean?
+A:You are now cleared to taxi.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:You are approaching a controlled aerodrome, unable to establish radio communication, when you see a series of red flashes from the control tower.  What does this mean?
+A:The aerodrome is unsafe – do not land.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What do a series of red flashes from the control tower mean?
+A:Taxi clear of the landing area.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What do a series of white flashes from the control tower mean?
+A:Land this aerodrome and proceed to the apron.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What does a series of white flashes from the tower mean while you are holding on the taxiway?
+A:Return to starting point on the aerodrome.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:As you turn on to final approach what does a series of red and green flashes from the control tower mean?
+A:Danger – be on alert.
+Syllabus Reference:2.10.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:While getting ready to leave the fuel pumps you are unable to raise the control tower on the radio, but you see a series of alternating red and green flashes.  What does this mean?
+A:Danger – be on alert.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:If at any time in flight around an aerodrome you see a red pyrotechnic, what does this mean?
+A:Notwithstanding any previous instructions, do not land for the time being.
+Syllabus Reference:2.16.10
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Section:2.18 Loss of Communication – ATS Equipment Failure
+
+Q:When will TIBA (Traffic Information Broadcast by Aircraft) be introduced?
+A:If significant disruption to ATC or related services occur.
+Syllabus Reference:2.18.2
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:What are the frequencies for TIBA?
+A:Unless otherwise notified by NOTAM, use the frequency normally used for that airspace.  A TIBA NOTAM will advise the frequency to be used.
+Syllabus Reference:2.18.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:You are approaching airspace which has a different frequency to what you have set on your radio.  Under TIBA procedures, what is the requirement for maintaining a listening watch on the new frequency?
+A:You should be maintaining a listening watch on the appropriate frequency ten minutes before entering the airspace, until leaving the airspace.
+Syllabus Reference:2.18.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:Under TIBA procedures when should you be making broadcasts on takeoff?
+A:As soon as possible before or after takeoff.
+Syllabus Reference:2.18.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:If TIBA procedures are in effect, when should you be making broadcasts when entering airspace?
+A:Ten minutes before entering designated airspace?
+Syllabus Reference:2.18.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:When should you be making TIBA broadcasts nearing a reporting point?
+A:Crossing a reporting point.
+Syllabus Reference:2.18.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:With regard to changing altitude while TIBA procedures are in effect, when should you make broadcasts?
+A:2 to 5 minutes before changing altitude, at the time of changing altitude, and on reaching the required altitude.
+Syllabus Reference:2.18.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+Q:Are you allowed to make broadcasts under TIBA procedures whenever you consider it necessary?
+A:Yes.
+Syllabus Reference:2.18.4
+Study Reference:Waypoints Volume 4 Chapter 3
+
+

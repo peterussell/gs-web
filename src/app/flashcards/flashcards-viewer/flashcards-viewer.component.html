@@ -6,11 +6,11 @@
         </mat-progress-bar>
     </div>
 
-    <app-flashcard
+    <app-flashcards-card
         [flashcardViewerQuestion]="questions[currentQuestionIndex]"
         [questionNumber]="currentQuestionIndex+1"
         [numberOfQuestions]="questions.length">
-    </app-flashcard>
+    </app-flashcards-card>
 
     <div class="nav-buttons">
         <button mat-flat-button
