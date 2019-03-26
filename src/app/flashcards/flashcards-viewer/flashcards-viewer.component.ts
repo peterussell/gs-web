@@ -19,6 +19,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   @Output() complete: EventEmitter<any> = new EventEmitter<any>();
 
   public questions: Array<FlashcardsViewerQuestion>;
+  public forReview: Set<FlashcardsViewerQuestion>;
   public currentQuestionIndex: number;
   public currentState: FlashcardsViewerState;
   
@@ -31,6 +32,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   constructor(private apiService: ApiService) {
     this.questions = new Array<FlashcardsViewerQuestion>();
+    this.forReview = new Set<FlashcardsViewerQuestion>();
   }
 
   ngOnInit() {
@@ -45,7 +47,6 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   loadQuestions() {
     if (!this.subject) return;
     this.subject.topics.forEach((t: Topic) => {
-      console.log(`Loading topic ${t.title}: ${t.questions}`);
       for (let questionId in t.questions) {
         let q = t.questions[questionId];
         let fvq = new FlashcardsViewerQuestion();
@@ -60,9 +61,28 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   hasQuestions() {
     return this.questions.length > 0;
   }
+
   canGoToNextQuestion(): boolean {
     return this.questions.length > 0 &&
       this.currentQuestionIndex < (this.questions.length -1);
+  }
+
+  saveForReview() {
+    this.forReview.add(this.questions[this.currentQuestionIndex]);
+    this.goToNextQuestion();
+  }
+
+  gotIt() {
+    // remove from questions for review if it's there
+    const q = this.questions[this.currentQuestionIndex];
+    if (this.forReview.has(q)) {
+      this.forReview.delete(q);
+    }
+    this.goToNextQuestion();
+  }
+
+  goToFinish() {
+    this.showResults();
   }
 
   goToNextQuestion() {

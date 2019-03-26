@@ -5,6 +5,29 @@
 
     .mat-flat-button {
         margin: 0 6px;
+        font-weight: 100;
+    }
+
+    .mat-review {
+        background-color: #ff8200 !important;
+        color: #fff;
+
+        .review-counter {
+            font-size: 0.8em;
+            padding: 3px 8px 2px 8px;
+            margin-right: 8px;
+            background-color: #e05301;
+            border-radius: 10%;
+            
+            &__bracket {
+                padding: 1px;
+            }
+        }
+    }
+
+    .mat-got-it {
+        background-color: #080 !important;
+        color: #fff;
     }
 }
 

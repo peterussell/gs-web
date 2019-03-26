@@ -67,17 +67,13 @@ export class FlashcardsComponent implements OnInit {
       Observable.forkJoin(loadQuestionTasks$).subscribe((topicsWithQuestions: Array<Topic>) => {
         topicsWithQuestions.forEach((t: Topic) => {
           this.currentSubject.topics
-            .find(existingTopic => existingTopic.topicId === t.topicId)
-            .questions = t.questions.sort((a, b) => {
+            .find(existingTopic => existingTopic.topicId === t.topicId) // find the topic to save to
+            .questions = t.questions.sort((a, b) => { // order questions by syllabus reference
               return GSUtils.sortMultiPartNumbers(a.syllabusRef, b.syllabusRef);
             });
         });
-        
-        // tmp
-        this.currentSubject.topics.forEach(t => {
-          console.log(`${t.title}: ${t.subTopic}`);
-          t.questions.forEach(q => console.log(q.syllabusRef));
-        });
+        // all done, ready to show flashcards
+        this.currentState = FlashcardsState.ShowViewer;
       })
     });
   }

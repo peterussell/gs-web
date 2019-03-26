@@ -16,11 +16,18 @@
         <button mat-flat-button
             (click)="goToPreviousQuestion()"
             [disabled]="!canGoToPreviousQuestion()">
-            Previous
+            < Previous
         </button>
-        <button mat-flat-button (click)="goToNextQuestion()">
-            <span *ngIf="canGoToNextQuestion(); else finish">Next</span>
-            <ng-template #finish><span>Finish</span></ng-template>
+        <button mat-flat-button (click)="saveForReview()" [color]="'review'">
+            <!-- <span class="review-counter">[ <span class="review-counter__number">{{ forReview.size }}</span> ]</span> -->
+            <span class="review-counter">{{ forReview.size }}</span>
+             Needs review >
+        </button>
+        <button mat-flat-button (click)="gotIt()" [color]="'got-it'" *ngIf="canGoToNextQuestion()">
+            Got it >
+        </button>
+        <button mat-flat-button (click)="goToFinish()">
+            Finish >>
         </button>
     </div>
 </div>
@@ -28,6 +35,15 @@
 <ng-template #results>
     <mat-card class="results">
         <h3>{{ numberOfQuestions }} questions completed.</h3>
+
+        <ul>
+            <li *ngFor="let q of forReview">
+                <p>
+                    <strong>{{ q.question.question }}</strong><br>
+                    {{ q.question.answer }} ({{ q.question.syllabusRef }})
+                </p>
+            </li>
+        </ul>
         <button mat-stroked-button (click)="allDone()">Get more flashcards</button>
     </mat-card>
 </ng-template>
