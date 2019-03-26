@@ -5,5 +5,6 @@ export class Topic {
     subjectId: string;
     title: string;
     path: string;
-    questions: { [id: number] : Question };
+    subTopic: string;
+    questions: Array<Question>;
 }

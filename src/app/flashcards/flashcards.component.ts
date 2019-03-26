@@ -7,6 +7,9 @@ import { Question } from '../core/models/question.model';
 import { StoreService } from '../core/services/store.service';
 import { Subject } from '../core/models/subject.model';
 import { Topic } from '../core/models/topic.model';
+import { GSUtils } from '../core/utils/utils';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/forkJoin';
 
 @Component({
   selector: 'app-flashcards',
@@ -47,14 +50,35 @@ export class FlashcardsComponent implements OnInit {
           }
       });
 
-      // load the topics for this subject
-      let questions: Array<Question> = new Array<Question>()
-      this.currentSubject.topics.forEach((t: Topic) => {
-          this.apiService.getQuestions(t.topicId).subscribe((topic) => {
-              t.questions = topic.questions;
-              this.currentState = FlashcardsState.ShowViewer;
-          });
+      // sort topics by syllabus number
+      this.currentSubject.topics.sort((a, b) => {
+        return GSUtils.sortMultiPartNumbers(a.subTopic, b.subTopic);
       });
+
+      // load the topics for this subject
+      let questions: Array<Question> = new Array<Question>();
+
+      let loadQuestionTasks$ = [];
+      this.currentSubject.topics.forEach((t: Topic) => {
+          loadQuestionTasks$.push(this.apiService.getQuestions(t.topicId));
+      });
+
+      // wait for all observables to finish then save the questions to currentSubject
+      Observable.forkJoin(loadQuestionTasks$).subscribe((topicsWithQuestions: Array<Topic>) => {
+        topicsWithQuestions.forEach((t: Topic) => {
+          this.currentSubject.topics
+            .find(existingTopic => existingTopic.topicId === t.topicId)
+            .questions = t.questions.sort((a, b) => {
+              return GSUtils.sortMultiPartNumbers(a.syllabusRef, b.syllabusRef);
+            });
+        });
+        
+        // tmp
+        this.currentSubject.topics.forEach(t => {
+          console.log(`${t.title}: ${t.subTopic}`);
+          t.questions.forEach(q => console.log(q.syllabusRef));
+        });
+      })
     });
   }
 

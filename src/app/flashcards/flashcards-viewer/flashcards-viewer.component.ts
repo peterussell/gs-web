@@ -45,6 +45,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   loadQuestions() {
     if (!this.subject) return;
     this.subject.topics.forEach((t: Topic) => {
+      console.log(`Loading topic ${t.title}: ${t.questions}`);
       for (let questionId in t.questions) {
         let q = t.questions[questionId];
         let fvq = new FlashcardsViewerQuestion();
