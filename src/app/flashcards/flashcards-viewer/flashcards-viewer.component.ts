@@ -6,6 +6,7 @@ import { CognitoUser } from 'amazon-cognito-identity-js';
 import { QuestionSet } from '../../core/models/question-set.model';
 import { Subject } from '../../core/models/subject.model';
 import { Topic } from '../../core/models/topic.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-flashcards-viewer',
@@ -30,7 +31,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     return ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
   };
 
-  constructor(private apiService: ApiService) {
+  constructor(private router: Router, private apiService: ApiService) {
     this.questions = new Array<FlashcardsViewerQuestion>();
     this.forReview = new Set<FlashcardsViewerQuestion>();
   }
@@ -62,9 +63,18 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     return this.questions.length > 0;
   }
 
+  hasReviewQuestions() {
+    return this.forReview.size > 0;
+  }
+
   canGoToNextQuestion(): boolean {
     return this.questions.length > 0 &&
       this.currentQuestionIndex < (this.questions.length -1);
+  }
+
+  isInReviewSet(question: FlashcardsViewerQuestion) {
+    if (question === undefined) { return false; }
+    return this.forReview.has(question);
   }
 
   saveForReview() {
@@ -113,6 +123,16 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   allDone() {
     this.complete.emit();
+  }
+
+  reloadFlashcards() {
+    this.currentQuestionIndex = 0;
+    this.forReview = new Set<FlashcardsViewerQuestion>();
+    this.currentState = FlashcardsViewerState.InProgress;
+  }
+
+  goToCourseIndex() {
+    this.router.navigate(['']);
   }
 }
 

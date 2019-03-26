@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
 import { Course } from '../core/models/course.model';
 import { ApiService } from '../core/services/api.service';
-import { FlashcardsBuilderRequest } from './flashcards-builder/flashcards-builder.component';
 import { Question } from '../core/models/question.model';
 import { StoreService } from '../core/services/store.service';
 import { Subject } from '../core/models/subject.model';
@@ -79,7 +78,6 @@ export class FlashcardsComponent implements OnInit {
   }
 
   onViewerComplete() {
-    this.currentState = FlashcardsState.ShowBuilder;
   }
 
   isLoadingState() {
@@ -93,6 +91,5 @@ export class FlashcardsComponent implements OnInit {
 
 enum FlashcardsState {
   Loading,
-  ShowBuilder,
   ShowViewer
 }

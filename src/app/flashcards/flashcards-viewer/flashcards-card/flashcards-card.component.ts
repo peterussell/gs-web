@@ -16,6 +16,7 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
   @Input() flashcardViewerQuestion: FlashcardsViewerQuestion;
   @Input() questionNumber: number;
   @Input() numberOfQuestions: number;
+  @Input() isInReviewSet: boolean;
   
   private currentState: FlashcardViewerState;
   private currentUser: CognitoUser;
@@ -83,14 +84,14 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
     return this.currentState === FlashcardViewerState.Answer;
   }
 
-  isInReviewSet() {
-    if (this.reviewSet === undefined || this.reviewSet.QuestionIds === undefined) {
-      return false;
-    }
+  // isInReviewSet() {
+  //   if (this.reviewSet === undefined || this.reviewSet.QuestionIds === undefined) {
+  //     return false;
+  //   }
 
-    return this.reviewSet.QuestionIds.indexOf(
-      this.flashcardViewerQuestion.question.questionId) > -1;
-  }
+  //   return this.reviewSet.QuestionIds.indexOf(
+  //     this.flashcardViewerQuestion.question.questionId) > -1;
+  // }
 
   addToReviewSet() {
     if (this.currentUser === null) {

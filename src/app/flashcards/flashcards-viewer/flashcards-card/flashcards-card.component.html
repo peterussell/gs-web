@@ -4,6 +4,8 @@
     <mat-card-title>
       <div class="actions-bar">
 
+        <span class="review-set-badge" *ngIf="isInReviewSet">Review</span>
+
         <!--
         <button mat-button
           (click)="addToReviewSet(flashcardViewerQuestion)"

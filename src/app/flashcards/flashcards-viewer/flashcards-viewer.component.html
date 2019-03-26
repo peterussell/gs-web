@@ -9,7 +9,8 @@
     <app-flashcards-card
         [flashcardViewerQuestion]="questions[currentQuestionIndex]"
         [questionNumber]="currentQuestionIndex+1"
-        [numberOfQuestions]="questions.length">
+        [numberOfQuestions]="questions.length"
+        [isInReviewSet]="isInReviewSet(questions[currentQuestionIndex])">
     </app-flashcards-card>
 
     <div class="nav-buttons">
@@ -19,7 +20,6 @@
             < Previous
         </button>
         <button mat-flat-button (click)="saveForReview()" [color]="'review'">
-            <!-- <span class="review-counter">[ <span class="review-counter__number">{{ forReview.size }}</span> ]</span> -->
             <span class="review-counter">{{ forReview.size }}</span>
              Needs review >
         </button>
@@ -34,16 +34,34 @@
 
 <ng-template #results>
     <mat-card class="results">
-        <h3>{{ numberOfQuestions }} questions completed.</h3>
+        <h2>Review questions</h2>
 
-        <ul>
+        <!-- Review questions -->
+        <ul *ngIf="hasReviewQuestions(); else noQuestions">
             <li *ngFor="let q of forReview">
-                <p>
-                    <strong>{{ q.question.question }}</strong><br>
-                    {{ q.question.answer }} ({{ q.question.syllabusRef }})
-                </p>
+                <div class="syllabus-ref">
+                    <span class="syllabus-ref__title">Syllabus Ref</span>
+                    {{ q.question.syllabusRef }}
+                </div>
+                <div class="question">
+                    <div class="question__question">{{ q.question.question }}</div>
+                    <div class="question__answer">
+                        <div class="question__answer--icon"><i class="material-icons">keyboard_arrow_right</i></div>
+                        <div class="question__answer--text">{{ q.question.answer }}</div>
+                    </div>
+                </div>
             </li>
         </ul>
-        <button mat-stroked-button (click)="allDone()">Get more flashcards</button>
+
+        <ng-template #noQuestions>
+            <div class="no-review-questions">
+                <p><i class="material-icons">check_circle_outline</i>No questions marked for review.</p>
+            </div>
+        </ng-template>
+
+        <div class="nav-buttons">
+            <button mat-flat-button (click)="reloadFlashcards()">Back to Flashcards</button>
+            <button mat-flat-button (click)="goToCourseIndex()">Back to Course Index</button>
+        </div>
     </mat-card>
 </ng-template>
