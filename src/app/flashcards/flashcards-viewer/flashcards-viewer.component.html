@@ -53,7 +53,7 @@
         
                 <!-- Review questions -->
                 <ul *ngIf="hasReviewQuestions(); else noQuestions">
-                    <li *ngFor="let q of forReview">
+                    <li *ngFor="let q of getCurrentReviewSet()">
                         <div class="syllabus-ref">
                             <span class="syllabus-ref__title">Syllabus Ref</span>
                             {{ q.question.syllabusRef }}

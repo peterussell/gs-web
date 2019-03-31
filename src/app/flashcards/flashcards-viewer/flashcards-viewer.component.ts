@@ -20,7 +20,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   @Output() complete: EventEmitter<any> = new EventEmitter<any>();
 
   public questions: Array<FlashcardsViewerQuestion>;
-  public forReview: Set<FlashcardsViewerQuestion>;
+  public forReview: { [topicId: string]: Set<FlashcardsViewerQuestion> };
   public currentQuestionIndex: number;
   public currentTopicId: string;
   public currentState: FlashcardsViewerState;
@@ -34,16 +34,33 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   constructor(private router: Router, private apiService: ApiService) {
     this.questions = new Array<FlashcardsViewerQuestion>();
-    this.forReview = new Set<FlashcardsViewerQuestion>();
   }
 
   ngOnInit() {
     this.loadQuestions();
+    this.initialiseReviewSets();
     this.currentQuestionIndex = 0;
     this.currentState = FlashcardsViewerState.InProgress;
   }
 
   ngOnChanges() {
+  }
+
+  initialiseReviewSets() {
+    this.forReview = {};
+    this.subject.topics.forEach((t: Topic) => {
+      this.forReview[t.topicId] = new Set<FlashcardsViewerQuestion>();
+    });
+  }
+
+  getReviewSet(topicId: string) {
+    if (topicId in this.forReview) {
+      return this.forReview[topicId];
+    }
+  }
+
+  getCurrentReviewSet() {
+    return this.getReviewSet(this.currentTopicId);
   }
 
   loadQuestions(selectedTopicId?: string) {
@@ -90,7 +107,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   hasReviewQuestions() {
-    return this.forReview.size > 0;
+    const crs = this.getCurrentReviewSet();
+    return crs !== undefined && crs.size > 0;
   }
 
   canGoToNextQuestion(): boolean {
@@ -101,18 +119,25 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   isCurrentQuestionInReviewSet() {
     const q = this.questions[this.currentQuestionIndex];
     if (q === undefined) { return false; }
-    return this.forReview.has(q);
+
+    for (let reviewQuestion of Array.from(this.getCurrentReviewSet())) {
+      if (reviewQuestion.question.questionId === q.question.questionId) {
+        return true;
+      }
+    }
   }
 
   saveForReview() {
-    this.forReview.add(this.questions[this.currentQuestionIndex]);
+    this.getCurrentReviewSet().add(this.questions[this.currentQuestionIndex]);
   }
 
   removeFromForReview() {
     const q = this.questions[this.currentQuestionIndex];
-    if (this.forReview.has(q)) {
-      this.forReview.delete(q);
-    }
+    this.getCurrentReviewSet().forEach((reviewQuestion: FlashcardsViewerQuestion) => {
+      if (reviewQuestion.question.questionId === q.question.questionId) {
+        this.getCurrentReviewSet().delete(reviewQuestion);
+      }
+    });
   }
 
   goToFinish() {
@@ -165,7 +190,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   goToNextTopic() {
-    this.loadQuestions(this.subject.topics[this.getCurrentTopicIndex()+1].topicId);
+    this.setCurrentTopic(this.subject.topics[this.getCurrentTopicIndex()+1].topicId);
+    this.loadQuestions(this.currentTopicId);
     this.currentQuestionIndex = 0;
     this.currentState = FlashcardsViewerState.InProgress;
   }
