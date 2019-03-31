@@ -22,14 +22,11 @@
         </ng-template>
         -->
       </div>
-      <h3>
-        <span *ngIf="isQuestionState()">Question</span>
-        <span *ngIf="isAnswerState()">Answer</span>
-        {{ questionNumber }}/{{ numberOfQuestions }}
-      </h3>
+      <h4>
+        {{ flashcardViewerQuestion.topicTitle }} - {{ questionNumber }}/{{ numberOfQuestions }}
+      </h4>
     </mat-card-title>
     <mat-card-subtitle>
-      <p>{{ flashcardViewerQuestion.subjectTitle }} > {{ flashcardViewerQuestion.topicTitle }}</p>
       <p>Syllabus reference: {{ flashcardViewerQuestion.question.syllabusRef }}</p>
     </mat-card-subtitle>
 

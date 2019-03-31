@@ -1,3 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    .menu {
+        flex: 0 0 220px;
+        margin-right: 10px;
+    }
+
+    .viewer {
+        flex: 1 1 auto;
+    }
+}
+
 .nav-buttons {
     width: 100%;
     text-align: center;

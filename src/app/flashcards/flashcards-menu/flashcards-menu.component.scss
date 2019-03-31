@@ -1,0 +1,44 @@
+.mat-card {
+    margin-top: 5px;
+    padding: 20px 20px 10px 20px;
+}
+
+ul {
+    font-size: 0.8em;
+    color: #666;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+
+        p {
+            cursor: pointer;
+            padding: 0 0 0 10px;
+            margin: 0;
+            border-left: 4px solid #ddd;
+            display: block;
+
+            span.question-counter {
+                background-color: #ddd;
+                border-radius: 4px;
+                padding: 1px 6px;
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+}
+
+.selected {
+    color: #000;
+    
+    p {
+        border-left-color: #3f51b5 !important;
+    }
+}

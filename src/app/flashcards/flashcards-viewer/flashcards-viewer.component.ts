@@ -22,6 +22,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   public questions: Array<FlashcardsViewerQuestion>;
   public forReview: Set<FlashcardsViewerQuestion>;
   public currentQuestionIndex: number;
+  public currentTopicId: string;
   public currentState: FlashcardsViewerState;
   
   get progress(): number {
@@ -45,18 +46,43 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   ngOnChanges() {
   }
 
-  loadQuestions() {
-    if (!this.subject) return;
-    this.subject.topics.forEach((t: Topic) => {
-      for (let questionId in t.questions) {
-        let q = t.questions[questionId];
-        let fvq = new FlashcardsViewerQuestion();
-        fvq.question = q;
-        fvq.subjectTitle = this.subject.title;
-        fvq.topicTitle = t.title;
-        this.questions.push(fvq);
-      }
+  loadQuestions(selectedTopicId?: string) {
+    if (!this.subject || this.subject.topics.length === 0) return;
+
+    if (selectedTopicId === undefined || selectedTopicId === '') {
+      // default to the first topic
+      selectedTopicId = this.subject.topics[0].topicId;
+    }
+
+    const selectedTopic = this.subject.topics.find((t) => {
+      return t.topicId === selectedTopicId;
     });
+
+    // no topic found matching the specified topic id
+    if (selectedTopic === undefined) { return; }
+    
+    this.setCurrentTopic(selectedTopic.topicId);
+    this.questions = new Array<FlashcardsViewerQuestion>();
+
+    for (let questionId in selectedTopic.questions) {
+      let q = selectedTopic.questions[questionId];
+      let fvq = new FlashcardsViewerQuestion();
+      fvq.question = q;
+      fvq.subjectTitle = this.subject.title;
+      fvq.topicTitle = selectedTopic.title;
+      this.questions.push(fvq);
+    }
+  }
+
+  onMenuTopicSelected(topicId: string) {
+    this.loadQuestions(topicId);
+    this.currentQuestionIndex = 0;
+    this.currentState = FlashcardsViewerState.InProgress;
+  }
+
+  setCurrentTopic(topicId: string) {
+    if (topicId === undefined || topicId === '') { return; }
+    this.currentTopicId = topicId;
   }
 
   hasQuestions() {
@@ -125,9 +151,24 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     this.complete.emit();
   }
 
-  reloadFlashcards() {
+  reloadTopic() {
     this.currentQuestionIndex = 0;
-    this.forReview = new Set<FlashcardsViewerQuestion>();
+    this.currentState = FlashcardsViewerState.InProgress;
+  }
+
+  getCurrentTopicIndex() {
+    return this.subject.topics.indexOf(
+      this.subject.topics.find(t => { return t.topicId === this.currentTopicId })
+    );
+  }
+
+  canGoToNextTopic() {
+    return this.getCurrentTopicIndex() < this.subject.topics.length-1;
+  }
+
+  goToNextTopic() {
+    this.loadQuestions(this.subject.topics[this.getCurrentTopicIndex()+1].topicId);
+    this.currentQuestionIndex = 0;
     this.currentState = FlashcardsViewerState.InProgress;
   }
 

@@ -1,67 +1,80 @@
-<div *ngIf="isInProgress(); else results">
-    <div class="progress-bar">
-        <mat-progress-bar
-            [mode]="determinate"
-            [value]="progress">
-        </mat-progress-bar>
+<div class="container">
+    <div class="menu">
+        <app-flashcards-menu
+            [subject]="subject"
+            [selectedTopicId]="currentTopicId"
+            (topicSelected)="onMenuTopicSelected($event)">
+        </app-flashcards-menu>
     </div>
-
-    <app-flashcards-card
-        [flashcardViewerQuestion]="questions[currentQuestionIndex]"
-        [questionNumber]="currentQuestionIndex+1"
-        [numberOfQuestions]="questions.length"
-        [isInReviewSet]="isInReviewSet(questions[currentQuestionIndex])">
-    </app-flashcards-card>
-
-    <div class="nav-buttons">
-        <button mat-flat-button
-            (click)="goToPreviousQuestion()"
-            [disabled]="!canGoToPreviousQuestion()">
-            < Previous
-        </button>
-        <button mat-flat-button (click)="saveForReview()" [color]="'review'">
-            <span class="review-counter">{{ forReview.size }}</span>
-             Needs review >
-        </button>
-        <button mat-flat-button (click)="gotIt()" [color]="'got-it'" *ngIf="canGoToNextQuestion()">
-            Got it >
-        </button>
-        <button mat-flat-button (click)="goToFinish()">
-            Finish >>
-        </button>
+    <div class="viewer">
+        <div *ngIf="isInProgress(); else results">
+            <div class="progress-bar">
+                <mat-progress-bar
+                    [mode]="determinate"
+                    [value]="progress">
+                </mat-progress-bar>
+            </div>
+        
+            <app-flashcards-card
+                [flashcardViewerQuestion]="questions[currentQuestionIndex]"
+                [questionNumber]="currentQuestionIndex+1"
+                [numberOfQuestions]="questions.length"
+                [isInReviewSet]="isInReviewSet(questions[currentQuestionIndex])">
+            </app-flashcards-card>
+        
+            <div class="nav-buttons">
+                <button mat-flat-button
+                    (click)="goToPreviousQuestion()"
+                    [disabled]="!canGoToPreviousQuestion()">
+                    < Previous
+                </button>
+                <button mat-flat-button (click)="saveForReview()" [color]="'review'">
+                    <span class="review-counter">{{ forReview.size }}</span>
+                        Needs review >
+                </button>
+                <button mat-flat-button (click)="gotIt()" [color]="'got-it'">
+                    Got it >
+                </button>
+            </div>
+        </div>
+        
+        <ng-template #results>
+            <mat-card class="results">
+                <h2>Review questions</h2>
+        
+                <!-- Review questions -->
+                <ul *ngIf="hasReviewQuestions(); else noQuestions">
+                    <li *ngFor="let q of forReview">
+                        <div class="syllabus-ref">
+                            <span class="syllabus-ref__title">Syllabus Ref</span>
+                            {{ q.question.syllabusRef }}
+                        </div>
+                        <div class="question">
+                            <div class="question__question">{{ q.question.question }}</div>
+                            <div class="question__answer">
+                                <div class="question__answer--icon"><i class="material-icons">keyboard_arrow_right</i></div>
+                                <div class="question__answer--text">{{ q.question.answer }}</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+        
+                <ng-template #noQuestions>
+                    <div class="no-review-questions">
+                        <p><i class="material-icons">check_circle_outline</i>No questions marked for review.</p>
+                    </div>
+                </ng-template>
+        
+                <div class="nav-buttons">
+                    <button mat-flat-button (click)="reloadTopic()">Redo this topic</button>
+                    <button
+                        mat-flat-button
+                        (click)="goToNextTopic()"
+                        *ngIf="canGoToNextTopic()">Go to next topic</button>
+                    <button mat-flat-button (click)="goToCourseIndex()">Back to Course Index</button>
+                </div>
+            </mat-card>
+        </ng-template>
     </div>
 </div>
 
-<ng-template #results>
-    <mat-card class="results">
-        <h2>Review questions</h2>
-
-        <!-- Review questions -->
-        <ul *ngIf="hasReviewQuestions(); else noQuestions">
-            <li *ngFor="let q of forReview">
-                <div class="syllabus-ref">
-                    <span class="syllabus-ref__title">Syllabus Ref</span>
-                    {{ q.question.syllabusRef }}
-                </div>
-                <div class="question">
-                    <div class="question__question">{{ q.question.question }}</div>
-                    <div class="question__answer">
-                        <div class="question__answer--icon"><i class="material-icons">keyboard_arrow_right</i></div>
-                        <div class="question__answer--text">{{ q.question.answer }}</div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <ng-template #noQuestions>
-            <div class="no-review-questions">
-                <p><i class="material-icons">check_circle_outline</i>No questions marked for review.</p>
-            </div>
-        </ng-template>
-
-        <div class="nav-buttons">
-            <button mat-flat-button (click)="reloadFlashcards()">Back to Flashcards</button>
-            <button mat-flat-button (click)="goToCourseIndex()">Back to Course Index</button>
-        </div>
-    </mat-card>
-</ng-template>

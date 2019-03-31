@@ -1,0 +1,14 @@
+<mat-card>
+  <h3>Topics</h3>
+
+  <ul *ngIf="subject">
+    <li
+      *ngFor="let t of subject.topics"
+      (click)="selectTopic(t.topicId)"
+      [ngClass]="{'selected': isSelected(t.topicId)}">
+      <p>
+        {{ t.subTopic }} - {{ t.title }} <span class="question-counter">{{ t.questions.length }}</span>
+      </p>
+    </li>
+  </ul>
+</mat-card>

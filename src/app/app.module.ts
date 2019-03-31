@@ -45,6 +45,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CourseIndexComponent } from './course-index/course-index.component';
 import { SubjectCardComponent } from './course-index/subject-card/subject-card.component';
 import { SubjectResolver } from './core/services/resolvers/subject-resolver.service';
+import { FlashcardsMenuComponent } from './flashcards/flashcards-menu/flashcards-menu.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { SubjectResolver } from './core/services/resolvers/subject-resolver.serv
     ActivateFullPageComponent,
     ContactComponent,
     CourseIndexComponent,
-    SubjectCardComponent
+    SubjectCardComponent,
+    FlashcardsMenuComponent
   ],
   imports: [
     BrowserModule,
