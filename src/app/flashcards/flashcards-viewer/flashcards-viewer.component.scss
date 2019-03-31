@@ -1,3 +1,10 @@
+i.material-icons {
+    font-size: 1.4em;
+    vertical-align: middle;
+    margin: -4px 4px 0 0;
+
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -23,25 +30,26 @@
     }
 
     .mat-review {
-        background-color: #ff8200 !important;
+        background-color: #999 !important;
         color: #fff;
 
-        .review-counter {
-            font-size: 0.8em;
-            padding: 3px 8px 2px 8px;
-            margin-right: 8px;
-            background-color: #e05301;
-            border-radius: 10%;
-            
-            &__bracket {
-                padding: 1px;
-            }
+        &__saved {
+            @extend .mat-review;
+            background-color: #ff8200 !important;
         }
     }
 
-    .mat-got-it {
-        background-color: #080 !important;
-        color: #fff;
+    .review-counter {
+        font-size: 0.8em;
+        padding: 3px 8px 2px 8px;
+        margin-right: 8px;
+        background-color: #666;
+        border-radius: 10%;
+
+        &__saved {
+            @extend .review-counter;
+            background-color: #e05301 !important;
+        }
     }
 }
 

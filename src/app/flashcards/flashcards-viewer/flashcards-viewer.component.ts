@@ -98,23 +98,21 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       this.currentQuestionIndex < (this.questions.length -1);
   }
 
-  isInReviewSet(question: FlashcardsViewerQuestion) {
-    if (question === undefined) { return false; }
-    return this.forReview.has(question);
+  isCurrentQuestionInReviewSet() {
+    const q = this.questions[this.currentQuestionIndex];
+    if (q === undefined) { return false; }
+    return this.forReview.has(q);
   }
 
   saveForReview() {
     this.forReview.add(this.questions[this.currentQuestionIndex]);
-    this.goToNextQuestion();
   }
 
-  gotIt() {
-    // remove from questions for review if it's there
+  removeFromForReview() {
     const q = this.questions[this.currentQuestionIndex];
     if (this.forReview.has(q)) {
       this.forReview.delete(q);
     }
-    this.goToNextQuestion();
   }
 
   goToFinish() {

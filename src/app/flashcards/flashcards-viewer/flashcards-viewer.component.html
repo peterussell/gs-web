@@ -18,8 +18,7 @@
             <app-flashcards-card
                 [flashcardViewerQuestion]="questions[currentQuestionIndex]"
                 [questionNumber]="currentQuestionIndex+1"
-                [numberOfQuestions]="questions.length"
-                [isInReviewSet]="isInReviewSet(questions[currentQuestionIndex])">
+                [numberOfQuestions]="questions.length">
             </app-flashcards-card>
         
             <div class="nav-buttons">
@@ -28,12 +27,22 @@
                     [disabled]="!canGoToPreviousQuestion()">
                     < Previous
                 </button>
-                <button mat-flat-button (click)="saveForReview()" [color]="'review'">
-                    <span class="review-counter">{{ forReview.size }}</span>
-                        Needs review >
-                </button>
-                <button mat-flat-button (click)="gotIt()" [color]="'got-it'">
-                    Got it >
+                <span *ngIf="!isCurrentQuestionInReviewSet(); else notSaved">
+                    <button mat-flat-button (click)="saveForReview()" [color]="'review'">
+                        <i class="material-icons">playlist_add</i>
+                        Save for review
+                    </button>
+                </span>
+                <ng-template #notSaved>
+                    <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
+                        <i class="material-icons">playlist_add_check</i>
+                        Saved for review
+                    </button>
+                </ng-template>
+                
+                <button mat-flat-button (click)="goToNextQuestion()">
+                    <span *ngIf="canGoToNextQuestion(); else finish">Next ></span>
+                    <ng-template #finish>Finish ></ng-template>
                 </button>
             </div>
         </div>
@@ -66,12 +75,17 @@
                 </ng-template>
         
                 <div class="nav-buttons">
-                    <button mat-flat-button (click)="reloadTopic()">Redo this topic</button>
+                    <button mat-flat-button (click)="reloadTopic()">
+                        <i class="material-icons">refresh</i>
+                        Redo topic
+                    </button>
                     <button
-                        mat-flat-button
-                        (click)="goToNextTopic()"
-                        *ngIf="canGoToNextTopic()">Go to next topic</button>
-                    <button mat-flat-button (click)="goToCourseIndex()">Back to Course Index</button>
+                        mat-flat-button (click)="goToNextTopic()" *ngIf="canGoToNextTopic()">
+                        Next topic >
+                    </button>
+                    <button mat-flat-button (click)="goToCourseIndex()">
+                        <i class="material-icons">subject</i>
+                        Course Index</button>
                 </div>
             </mat-card>
         </ng-template>
