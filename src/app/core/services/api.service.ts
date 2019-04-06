@@ -76,7 +76,7 @@ export class ApiService {
     public addQuestion(topicId: string, question: string, answer: string,
         references: Array<Reference>): Observable<any> {
         var body = {
-            'question_set_id': topicId,
+            'topic_id': topicId,
             'question': question,
             'answer': answer,
             'references': []

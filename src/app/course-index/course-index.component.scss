@@ -1,0 +1,9 @@
+.subject-cards {
+    display: flex;
+    flex-direction: row;
+
+    &__card {
+        display: flex;
+        margin-right: 10px;
+    }
+}

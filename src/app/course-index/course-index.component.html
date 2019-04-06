@@ -4,10 +4,12 @@
 
 <ng-template #courseIndex>
   <div *ngFor="let course of allCourses">
-      <h2>{{ course['title'] }}</h2>
-    
-      <div *ngFor="let subject of course.subjects">
+    <h2>{{ course['title'] }}</h2>
+
+    <div class="subject-cards">
+      <div *ngFor="let subject of course.subjects" class="subject-cards__card">
         <app-subject-card [subject]=subject [parentPath]="course['path']"></app-subject-card>
       </div>
     </div>
+  </div>
 </ng-template>
