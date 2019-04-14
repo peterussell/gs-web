@@ -7,19 +7,50 @@
     }
 
     .mat-card-title {
-        font-size: 1.1em;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0px;
         font-weight: 300;
-        margin-left: 0px !important;
+
+        .text {
+            flex: 1 1 auto;
+            margin-left: 0px !important;
+        }
+        
+        .expand-collapse {
+            flex: 0 0 auto;
+            margin: 0;
+            font-size: 0.7em;
+
+            .mat-flat-button {
+                font-weight: 100;
+                background-color: #eee !important;
+                color: #000;
+            }
+
+            i {
+                cursor: pointer;
+                font-size: 1.4em;
+                vertical-align: middle;
+                margin-top: -4px;       
+            }
+        }
     }
 }
 
 .mat-card-content {
     overflow: auto;
     height: 400px;
+    margin-top: 16px;
 
     &__sm {
+        margin-top: 8px;
         height: 140px;
     }
+}
+
+.hidden {
+    height: 0px;
 }
 
 .wrapper {

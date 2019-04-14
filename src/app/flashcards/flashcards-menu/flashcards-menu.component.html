@@ -1,9 +1,23 @@
 <mat-card ngClass.lt-md="mat-card__sm">
   <mat-card-title>
-    Topics (scroll for more)
+    <span class="text">Topics</span>
+    <span
+      class="expand-collapse"
+      fxHide.gt-sm="true">
+      <button mat-flat-button *ngIf="showTopicList(); else showTopics" (click)="toggleTopicListVisible()">
+        Hide
+        <i class="material-icons">keyboard_arrow_up</i>
+      </button>
+      <ng-template #showTopics>
+        <button mat-flat-button (click)="toggleTopicListVisible()">
+          Show
+          <i class="material-icons">keyboard_arrow_down</i>
+        </button>
+      </ng-template>
+    </span>
   </mat-card-title>
 
-  <mat-card-content ngClass.lt-md="mat-card-content__sm">
+  <mat-card-content ngClass.lt-md="mat-card-content__sm" [class.hidden]="!showTopicList()">
     <div class="wrapper" *ngIf="subject">
       <div
         class="item"

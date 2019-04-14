@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Subject } from '../../core/models/subject.model';
+import { ResponsiveService, ViewportSize } from '../../core/services/responsive.service';
 
 @Component({
   selector: 'app-flashcards-menu',
@@ -12,7 +13,9 @@ export class FlashcardsMenuComponent implements OnInit {
 
   @Output() topicSelected: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  private topicListVisible: boolean = false;
+
+  constructor(private responsiveService: ResponsiveService) { }
 
   ngOnInit() {
   }
@@ -26,5 +29,17 @@ export class FlashcardsMenuComponent implements OnInit {
 
   selectTopic(topicId: string) {
     this.topicSelected.emit(topicId);
+  }
+
+  toggleTopicListVisible() {
+    this.topicListVisible = !this.topicListVisible;
+    console.log(this.topicListVisible);
+  }
+
+  showTopicList() {
+    if (this.responsiveService.getViewportSize() === ViewportSize.Large) {
+      return true;
+    }
+    return this.topicListVisible;
   }
 }
