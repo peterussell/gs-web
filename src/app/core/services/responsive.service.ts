@@ -15,16 +15,21 @@ export class ResponsiveService {
         Breakpoints.TabletLandscape
     ];
 
+    private readonly smallViewportBreakpoints = [
+        Breakpoints.XSmall,
+        Breakpoints.Small
+    ];
+
     constructor(public breakpointObserver: BreakpointObserver) {
         // initial load
-        this.currentViewportSize = this.breakpointObserver.isMatched(this.largeViewportBreakpoints) ?
-            ViewportSize.Large : ViewportSize.Small;
+        this.currentViewportSize = this.breakpointObserver.isMatched(this.smallViewportBreakpoints) ?
+            ViewportSize.Small : ViewportSize.Large;
 
         // change events
         this.breakpointObserver
-            .observe(this.largeViewportBreakpoints)
+            .observe(this.smallViewportBreakpoints)
             .subscribe((state: BreakpointState) => {
-                this.currentViewportSize = state.matches ? ViewportSize.Large : ViewportSize.Small;
+                this.currentViewportSize = state.matches ? ViewportSize.Small : ViewportSize.Large;
                 this.onViewportChange.emit(this.currentViewportSize);
             }
         );

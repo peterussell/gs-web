@@ -1,5 +1,5 @@
 <div *ngIf="flashcardViewerQuestion; else loading">
-  <mat-card>
+  <mat-card ngClass.xs="mat-card--sm" ngClass.sm="mat-card--sm">
     <!-- Title -->
     <mat-card-title>
       <div class="actions-bar">
@@ -22,17 +22,17 @@
         </ng-template>
         -->
       </div>
-      <h4>
+      <h4 ngClass.xs="sm" ngClass.sm="sm">
         {{ flashcardViewerQuestion.topicTitle }} - {{ questionNumber }}/{{ numberOfQuestions }}
       </h4>
     </mat-card-title>
     <mat-card-subtitle>
-      <p>Syllabus reference: {{ flashcardViewerQuestion.question.syllabusRef }}</p>
+      <p ngClass.xs="sm" ngClass.sm="sm">Syllabus reference: {{ flashcardViewerQuestion.question.syllabusRef }}</p>
     </mat-card-subtitle>
 
     <!-- Question -->
     <mat-card-content *ngIf="isQuestionState()" (click)="toggleState()">
-      <div class="question">
+      <div class="question" ngClass.xs="question--sm" ngClass.sm="question--sm">
         {{ flashcardViewerQuestion.question.question }}
       </div>
 
@@ -43,12 +43,12 @@
     
     <!-- Answer -->
     <mat-card-content *ngIf="isAnswerState()" (click)="toggleState()">
-      <div class="answer">
+      <div class="answer" ngClass.xs="answer--sm" ngClass.sm="answer--sm">
         {{ flashcardViewerQuestion.question.answer }}<br>
       </div>
 
       <!-- References -->
-      <div class="references">
+      <div class="references" ngClass.xs="references--sm" ngClass.sm="references--sm">
         <span class="title">References:</span>
         <ul>
           <li *ngFor="let reference of sortReferences(flashcardViewerQuestion.question.references)">

@@ -33,11 +33,10 @@ export class FlashcardsMenuComponent implements OnInit {
 
   toggleTopicListVisible() {
     this.topicListVisible = !this.topicListVisible;
-    console.log(this.topicListVisible);
   }
 
   showTopicList() {
-    if (this.responsiveService.getViewportSize() === ViewportSize.Large) {
+    if (this.responsiveService.getViewportSize() !== ViewportSize.Small) {
       return true;
     }
     return this.topicListVisible;
