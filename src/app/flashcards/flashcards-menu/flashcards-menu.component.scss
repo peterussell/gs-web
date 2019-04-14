@@ -1,6 +1,25 @@
 .mat-card {
     margin-top: 5px;
     padding: 20px 20px 10px 20px;
+
+    &__sm {
+        padding: 5px auto;
+    }
+
+    .mat-card-title {
+        font-size: 1.1em;
+        font-weight: 300;
+        margin-left: 0px !important;
+    }
+}
+
+.mat-card-content {
+    overflow: auto;
+    height: 400px;
+
+    &__sm {
+        height: 140px;
+    }
 }
 
 .wrapper {
@@ -16,7 +35,7 @@
         flex: 1 1 auto;
         align-items: center;
         flex-direction: row;
-        padding: 6px 0 6px 8px;
+        padding: 6px 14px 6px 8px;
         margin: 3px 0;
         border-left: 2px solid #ddd;
         

@@ -5,12 +5,26 @@ i.material-icons {
 
 }
 
+.container-sm {
+    display: flex;
+    flex-direction: column;
+
+    .menu {
+        flex: 0 0 auto;
+        margin-bottom: 14px;
+    }
+
+    .viewer {
+        flex: 1 1 auto;
+    }
+}
+
 .container {
     display: flex;
     flex-direction: row;
 
     .menu {
-        flex: 0 0 220px;
+        flex: 0 0 300px;
         margin-right: 10px;
     }
 

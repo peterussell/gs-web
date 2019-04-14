@@ -1,16 +1,21 @@
-<mat-card>
-  <h3>Topics</h3>
+<mat-card ngClass.lt-md="mat-card__sm">
+  <mat-card-title>
+    <!-- <h3 ngClass.lt-md="h3__sm">Topics (scroll for more)</h3> -->
+    Topics (scroll for more)
+  </mat-card-title>
 
-  <div class="wrapper" *ngIf="subject">
-    <div
-      class="item"
-      *ngFor="let t of subject.topics"
-      (click)="selectTopic(t.topicId)"
-      [ngClass]="{'selected': isSelected(t.topicId)}">
-      <span class="question-title">{{ t.subTopic }} - {{ t.title }}</span>
-      <span class="question-counter">
-        <span class="question-counter__number">{{ t.questions.length }}</span>
-      </span>
+  <mat-card-content ngClass.lt-md="mat-card-content__sm">
+    <div class="wrapper" *ngIf="subject">
+      <div
+        class="item"
+        *ngFor="let t of subject.topics"
+        (click)="selectTopic(t.topicId)"
+        [ngClass]="{'selected': isSelected(t.topicId)}">
+        <span class="question-title">{{ t.subTopic }} - {{ t.title }}</span>
+        <span class="question-counter">
+          <span class="question-counter__number">{{ t.questions.length }}</span>
+        </span>
+      </div>
     </div>
-  </div>
+  </mat-card-content>
 </mat-card>
