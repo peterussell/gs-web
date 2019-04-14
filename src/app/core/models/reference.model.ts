@@ -1,5 +1,5 @@
 export class Reference {
     constructor(
-        public Text: string,
-        public Url: string) {}
+        public text: string,
+        public url: string) {}
 }

@@ -61,7 +61,7 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
   sortReferences(references: Array<Reference>): Array<Reference> {
     return references.sort((a, b) => {
       // Waypoints references should always come first
-      if (a.Text.toLowerCase().startsWith('waypoints')) {
+      if (a.text.toLowerCase().startsWith('waypoints')) {
         return -1;
       }
       return 1;
