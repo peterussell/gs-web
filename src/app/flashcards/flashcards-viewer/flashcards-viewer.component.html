@@ -120,17 +120,19 @@
                 </ng-template>
         
                 <div class="nav-buttons">
-                    <button mat-flat-button (click)="reloadTopic()">
+                    <button mat-flat-button (click)="reloadTopic()" style="margin-bottom: 8px;">
                         <i class="material-icons">refresh</i>
-                        Redo topic
+                        <span fxShow="false" fxShow.gt-sm="true">Redo topic</span>
+                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Redo</span>
                     </button>
                     <button
                         mat-flat-button (click)="goToNextTopic()" *ngIf="canGoToNextTopic()">
-                        Next topic >
+                        <span fxShow="false" fxShow.gt-sm="true">Next topic ></span>
+                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Next </span>
                     </button>
                     <button mat-flat-button (click)="goToCourseIndex()">
-                        <i class="material-icons">subject</i>
-                        Course Index</button>
+                        <i class="material-icons">subject</i> Course Index
+                    </button>
                 </div>
             </mat-card>
         </ng-template>
