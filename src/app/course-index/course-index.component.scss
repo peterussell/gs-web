@@ -1,9 +1,17 @@
+.wrapper {
+    max-width: 100%;
+
+    .content-wrapper {
+        max-width: 900px;
+    }
+}
+
 .subject-cards {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
 
     &__card {
         display: flex;
-        margin-right: 10px;
+        margin: 0 10px 10px 0;
     }
 }
