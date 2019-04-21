@@ -46,6 +46,7 @@ import { CourseIndexComponent } from './course-index/course-index.component';
 import { SubjectCardComponent } from './course-index/subject-card/subject-card.component';
 import { SubjectResolver } from './core/services/resolvers/subject-resolver.service';
 import { FlashcardsMenuComponent } from './flashcards/flashcards-menu/flashcards-menu.component';
+import { ChecklistHelperComponent } from './checklist-helper/checklist-helper.component';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { FlashcardsMenuComponent } from './flashcards/flashcards-menu/flashcards
     ContactComponent,
     CourseIndexComponent,
     SubjectCardComponent,
-    FlashcardsMenuComponent
+    FlashcardsMenuComponent,
+    ChecklistHelperComponent
   ],
   imports: [
     BrowserModule,
