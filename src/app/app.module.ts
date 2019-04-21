@@ -47,6 +47,7 @@ import { SubjectCardComponent } from './course-index/subject-card/subject-card.c
 import { SubjectResolver } from './core/services/resolvers/subject-resolver.service';
 import { FlashcardsMenuComponent } from './flashcards/flashcards-menu/flashcards-menu.component';
 import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.component';
+import { GsSnackbarComponent } from './gs-snackbar/gs-snackbar.component';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.compo
     CourseIndexComponent,
     SubjectCardComponent,
     FlashcardsMenuComponent,
-    FlashcardsFreeComponent
+    FlashcardsFreeComponent,
+    GsSnackbarComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +107,8 @@ import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.compo
   entryComponents: [
     ReportQuestionDialogComponent,
     AccountDialogComponent,
-    ActivateComponent
+    ActivateComponent,
+    GsSnackbarComponent
   ],
   bootstrap: [AppComponent]
 })

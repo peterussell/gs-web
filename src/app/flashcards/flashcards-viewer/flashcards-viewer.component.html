@@ -1,5 +1,5 @@
 <div ngClass.lt-md="container-sm" ngClass.gt-sm="container">
-    <div class="menu" *ngIf="showMenu()">
+    <div class="menu" *ngIf="!isFreeMode()">
         <app-flashcards-menu
             [subject]="subject"
             [selectedTopicId]="currentTopicId"
@@ -16,14 +16,14 @@
                         <i class="material-icons">fast_rewind</i>
                     </span>
                 </button>
-                <span *ngIf="!isCurrentQuestionInReviewSet(); else notSaved">
+                <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
                     <button mat-flat-button (click)="saveForReview()" [color]="'review'">
                         <i class="material-icons">playlist_add</i>
                         <span fxShow="false" fxShow.gt-sm="true">Save for review</span>
                         <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Review</span>
                     </button>
                 </span>
-                <ng-template #notSaved>
+                <ng-template #saved>
                     <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
                         <i class="material-icons">playlist_add_check</i>
                         <span fxShow="false" fxShow.gt-sm="true">Saved for review</span>
@@ -65,14 +65,14 @@
                         <i class="material-icons">fast_rewind</i>
                     </span>
                 </button>
-                <span *ngIf="!isCurrentQuestionInReviewSet(); else notSaved">
+                <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
                     <button mat-flat-button (click)="saveForReview()" [color]="'review'">
                         <i class="material-icons">playlist_add</i>
                         <span fxShow="false" fxShow.gt-sm="true">Save for review</span>
                         <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Review</span>
                     </button>
                 </span>
-                <ng-template #notSaved>
+                <ng-template #saved>
                     <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
                         <i class="material-icons">playlist_add_check</i>
                         <span fxShow="false" fxShow.gt-sm="true">Saved for review</span>

@@ -8,6 +8,8 @@ import { Subject } from '../../core/models/subject.model';
 import { Topic } from '../../core/models/topic.model';
 import { Router } from '@angular/router';
 import { FlashcardsViewerMode } from '../flashcards-shared';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { GsSnackbarComponent } from '../../gs-snackbar/gs-snackbar.component';
 
 @Component({
   selector: 'app-flashcards-viewer',
@@ -34,22 +36,41 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     return ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
   };
 
-  constructor(private router: Router, private apiService: ApiService) {
+  constructor(
+    private router: Router,
+    private apiService: ApiService,
+    private snackBar: MatSnackBar) {
     this.questions = new Array<FlashcardsViewerQuestion>();
   }
 
   ngOnInit() {
-    this.loadQuestions();
-    this.initialiseReviewSets();
+    this.doModeDependentInit();
+  }
+  
+  doModeDependentInit() {
+    if (this.viewerMode === FlashcardsViewerMode.Free) {
+      this.initFreeMode();
+    } else if (this.viewerMode === FlashcardsViewerMode.Premium) {
+      this.initPremiumMode();
+    }
     this.currentQuestionIndex = 0;
     this.currentState = FlashcardsViewerState.InProgress;
+  }
+
+  initFreeMode() {
+    // TODO
+  }
+
+  initPremiumMode() {
+    this.loadQuestions();
+    this.initialiseReviewSets();
   }
 
   ngOnChanges() {
   }
 
-  showMenu(): boolean {
-    return this.viewerMode === FlashcardsViewerMode.Premium;
+  isFreeMode(): boolean {
+    return this.viewerMode === FlashcardsViewerMode.Free;
   }
 
   initialiseReviewSets() {
@@ -134,6 +155,21 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   saveForReview() {
+    if (this.isFreeMode()) {
+      this.snackBar.openFromComponent(
+        GsSnackbarComponent,
+        {
+          duration: 5000,
+          data: {
+            message: 'Become a GroundSchool member to access Review Sets',
+            linkText: 'Learn more',
+            linkUrl: '/membership'
+          },
+          panelClass: 'gs-snackbar'
+        }
+      );
+      return;
+    }
     this.getCurrentReviewSet().add(this.questions[this.currentQuestionIndex]);
   }
 
