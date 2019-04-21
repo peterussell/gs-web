@@ -23,10 +23,17 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   @Output() complete: EventEmitter<any> = new EventEmitter<any>();
 
+  // Premium
   public questions: Array<FlashcardsViewerQuestion>;
   public forReview: { [topicId: string]: Set<FlashcardsViewerQuestion> };
   public currentQuestionIndex: number;
   public currentTopicId: string;
+
+  // Free
+  public topicIdsSeen: Array<string> = new Array<string>();
+  public questionIdsSeen: Array<string> = new Array<string>();
+  public currentQuestion: Question;
+
   public currentState: FlashcardsViewerState;
   
   get progress(): number {
@@ -58,7 +65,19 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   initFreeMode() {
-    // TODO
+    // free tier - get a random question, include all topics in this subject
+    const topicIdsToInclude: Array<string> = new Array<string>();
+    this.subject.topics.forEach((t: Topic) => {
+      topicIdsToInclude.push(t.topicId);
+    });
+
+    this.apiService.getRandomQuestion(
+      topicIdsToInclude,
+      this.topicIdsSeen,
+      this.questionIdsSeen).subscribe((res: any) => {
+        this.currentQuestion = res.body.Question;
+        console.log(this.currentQuestion);
+    });
   }
 
   initPremiumMode() {
