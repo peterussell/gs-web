@@ -1,10 +1,17 @@
-<mat-card [routerLink]="['/', parentPath, subject.Path]">
+<mat-card>
   <mat-card-header>
     <mat-card-title>
-      <h4>{{ subject.Title }}</h4>
+      <h3>{{ subject.Title }}</h3>
     </mat-card-title>
     <mat-card-subtitle>
+      <mat-chip-list><mat-chip>PREMIUM</mat-chip></mat-chip-list>
     </mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="200">
+  <img
+    [routerLink]="['/', parentPath, subject.Path]"
+    mat-card-image
+    src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="140">
+  <mat-card-actions>
+    <button mat-button [routerLink]="['/', parentPath, subject.Path, 'free']">(FREE VERSION)</button>
+  </mat-card-actions>
 </mat-card>

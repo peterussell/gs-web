@@ -3,15 +3,26 @@
 
     .content-wrapper {
         max-width: 900px;
+        background-color: #fff;
     }
+}
+
+.mat-card {
+    -webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
 }
 
 .subject-cards {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 
     &__card {
         display: flex;
         margin: 0 10px 10px 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
     }
 }

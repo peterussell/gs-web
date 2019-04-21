@@ -170,10 +170,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       fvq.TopicTitle = selectedTopic.Title;
       this.questions.push(fvq);
     }
-
-    console.log(this.currentQuestionIndex);
     this.currentQuestionIndex++;
-    console.log(this.currentQuestionIndex);
   }
 
   getNumberOfQuestions() {
