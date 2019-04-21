@@ -17,7 +17,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getCourses().subscribe(res => {
-      this.courses = this.sortCourses(res.courses);
+      this.courses = this.sortCourses(res.Courses);
     },
     (error: any) => {
       console.log(error.message);
@@ -26,16 +26,16 @@ export class SidebarComponent implements OnInit {
 
   sortCourses(courses: Array<Course>): Array<Course> {
     return courses.sort((a, b) => {
-      if (a.order > b.order) return 1;
-      if (a.order < b.order) return -1;
+      if (a.Order > b.Order) return 1;
+      if (a.Order < b.Order) return -1;
       return 0;
     });
   }
 
   sortSubjects(subjects: Array<Subject>): Array<Subject> {
     return subjects.sort((a, b) => {
-      if (a.title > b.title) return 1;
-      if (a.title < b.title) return -1;
+      if (a.Title > b.Title) return 1;
+      if (a.Title < b.Title) return -1;
       return 0;
     });
   }

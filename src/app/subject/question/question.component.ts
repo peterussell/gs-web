@@ -19,8 +19,8 @@ export class QuestionComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-    this.questionText = this.insertDegreeSymbols(this.question.question);
-    this.answerText = this.insertDegreeSymbols(this.question.answer);
+    this.questionText = this.insertDegreeSymbols(this.question.Question);
+    this.answerText = this.insertDegreeSymbols(this.question.Answer);
   }
 
   // TODO: move this to a util class
@@ -30,7 +30,7 @@ export class QuestionComponent implements OnInit {
 
   sortReferences(references: Array<Reference>): Array<Reference> {
     return references.sort((a, b) => {
-      if (a.text.toLowerCase().startsWith('waypoints')) {
+      if (a.Text.toLowerCase().startsWith('waypoints')) {
         return -1;
       } else {
         return 1;

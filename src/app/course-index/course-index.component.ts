@@ -16,7 +16,7 @@ export class CourseIndexComponent implements OnInit {
   ngOnInit() {
     this.apiService.getCourses().subscribe(
       (data) => {
-        this.allCourses = data.courses.sort((a, b) => {
+        this.allCourses = data.Courses.sort((a, b) => {
           if (a.order > b.order) return 1;
           if (a.order < b.order) return -1;
           return 0;

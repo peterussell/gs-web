@@ -30,7 +30,7 @@ export class ReportQuestionDialogComponent implements OnInit {
 
   onSubmit() {
     this.apiService.reportQuestion(
-      this.data.question.questionId,
+      this.data.question.QuestionId,
       this.reportQuestionForm.get('reason').value,
       this.reportQuestionForm.get('description').value,
       this.reportQuestionForm.get('email').value

@@ -32,7 +32,6 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   // Free
   public topicIdsSeen: Array<string> = new Array<string>();
   public questionIdsSeen: Array<string> = new Array<string>();
-  public currentQuestion: Question;
 
   public currentState: FlashcardsViewerState;
   
@@ -65,19 +64,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   initFreeMode() {
-    // free tier - get a random question, include all topics in this subject
-    const topicIdsToInclude: Array<string> = new Array<string>();
-    this.subject.topics.forEach((t: Topic) => {
-      topicIdsToInclude.push(t.topicId);
-    });
-
-    this.apiService.getRandomQuestion(
-      topicIdsToInclude,
-      this.topicIdsSeen,
-      this.questionIdsSeen).subscribe((res: any) => {
-        this.currentQuestion = res.body.Question;
-        console.log(this.currentQuestion);
-    });
+    this.getRandomQuestion();
   }
 
   initPremiumMode() {
@@ -94,12 +81,13 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   initialiseReviewSets() {
     this.forReview = {};
-    this.subject.topics.forEach((t: Topic) => {
-      this.forReview[t.topicId] = new Set<FlashcardsViewerQuestion>();
+    this.subject.Topics.forEach((t: Topic) => {
+      this.forReview[t.TopicId] = new Set<FlashcardsViewerQuestion>();
     });
   }
 
   getReviewSet(topicId: string) {
+    if (this.forReview === undefined) return undefined;
     if (topicId in this.forReview) {
       return this.forReview[topicId];
     }
@@ -109,30 +97,65 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     return this.getReviewSet(this.currentTopicId);
   }
 
+  getRandomQuestion() {
+    const topicIdsToInclude: Array<string> = new Array<string>();
+    this.subject.Topics.forEach((t: Topic) => {
+      topicIdsToInclude.push(t.TopicId);
+    });
+
+    this.apiService.getRandomQuestion(
+      topicIdsToInclude,
+      this.topicIdsSeen,
+      this.questionIdsSeen).subscribe((res: any) => {
+        if (res['status'] === 200) {
+          const question = res['body'].Question;
+          if (question === undefined)
+          {
+            return;
+          }
+          
+          const q = question;
+
+          let fvQuestion = new FlashcardsViewerQuestion();
+          fvQuestion.Question = q;
+          fvQuestion.SubjectTitle = res['body'].SubjectTitle;
+          fvQuestion.TopicTitle = res['body'].TopicTitle;
+
+          this.questions.push(fvQuestion);
+          this.questionIdsSeen.push(question.QuestionId);
+          this.topicIdsSeen.push(question.TopicId);
+        }
+      },
+      (error) => {
+        console.log(error); // TODO: log this properly
+      }
+    );
+  }
+
   loadQuestions(selectedTopicId?: string) {
-    if (!this.subject || this.subject.topics.length === 0) return;
+    if (!this.subject || this.subject.Topics.length === 0) return;
 
     if (selectedTopicId === undefined || selectedTopicId === '') {
       // default to the first topic
-      selectedTopicId = this.subject.topics[0].topicId;
+      selectedTopicId = this.subject.Topics[0].TopicId;
     }
 
-    const selectedTopic = this.subject.topics.find((t) => {
-      return t.topicId === selectedTopicId;
+    const selectedTopic = this.subject.Topics.find((t) => {
+      return t.TopicId === selectedTopicId;
     });
 
     // no topic found matching the specified topic id
     if (selectedTopic === undefined) { return; }
     
-    this.setCurrentTopic(selectedTopic.topicId);
+    this.setCurrentTopic(selectedTopic.TopicId);
     this.questions = new Array<FlashcardsViewerQuestion>();
 
-    for (let questionId in selectedTopic.questions) {
-      let q = selectedTopic.questions[questionId];
+    for (let questionId in selectedTopic.Questions) {
+      let q = selectedTopic.Questions[questionId];
       let fvq = new FlashcardsViewerQuestion();
-      fvq.question = q;
-      fvq.subjectTitle = this.subject.title;
-      fvq.topicTitle = selectedTopic.title;
+      fvq.Question = q;
+      fvq.SubjectTitle = this.subject.Title;
+      fvq.TopicTitle = selectedTopic.Title;
       this.questions.push(fvq);
     }
   }
@@ -166,8 +189,11 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     const q = this.questions[this.currentQuestionIndex];
     if (q === undefined) { return false; }
 
+    let crs = this.getCurrentReviewSet();
+    if (crs === undefined) return false;
+
     for (let reviewQuestion of Array.from(this.getCurrentReviewSet())) {
-      if (reviewQuestion.question.questionId === q.question.questionId) {
+      if (reviewQuestion.Question.QuestionId === q.Question.QuestionId) {
         return true;
       }
     }
@@ -195,7 +221,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   removeFromForReview() {
     const q = this.questions[this.currentQuestionIndex];
     this.getCurrentReviewSet().forEach((reviewQuestion: FlashcardsViewerQuestion) => {
-      if (reviewQuestion.question.questionId === q.question.questionId) {
+      if (reviewQuestion.Question.QuestionId === q.Question.QuestionId) {
         this.getCurrentReviewSet().delete(reviewQuestion);
       }
     });
@@ -241,17 +267,17 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   getCurrentTopicIndex() {
-    return this.subject.topics.indexOf(
-      this.subject.topics.find(t => { return t.topicId === this.currentTopicId })
+    return this.subject.Topics.indexOf(
+      this.subject.Topics.find(t => { return t.TopicId === this.currentTopicId })
     );
   }
 
   canGoToNextTopic() {
-    return this.getCurrentTopicIndex() < this.subject.topics.length-1;
+    return this.getCurrentTopicIndex() < this.subject.Topics.length-1;
   }
 
   goToNextTopic() {
-    this.setCurrentTopic(this.subject.topics[this.getCurrentTopicIndex()+1].topicId);
+    this.setCurrentTopic(this.subject.Topics[this.getCurrentTopicIndex()+1].TopicId);
     this.loadQuestions(this.currentTopicId);
     this.currentQuestionIndex = 0;
     this.currentState = FlashcardsViewerState.InProgress;
@@ -263,9 +289,9 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 }
 
 export class FlashcardsViewerQuestion {
-  public question: Question;
-  public subjectTitle: string;
-  public topicTitle: string;
+  public Question: Question;
+  public SubjectTitle: string;
+  public TopicTitle: string;
 }
 
 enum FlashcardsViewerState {

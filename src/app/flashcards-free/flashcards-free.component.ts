@@ -27,16 +27,16 @@ export class FlashcardsFreeComponent implements OnInit {
 
     this.apiService.getCourses().subscribe((res) => {
       // find the matching course
-      res.courses.forEach((c: Course) => {
-          if (c.path === coursePath) {
+      res.Courses.forEach((c: Course) => {
+          if (c.Path === coursePath) {
               this.currentCourse = c;
               return;
           }
       });
 
       // find the matching subject
-      this.currentCourse.subjects.forEach((s: Subject) => {
-          if (s.path === subjectPath) {
+      this.currentCourse.Subjects.forEach((s: Subject) => {
+          if (s.Path === subjectPath) {
               this.currentSubject = s;
               return;
           }

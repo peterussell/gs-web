@@ -41,12 +41,12 @@ export class QuestionEditorComponent implements OnInit {
     });
 
     this.apiService.getCourses().subscribe((response: any) => {
-      let courses: Array<Course> = response.courses;
+      let courses: Array<Course> = response.Courses;
 
       // TODO: extract this to a utility class, eg. sortCoursesByOrdering(..)
       this.courses = courses.sort((a, b) => {
-        if (a.order < b.order) return -1;
-        if (a.order > b.order) return 1;
+        if (a.Order < b.Order) return -1;
+        if (a.Order > b.Order) return 1;
         return 0;
       });
 
@@ -89,15 +89,15 @@ export class QuestionEditorComponent implements OnInit {
   addSelectedTopic() {
     // Don't add topics we're already updating
     if (this.topicsToUpdate.some(
-      q => q.topicId === this.selectedTopic.topicId)
+      q => q.topicId === this.selectedTopic.TopicId)
     ) {
       return;
     }
 
     let toUpdate = new TopicToUpdate();
-    toUpdate.topicId = this.selectedTopic.topicId;
+    toUpdate.topicId = this.selectedTopic.TopicId;
     toUpdate.description =
-      `${this.selectedCourse.title} > ${this.selectedSubject.title} > ${this.selectedTopic.title}`;
+      `${this.selectedCourse.Title} > ${this.selectedSubject.Title} > ${this.selectedTopic.Title}`;
     this.topicsToUpdate.push(toUpdate);
   }
 
@@ -206,8 +206,8 @@ export class QuestionEditorComponent implements OnInit {
     this.selectedCourse = course;
     // TODO: extract to utility class
     this.subjects = this.selectedCourse.subjects.sort((a, b) => {
-      if (a.title < b.title) return -1;
-      if (a.title > b.title) return 1;
+      if (a.Title < b.Title) return -1;
+      if (a.Title > b.Title) return 1;
       return 0;
     });
     if (this.selectedCourse.subjects !== null && this.selectedCourse.subjects.length > 0) {
@@ -220,8 +220,8 @@ export class QuestionEditorComponent implements OnInit {
     this.selectedSubject = subject;
     // TODO: extract to utility class
     this.topics = this.selectedSubject.topics.sort((a, b) => {
-      if (a.title < b.title) return -1;
-      if (a.title > b.title) return 1;
+      if (a.Title < b.Title) return -1;
+      if (a.Title > b.Title) return 1;
       return 0;
     });
     if (this.selectedSubject.topics !== null && this.selectedSubject.topics.length > 0) {

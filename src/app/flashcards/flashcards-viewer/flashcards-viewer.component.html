@@ -101,13 +101,13 @@
                     <li *ngFor="let q of getCurrentReviewSet()">
                         <div class="syllabus-ref">
                             <span class="syllabus-ref__title">Syllabus Ref</span>
-                            {{ q.question.syllabusRef }}
+                            {{ q.Question.SyllabusRef }}
                         </div>
                         <div class="question">
-                            <div class="question__question">{{ q.question.question }}</div>
+                            <div class="question__question">{{ q.Question.Question }}</div>
                             <div class="question__answer">
                                 <div class="question__answer--icon"><i class="material-icons">keyboard_arrow_right</i></div>
-                                <div class="question__answer--text">{{ q.question.answer }}</div>
+                                <div class="question__answer--text">{{ q.Question.Answer }}</div>
                             </div>
                         </div>
                     </li>
