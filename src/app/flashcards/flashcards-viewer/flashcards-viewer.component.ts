@@ -20,7 +20,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   @Input() subject: Subject;
   @Input() reviewSet: QuestionSet;
   @Input() viewerMode: FlashcardsViewerMode; // TODO: validate premium against cognito/dynamodb credentials
-
+  
   @Output() complete: EventEmitter<any> = new EventEmitter<any>();
 
   // Premium
@@ -30,17 +30,29 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   public currentTopicId: string;
 
   // Free
+  private QUESTIONS_PER_SET: number = 20;
   public topicIdsSeen: Array<string> = new Array<string>();
   public questionIdsSeen: Array<string> = new Array<string>();
 
   public currentState: FlashcardsViewerState;
   
-  get progress(): number {
-    if (this.questions === undefined || this.questions.length === 0) {
-      return 0;
+  get progress() : number {
+    if (this.questions === undefined || this.questions.length === 0) { return 0; }
+
+    if (this.viewerMode === FlashcardsViewerMode.Free) {
+      return this.getProgressForFreeMode();
+    } else if (this.viewerMode === FlashcardsViewerMode.Premium) {
+      return this.getProgressForPremiumMode();
     }
-    return ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
   };
+
+  private getProgressForFreeMode() : number {
+    return ((this.currentQuestionIndex + 1) / this.QUESTIONS_PER_SET) * 100;
+  }
+
+  private getProgressForPremiumMode() : number {
+    return ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
+  }
 
   constructor(
     private router: Router,
@@ -50,16 +62,16 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    this.doModeDependentInit();
+    this.initialise();
   }
   
-  doModeDependentInit() {
+  initialise() {
+    this.currentQuestionIndex = -1;
     if (this.viewerMode === FlashcardsViewerMode.Free) {
       this.initFreeMode();
     } else if (this.viewerMode === FlashcardsViewerMode.Premium) {
       this.initPremiumMode();
     }
-    this.currentQuestionIndex = 0;
     this.currentState = FlashcardsViewerState.InProgress;
   }
 
@@ -113,17 +125,17 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
           {
             return;
           }
-          
-          const q = question;
 
           let fvQuestion = new FlashcardsViewerQuestion();
-          fvQuestion.Question = q;
+          fvQuestion.Question = question;
           fvQuestion.SubjectTitle = res['body'].SubjectTitle;
           fvQuestion.TopicTitle = res['body'].TopicTitle;
 
           this.questions.push(fvQuestion);
           this.questionIdsSeen.push(question.QuestionId);
           this.topicIdsSeen.push(question.TopicId);
+
+          this.currentQuestionIndex++;
         }
       },
       (error) => {
@@ -158,6 +170,18 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       fvq.TopicTitle = selectedTopic.Title;
       this.questions.push(fvq);
     }
+
+    console.log(this.currentQuestionIndex);
+    this.currentQuestionIndex++;
+    console.log(this.currentQuestionIndex);
+  }
+
+  getNumberOfQuestions() {
+    if (this.viewerMode === FlashcardsViewerMode.Free) {
+      return this.QUESTIONS_PER_SET;
+    } else if (this.viewerMode === FlashcardsViewerMode.Premium) {
+      return this.questions.length;
+    }
   }
 
   onMenuTopicSelected(topicId: string) {
@@ -181,6 +205,19 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   canGoToNextQuestion(): boolean {
+    if (this.viewerMode === FlashcardsViewerMode.Free) {
+      return this.canGoToNextQuestionFreeMode();
+    } else if (this.viewerMode === FlashcardsViewerMode.Premium) {
+      return this.canGoToNextQuestionPremiumMode();
+    }
+  }
+
+  canGoToNextQuestionFreeMode(): boolean {
+    return this.questions.length > 0 &&
+      this.currentQuestionIndex < (this.QUESTIONS_PER_SET - 1);
+  }
+
+  canGoToNextQuestionPremiumMode(): boolean {
     return this.questions.length > 0 &&
       this.currentQuestionIndex < (this.questions.length -1);
   }
@@ -206,7 +243,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
         {
           duration: 5000,
           data: {
-            message: 'Become a GroundSchool member to access Review Sets',
+            message: 'Become a GroundSchool NZ premium member to access Review Sets',
             linkText: 'Learn more',
             linkUrl: '/membership'
           },
@@ -232,6 +269,23 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   goToNextQuestion() {
+    if (!this.canGoToNextQuestion()) {
+      this.showResults();
+      return;
+    }
+
+    if (this.viewerMode === FlashcardsViewerMode.Free) {
+      return this.goToNextQuestionFreeMode();
+    } else if (this.viewerMode === FlashcardsViewerMode.Premium) {
+      return this.goToNextQuestionPremiumMode();
+    }
+  }
+
+  goToNextQuestionFreeMode() {
+    this.getRandomQuestion();
+  }
+
+  goToNextQuestionPremiumMode() {
     if (this.canGoToNextQuestion()) {
       this.currentQuestionIndex++;
     } else {

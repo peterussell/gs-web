@@ -53,7 +53,7 @@
             <app-flashcards-card
                 [flashcardViewerQuestion]="questions[currentQuestionIndex]"
                 [questionNumber]="currentQuestionIndex+1"
-                [numberOfQuestions]="questions.length">
+                [numberOfQuestions]="getNumberOfQuestions()">
             </app-flashcards-card>
         
             <div class="nav-buttons">

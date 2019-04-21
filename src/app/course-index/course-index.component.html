@@ -8,12 +8,12 @@
 
         <mat-card *ngFor="let course of allCourses">
           <mat-card-title>
-              <h2>{{ course['title'] }} Subjects</h2>
+              <h2>{{ course.Title }} Subjects</h2>
           </mat-card-title>
           <mat-card-content>
               <div class="subject-cards">
-                <div *ngFor="let subject of course.subjects" class="subject-cards__card">
-                  <app-subject-card [subject]=subject [parentPath]="course['path']"></app-subject-card>
+                <div *ngFor="let subject of course.Subjects" class="subject-cards__card">
+                  <app-subject-card [subject]=subject [parentPath]="course.Path"></app-subject-card>
                 </div>
               </div>
           </mat-card-content>
