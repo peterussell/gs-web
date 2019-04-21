@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 export class FlashcardsViewerComponent implements OnInit, OnChanges {
   @Input() subject: Subject;
   @Input() reviewSet: QuestionSet;
+  @Input() viewerMode: FlashcardsViewerMode;
 
   @Output() complete: EventEmitter<any> = new EventEmitter<any>();
 

@@ -8,6 +8,7 @@
     <div *ngIf="isViewerState()" class="viewer">
       <app-flashcards-viewer
         [subject]="currentSubject"
+        [viewerMode]="'premium'"
         (complete)="onViewerComplete()">
       </app-flashcards-viewer>
     </div>
