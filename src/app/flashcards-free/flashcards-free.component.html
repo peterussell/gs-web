@@ -8,7 +8,7 @@
       <div *ngIf="isViewerState()" class="viewer">
         <app-flashcards-viewer
           [subject]="currentSubject"
-          [viewerMode]="'free'"
+          [viewerMode]="viewerMode"
           (complete)="onViewerComplete()">
         </app-flashcards-viewer>
       </div>

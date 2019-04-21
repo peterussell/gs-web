@@ -7,6 +7,7 @@ import { QuestionSet } from '../../core/models/question-set.model';
 import { Subject } from '../../core/models/subject.model';
 import { Topic } from '../../core/models/topic.model';
 import { Router } from '@angular/router';
+import { FlashcardsViewerMode } from '../flashcards-shared';
 
 @Component({
   selector: 'app-flashcards-viewer',
@@ -16,7 +17,7 @@ import { Router } from '@angular/router';
 export class FlashcardsViewerComponent implements OnInit, OnChanges {
   @Input() subject: Subject;
   @Input() reviewSet: QuestionSet;
-  @Input() viewerMode: FlashcardsViewerMode;
+  @Input() viewerMode: FlashcardsViewerMode; // TODO: validate premium against cognito/dynamodb credentials
 
   @Output() complete: EventEmitter<any> = new EventEmitter<any>();
 
@@ -45,6 +46,10 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
+  }
+
+  showMenu(): boolean {
+    return this.viewerMode === FlashcardsViewerMode.Premium;
   }
 
   initialiseReviewSets() {

@@ -1,5 +1,5 @@
 <div ngClass.lt-md="container-sm" ngClass.gt-sm="container">
-    <div class="menu">
+    <div class="menu" *ngIf="showMenu()">
         <app-flashcards-menu
             [subject]="subject"
             [selectedTopicId]="currentTopicId"

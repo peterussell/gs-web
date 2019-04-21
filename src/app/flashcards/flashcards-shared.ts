@@ -1,4 +1,4 @@
-enum FlashcardsViewerMode {
-    Free = 'free',
-    Premium = 'premium'
+export enum FlashcardsViewerMode {
+    Free,
+    Premium
 };

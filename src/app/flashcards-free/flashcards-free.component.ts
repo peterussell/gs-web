@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../core/services/api.service';
 import { Course } from '../core/models/course.model';
 import { Subject } from '../core/models/subject.model';
+import { FlashcardsViewerMode } from '../flashcards/flashcards-shared';
 
 @Component({
   selector: 'app-flashcards-free',
@@ -11,6 +12,8 @@ import { Subject } from '../core/models/subject.model';
 })
 export class FlashcardsFreeComponent implements OnInit {
   private currentState: FlashcardsFreeState;
+  private viewerMode: FlashcardsViewerMode = FlashcardsViewerMode.Free;
+
   private currentCourse: Course;
   private currentSubject: Subject;
 

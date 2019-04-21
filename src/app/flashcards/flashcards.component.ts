@@ -9,6 +9,7 @@ import { Topic } from '../core/models/topic.model';
 import { GSUtils } from '../core/utils/utils';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
+import { FlashcardsViewerMode } from './flashcards-shared';
 
 @Component({
   selector: 'app-flashcards',
@@ -18,6 +19,7 @@ import 'rxjs/add/observable/forkJoin';
 export class FlashcardsComponent implements OnInit {
   @Input() initialState: FlashcardsState;
   private currentState: FlashcardsState = FlashcardsState.ShowViewer; // TODO: possibly deprecate
+  private viewerMode: FlashcardsViewerMode = FlashcardsViewerMode.Premium;
 
   public currentCourse: Course;
   public currentSubject: Subject;
