@@ -4,10 +4,10 @@ import { Reference } from "./reference.model";
 export class Question {
     
     constructor(
-        public questionId: string,
-        public question: string,
-        public answer: string,
-        public references: Array<Reference>,
-        public syllabusRef: string,
-        public topicId?: string) {}
+        public QuestionId: string,
+        public Question: string,
+        public Answer: string,
+        public References: Array<Reference>,
+        public SyllabusRef: string,
+        public TopicId?: string) {}
 }

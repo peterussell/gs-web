@@ -4,11 +4,11 @@ export class Subject {
     public topics: Array<Topic>;
     
     constructor(
-        public courseId: string,
-        public subjectId: string,
-        public title: string,
-        public path: string,
-        topics: Array<Topic>) {
-            this.topics = topics.sort();
+        public SourseId: string,
+        public SubjectId: string,
+        public Title: string,
+        public Path: string,
+        public Topics: Array<Topic>) {
+            this.topics = Topics.sort();
         }
 }

@@ -44,11 +44,11 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     if (this.flashcardViewerQuestion !== undefined) {
-      this.flashcardViewerQuestion.question.question =
-        this.insertDegreeSymbols(this.flashcardViewerQuestion.question.question);
+      this.flashcardViewerQuestion.Question.Question =
+        this.insertDegreeSymbols(this.flashcardViewerQuestion.Question.Question);
 
-      this.flashcardViewerQuestion.question.answer = 
-        this.insertDegreeSymbols(this.flashcardViewerQuestion.question.answer);
+      this.flashcardViewerQuestion.Question.Answer = 
+        this.insertDegreeSymbols(this.flashcardViewerQuestion.Question.Answer);
     }
     this.currentState = FlashcardViewerState.Question;
   }
@@ -61,7 +61,7 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
   sortReferences(references: Array<Reference>): Array<Reference> {
     return references.sort((a, b) => {
       // Waypoints references should always come first
-      if (a.text.toLowerCase().startsWith('waypoints')) {
+      if (a.Text.toLowerCase().startsWith('waypoints')) {
         return -1;
       }
       return 1;
@@ -109,7 +109,7 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
     this.apiService.addToReviewSet(
       this.currentUser['username'],
       this.reviewSet.QuestionSetId,
-      this.flashcardViewerQuestion.question.questionId
+      this.flashcardViewerQuestion.Question.QuestionId
     );
   }
 
@@ -120,7 +120,7 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
     this.apiService.removeFromReviewSet(
       this.currentUser['username'],
       this.reviewSet.QuestionSetId,
-      this.flashcardViewerQuestion.question.questionId
+      this.flashcardViewerQuestion.Question.QuestionId
     );
   }
 

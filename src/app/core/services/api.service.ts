@@ -8,7 +8,8 @@ import { QuestionSet } from "../models/question-set.model";
 @Injectable()
 export class ApiService {
     private readonly basePath = 'http://localhost:4200/assets';
-    private readonly awsBasePath = 'https://wbr0qbew2b.execute-api.us-west-2.amazonaws.com/prod/v2';
+    private readonly awsBasePath_v1 = 'https://wbr0qbew2b.execute-api.us-west-2.amazonaws.com/prod/v1';
+    private readonly awsBasePath_v2 = 'https://wbr0qbew2b.execute-api.us-west-2.amazonaws.com/prod/v2';
     private httpOptions;
 
     private readonly coursesRelPath = 'courses';
@@ -19,6 +20,7 @@ export class ApiService {
     private readonly addQuestionRelPath = 'question';
     private readonly reportQuestionRelPath = 'report-question';
     private readonly memberInfoRelPath = 'member';
+    private readonly randomQuestionRelPath = 'question/random';
 
     constructor(private http: HttpClient) {
         this.httpOptions = {
@@ -30,15 +32,15 @@ export class ApiService {
     }
 
     public getCourses(): Observable<any> {
-        return this.http.get(`${this.awsBasePath}/${this.coursesRelPath}`);
+        return this.http.get(`${this.awsBasePath_v2}/${this.coursesRelPath}`);
     }
 
     public getQuestions(topicId: string): Observable<any> {
-        return this.http.get(`${this.awsBasePath}/${this.topicRelPath}/${topicId}`);
+        return this.http.get(`${this.awsBasePath_v2}/${this.topicRelPath}/${topicId}`);
     }
 
     public getReviewSetForUser(userId: string): Observable<QuestionSet> {
-        return this.http.get<QuestionSet>(`${this.awsBasePath}/${this.memberInfoRelPath}/${userId}/review-sets`)
+        return this.http.get<QuestionSet>(`${this.awsBasePath_v2}/${this.memberInfoRelPath}/${userId}/review-sets`)
     }
 
     public addToReviewSet(userId: string, questionSetId: string, questionId: string): Observable<any> {
@@ -61,15 +63,18 @@ export class ApiService {
             'topicsAlreadySeen': topicIdsSeen,
             'questionsAlreadySeen': questionIdsSeen
         };
+
+        console.log(`${this.awsBasePath_v2}/${this.randomQuestionRelPath}`);
+
         return this.http.post(
-            `${this.awsBasePath}/${this.flashcardsRelPath}`, body, this.httpOptions
+            `${this.awsBasePath_v2}/${this.randomQuestionRelPath}`, body, this.httpOptions
         );
     }
 
     public registerInterest(email: string): Observable<any> {
         const body = { 'email': email };
         return this.http.post<RegisterInterestResponse>(
-            `${this.awsBasePath}/${this.registerInterestRelPath}`, body, this.httpOptions
+            `${this.awsBasePath_v1}/${this.registerInterestRelPath}`, body, this.httpOptions
         );
     }
 
@@ -82,12 +87,12 @@ export class ApiService {
             'references': []
         };
         references.forEach(r => {
-            if (r.text === null) { return; }
-            body['references'].push({ 'text': r.text, 'url': r.url });
+            if (r.Text === null) { return; }
+            body['references'].push({ 'text': r.Text, 'url': r.Url });
         });
 
         return this.http.post<any>(
-            `${this.awsBasePath}/${this.addQuestionRelPath}`, body, this.httpOptions
+            `${this.awsBasePath_v1}/${this.addQuestionRelPath}`, body, this.httpOptions
         );
     }
 
@@ -101,7 +106,7 @@ export class ApiService {
         };
 
         return this.http.post<any>(
-            `${this.awsBasePath}/${this.reportQuestionRelPath}`, body, this.httpOptions
+            `${this.awsBasePath_v1}/${this.reportQuestionRelPath}`, body, this.httpOptions
         );
     }
 }

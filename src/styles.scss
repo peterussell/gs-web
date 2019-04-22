@@ -21,6 +21,11 @@ h1, h2, h3, h4 {
 
 }
 
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100 !important;
+}
+
 .container-no-padding .mat-dialog-container {
     padding: 0;
     max-height: 100vh;
@@ -44,8 +49,14 @@ h1, h2, h3, h4 {
     margin: 16px 0 16px 10px;
 }
 
+.mat-simple-snackbar {
+    justify-content: center;
+}
+
 .gs-snackbar {
     font-weight: 100;
+    font-size: 0.8em;
+    justify-content: center;
 }
 
 .gs-snackbar-warning {

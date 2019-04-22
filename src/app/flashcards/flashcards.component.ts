@@ -9,6 +9,7 @@ import { Topic } from '../core/models/topic.model';
 import { GSUtils } from '../core/utils/utils';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
+import { FlashcardsViewerMode } from './flashcards-shared';
 
 @Component({
   selector: 'app-flashcards',
@@ -18,6 +19,7 @@ import 'rxjs/add/observable/forkJoin';
 export class FlashcardsComponent implements OnInit {
   @Input() initialState: FlashcardsState;
   private currentState: FlashcardsState = FlashcardsState.ShowViewer; // TODO: possibly deprecate
+  private viewerMode: FlashcardsViewerMode = FlashcardsViewerMode.Premium;
 
   public currentCourse: Course;
   public currentSubject: Subject;
@@ -34,41 +36,41 @@ export class FlashcardsComponent implements OnInit {
 
     this.apiService.getCourses().subscribe((res) => {
       // find the matching course
-      res.courses.forEach((c: Course) => {
-          if (c.path === coursePath) {
+      res.Courses.forEach((c: Course) => {
+          if (c.Path === coursePath) {
               this.currentCourse = c;
               return;
           }
       });
 
       // find the matching subject
-      this.currentCourse.subjects.forEach((s: Subject) => {
-          if (s.path === subjectPath) {
+      this.currentCourse.Subjects.forEach((s: Subject) => {
+          if (s.Path === subjectPath) {
               this.currentSubject = s;
               return;
           }
       });
 
       // sort topics by syllabus number
-      this.currentSubject.topics.sort((a, b) => {
-        return GSUtils.sortMultiPartNumbers(a.subTopic, b.subTopic);
+      this.currentSubject.Topics.sort((a, b) => {
+        return GSUtils.sortMultiPartNumbers(a.SubTopic, b.SubTopic);
       });
 
       // load the topics for this subject
       let questions: Array<Question> = new Array<Question>();
 
       let loadQuestionTasks$ = [];
-      this.currentSubject.topics.forEach((t: Topic) => {
-          loadQuestionTasks$.push(this.apiService.getQuestions(t.topicId));
+      this.currentSubject.Topics.forEach((t: Topic) => {
+          loadQuestionTasks$.push(this.apiService.getQuestions(t.TopicId));
       });
 
       // wait for all observables to finish then save the questions to currentSubject
       Observable.forkJoin(loadQuestionTasks$).subscribe((topicsWithQuestions: Array<Topic>) => {
         topicsWithQuestions.forEach((t: Topic) => {
-          this.currentSubject.topics
-            .find(existingTopic => existingTopic.topicId === t.topicId) // find the topic to save to
-            .questions = t.questions.sort((a, b) => { // order questions by syllabus reference
-              return GSUtils.sortMultiPartNumbers(a.syllabusRef, b.syllabusRef);
+          this.currentSubject.Topics
+            .find(existingTopic => existingTopic.TopicId === t.TopicId) // find the topic to save to
+            .Questions = t.Questions.sort((a, b) => { // order questions by syllabus reference
+              return GSUtils.sortMultiPartNumbers(a.SyllabusRef, b.SyllabusRef);
             });
         });
         // all done, ready to show flashcards

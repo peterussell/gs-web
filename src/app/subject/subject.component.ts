@@ -23,8 +23,8 @@ export class SubjectComponent implements OnInit {
       this._subject = subject;
       if (this._subject !== undefined && this._subject.topics.length > 0) {
         this._subject.topics = this._subject.topics.sort((a, b) => {
-          if (a.title < b.title) return -1;
-          if (a.title > b.title) return 1;
+          if (a.Title < b.Title) return -1;
+          if (a.Title > b.Title) return 1;
           return 0;
         });
         this.selectTopic(this._subject.topics[0]);
@@ -51,14 +51,14 @@ export class SubjectComponent implements OnInit {
   selectTopic(topic: Topic) {
     this.isLoading = true;
 
-    this.apiService.getQuestions(topic.topicId).subscribe(
+    this.apiService.getQuestions(topic.TopicId).subscribe(
       (topicWithQuestions: Topic) => {
 
         // TODO: ideally we'd just get just the questions from the API
         this.selectedTopic = topic;
-        this.selectedTopic.questions = topicWithQuestions.questions;
+        this.selectedTopic.Questions = topicWithQuestions.Questions;
 
-        this.totalQuestionCount = Object.keys(this.selectedTopic.questions).length;
+        this.totalQuestionCount = Object.keys(this.selectedTopic.Questions).length;
         this.currentStartIndex = 0;
         this.currentEndIndex = Math.min(this.currentStartIndex + this.topicSize, this.totalQuestionCount);
         this.updateCurrentPage();
@@ -92,11 +92,11 @@ export class SubjectComponent implements OnInit {
     let result: { [id: number] : Question } = [];
 
     for (let i=0; i<this.currentEndIndex-this.currentStartIndex; i++) {
-      if (this.selectedTopic.questions[i+this.currentStartIndex] === undefined) {
+      if (this.selectedTopic.Questions[i+this.currentStartIndex] === undefined) {
         // return if there are less questions than the page size
         break;
       }
-      result[i] = this.selectedTopic.questions[i+this.currentStartIndex];
+      result[i] = this.selectedTopic.Questions[i+this.currentStartIndex];
     }
     this.currentPage = result;
   }

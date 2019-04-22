@@ -1,5 +1,5 @@
 <div ngClass.lt-md="container-sm" ngClass.gt-sm="container">
-    <div class="menu">
+    <div class="menu" *ngIf="!isFreeMode()">
         <app-flashcards-menu
             [subject]="subject"
             [selectedTopicId]="currentTopicId"
@@ -7,40 +7,40 @@
         </app-flashcards-menu>
     </div>
     <div class="viewer">
-            <div class="nav-buttons">
-                    <button mat-flat-button
-                        (click)="goToPreviousQuestion()"
-                        [disabled]="!canGoToPreviousQuestion()">
-                        <span fxShow="false" fxShow.gt-sm="true">< Previous</span>
-                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
-                            <i class="material-icons">fast_rewind</i>
-                        </span>
-                    </button>
-                    <span *ngIf="!isCurrentQuestionInReviewSet(); else notSaved">
-                        <button mat-flat-button (click)="saveForReview()" [color]="'review'">
-                            <i class="material-icons">playlist_add</i>
-                            <span fxShow="false" fxShow.gt-sm="true">Save for review</span>
-                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Review</span>
-                        </button>
+        <div class="nav-buttons">
+                <button mat-flat-button
+                    (click)="goToPreviousQuestion()"
+                    [disabled]="!canGoToPreviousQuestion()">
+                    <span fxShow="false" fxShow.gt-sm="true">< Previous</span>
+                    <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
+                        <i class="material-icons">fast_rewind</i>
                     </span>
-                    <ng-template #notSaved>
-                        <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
-                            <i class="material-icons">playlist_add_check</i>
-                            <span fxShow="false" fxShow.gt-sm="true">Saved for review</span>
-                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Saved</span>
-                        </button>
-                    </ng-template>
-                    
-                    <button mat-flat-button (click)="goToNextQuestion()">
-                        <span *ngIf="canGoToNextQuestion(); else finish">
-                            <span fxShow="false" fxShow.gt-sm="true">Next ></span>
-                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
-                                <i class="material-icons">fast_forward</i>
-                            </span>
-                        </span>
-                        <ng-template #finish>Finish ></ng-template>
+                </button>
+                <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
+                    <button mat-flat-button (click)="saveForReview()" [color]="'review'">
+                        <i class="material-icons">playlist_add</i>
+                        <span fxShow="false" fxShow.gt-sm="true">Save for review</span>
+                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Review</span>
                     </button>
-                </div>
+                </span>
+                <ng-template #saved>
+                    <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
+                        <i class="material-icons">playlist_add_check</i>
+                        <span fxShow="false" fxShow.gt-sm="true">Saved for review</span>
+                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Saved</span>
+                    </button>
+                </ng-template>
+                
+                <button mat-flat-button (click)="goToNextQuestion()">
+                    <span *ngIf="canGoToNextQuestion(); else finish">
+                        <span fxShow="false" fxShow.gt-sm="true">Next ></span>
+                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
+                            <i class="material-icons">fast_forward</i>
+                        </span>
+                    </span>
+                    <ng-template #finish>Finish ></ng-template>
+                </button>
+            </div>
                 
         <div *ngIf="isInProgress(); else results">
             <div class="progress-bar">
@@ -53,7 +53,7 @@
             <app-flashcards-card
                 [flashcardViewerQuestion]="questions[currentQuestionIndex]"
                 [questionNumber]="currentQuestionIndex+1"
-                [numberOfQuestions]="questions.length">
+                [numberOfQuestions]="getNumberOfQuestions()">
             </app-flashcards-card>
         
             <div class="nav-buttons">
@@ -65,14 +65,14 @@
                         <i class="material-icons">fast_rewind</i>
                     </span>
                 </button>
-                <span *ngIf="!isCurrentQuestionInReviewSet(); else notSaved">
+                <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
                     <button mat-flat-button (click)="saveForReview()" [color]="'review'">
                         <i class="material-icons">playlist_add</i>
                         <span fxShow="false" fxShow.gt-sm="true">Save for review</span>
                         <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Review</span>
                     </button>
                 </span>
-                <ng-template #notSaved>
+                <ng-template #saved>
                     <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
                         <i class="material-icons">playlist_add_check</i>
                         <span fxShow="false" fxShow.gt-sm="true">Saved for review</span>
@@ -101,13 +101,13 @@
                     <li *ngFor="let q of getCurrentReviewSet()">
                         <div class="syllabus-ref">
                             <span class="syllabus-ref__title">Syllabus Ref</span>
-                            {{ q.question.syllabusRef }}
+                            {{ q.Question.SyllabusRef }}
                         </div>
                         <div class="question">
-                            <div class="question__question">{{ q.question.question }}</div>
+                            <div class="question__question">{{ q.Question.Question }}</div>
                             <div class="question__answer">
                                 <div class="question__answer--icon"><i class="material-icons">keyboard_arrow_right</i></div>
-                                <div class="question__answer--text">{{ q.question.answer }}</div>
+                                <div class="question__answer--text">{{ q.Question.Answer }}</div>
                             </div>
                         </div>
                     </li>

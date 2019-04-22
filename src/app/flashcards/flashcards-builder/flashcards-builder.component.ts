@@ -37,22 +37,22 @@ export class FlashcardsBuilderComponent implements OnInit {
     // Populate the checkbox states for Subjects and Topics
     if (this.selectedCourse.subjects !== null && this.selectedCourse.subjects.length > 0) {
       this.selectedCourse.subjects.sort((a, b) => {
-        if (a.title > b.title) { return 1; }
-        if (a.title < b.title) { return -1; }
+        if (a.Title > b.Title) { return 1; }
+        if (a.Title < b.Title) { return -1; }
         return 0;
       }).forEach((subject: Subject) => {
         // Subject
-        let s = { id: subject.subjectId, title: subject.title, selected: true, topics: [] };
+        let s = { id: subject.SubjectId, title: subject.Title, selected: true, topics: [] };
 
         // Topics for this subject
         subject.topics.sort((a, b) => {
-          if (a.title > b.title) { return 1; }
-          if (a.title < b.title) { return -1; }
+          if (a.Title > b.Title) { return 1; }
+          if (a.Title < b.Title) { return -1; }
           return 0;
          }).forEach((topic: Topic) => {
-          s.topics.push({ id: topic.topicId, title: topic.title, selected: true });
-        });
+          s.topics.push({ id: topic.TopicId, title: topic.Title, selected: true });
 
+        });
         this.subjectsState.push(s);
       });
     }

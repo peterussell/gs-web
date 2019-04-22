@@ -3,8 +3,8 @@
   <div class="form-row__field">
       <mat-form-field class="topic-selector__topic">
           <mat-select placeholder="Course" (change)="matSelectCourse($event)" [value]="selectedCourse">
-          <mat-option *ngFor="let course of courses" [value]="course">
-              {{ course.title }}
+          <mat-option *ngFor="let course of Courses" [value]="course">
+              {{ course.Title }}
           </mat-option>
           </mat-select>
       </mat-form-field>
@@ -26,20 +26,20 @@
                   (click)="$event.stopPropagation();"
                   color="primary"
                   class="allow-wrap">
-                  {{ subject.title }}
+                  {{ subject.Title }}
               </mat-checkbox>
 
             </mat-panel-title>
           </mat-expansion-panel-header>
 
           <!-- Topics for subject (body) -->
-          <div *ngFor="let topic of subject.topics" class="topic__checkbox-row">
+          <div *ngFor="let topic of subject.Topics" class="topic__checkbox-row">
             <mat-checkbox
               [(ngModel)]="topic.selected"
               (click)="$event.stopPropagation();"
               color="primary">
             </mat-checkbox>
-            <p>{{ topic.title }}</p>
+            <p>{{ topic.Title }}</p>
           </div>
           
         </mat-expansion-panel>

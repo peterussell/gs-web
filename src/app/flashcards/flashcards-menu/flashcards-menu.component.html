@@ -22,12 +22,12 @@
       <div
         class="item"
         ngClass.lt-md="item__sm"
-        [class.selected]="isSelected(t.topicId)"
-        *ngFor="let t of subject.topics"
-        (click)="selectTopic(t.topicId)">
-        <span class="question-title">{{ t.subTopic }} - {{ t.title }}</span>
+        [class.selected]="isSelected(t.TopicId)"
+        *ngFor="let t of subject.Topics"
+        (click)="selectTopic(t.TopicId)">
+        <span class="question-title">{{ t.SubTopic }} - {{ t.Title }}</span>
         <span class="question-counter">
-          <span class="question-counter__number">{{ t.questions.length }}</span>
+          <span class="question-counter__number">{{ t.Questions.length }}</span>
         </span>
       </div>
     </div>

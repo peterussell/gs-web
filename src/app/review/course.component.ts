@@ -44,14 +44,14 @@ export class CourseComponent implements OnInit {
   }
 
   loadSubjectForCurrentPath() {
-    const course = this.allCourses.find(c => c.path === this.coursePath);
+    const course = this.allCourses.find(c => c.Path === this.coursePath);
     if (course === undefined) { this.router.navigate(['/']); }
 
-    const subject = course.subjects.find(s => s.path === this.subjectPath);
+    const subject = course.subjects.find(s => s.Path === this.subjectPath);
     if (subject === undefined) { this.router.navigate(['/']); }
 
     this.selectedSubject = subject;
-    this.updateTitle(course.title, subject.title);
+    this.updateTitle(course.Title, subject.Title);
   }
 
   updateTitle(courseTitle: string, subjectTitle: string) {

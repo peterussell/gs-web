@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SubjectResolver } from './core/services/resolvers/subject-resolver.service';
 import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
 import { ChecklistHelperComponent } from './checklist-helper/checklist-helper.component';
+import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.component';
 
 const appRoutes: Routes = [
     
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
     ]},
     { path: '', component: GroundschoolComponent, children: [
         { path: '', component: LandingPageComponent },
+        { path: ':course/:subject/free', component: FlashcardsFreeComponent },
         { path: ':course/:subject', component: FlashcardsComponent },
         { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
         { path: 'activate', component: ActivateFullPageComponent },
