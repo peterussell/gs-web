@@ -1,0 +1,216 @@
+{
+    "Normal procedures": [
+        {
+            "order": 0,
+            "title": "Before flight procedures",
+            "steps": [
+                { "item": "NOTAMS", "action": "Read" },
+                { "item": "Weather", "action": "Read" },
+                { "item": "Weight and Balance", "action": "Complete" },
+                { "item": "P-Chart", "action": "Complete / As required" },
+                { "item": "Charts / AIP Plates", "action": "Studied / Carried" },
+                { "item": "Route Guide", "action": "Studied / Carried" },
+                { "item": "Tech Log / Hours", "action": "Checked" },
+                { "item": "Documents", "action": "Checked / Carried" },
+                { "item": "Pre-Flight Inspection", "action": "Complete" },
+                { "item": "FOD", "action": "Checked" },
+                { "item": "Authorisation", "action": "Complete" },
+                { "item": "IFIS", "action": "Notification filed as required / ATIS copied" }
+            ]
+        },
+        {
+            "order": 1,
+            "title": "Before start procedures",
+            "steps": [
+                { "item": "Take-off Performance Brief", "action": "Complete" },
+                { "item": "Departure Procedure", "action": "Brief" },
+                { "item": "Park Brake", "action": "On" },
+                { "item": "Fuel", "action": "Lowest tank" },
+                { "item": "Flaps", "action": "Check" },
+                { "item": "Trim", "action": "Check" },
+                { "item": "Mixture", "action": "Rich" },
+                { "item": "Carb Heat", "action": "Off" },
+                { "item": "Master Switch and Alternator", "action": "On" },
+                { "item": "Anti-collision Light", "action": "Off" },
+                { "item": "Nav Lights", "action": "On" },
+                { "item": "Fuel Pump", "action": "On" },
+                { "item": "Fuel Pressure", "action": "Check" },
+                { "item": "Engine", "action": "Prime" },
+                { "item": "Primer", "action": "Covered" },
+                { "item": "Throttle", "action": "Set" },
+                { "item": "Propellor", "action": "Check clear" },
+                { "item": "COMPLETE BEFORE START CHECKLIST", "isChecklistItem": true },
+                { "item": "Starter", "action": "Engage" }
+            ]
+        },
+        {
+            "order": 2,
+            "title": "After start procedures",
+            "steps": [
+                { "item": "Throttle", "action": "1000 RPM" },
+                { "item": "Oil Pressure", "action": "Check rising" },
+                { "item": "Oil Temperature", "action": "Check" },
+                { "item": "Fuel Pump", "action": "Off" },
+                { "item": "Fuel Pressure", "action": "Check" },
+                { "item": "Magnetos", "action": "Live cut check" },
+                { "item": "Alternator", "action": "Check on" },
+                { "item": "COMPLETE AFTER START CHECKLIST", "isChecklistItem": true }
+            ]
+        },
+        {
+            "order": 3,
+            "title": "Taxi procedures",
+            "steps": [
+                { "item": "Radio Master", "action": "On" },
+                { "item": "Radio", "action": "On" },
+                { "item": "Transponder", "action": "STBY" },
+                { "item": "ATIS", "action": "Confirmed / Copied" },
+                { "item": "Taxi Brief", "action": "Complete" },
+                { "item": "AHRS", "action": "Aligned or 'OK to taxi'" },
+                { "item": "Brakes", "action": "Check" },
+                { "item": "Crosswind Taxi Technique", "action": "As required" },
+                { "item": "Taxi checks", "action": "Complete" }
+            ]
+        },
+        {
+            "order": 4,
+            "title": "Run up procedures",
+            "steps": [
+                { "item": "Park Brake", "action": "On" },
+                { "item": "Fuel Pump", "action": "On" },
+                { "item": "Fuel Tank", "action": "Fullest tank" },
+                { "item": "Fuel Pump", "action": "Off" },
+                { "item": "T's and P's", "action": "Check green" },
+                { "item": "Magnetos", "action": "Dead cut check" },
+                { "item": "All clear", "action": "Check" },
+                { "item": "Throttle", "action": "1800 RPM" },
+                { "item": "Brakes", "action": "Check holding" },
+                { "item": "T's and P's", "action": "Check green" },
+                { "item": "Carb heat", "action": "Check" },
+                { "item": "Magnetos", "action": "L, Both, R, Both" },
+                { "item": "Voltmeter", "action": "28 Volts" },
+                { "item": "Ammeter", "action": "Check" },
+                { "item": "Throttle", "action": "Close" },
+                { "item": "Slow Running", "action": "500 RPM to 800 RPM" },
+                { "item": "Carb Heat", "action": "On" },
+                { "item": "Oil Pressure", "action": "Check" },
+                { "item": "Carb Heat", "action": "Off" },
+                { "item": "Throttle", "action": "1000 RPM" }
+            ]
+        },
+        {
+            "order": 5,
+            "title": "Before take-off procedures",
+            "steps": [
+                { "item": "Trim", "action": "Set" },
+                { "item": "Throttle Friction", "action": "Set" },
+                { "item": "Mixture", "action": "Rich" },
+                { "item": "Fuel", "action": "CCPPP" },
+                { "item": "Flaps", "action": "Set" },
+                { "item": "Ignition", "action": "Both" },
+                { "item": "Instruments", "action": "QNH set, AHRS aligned, Bugs set" },
+                { "item": "Carbon Monoxide", "action": "Check" },
+                { "item": "Standby Instruments", "action": "QNH set" },
+                { "item": "Circuit Breakers", "action": "All in" },
+                { "item": "Hatches and Harnesses", "action": "Secure" },
+                { "item": "Controls", "action": "Full and free" },
+                { "item": "Radio", "action": "Set" },
+                { "item": "Departure TCTWO", "action": "Complete" },
+                { "item": "COMPLETE BEFORE TAKE-OFF CHECKLIST", "isChecklistItem": true },
+                { "item": "Emergency Brief", "action": "Complete" }
+            ]
+        },
+        {
+            "order": 6,
+            "title": "Runway entry procedures",
+            "steps": [
+                { "item": "Traffic", "action": "Check clear" },
+                { "item": "Windsock", "action": "Check headwind" },
+                { "item": "Transponder", "action": "ALT" },
+                { "item": "Lights", "action": "All on" },
+                { "item": "Compass", "action": "Aligned with runway after line up" }
+            ]
+        },
+        {
+            "order": 7,
+            "title": "After take-off procedures",
+            "steps": [
+                { "item": "Flaps", "action": "Retract" },
+                { "item": "Fuel Pump", "action": "Off" },
+                { "item": "Fuel Pressure", "action": "Check" },
+                { "item": "COMPLETE AFTER TAKE-OFF CHECKLIST", "isChecklistItem": true }
+            ]
+        },
+        {
+            "order": 8,
+            "title": "Cruise procedures",
+            "steps": [
+                { "item": "TOD", "action": "Confirm or re-calculate" },
+                { "item": "Compass", "action": "Compass and DI, Check alignment" },
+                { "item": "Log", "action": "Update" },
+                { "item": "Engine", "action": "Fuel, T's and P's, Carb Heat, Mixture, Carbon Monoxide" },
+                { "item": "Altitude", "action": "Airspace, Amps, QNH set" },
+                { "item": "Radio", "action": "As required, Check frequency" },
+                { "item": "COMPLETE CRUISE CHECKLIST", "isChecklistItem": true }
+            ]
+        },
+        {
+            "order": 9,
+            "title": "Descent procedures (prior to TOD)",
+            "steps": [
+                { "item": "ABRIEFS", "action": "Complete" },
+                { "item": "Approach TCTWO", "action": "Complete" },
+                { "item": "Mixture", "action": "Rich" },
+                { "item": "COMPLETE DESCENT CHECKLIST", "isChecklistItem": true }
+            ]
+        },
+        {
+            "order": 10,
+            "title": "Before landing procedures",
+            "steps": [
+                { "item": "Brakes", "action": "Check and off" },
+                { "item": "Mixture", "action": "Full rich" },
+                { "item": "Fuel pump", "action": "On" },
+                { "item": "Hatches and Harnesses", "action": "Secure" },
+                { "item": "Radio", "action": "Make call" },
+                { "item": "Carb Heat", "action": "Off when on final" },
+                { "item": "COMPLETE BEFORE LANDING CHECKLIST", "isChecklistItem": true }
+            ]
+        },
+        {
+            "order": 11,
+            "title": "After landing procedures",
+            "steps": [
+                { "item": "Fuel Pump", "action": "Off" },
+                { "item": "Lights", "action": "Off" },
+                { "item": "Flaps", "action": "Retract" },
+                { "item": "Transponder", "action": "STBY" },
+                { "item": "Radio", "action": "Set frequency as required" },
+                { "item": "Spidertrack", "action": "Check" },
+                { "item": "COMPLETE AFTER LANDING CHECKLIST", "isChecklistItem": true }
+            ]
+        },
+        {
+            "order": 12,
+            "title": "Parking procedures",
+            "steps": [
+                { "item": "Brakes", "action": "On" },
+                { "item": "Throttle", "action": "1000 RPM" },
+                { "item": "Spidertrack", "action": "Check" },
+                { "item": "Radio", "action": "Check 121.5" },
+                { "item": "Transponder", "action": "STBY" },
+                { "item": "Radio Master", "action": "Off" },
+                { "item": "Magnetos", "action": "Live cut check" },
+                { "item": "Mixture", "action": "Idle cut off" },
+                { "item": "Throttle", "action": "Close" },
+                { "item": "Magnetos", "action": "Off, keys out" },
+                { "item": "Lights", "action": "Off" },
+                { "item": "Master Switch and Alternator", "action": "Off" },
+                { "item": "Brakes", "action": "Off if refueling" },
+                { "item": "Tech Log", "action": "Complete" },
+                { "item": "FOD", "action": "Check" },
+                { "item": "COMPLETE PARKING CHECKLIST", "isChecklistItem": true }
+            ]
+        }
+    ]   
+}

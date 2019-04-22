@@ -49,6 +49,7 @@ import { FlashcardsMenuComponent } from './flashcards/flashcards-menu/flashcards
 import { ChecklistHelperComponent } from './checklist-helper/checklist-helper.component';
 import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.component';
 import { GsSnackbarComponent } from './gs-snackbar/gs-snackbar.component';
+import { PiperWarriorIiAvidyneComponent } from './checklists/aircraft/piper-warrior-ii-avidyne/piper-warrior-ii-avidyne.component';
 
 
 @NgModule({
@@ -82,7 +83,8 @@ import { GsSnackbarComponent } from './gs-snackbar/gs-snackbar.component';
     FlashcardsMenuComponent,
     ChecklistHelperComponent,
     FlashcardsFreeComponent,
-    GsSnackbarComponent
+    GsSnackbarComponent,
+    PiperWarriorIiAvidyneComponent
   ],
   imports: [
     BrowserModule,

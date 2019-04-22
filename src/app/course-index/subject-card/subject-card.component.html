@@ -4,7 +4,7 @@
       <h3>{{ subject.Title }}</h3>
     </mat-card-title>
     <mat-card-subtitle>
-      <mat-chip-list><mat-chip>PREMIUM</mat-chip></mat-chip-list>
+      <!-- <mat-chip-list><mat-chip>PREMIUM</mat-chip></mat-chip-list> -->
     </mat-card-subtitle>
   </mat-card-header>
   <img
@@ -12,6 +12,7 @@
     mat-card-image
     src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="140">
   <mat-card-actions>
-    <button mat-button [routerLink]="['/', parentPath, subject.Path, 'free']">(FREE VERSION)</button>
+      <button mat-button [routerLink]="['/', parentPath, subject.Path]"><strong>PREMIUM</strong></button>
+    <button mat-button [routerLink]="['/', parentPath, subject.Path, 'free']">FREE</button>
   </mat-card-actions>
 </mat-card>
