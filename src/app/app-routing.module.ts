@@ -15,7 +15,7 @@ import { ActivateFullPageComponent } from './activate-full-page/activate-full-pa
 import { ContactComponent } from './contact/contact.component';
 import { SubjectResolver } from './core/services/resolvers/subject-resolver.service';
 import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
-import { ChecklistHelperComponent } from './checklist-helper/checklist-helper.component';
+import { ChecklistTrainerComponent } from './checklist-trainer/checklist-trainer.component';
 import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.component';
 
 const appRoutes: Routes = [
@@ -36,7 +36,7 @@ const appRoutes: Routes = [
         { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
         { path: 'activate', component: ActivateFullPageComponent },
         { path: 'contact', component: ContactComponent },
-        { path: 'checklists', component: ChecklistHelperComponent }
+        { path: 'checklist-trainer', component: ChecklistTrainerComponent }
     ]},
     { path: '**', redirectTo: '' }
 ];

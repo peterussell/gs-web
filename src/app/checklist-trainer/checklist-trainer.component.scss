@@ -1,0 +1,108 @@
+.wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    .content-wrapper {
+        max-width: 900px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            flex: 1 0 auto;
+        }
+
+        .trainer {
+            &__menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding-bottom: 10px;
+                color: #333;
+                height: 80px;
+                font-size: 0.9em;
+
+                &--label {
+                    display: flex;
+                    flex: 0 0 20%;
+                    font-weight: 400;
+                    padding-left: 20px;
+                }
+
+                button {
+                    margin-left: 40px;
+                    font-size: 0.9em;
+                    font-weight: 100;
+                }
+
+                .procedure-selector {
+                    display: flex;
+                    align-items: center;
+                    height: 40px;
+                }
+                
+                .output {
+                    height: 30px;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+
+                    .match {
+                        color: #080;
+                    }
+                
+                    .no-match {
+                        color: #800;
+                    }
+
+                    i {
+                        font-size: 1.2em;
+                        vertical-align: middle;
+                        margin-top: -4px;
+                        margin-left: 10px;
+                    }
+
+                    .actual {
+                        padding-left: 40px;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.output {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+
+    &__actual {
+        flex: 0 0 50%;
+
+        .match {
+            color: #080;
+        }
+    
+        .no-match {
+            color: #800;
+        }
+    }
+
+    &__expected {
+        flex: 0 0 50%;
+    }
+}
+
+.mat-form-field-infix {
+    width: 240px !important;
+}
+
+.mat-select-value-text {
+    font-weight: 100;
+}
+
+.mat-option-text {
+    font-weight: 100;
+}

@@ -1,0 +1,198 @@
+.cockpit {
+    position: relative;
+    background-image: url('/assets/images/checklist-helper/iaanz-pa28-161.png');
+    width: 900px;
+    height: 600px;
+
+    .click-region {
+        position: absolute;
+        cursor: pointer;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+
+        i {
+            border: 2px solid #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 2px;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+    }
+
+    .label {
+        color: #333;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: 14px;
+        text-align: center;
+    }
+
+    .ahrs {
+        @extend .click-region;
+        left: 170px; top: 180px;
+    }
+
+    .brakes {
+        @extend .click-region;
+        left: 250px; top: 500px;
+    }
+
+    .briefings {
+        @extend .click-region;
+        @extend .label;
+        left: 565px; top: 14px;
+    }
+
+    .carb-heat {
+        @extend .click-region;
+        left: 554px; top: 430px;
+    }
+
+    .cbs {
+        @extend .click-region;
+        left: 800px; top: 410px;
+    }
+
+    .controls {
+        @extend .click-region;
+        left: 197px; top: 395px;
+    }
+
+    .electrical {
+        @extend .click-region;
+        left: 656px; top: 215px;
+    }
+
+    .flaps {
+        @extend .click-region;
+        left: 429px; top: 550px;
+    }
+
+    .fuel-cock {
+        @extend .click-region;
+        left: 110px; top: 525px;
+    }
+
+    .fuel-pressure {
+        @extend .click-region;
+        left: 656px; top: 262px;
+    }
+
+    .fuel-pump {
+        @extend .click-region;
+        left: 440px; top: 310px;
+    }
+
+    .landing-light {
+        @extend .click-region;
+        left: 404px; top: 380px;
+    }
+
+    .mags {
+        @extend .click-region;
+        left: 84px; top: 446px;
+    }
+
+    .master-alt {
+        @extend .click-region;
+        left: 390px; top: 310px;
+    }
+
+    .misc {
+        @extend .click-region;
+        @extend .label;
+        left: 710px; top: 14px;
+    }
+
+    .mixture {
+        @extend .click-region;
+        left: 516px; top: 408px;
+    }
+
+    .nav-lights {
+        @extend .click-region;
+        left: 381px; top: 380px;
+    }
+
+    .oil {
+        @extend .click-region;
+        left: 656px; top: 170px;
+    }
+
+    .park-brake {
+        @extend .click-region;
+        left: 405px; top: 520px;
+    }
+
+    .primer {
+        @extend .click-region;
+        left: 84px; top: 411px;
+    }
+
+    .ptt {
+        @extend .click-region;
+        left: 92px; top: 312px;
+    }
+
+    .radio {
+        @extend .click-region;
+        left: 376px; top: 172px;
+    }
+
+    .radio-master {
+        @extend .click-region;
+        left: 464px; top: 310px;
+    }
+
+    .spidertrack {
+        @extend .click-region;
+        left: 559px; top: 336px;
+    }
+
+    .standby-alt {
+        @extend .click-region;
+        left: 418px; top: 310px;
+    }
+
+    .strobe-lights {
+        @extend .click-region;
+        left: 440px; top: 380px;
+    }
+
+    .throttle {
+        @extend .click-region;
+        left: 466px; top: 430px;
+    }
+
+    .transponder {
+        @extend .click-region;
+        left: 610px; top: 450px;
+    }
+
+    .trim {
+        @extend .click-region;
+        left: 459px; top: 550px;
+    }
+}
+
+.output {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    padding-top: 10px;
+
+    &__actual {
+        flex: 0 0 50%;
+
+        .match {
+            color: #080;
+        }
+    
+        .no-match {
+            color: #800;
+        }
+    }
+
+    &__expected {
+        flex: 0 0 50%;
+    }
+}

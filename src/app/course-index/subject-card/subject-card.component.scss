@@ -10,29 +10,10 @@
 .mat-card-header {
     display: flex;
     justify-content: center;
-
-    .mat-card-subtitle {
-        .mat-chip-list {
-            position: absolute;
-            top: 154px;
-            right: 6px;
-
-            .mat-chip {
-                font-size: 0.8em;
-                padding: 4px 6px 3px 6px;
-                border-radius: 2px;
-                cursor: pointer;
-                color: #fff;
-                background-color: rgba(30, 30, 30, 0.3);
-                letter-spacing: 0.5px;
-            }
-        }
-    }
 }
 
 .mat-card-image {
     margin-bottom: 2px;
-    cursor: pointer;
 }
 
 .mat-card-content {

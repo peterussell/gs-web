@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <div class="content-wrapper">
+    <div class="title">
+      <app-page-title>Checklist Trainer</app-page-title>
+    </div>
+
+    <div class="trainer">
+      <div class="trainer__menu">
+
+        <!-- Procedure selector -->
+        <div class="procedure-selector">
+          <span class="trainer__menu--label">Select Procedure</span>
+          <mat-form-field *ngIf="procedureList; else noProcedures">
+            <mat-select [(ngModel)]="defaultValue" (selectionChange)="onProcedureSelected($event)">
+              <mat-option
+                *ngFor="let procedure of procedureList.Procedures"
+                [value]="procedure.Title">
+                {{ procedure.Title }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <ng-template #noProcedures>Loading...</ng-template>
+          <button mat-stroked-button (click)="reset()">Reset</button>
+        </div>
+
+        <!-- Progressive output -->
+        <div class="output">
+          <span class="trainer__menu--label">Output</span>
+          <div *ngIf="lastActualStep && lastExpectedStep" [ngClass]="isLastStepCorrect() ? 'match' : 'no-match'">
+            {{ lastActualStep.Item }}: {{ lastActualStep.Action }}
+            <span *ngIf="isLastStepCorrect(); else noMatch">
+                <i class="material-icons">check_circle_outline</i>
+            </span>
+            <ng-template #noMatch>
+                <i class="material-icons">highlight_off</i>
+                <span class="actual">
+                  Expected '{{ lastExpectedStep.Item }}: {{ lastExpectedStep.Action }}'</span>
+            </ng-template>
+          </div>
+        </div>
+
+      </div>
+      <div class="trainer__aircraft">
+        <app-piper-warrior-ii-avidyne
+          [currentProcedure]="currentProcedure"
+          (onProceduresLoaded)="proceduresLoaded($event)"
+          (onProcedureStepExecuted)="procedureStepExecuted($event)">
+        </app-piper-warrior-ii-avidyne>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
