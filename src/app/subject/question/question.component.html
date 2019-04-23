@@ -18,9 +18,9 @@
   <div class="references">
     <span class="title"><strong>References:</strong></span>
     <ul>
-      <li *ngFor="let reference of sortReferences(question.references)">
-          <a href="{{ reference.url }}" target="_blank" *ngIf="reference.url; else noLink">{{ reference.text }}</a>
-          <ng-template #noLink>{{ reference.text }}</ng-template>
+      <li *ngFor="let reference of sortReferences(question.References)">
+          <a href="{{ reference.Url }}" target="_blank" *ngIf="reference.url; else noLink">{{ reference.Text }}</a>
+          <ng-template #noLink>{{ reference.Text }}</ng-template>
       </li>
     </ul>
   </div>

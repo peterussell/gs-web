@@ -16,8 +16,8 @@ export class ChecklistTrainerComponent implements OnInit {
   public defaultValue: string;
   public currentProcedure: Procedure;
   
-  private lastExpectedStep: ProcedureStep;
-  private lastActualStep: ProcedureStep;
+  public lastExpectedStep: ProcedureStep;
+  public lastActualStep: ProcedureStep;
 
   constructor() {
     this.actionHistory = [];

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Subject } from 'aws-sdk/clients/support';
 import { Router } from '@angular/router';
+import { Subject } from '../../core/models/subject.model';
 
 @Component({
   selector: 'app-subject-card',

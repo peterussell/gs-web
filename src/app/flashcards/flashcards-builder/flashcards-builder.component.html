@@ -3,7 +3,7 @@
   <div class="form-row__field">
       <mat-form-field class="topic-selector__topic">
           <mat-select placeholder="Course" (change)="matSelectCourse($event)" [value]="selectedCourse">
-          <mat-option *ngFor="let course of Courses" [value]="course">
+          <mat-option *ngFor="let course of courses" [value]="course">
               {{ course.Title }}
           </mat-option>
           </mat-select>
