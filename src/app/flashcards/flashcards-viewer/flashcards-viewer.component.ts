@@ -118,7 +118,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     this.apiService.getRandomQuestion(
       topicIdsToInclude,
       this.topicIdsSeen,
-      this.questionIdsSeen).subscribe((res: any) => {
+      this.questionIdsSeen,
+      this.subject.Version).subscribe((res: any) => {
         if (res['status'] === 200) {
           const question = res['body'].Question;
           if (question === undefined)

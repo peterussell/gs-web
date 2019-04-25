@@ -9,7 +9,9 @@
   <img mat-card-image 
     src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="140">
   <mat-card-actions>
+    <span *ngIf="subject.PremiumVersionAvailable">
       <button mat-button [routerLink]="['/', parentPath, subject.Path]"><strong>PREMIUM</strong></button>
+    </span>
     <button mat-button [routerLink]="['/', parentPath, subject.Path, 'free']">FREE</button>
   </mat-card-actions>
 </mat-card>

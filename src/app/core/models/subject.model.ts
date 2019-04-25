@@ -8,6 +8,8 @@ export class Subject {
         public SubjectId: string,
         public Title: string,
         public Path: string,
+        public Version: number,
+        public PremiumVersionAvailable: boolean,
         public Topics: Array<Topic>) {
             this.topics = Topics.sort();
         }
