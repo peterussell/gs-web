@@ -61,7 +61,7 @@
             "steps": [
                 { "order": 0, "item": "Park Brake", "action": "On" },
                 { "order": 1, "item": "Fuel Pump", "action": "On" },
-                { "order": 2, "item": "Fuel Tank", "action": "Fullest tank" },
+                { "order": 2, "item": "Fuel", "action": "Fullest tank" },
                 { "order": 3, "item": "Fuel Pump", "action": "Off" },
                 { "order": 4, "item": "T's and P's", "action": "Check green" },
                 { "order": 5, "item": "Magnetos", "action": "Dead cut check" },
@@ -177,7 +177,7 @@
             "order": 12,
             "title": "Parking procedures",
             "steps": [
-                { "order": 0, "item": "Brakes", "action": "On" },
+                { "order": 0, "item": "Park brake", "action": "On" },
                 { "order": 1, "item": "Throttle", "action": "1000 RPM" },
                 { "order": 2, "item": "Spidertrack", "action": "Check" },
                 { "order": 3, "item": "Radio", "action": "Check 121.5" },

@@ -55,8 +55,18 @@ export class ChecklistTrainerComponent implements OnInit {
   }
 
   isMatch(expected: ProcedureStep, actual: ProcedureStep) {
-    return expected.Item.toLocaleLowerCase() === actual.Item.toLocaleLowerCase()
-      && expected.Action.toLocaleLowerCase() === actual.Action.toLocaleLowerCase();
+    const itemMatches = expected.Item.toLocaleLowerCase() === actual.Item.toLocaleLowerCase();
+
+    // If one is a checklist item and the other isn't - no match
+    if (expected.IsChecklistItem && !actual.IsChecklistItem ||
+        !expected.IsChecklistItem && actual.IsChecklistItem) { return false; }
+
+    // Checklist for both, check the item matches (checklists don't have an action)
+    if (expected.IsChecklistItem && actual.IsChecklistItem && itemMatches) { return true; }
+
+    // Non-checklist, check both item and action match
+    const actionMatches = expected.Action.toLocaleLowerCase() === actual.Action.toLocaleLowerCase();
+    return itemMatches && actionMatches;
   }
 
   reset() {

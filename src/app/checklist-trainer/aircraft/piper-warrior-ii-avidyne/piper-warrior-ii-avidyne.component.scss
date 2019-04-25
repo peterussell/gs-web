@@ -27,9 +27,9 @@
         text-align: center;
     }
 
-    .ahrs {
+    .alternator {
         @extend .click-region;
-        left: 170px; top: 180px;
+        left: 404px; top: 310px;
     }
 
     .brakes {
@@ -40,7 +40,7 @@
     .briefings {
         @extend .click-region;
         @extend .label;
-        left: 565px; top: 14px;
+        left: 20px; top: 14px;
     }
 
     .carb-heat {
@@ -48,9 +48,25 @@
         left: 554px; top: 430px;
     }
 
+    .co2 {
+        @extend .click-region;
+        left: 350px; top: 405px;
+    }
+
+    .checklists {
+        @extend .click-region;
+        @extend .label;
+        left: 120px; top: 14px;
+    }
+
     .cbs {
         @extend .click-region;
         left: 800px; top: 410px;
+    }
+
+    .compass {
+        @extend .click-region;
+        left: 450px; top: 35px;
     }
 
     .controls {
@@ -63,6 +79,11 @@
         left: 656px; top: 215px;
     }
 
+    .engine {
+        @extend .click-region;
+        left: 656px; top: 262px;
+    }
+
     .flaps {
         @extend .click-region;
         left: 429px; top: 550px;
@@ -73,19 +94,19 @@
         left: 110px; top: 525px;
     }
 
-    .fuel-pressure {
-        @extend .click-region;
-        left: 656px; top: 262px;
-    }
-
     .fuel-pump {
         @extend .click-region;
         left: 440px; top: 310px;
     }
 
-    .landing-light {
+    .instruments {
         @extend .click-region;
-        left: 404px; top: 380px;
+        left: 170px; top: 180px;
+    }
+
+    .lights {
+        @extend .click-region;
+        left: 392px; top: 380px;
     }
 
     .mags {
@@ -95,23 +116,18 @@
 
     .master-alt {
         @extend .click-region;
-        left: 390px; top: 310px;
+        left: 381px; top: 310px;
     }
 
     .misc {
         @extend .click-region;
         @extend .label;
-        left: 710px; top: 14px;
+        left: 230px; top: 14px;
     }
 
     .mixture {
         @extend .click-region;
         left: 516px; top: 408px;
-    }
-
-    .nav-lights {
-        @extend .click-region;
-        left: 381px; top: 380px;
     }
 
     .oil {
@@ -154,14 +170,24 @@
         left: 418px; top: 310px;
     }
 
-    .strobe-lights {
+    .standby-instruments {
         @extend .click-region;
-        left: 440px; top: 380px;
+        left: 80px; top: 180px;
+    }
+
+    .tach {
+        @extend .click-region;
+        left: 174px; top: 220px;
     }
 
     .throttle {
         @extend .click-region;
         left: 466px; top: 430px;
+    }
+
+    .throttle-friction {
+        @extend .click-region;
+        left: 535px; top: 470px;
     }
 
     .transponder {
