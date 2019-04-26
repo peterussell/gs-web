@@ -94,46 +94,73 @@
         
         <ng-template #results>
             <mat-card class="results">
-                <h2>Review questions</h2>
-        
-                <!-- Review questions -->
-                <ul *ngIf="hasReviewQuestions(); else noQuestions">
-                    <li *ngFor="let q of getCurrentReviewSet()">
-                        <div class="syllabus-ref">
-                            <span class="syllabus-ref__title">Syllabus Ref</span>
-                            {{ q.Question.SyllabusRef }}
-                        </div>
-                        <div class="question">
-                            <div class="question__question">{{ q.Question.Question }}</div>
-                            <div class="question__answer">
-                                <div class="question__answer--icon"><i class="material-icons">keyboard_arrow_right</i></div>
-                                <div class="question__answer--text">{{ q.Question.Answer }}</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-        
-                <ng-template #noQuestions>
+                <!-- Free mode: show final screen -->
+                <div *ngIf="isFreeMode(); else reviewQuestions">
+                    <h2>Flashcard set complete</h2>
+
+                    <p>
+                        <button mat-flat-button (click)="goToCourseIndex()">
+                            <i class="material-icons">subject</i> Course Index
+                        </button>
+                        <button mat-flat-button (click)="restartFree()" style="margin-bottom: 8px;">
+                            <i class="material-icons">refresh</i>
+                            <span fxShow="false" fxShow.gt-sm="true">Go again</span>
+                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Go again</span>
+                        </button>
+                    </p>
                     <div class="no-review-questions">
-                        <p><i class="material-icons">check_circle_outline</i>No questions marked for review.</p>
+                        <iframe
+                            width="560"
+                            height="315"
+                            [src]="getRandomVideoUrl()"
+                            frameborder="0"
+                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <ng-template #reviewQuestions>
+                    <h2>Review questions</h2>
+            
+                    <!-- Review questions -->
+                    <ul *ngIf="hasReviewQuestions(); else noQuestions">
+                        <li *ngFor="let q of getCurrentReviewSet()">
+                            <div class="syllabus-ref">
+                                <span class="syllabus-ref__title">Syllabus Ref</span>
+                                {{ q.Question.SyllabusRef }}
+                            </div>
+                            <div class="question">
+                                <div class="question__question">{{ q.Question.Question }}</div>
+                                <div class="question__answer">
+                                    <div class="question__answer--icon"><i class="material-icons">keyboard_arrow_right</i></div>
+                                    <div class="question__answer--text">{{ q.Question.Answer }}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            
+                    <ng-template #noQuestions>
+                        <div class="no-review-questions">
+                            <p><i class="material-icons">check_circle_outline</i>No questions marked for review.</p><br>
+                        </div>
+                    </ng-template>
+            
+                    <div class="nav-buttons">
+                        <button mat-flat-button (click)="reloadTopic()" style="margin-bottom: 8px;">
+                            <i class="material-icons">refresh</i>
+                            <span fxShow="false" fxShow.gt-sm="true">Redo topic</span>
+                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Redo</span>
+                        </button>
+                        <button
+                            mat-flat-button (click)="goToNextTopic()" *ngIf="canGoToNextTopic()">
+                            <span fxShow="false" fxShow.gt-sm="true">Next topic ></span>
+                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Next </span>
+                        </button>
+                        <button mat-flat-button (click)="goToCourseIndex()">
+                            <i class="material-icons">subject</i> Course Index
+                        </button>
                     </div>
                 </ng-template>
-        
-                <div class="nav-buttons">
-                    <button mat-flat-button (click)="reloadTopic()" style="margin-bottom: 8px;">
-                        <i class="material-icons">refresh</i>
-                        <span fxShow="false" fxShow.gt-sm="true">Redo topic</span>
-                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Redo</span>
-                    </button>
-                    <button
-                        mat-flat-button (click)="goToNextTopic()" *ngIf="canGoToNextTopic()">
-                        <span fxShow="false" fxShow.gt-sm="true">Next topic ></span>
-                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Next </span>
-                    </button>
-                    <button mat-flat-button (click)="goToCourseIndex()">
-                        <i class="material-icons">subject</i> Course Index
-                    </button>
-                </div>
             </mat-card>
         </ng-template>
     </div>

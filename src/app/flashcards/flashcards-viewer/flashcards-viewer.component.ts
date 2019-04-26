@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { FlashcardsViewerMode } from '../flashcards-shared';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { GsSnackbarComponent } from '../../gs-snackbar/gs-snackbar.component';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-flashcards-viewer',
@@ -57,7 +58,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   constructor(
     private router: Router,
     private apiService: ApiService,
-    private snackBar: MatSnackBar) {
+    private snackBar: MatSnackBar,
+    private domSanitizer: DomSanitizer) {
     this.questions = new Array<FlashcardsViewerQuestion>();
   }
 
@@ -337,6 +339,19 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   goToCourseIndex() {
     this.router.navigate(['']);
+  }
+
+  restartFree() {
+    this.router.navigate([this.router.url]);
+  }
+
+  public getRandomVideoUrl() {
+    const youtubeUrl = 'https://www.youtube.com/embed?v=kLzXLW0XDRU&list=PL0C290BA5F9B3FEC3&index=';
+    const min = Math.ceil(32);
+    const max = Math.floor(1);
+    const videoIndex = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(youtubeUrl + videoIndex);
   }
 }
 
