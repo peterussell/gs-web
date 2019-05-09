@@ -19,6 +19,7 @@ export class ApiService {
     private readonly addQuestionRelPath = 'question';
     private readonly reportQuestionRelPath = 'report-question';
     private readonly memberInfoRelPath = 'member';
+    private readonly memberProfileRelPath = 'profile'; // member/{id}/profile
     private readonly randomQuestionRelPath_v1 = 'flashcards';
     private readonly randomQuestionRelPath_v2 = 'question/random';
 
@@ -54,6 +55,7 @@ export class ApiService {
         return this.http.get(`${this.getAwsBasePathVersioned(2)}/${this.topicRelPath}/${topicId}`);
     }
 
+    /* ---- Review sets ---- */
     public getReviewSetForUser(userId: string): Observable<QuestionSet> {
         return this.http.get<QuestionSet>(`${this.getAwsBasePathVersioned(2)}/${this.memberInfoRelPath}/${userId}/review-sets`)
     }
@@ -87,13 +89,6 @@ export class ApiService {
         );
     }
 
-    public registerInterest(email: string): Observable<any> {
-        const body = { 'email': email };
-        return this.http.post<RegisterInterestResponse>(
-            `${this.getAwsBasePathVersioned(1)}/${this.registerInterestRelPath}`, body, this.httpOptions
-        );
-    }
-
     public addQuestion(topicId: string, question: string, answer: string,
         references: Array<Reference>): Observable<any> {
         var body = {
@@ -124,5 +119,17 @@ export class ApiService {
         return this.http.post<any>(
             `${this.getAwsBasePathVersioned(1)}/${this.reportQuestionRelPath}`, body, this.httpOptions
         );
+    }
+
+    /* ---- Member ---- */
+    public registerInterest(email: string): Observable<any> {
+        const body = { 'email': email };
+        return this.http.post<RegisterInterestResponse>(
+            `${this.getAwsBasePathVersioned(1)}/${this.registerInterestRelPath}`, body, this.httpOptions
+        );
+    }
+
+    public getUserProfile(userId: string): Observable<any> {
+        return this.http.get<any>(`${this.getAwsBasePathVersioned(2)}/${this.memberInfoRelPath}/${userId}/profile`)
     }
 }

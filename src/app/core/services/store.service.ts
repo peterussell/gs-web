@@ -6,6 +6,7 @@ import { ApiService } from "./api.service";
 
 @Injectable()
 export class StoreService {
+    // TODO: deprecate when flashcards builder is deprecated
     private pendingFlashcardsRequest: FlashcardsBuilderRequest;
     
     public pushPendingFlashcardsBuilderRequest(request: FlashcardsBuilderRequest) {

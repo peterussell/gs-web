@@ -8,7 +8,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { AccountDialogState, AccountDialogComponent } from '../account-dialog/account-dialog.component';
 import { UserService } from '../core/services/user.service';
 import { CognitoUser } from 'amazon-cognito-identity-js';
-import { User } from '../core/models/user.model';
 import { Observable } from 'rxjs/Observable';
 
 @Component({

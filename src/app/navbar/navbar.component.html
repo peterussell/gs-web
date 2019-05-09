@@ -18,6 +18,7 @@
       <!-- Account buttons: >= medium -->
       <div class="accounts" fxShow="true" fxHide.lt-md="true">
         <span *ngIf="currentUser; else loggedOut">
+          <p class="welcome-back-msg">Welcome back, {{ currentUser.Name }}</p>
           <button mat-stroked-button (click)="signOutClick()">Sign Out</button>
         </span>
         <ng-template #loggedOut>

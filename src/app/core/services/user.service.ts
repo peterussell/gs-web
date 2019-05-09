@@ -9,15 +9,19 @@ import { CognitoUser } from "amazon-cognito-identity-js";
 import { fromPromise } from "rxjs/observable/fromPromise";
 import { from } from "rxjs/observable/from";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { User } from "../models/user.model";
 
 @Injectable()
 export class UserService {
-    private _currentUser: BehaviorSubject<CognitoUser> = new BehaviorSubject(null);
-    public readonly currentUser$: Observable<CognitoUser> = this._currentUser.asObservable();
+    private _currentUser: BehaviorSubject<User> = new BehaviorSubject(null);
+    public readonly currentUser$: Observable<User> = this._currentUser.asObservable();
 
     constructor(private apiService: ApiService) {
         from(Auth.currentAuthenticatedUser()).subscribe(
-            (cognitoUser: CognitoUser) => { this._currentUser.next(cognitoUser); },
+            (cognitoUser: CognitoUser) => {
+                let user = new User(cognitoUser)
+                this._currentUser.next(user);
+            },
             (error: any) =>
             {
                 // 'Not authenticated' returns as an error, so don't log errors for now.
@@ -36,8 +40,8 @@ export class UserService {
         );
     }
 
-    setCurrentUser(cognitoUser: CognitoUser) {
-        this._currentUser.next(cognitoUser);
+    setCurrentUser(user: User) {
+        this._currentUser.next(user);
     }
 
     // TODO: convert to observable
@@ -65,5 +69,9 @@ export class UserService {
 
     registerInterest(email: string): Observable<RegisterInterestResponse> {
         return this.apiService.registerInterest(email);
+    }
+
+    getProfile(userId: string): Observable<any> {
+        return this.apiService.getUserProfile(userId);
     }
 }

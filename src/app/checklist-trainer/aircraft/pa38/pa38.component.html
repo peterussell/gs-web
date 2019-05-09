@@ -1,0 +1,353 @@
+<div class="cockpit">
+
+    <!-- AHRS -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="instruments" class="instruments" matTooltip="Instruments" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #instruments="matMenu">
+      <span mat-menu-item class="menu-header">INSTRUMENTS</span>
+      <span mat-menu-item (click)="doAction('Altitude', 'Airspace, amps, QNH set')">Altitude: Airspace, amps, QNH set'</span>
+      <span mat-menu-item (click)="doAction('Instruments', 'QNH set, AHRS aligned, Bugs set')">Instruments: QNH set, AHRS aligned, Bugs set</span>
+    </mat-menu> -->
+  
+    <!-- Brakes -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="brakes" class="brakes" matTooltip="Brakes" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #brakes="matMenu">
+      <span mat-menu-item class="menu-header">BRAKES</span>
+      <span mat-menu-item (click)="doAction('Brakes', 'Check')">Check</span>
+    </mat-menu> -->
+  
+    <!-- Briefings -->
+    <div mat-icon-button [matMenuTriggerFor]="briefings" class="briefings">
+      <button mat-stroked-button>Briefings</button>
+    </div>
+    <mat-menu #briefings="matMenu">
+      <span mat-menu-item class="menu-header">BRIEFINGS</span>
+      <span mat-menu-item (click)="doAction('ABRIEFS', 'Complete')">ABRIEFS: Complete</span>
+      <span mat-menu-item (click)="doAction('Approach TCTWO', 'Complete')">Approach TCTWO: Complete</span>
+      <span mat-menu-item (click)="doAction('Departure procedure', 'Brief')">Departure procedure: Brief</span>
+      <span mat-menu-item (click)="doAction('Departure TCTWO', 'Complete')">Departure TCTWO: Complete</span>
+      <span mat-menu-item (click)="doAction('Emergency brief', 'Complete')">Emergency brief: Complete</span>
+      <span mat-menu-item (click)="doAction('Take-off performance brief', 'Complete')">Takeoff performance brief: Complete</span>
+      <span mat-menu-item (click)="doAction('Taxi brief', 'Complete')">Taxi brief: Complete</span>
+    </mat-menu>
+  
+    <!-- Carb heat -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="carbHeat" class="carb-heat" matTooltip="Carb Heat" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #carbHeat="matMenu">
+      <span mat-menu-item class="menu-header">CARB HEAT</span>
+      <span mat-menu-item (click)="doAction('Carb heat', 'Check')">Check</span>
+      <span mat-menu-item (click)="doAction('Carb heat', 'Off')">Off</span>
+      <span mat-menu-item (click)="doAction('Carb heat', 'Off when on final')">Off when on final</span>
+      <span mat-menu-item (click)="doAction('Carb heat', 'On')">On</span>
+    </mat-menu> -->
+  
+    <!-- Carbon Monoxide -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="co2" class="co2" matTooltip="Carbon Monoxide" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #co2="matMenu">
+      <span mat-menu-item class="menu-header">CARBON MONOXIDE</span>
+      <span mat-menu-item (click)="doAction('Carbon Monoxide', 'Check')">Check</span>
+    </mat-menu> -->
+  
+    <!-- Checklists -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="checklists" class="checklists">
+      <button mat-stroked-button>Checklists</button>
+    </div>
+    <mat-menu #checklists="matMenu">
+      <span mat-menu-item class="menu-header">CHECKLISTS</span>
+      <span mat-menu-item (click)="doAction('Complete before start checklist', '', true)">Before start</span>
+      <span mat-menu-item (click)="doAction('Complete after start checklist', '', true)">After start</span>
+      <span mat-menu-item (click)="doAction('Complete before take-off checklist', '', true)">Before take-off</span>
+      <span mat-menu-item (click)="doAction('Complete after take-off checklist', '', true)">After take-off</span>
+      <span mat-menu-item (click)="doAction('Complete cruise checklist', '', true)">Cruise</span>
+      <span mat-menu-item (click)="doAction('Complete descent checklist', '', true)">Descent</span>
+      <span mat-menu-item (click)="doAction('Complete before landing checklist', '', true)">Before landing</span>
+      <span mat-menu-item (click)="doAction('Complete after landing checklist', '', true)">After landing</span>
+      <span mat-menu-item (click)="doAction('Complete parking checklist', '', true)">Parking</span>
+    </mat-menu> -->
+  
+    <!-- Circuit Breakers -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="cbs" class="cbs" matTooltip="Circuit Breakers" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #cbs="matMenu">
+      <span mat-menu-item class="menu-header">CIRCUIT BREAKERS</span>
+      <span mat-menu-item (click)="doAction('Circuit breakers', 'All in')">All in</span>
+    </mat-menu> -->
+  
+    <!-- Compass -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="compass" class="compass" matTooltip="Compass" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #compass="matMenu">
+      <span mat-menu-item class="menu-header">COMPASS</span>
+      <span mat-menu-item (click)="doAction('Compass', 'Aligned with runway after line up')">Aligned with runway after line up</span>
+      <span mat-menu-item (click)="doAction('Compass', 'Compass and DI, check alignment')">Compass and DI, check alignment</span>
+    </mat-menu> -->
+  
+    <!-- Controls -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="controls" class="controls" matTooltip="Controls" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #controls="matMenu">
+      <span mat-menu-item class="menu-header">CONTROLS</span>
+      <span mat-menu-item (click)="doAction('Controls', 'Full and free')">Full and Free</span>
+      <span mat-menu-item (click)="doAction('Crosswind taxi technique', 'As required')">Crosswind taxi technique: As required</span>
+    </mat-menu> -->
+  
+    <!-- Electrical -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="electrical" class="electrical" matTooltip="Electrical" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #electrical="matMenu">
+      <span mat-menu-item class="menu-header">ELECTRICAL</span>
+      <span mat-menu-item (click)="doAction('Voltmeter', '28 volts')">Voltmeter: 28 volts</span>
+      <span mat-menu-item (click)="doAction('Ammeter', 'Check')">Ammeter: check</span>
+    </mat-menu> -->
+  
+    <!-- Flaps -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="flaps" class="flaps" matTooltip="Flaps" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #flaps="matMenu">
+      <span mat-menu-item class="menu-header">FLAPS</span>
+      <span mat-menu-item (click)="doAction('Flaps', 'Check')">Check</span>
+      <span mat-menu-item (click)="doAction('Flaps', 'Retract')">Retract</span>
+      <span mat-menu-item (click)="doAction('Flaps', 'Set')">Set</span>
+    </mat-menu> -->
+  
+    <!-- Fuel cock -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="fuelCock" class="fuel-cock" matTooltip="Fuel Cock" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #fuelCock="matMenu">
+      <span mat-menu-item class="menu-header">FUEL</span>
+      <span mat-menu-item (click)="doAction('Fuel', 'OFF')">OFF</span>
+      <span mat-menu-item (click)="doAction('Fuel', 'Fullest tank')">Fullest tank</span>
+      <span mat-menu-item (click)="doAction('Fuel', 'Lowest tank')">Lowest tank</span>
+      <span mat-menu-item (click)="doAction('Fuel', 'CCPPP')">CCPPP</span>
+    </mat-menu> -->
+  
+    <!-- Engine -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="engine" class="engine" matTooltip="Engine" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #engine="matMenu">
+      <span mat-menu-item class="menu-header">ENGINE</span>
+      <span mat-menu-item (click)="doAction('Engine', 'Fuel, T\'s and P\'s, Carb Heat, Mixture, Carbon Monoxide')">Engine: Fuel, T's and P's, Carb Heat, Mixture, Carbon Monoxide</span>
+      <span mat-menu-item (click)="doAction('Fuel pressure', 'Check')">Fuel pressure: Check</span>
+    </mat-menu> -->
+  
+    <!-- Fuel pump -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="fuelPump" class="fuel-pump" matTooltip="Fuel Pump" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #fuelPump="matMenu">
+      <span mat-menu-item class="menu-header">FUEL PUMP</span>
+      <span mat-menu-item (click)="doAction('Fuel pump', 'OFF')">OFF</span>
+      <span mat-menu-item (click)="doAction('Fuel pump', 'ON')">ON</span>
+    </mat-menu> -->
+  
+    <!-- Lights -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="lights" class="lights" matTooltip="Lights" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #lights="matMenu">
+      <span mat-menu-item class="menu-header">LIGHTS</span>
+      <span mat-menu-item (click)="doAction('Lights', 'Off')">All off</span>
+      <span mat-menu-item (click)="doAction('Lights', 'All on')">All on</span>
+      <span mat-menu-item (click)="doAction('Anti-collision light', 'OFF')">Anti-collision: Off</span>
+      <span mat-menu-item (click)="doAction('Anti-collision light', 'ON')">Anti-collision: On</span>
+      <span mat-menu-item (click)="doAction('Nav lights', 'OFF')">Nav lights: Off</span>
+      <span mat-menu-item (click)="doAction('Nav lights', 'ON')">Nav lights: On</span>
+    </mat-menu> -->
+  
+    <!-- Mags -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="mags" class="mags" matTooltip="Magnetos" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #mags="matMenu">
+      <span mat-menu-item class="menu-header">MAGNETOS</span>
+      <span mat-menu-item (click)="doAction('Ignition', 'Both')">Ignition: Both</span>
+      <span mat-menu-item (click)="doAction('Magnetos', 'Dead cut check')">Dead cut check</span>
+      <span mat-menu-item (click)="doAction('Magnetos', 'L, both, R, both')">L, Both, R, Both</span>
+      <span mat-menu-item (click)="doAction('Magnetos', 'Live cut check')">Live cut check</span>
+      <span mat-menu-item (click)="doAction('Magnetos', 'OFF, keys out')">OFF, keys out</span>
+      <span mat-menu-item (click)="doAction('Starter', 'Engage')">Starter: engage</span>
+    </mat-menu> -->
+    
+    <!-- Master and Alt -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="masterAlt" class="master-alt" matTooltip="Master and Alt" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #masterAlt="matMenu">
+      <span mat-menu-item class="menu-header">MASTER and ALT</span>
+      <span mat-menu-item (click)="doAction('Alternator', 'Check on')">Alternator: Check on</span>
+      <span mat-menu-item (click)="doAction('Master Switch and Alternator', 'Off')">Off</span>
+      <span mat-menu-item (click)="doAction('Master Switch and Alternator', 'On')">On</span>
+    </mat-menu> -->
+  
+    <!-- Misc -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="misc" class="misc">
+      <button mat-stroked-button>Misc.</button>
+    </div>
+    <mat-menu #misc="matMenu">
+      <span mat-menu-item class="menu-header">MISC</span>
+      <span mat-menu-item (click)="doAction('All clear', 'Check')">All clear: Check</span>
+      <span mat-menu-item (click)="doAction('FOD', 'Check')">FOD: Check</span>
+      <span mat-menu-item (click)="doAction('Hatches and harnesses', 'Secure')">Hatches and harnesses: Secure</span>
+      <span mat-menu-item (click)="doAction('Log', 'Update')">Log: Update</span>
+      <span mat-menu-item (click)="doAction('Propellor', 'Check clear')">Propellor: check clear</span>
+      <span mat-menu-item (click)="doAction('Taxi checks', 'Complete')">Taxi checks: Complete</span>
+      <span mat-menu-item (click)="doAction('Tech log', 'Complete')">Tech log: Complete</span>
+      <span mat-menu-item (click)="doAction('TOD', 'Confirm or re-calculate')">TOD: Confirm or re-calculate</span>
+      <span mat-menu-item (click)="doAction('Traffic', 'Check clear')">Traffic: Check clear</span>
+      <span mat-menu-item (click)="doAction('Windsock', 'Check headwind')">Windsock: Check headwind</span>
+    </mat-menu> -->
+  
+    <!-- Mixture -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="mixture" class="mixture" matTooltip="Mixture" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #mixture="matMenu">
+      <span mat-menu-item class="menu-header">MIXTURE</span>
+      <span mat-menu-item (click)="doAction('Mixture', 'Full rich')">Full rich</span>
+      <span mat-menu-item (click)="doAction('Mixture', 'Idle cut off')">Idle cut off</span>
+      <span mat-menu-item (click)="doAction('Mixture', 'Lean')">Lean</span>
+      <span mat-menu-item (click)="doAction('Mixture', 'Rich')">Rich</span>
+    </mat-menu> -->
+  
+    <!-- Oil -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="oil" class="oil" matTooltip="Oil" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #oil="matMenu">
+      <span mat-menu-item class="menu-header">OIL</span>
+      <span mat-menu-item (click)="doAction('Oil pressure', 'Check')">Pressure: Check</span>
+      <span mat-menu-item (click)="doAction('Oil pressure', 'Check rising')">Pressure: Check rising</span>
+      <span mat-menu-item (click)="doAction('Oil temperature', 'Check')">Temperature: Check</span>
+      <span mat-menu-item (click)="doAction('T\'s and P\'s', 'Check green')">T's and P's: Check green</span>
+    </mat-menu> -->
+  
+    <!-- Park brake -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="parkBrake" class="park-brake" matTooltip="Brakes" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #parkBrake="matMenu">
+      <span mat-menu-item class="menu-header">BRAKES</span>
+      <span mat-menu-item (click)="doAction('Brakes', 'Check and off')">Check and off</span>
+      <span mat-menu-item (click)="doAction('Brakes', 'Check holding')">Check holding</span>
+      <span mat-menu-item (click)="doAction('Brakes', 'Off if refueling')">Off if refueling</span>
+      <span mat-menu-item (click)="doAction('Park brake', 'ON')">Park brake: On</span>
+    </mat-menu> -->
+  
+    <!-- Primer -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="primer" class="primer" matTooltip="Primer" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #primer="matMenu">
+      <span mat-menu-item class="menu-header">PRIMER</span>
+      <span mat-menu-item (click)="doAction('Engine', 'Prime')">Prime</span>
+      <span mat-menu-item (click)="doAction('Primer', 'Covered')">Covered</span>
+    </mat-menu> -->
+  
+    <!-- Radio -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="radio" class="radio" matTooltip="Radio" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #radio="matMenu">
+      <span mat-menu-item class="menu-header">RADIO</span>
+      <span mat-menu-item (click)="doAction('Radio', 'As required, check frequency')">As required, check frequency</span>
+      <span mat-menu-item (click)="doAction('ATIS', 'Confirmed / copied')">ATIS copied</span>
+      <span mat-menu-item (click)="doAction('Radio', 'Check 121.5')">Check 121.5</span>
+      <span mat-menu-item (click)="doAction('Radio', 'Make call')">Make call</span>
+      <span mat-menu-item (click)="doAction('Radio', 'ON')">ON</span>
+      <span mat-menu-item (click)="doAction('Radio', 'Set')">Set</span>
+      <span mat-menu-item (click)="doAction('Radio', 'Set frequency as required')">Set frequency as required</span>
+    </mat-menu> -->
+  
+    <!-- Radio master -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="radioMaster" class="radio-master" matTooltip="Radio Master" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #radioMaster="matMenu">
+      <span mat-menu-item class="menu-header">RADIO MASTER</span>
+      <span mat-menu-item (click)="doAction('Radio master', 'OFF')">OFF</span>
+      <span mat-menu-item (click)="doAction('Radio master', 'ON')">ON</span>
+    </mat-menu> -->
+  
+    <!-- Spidertracks -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="spidertrack" class="spidertrack" matTooltip="Spidertrack" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #spidertrack="matMenu">
+      <span mat-menu-item class="menu-header">SPIDERTRACK</span>
+      <span mat-menu-item (click)="doAction('Spidertrack', 'Check')">Check</span>
+    </mat-menu> -->
+  
+    <!-- Standby instruments -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="standbyInstruments" class="standby-instruments" matTooltip="Standby Instruments" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #standbyInstruments="matMenu">
+      <span mat-menu-item class="menu-header">STANDBY INSTRUMENTS</span>
+      <span mat-menu-item (click)="doAction('Standby instruments', 'QNH set')">QNH set</span>
+    </mat-menu> -->
+  
+    <!-- Tachometer -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="tach" class="tach" matTooltip="Tachometer" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #tach="matMenu">
+      <span mat-menu-item class="menu-header">Tachometer</span>
+      <span mat-menu-item (click)="doAction('Slow running', '500 RPM to 800 RPM')">Slow running: 500 RPM to 800 RPM</span>
+    </mat-menu> -->
+  
+    <!-- Throttle -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="throttle" class="throttle" matTooltip="Throttle" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #throttle="matMenu">
+      <span mat-menu-item class="menu-header">THROTTLE</span>
+      <span mat-menu-item (click)="doAction('Throttle', '1000 RPM')">1000 RPM</span>
+      <span mat-menu-item (click)="doAction('Throttle', '1800 RPM')">1800 RPM</span>
+      <span mat-menu-item (click)="doAction('Throttle', 'Close')">Close</span>
+      <span mat-menu-item (click)="doAction('Throttle', 'Open')">Open</span>
+      <span mat-menu-item (click)="doAction('Throttle', 'Set')">Set</span>
+    </mat-menu> -->
+  
+    <!-- Throttle Friction -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="throttleFriction" class="throttle-friction" matTooltip="Throttle Friction" matTooltipPosition="right">
+        <i class="material-icons find-icon">search</i>
+      </div>
+      <mat-menu #throttleFriction="matMenu">
+        <span mat-menu-item class="menu-header">THROTTLE FRICTION</span>
+        <span mat-menu-item (click)="doAction('Throttle Friction', 'Set')">Set</span>
+      </mat-menu> -->
+  
+    <!-- Transponder -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="transponder" class="transponder" matTooltip="Transponder" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #transponder="matMenu">
+      <span mat-menu-item class="menu-header">TRANSPONDER</span>
+      <span mat-menu-item (click)="doAction('Transponder', 'STBY')">STBY</span>
+      <span mat-menu-item (click)="doAction('Transponder', 'ALT')">ALT</span>
+    </mat-menu> -->
+  
+    <!-- Trim -->
+    <!-- <div mat-icon-button [matMenuTriggerFor]="trim" class="trim" matTooltip="Trim" matTooltipPosition="right">
+      <i class="material-icons find-icon">search</i>
+    </div>
+    <mat-menu #trim="matMenu">
+      <span mat-menu-item class="menu-header">TRIM</span>
+      <span mat-menu-item (click)="doAction('Trim', 'Check')">Check</span>
+      <span mat-menu-item (click)="doAction('Trim', 'Set')">Set</span>
+    </mat-menu> -->
+  </div>

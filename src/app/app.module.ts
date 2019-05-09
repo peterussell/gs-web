@@ -50,6 +50,7 @@ import { ChecklistTrainerComponent } from './checklist-trainer/checklist-trainer
 import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.component';
 import { GsSnackbarComponent } from './gs-snackbar/gs-snackbar.component';
 import { PiperWarriorIiAvidyneComponent } from './checklist-trainer/aircraft/piper-warrior-ii-avidyne/piper-warrior-ii-avidyne.component';
+import { Pa38Component } from './checklist-trainer/aircraft/pa38/pa38.component';
 
 
 @NgModule({
@@ -85,6 +86,7 @@ import { PiperWarriorIiAvidyneComponent } from './checklist-trainer/aircraft/pip
     FlashcardsFreeComponent,
     GsSnackbarComponent,
     PiperWarriorIiAvidyneComponent,
+    Pa38Component,
   ],
   imports: [
     BrowserModule,

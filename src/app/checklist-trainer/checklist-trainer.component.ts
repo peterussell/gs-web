@@ -10,6 +10,7 @@ import { MatSelectChange } from '@angular/material';
   encapsulation: ViewEncapsulation.None
 })
 export class ChecklistTrainerComponent implements OnInit {
+  private currentAircraft: AvailableAircraft;
   private actionHistory: ProcedureStep[];
 
   public procedureList: ProcedureList;
@@ -26,6 +27,21 @@ export class ChecklistTrainerComponent implements OnInit {
   ngOnInit() {
     this.currentProcedure = new Procedure();
     this.procedureList = new ProcedureList();
+  }
+
+  showSelector() {
+    return this.currentAircraft === undefined;
+  }
+
+  selectTrainer(identifier: string) {
+    switch (identifier.toLocaleLowerCase()) {
+      case 'pa-28':
+        this.currentAircraft = AvailableAircraft.PA28;
+        break;
+      case 'pa-38':
+        this.currentAircraft = AvailableAircraft.PA38;
+        break;
+    }
   }
 
   onProcedureSelected(event: MatSelectChange) {
@@ -74,4 +90,9 @@ export class ChecklistTrainerComponent implements OnInit {
     this.lastExpectedStep = undefined;
     this.lastActualStep = undefined;
   }
+}
+
+enum AvailableAircraft {
+  PA28,
+  PA38
 }

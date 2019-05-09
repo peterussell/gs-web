@@ -6,6 +6,8 @@ import { AuthenticateUserResultStatus } from '../core/services/authenticate-user
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { map, catchError } from 'rxjs/operators';
 import { Subscription } from 'rxjs/Subscription';
+import { User } from '../core/models/user.model';
+import { StoreService } from '../core/services/store.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +22,10 @@ export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
   public hasAuthError: boolean = false;
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    private storeService: StoreService) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -39,8 +44,14 @@ export class LoginComponent implements OnInit {
     )
     .subscribe(
       (cognitoUser: CognitoUser) => {
-        this.userService.setCurrentUser(cognitoUser);
-        this.onAuthenticationSuccess.emit();
+        // Load the user's profile info
+        this.userService.getProfile(cognitoUser['username']).subscribe((data) => {
+          let user = new User(cognitoUser, data);
+          this.userService.setCurrentUser(user);
+
+          console.log(user);
+          this.onAuthenticationSuccess.emit();
+        });
       },
       (error: any) => {
         this.hasAuthError = true;

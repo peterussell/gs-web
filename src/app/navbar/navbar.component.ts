@@ -4,6 +4,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { UserService } from '../core/services/user.service';
 import { UIEventsService } from '../core/services/ui-events.service';
+import { User } from '../core/models/user.model';
+import { UserArn } from 'aws-sdk/clients/codestar';
+import { StoreService } from '../core/services/store.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +14,7 @@ import { UIEventsService } from '../core/services/ui-events.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  public currentUser: CognitoUser;
+  public currentUser: User;
 
   constructor(
     private userService: UserService,
@@ -21,7 +24,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.userService.currentUser$.subscribe(
-      (newUser: CognitoUser) => {
+      (newUser: User) => {
         this.currentUser = newUser;
       }
     );

@@ -36,7 +36,7 @@ const appRoutes: Routes = [
         { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
         { path: 'activate', component: ActivateFullPageComponent },
         { path: 'contact', component: ContactComponent },
-        { path: 'checklist-trainer', component: ChecklistTrainerComponent }
+        { path: 'checklists', component: ChecklistTrainerComponent }
     ]},
     { path: '**', redirectTo: '' }
 ];

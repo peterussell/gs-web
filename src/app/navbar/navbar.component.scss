@@ -7,6 +7,7 @@
     justify-content: center;
     background-color: #15354e;
     color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
 
     &__inner {
         width: 900px;
@@ -17,6 +18,12 @@
         &--left,
         &--right {
             flex: 0 0 auto;
+
+            p.welcome-back-msg {
+                font-size: 0.7em;
+                display: inline;
+                margin-right: 8px;
+            }
         }
 
         &--left {
@@ -26,7 +33,6 @@
             .title {
                 margin-right: 40px;
                 a {
-                    font-family: 'Roboto Condensed', sans-serif;
                     font-size: 1.1em;
                     font-weight: 400;
                     text-decoration: none;

@@ -6,6 +6,7 @@ import { UserService } from '../../../core/services/user.service';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { QuestionSet } from '../../../core/models/question-set.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { User } from '../../../core/models/user.model';
 
 @Component({
   selector: 'app-flashcards-card',
@@ -19,7 +20,7 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
   @Input() isInReviewSet: boolean;
   
   private currentState: FlashcardViewerState;
-  private currentUser: CognitoUser;
+  private currentUser: User;
   private reviewSet: QuestionSet;
 
   constructor(
@@ -29,15 +30,17 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.userService.currentUser$.subscribe(
-      (newUser: CognitoUser) => {
+      (newUser: User) => {
         this.currentUser = newUser;
 
-        if (newUser) {
-          this.apiService.getReviewSetForUser(this.currentUser['username']).subscribe(
-            (reviewSet: QuestionSet) => {
-            this.reviewSet = reviewSet;
-          });
-        }
+        // TODO: needs to be updated with the new User model, deferring since this isn't in use yet
+        // (should just be user.CognitoUser['username'])
+        // if (newUser) {
+        //   this.apiService.getReviewSetForUser(this.currentUser['username']).subscribe(
+        //     (reviewSet: QuestionSet) => {
+        //     this.reviewSet = reviewSet;
+        //   });
+        // }
       }
     );
   }
