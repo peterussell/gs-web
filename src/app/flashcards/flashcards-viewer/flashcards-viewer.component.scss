@@ -72,6 +72,17 @@ i.material-icons {
     }
 }
 
+.no-questions {
+    p {
+        margin: 20px 0;
+        line-height: 1.5em;
+    }
+
+    .mat-flat-button {
+        font-weight: 100;
+    }
+}
+
 .results {
     .no-review-questions {
         font-weight: 100;

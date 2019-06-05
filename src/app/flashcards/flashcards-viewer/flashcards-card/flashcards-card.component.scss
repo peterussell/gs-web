@@ -26,30 +26,6 @@
     }
 }
 
-.actions-bar {
-    text-align: right;
-
-    .review-set-badge {
-        font-size: 14px;
-        font-weight: 100;
-        color: #fff;
-        background-color: #ff8200;
-        border-radius: 2px;
-        padding: 4px 12px;
-    }
-
-    button {
-        i {
-            vertical-align: middle;
-            margin-top: -4px;
-        }
-        font-size: 0.6em;
-        color: #333;
-        font-weight: 100;
-        cursor: pointer;
-    }
-}
-
 .question, .answer {
     font-size: 1.2em;
     line-height: 1.6em;

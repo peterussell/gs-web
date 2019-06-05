@@ -320,6 +320,13 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     this.currentState = FlashcardsViewerState.InProgress;
   }
 
+  getCurrentTopic() {
+    if (this.subject === undefined || this.subject.Topics.length === 0) {
+      return null;
+    }
+    return this.subject.Topics[this.getCurrentTopicIndex()];
+  }
+
   getCurrentTopicIndex() {
     return this.subject.Topics.indexOf(
       this.subject.Topics.find(t => { return t.TopicId === this.currentTopicId })

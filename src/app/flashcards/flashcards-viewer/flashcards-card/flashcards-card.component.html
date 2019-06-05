@@ -1,27 +1,7 @@
-<div *ngIf="flashcardViewerQuestion; else loading">
+<div *ngIf="flashcardViewerQuestion; else noQuestions">
   <mat-card ngClass.xs="mat-card--sm" ngClass.sm="mat-card--sm">
     <!-- Title -->
     <mat-card-title>
-      <div class="actions-bar">
-
-        <span class="review-set-badge" *ngIf="isInReviewSet">Review</span>
-
-        <!--
-        <button mat-button
-          (click)="addToReviewSet(flashcardViewerQuestion)"
-          *ngIf="!isInReviewSet(); else inReviewSet"
-          style="cursor: pointer">
-          <i class="material-icons">playlist_add</i>
-            Save to review list
-        </button>
-        <ng-template #inReviewSet>
-          <button mat-button (click)="removeFromReviewSet(flashcardViewerQuestion)">
-            <i class="material-icons">playlist_add_check</i>
-            Remove from review list<br>
-          </button>
-        </ng-template>
-        -->
-      </div>
       <h4 ngClass.xs="sm" ngClass.sm="sm">
         {{ flashcardViewerQuestion.TopicTitle }} - {{ questionNumber }}/{{ numberOfQuestions }}
       </h4>
@@ -61,6 +41,6 @@
   </mat-card>
 </div>
 
-<ng-template #loading>
-  <h2>Loading...</h2>
+<ng-template #noQuestions>
+  <h2>Yo mama...</h2>
 </ng-template>

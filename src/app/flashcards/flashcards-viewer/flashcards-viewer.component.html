@@ -8,7 +8,8 @@
     </div>
     <div class="viewer">
         <div *ngIf="isInProgress(); else results">
-            <div class="nav-buttons">
+            <div *ngIf="hasQuestions(); else noQuestions">
+                <div class="nav-buttons">
                     <button mat-flat-button
                         (click)="goToPreviousQuestion()"
                         [disabled]="!canGoToPreviousQuestion()">
@@ -19,16 +20,12 @@
                     </button>
                     <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
                         <button mat-flat-button (click)="saveForReview()" [color]="'review'">
-                            <i class="material-icons">playlist_add</i>
-                            <span fxShow="false" fxShow.gt-sm="true">Save for review</span>
-                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Review</span>
+                            <i class="material-icons">playlist_add</i>Review
                         </button>
                     </span>
                     <ng-template #saved>
                         <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
-                            <i class="material-icons">playlist_add_check</i>
-                            <span fxShow="false" fxShow.gt-sm="true">Saved for review</span>
-                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Saved</span>
+                            <i class="material-icons">playlist_add_check</i>Saved
                         </button>
                     </ng-template>
                     
@@ -42,53 +39,71 @@
                         <ng-template #finish>Finish ></ng-template>
                     </button>
                 </div>
-            <div class="progress-bar">
-                <mat-progress-bar
-                    [mode]="determinate"
-                    [value]="progress">
-                </mat-progress-bar>
-            </div>
-        
-            <app-flashcards-card
-                [flashcardViewerQuestion]="questions[currentQuestionIndex]"
-                [questionNumber]="currentQuestionIndex+1"
-                [numberOfQuestions]="getNumberOfQuestions()">
-            </app-flashcards-card>
-        
-            <div class="nav-buttons">
-                <button mat-flat-button
-                    (click)="goToPreviousQuestion()"
-                    [disabled]="!canGoToPreviousQuestion()">
-                    <span fxShow="false" fxShow.gt-sm="true">< Previous</span>
-                    <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
-                        <i class="material-icons">fast_rewind</i>
-                    </span>
-                </button>
-                <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
-                    <button mat-flat-button (click)="saveForReview()" [color]="'review'">
-                        <i class="material-icons">playlist_add</i>
-                        <span fxShow="false" fxShow.gt-sm="true">Save for review</span>
-                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Review</span>
-                    </button>
-                </span>
-                <ng-template #saved>
-                    <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
-                        <i class="material-icons">playlist_add_check</i>
-                        <span fxShow="false" fxShow.gt-sm="true">Saved for review</span>
-                        <span fxShow="false" fxShow.xs="true" fxShow.sm="true">Saved</span>
-                    </button>
-                </ng-template>
-                
-                <button mat-flat-button (click)="goToNextQuestion()">
-                    <span *ngIf="canGoToNextQuestion(); else finish">
-                        <span fxShow="false" fxShow.gt-sm="true">Next ></span>
+                <div class="progress-bar">
+                    <mat-progress-bar
+                        [mode]="determinate"
+                        [value]="progress">
+                    </mat-progress-bar>
+                </div>
+            
+                <app-flashcards-card
+                    [flashcardViewerQuestion]="questions[currentQuestionIndex]"
+                    [questionNumber]="currentQuestionIndex+1"
+                    [numberOfQuestions]="getNumberOfQuestions()">
+                </app-flashcards-card>
+            
+                <div class="nav-buttons">
+                    <button mat-flat-button
+                        (click)="goToPreviousQuestion()"
+                        [disabled]="!canGoToPreviousQuestion()">
+                        <span fxShow="false" fxShow.gt-sm="true">< Previous</span>
                         <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
-                            <i class="material-icons">fast_forward</i>
+                            <i class="material-icons">fast_rewind</i>
                         </span>
+                    </button>
+                    <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
+                        <button mat-flat-button (click)="saveForReview()" [color]="'review'">
+                            <i class="material-icons">playlist_add</i>Review
+                        </button>
                     </span>
-                    <ng-template #finish>Finish ></ng-template>
-                </button>
+                    <ng-template #saved>
+                        <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
+                            <i class="material-icons">playlist_add_check</i>Saved
+                        </button>
+                    </ng-template>
+                    
+                    <button mat-flat-button (click)="goToNextQuestion()">
+                        <span *ngIf="canGoToNextQuestion(); else finish">
+                            <span fxShow="false" fxShow.gt-sm="true">Next ></span>
+                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
+                                <i class="material-icons">fast_forward</i>
+                            </span>
+                        </span>
+                        <ng-template #finish>Finish ></ng-template>
+                    </button>
+                </div>
             </div>
+
+            <!-- No questions for this topic (shouldn't happen, but show a useful message just in case) -->
+            <ng-template #noQuestions>
+                <mat-card class="no-questions">
+                    <h2>{{ getCurrentTopic().SubTopic }} - {{ getCurrentTopic().Title }}</h2>
+                    <p>
+                        Sorry, this topic doesn't have any questions yet.
+                    </p>
+                    <p>
+                        We're working hard to add new questions as often as possible. For updates, follow
+                        <a href="https://www.facebook.com/groundschoolnz" target="_blank">
+                        GroundSchool NZ on Facebook</a>.
+                    </p>
+                    <button
+                        mat-flat-button (click)="goToNextTopic()"
+                        [disabled]="!canGoToNextTopic()">
+                        Go to next topic >
+                    </button>
+                    <!-- TODO: this should be a 'finish' button for the last topic -->
+                </mat-card>
+            </ng-template>
         </div>
         
         <ng-template #results>
@@ -96,7 +111,6 @@
                 <!-- Free mode: show final screen -->
                 <div *ngIf="isFreeMode(); else reviewQuestions">
                     <h2>Flashcard set complete</h2>
-
                     <p>
                         <button mat-flat-button (click)="goToCourseIndex()">
                             <i class="material-icons">subject</i> Course Index
@@ -108,6 +122,8 @@
                         </button>
                     </p>
                     <div class="no-review-questions">
+
+                        <!-- TODO -->
                         <iframe
                             width="560"
                             height="315"
