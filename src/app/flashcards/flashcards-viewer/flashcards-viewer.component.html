@@ -8,7 +8,7 @@
     </div>
     <div class="viewer">
         <div *ngIf="isInProgress(); else results">
-            <div *ngIf="!isPremiumAndHasQuestions(); else noQuestions">
+            <div *ngIf="isPremiumAndHasQuestions(); else topicHasNoQuestions">
                 <div class="nav-buttons">
                     <button mat-flat-button
                         (click)="goToPreviousQuestion()"
@@ -100,7 +100,7 @@
             </div>
 
             <!-- No questions for this topic (shouldn't happen, but show a useful message just in case) -->
-            <ng-template #noQuestions>
+            <ng-template #topicHasNoQuestions>
                 <mat-card class="no-questions">
                     <h2>{{ getCurrentTopic().SubTopic }} - {{ getCurrentTopic().Title }}</h2>
                     <p>
