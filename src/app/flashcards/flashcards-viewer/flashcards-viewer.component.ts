@@ -207,7 +207,11 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     return this.questions.length > 0;
   }
 
-  isPremiumAndHasQuestions() {
+  isFree() {
+    return this.viewerMode === FlashcardsViewerMode.Free;
+  }
+
+  isPremiumAndTopicHasQuestions() {
     return this.viewerMode === FlashcardsViewerMode.Premium
       && this.hasQuestions();
   }

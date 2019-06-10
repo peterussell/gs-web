@@ -8,7 +8,7 @@
     </div>
     <div class="viewer">
         <div *ngIf="isInProgress(); else results">
-            <div *ngIf="isPremiumAndHasQuestions(); else topicHasNoQuestions">
+            <div *ngIf="isFree() || isPremiumAndTopicHasQuestions(); else topicHasNoQuestions">
                 <div class="nav-buttons">
                     <button mat-flat-button
                         (click)="goToPreviousQuestion()"
