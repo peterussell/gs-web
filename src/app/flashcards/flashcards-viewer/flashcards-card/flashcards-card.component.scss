@@ -10,9 +10,16 @@
 }
 
 .mat-card-title {
+    line-height: 1.5em;
+
+    span.question-counter {
+        font-size: 0.8em;
+        display: block;
+    }
+
     h4.sm {
         margin: 14px 2px 6px 2px;
-    }   
+    }
 }
 
 .mat-card-subtitle {

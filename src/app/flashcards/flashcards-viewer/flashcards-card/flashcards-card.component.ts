@@ -18,6 +18,7 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
   @Input() questionNumber: number;
   @Input() numberOfQuestions: number;
   @Input() isInReviewSet: boolean;
+  @Input() isQuestionLoading: boolean;
   
   private currentState: FlashcardViewerState;
   private currentUser: User;
@@ -134,5 +135,6 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
 
 enum FlashcardViewerState {
   Question,
-  Answer
+  Answer,
+  Loading
 }

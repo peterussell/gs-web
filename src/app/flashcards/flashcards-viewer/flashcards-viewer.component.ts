@@ -36,6 +36,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   public questionIdsSeen: Array<string> = new Array<string>();
 
   public currentState: FlashcardsViewerState;
+  public isQuestionLoading: boolean;
   
   get progress() : number {
     if (this.questions === undefined || this.questions.length === 0) { return 0; }
@@ -112,6 +113,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   getRandomQuestion() {
+    this.isQuestionLoading = true;
+
     const topicIdsToInclude: Array<string> = new Array<string>();
     this.subject.Topics.forEach((t: Topic) => {
       topicIdsToInclude.push(t.TopicId);
@@ -122,6 +125,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       this.topicIdsSeen,
       this.questionIdsSeen,
       this.subject.Version).subscribe((res: any) => {
+
         if (res['status'] === 200) {
           const question = res['body'].Question;
           if (question === undefined)
@@ -133,6 +137,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
           fvQuestion.Question = question;
           fvQuestion.SubjectTitle = res['body'].SubjectTitle;
           fvQuestion.TopicTitle = res['body'].TopicTitle;
+          fvQuestion.SubTopic = res['body'].SubTopic;
 
           this.questions.push(fvQuestion);
           this.questionIdsSeen.push(question.QuestionId);
@@ -143,6 +148,9 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       },
       (error) => {
         console.log(error); // TODO: log this properly
+      },
+      () => {
+        this.isQuestionLoading = false;
       }
     );
   }
@@ -197,6 +205,11 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   hasQuestions() {
     return this.questions.length > 0;
+  }
+
+  isPremiumAndHasQuestions() {
+    return this.viewerMode === FlashcardsViewerMode.Premium
+      && this.hasQuestions();
   }
 
   hasReviewQuestions() {
@@ -366,6 +379,11 @@ export class FlashcardsViewerQuestion {
   public Question: Question;
   public SubjectTitle: string;
   public TopicTitle: string;
+  public SubTopic: string;
+
+  hasSubTopic(): boolean {
+    return this.SubTopic !== undefined && this.SubTopic !== '';
+  }
 }
 
 enum FlashcardsViewerState {

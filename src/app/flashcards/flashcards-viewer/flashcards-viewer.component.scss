@@ -33,11 +33,15 @@ i.material-icons {
     }
 }
 
+.mat-progress-spinner .mat-spinner circle {
+    stroke: #fff;
+}
+
 .nav-buttons {
     width: 100%;
     text-align: center;
     margin: 20px 0;
-
+    
     .mat-flat-button {
         margin: 0 6px;
         font-weight: 100;
@@ -45,6 +49,16 @@ i.material-icons {
         &--sm {
             @extend .mat-flat-button;
             margin: 0;
+        }
+
+        .mat-progress-spinner { 
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 7px;
+        }
+
+        .spinner ::ng-deep .mat-spinner circle { 
+            stroke: #fff;
         }
     }
 

@@ -3,11 +3,15 @@
     <!-- Title -->
     <mat-card-title>
       <h4 ngClass.xs="sm" ngClass.sm="sm">
-        {{ flashcardViewerQuestion.TopicTitle }} - {{ questionNumber }}/{{ numberOfQuestions }}
+        <span class="question-counter">Question {{ questionNumber }}/{{ numberOfQuestions }}</span>
+        <span *ngIf="flashcardViewerQuestion.hasSubTopic()" class="random-question-subtitle">
+            {{ flashcardViewerQuestion.SubTopic }} - 
+          </span>
+          {{ flashcardViewerQuestion.TopicTitle }}
       </h4>
     </mat-card-title>
     <mat-card-subtitle>
-      <p ngClass.xs="sm" ngClass.sm="sm">Syllabus reference: {{ flashcardViewerQuestion.Question.SyllabusRef }}</p>
+      <p ngClass.xs="sm" ngClass.sm="sm">AC Syllabus Reference: {{ flashcardViewerQuestion.Question.SyllabusRef }}</p>
     </mat-card-subtitle>
 
     <!-- Question -->
@@ -42,5 +46,5 @@
 </div>
 
 <ng-template #noQuestions>
-  <h2>Yo mama...</h2>
+  <h2>Fetching a random question...</h2>
 </ng-template>

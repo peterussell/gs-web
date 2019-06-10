@@ -8,7 +8,7 @@
     </div>
     <div class="viewer">
         <div *ngIf="isInProgress(); else results">
-            <div *ngIf="hasQuestions(); else noQuestions">
+            <div *ngIf="!isPremiumAndHasQuestions(); else noQuestions">
                 <div class="nav-buttons">
                     <button mat-flat-button
                         (click)="goToPreviousQuestion()"
@@ -28,15 +28,22 @@
                             <i class="material-icons">playlist_add_check</i>Saved
                         </button>
                     </ng-template>
-                    
-                    <button mat-flat-button (click)="goToNextQuestion()">
-                        <span *ngIf="canGoToNextQuestion(); else finish">
-                            <span fxShow="false" fxShow.gt-sm="true">Next ></span>
-                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
-                                <i class="material-icons">fast_forward</i>
-                            </span>
+                    <button
+                        mat-flat-button
+                        (click)="goToNextQuestion()"
+                        [disabled]="isQuestionLoading">
+                        <span *ngIf="isQuestionLoading; else nextButton" class="spinner">
+                            <mat-spinner diameter="20"></mat-spinner>
                         </span>
-                        <ng-template #finish>Finish ></ng-template>
+                        <ng-template #nextButton>
+                            <span *ngIf="canGoToNextQuestion(); else finish">
+                                <span fxShow="false" fxShow.gt-sm="true">Next ></span>
+                                <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
+                                    <i class="material-icons">fast_forward</i>
+                                </span>
+                            </span>
+                            <ng-template #finish>Finish ></ng-template>
+                        </ng-template>
                     </button>
                 </div>
                 <div class="progress-bar">
@@ -45,11 +52,12 @@
                         [value]="progress">
                     </mat-progress-bar>
                 </div>
-            
+
                 <app-flashcards-card
                     [flashcardViewerQuestion]="questions[currentQuestionIndex]"
                     [questionNumber]="currentQuestionIndex+1"
-                    [numberOfQuestions]="getNumberOfQuestions()">
+                    [numberOfQuestions]="getNumberOfQuestions()"
+                    [isQuestionLoading]="isQuestionLoading">
                 </app-flashcards-card>
             
                 <div class="nav-buttons">
@@ -71,15 +79,22 @@
                             <i class="material-icons">playlist_add_check</i>Saved
                         </button>
                     </ng-template>
-                    
-                    <button mat-flat-button (click)="goToNextQuestion()">
-                        <span *ngIf="canGoToNextQuestion(); else finish">
-                            <span fxShow="false" fxShow.gt-sm="true">Next ></span>
-                            <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
-                                <i class="material-icons">fast_forward</i>
-                            </span>
+                    <button
+                        mat-flat-button
+                        (click)="goToNextQuestion()"
+                        [disabled]="isQuestionLoading">
+                        <span *ngIf="isQuestionLoading; else nextButton" class="spinner">
+                            <mat-spinner diameter="20"></mat-spinner>
                         </span>
-                        <ng-template #finish>Finish ></ng-template>
+                        <ng-template #nextButton>
+                            <span *ngIf="canGoToNextQuestion(); else finish">
+                                <span fxShow="false" fxShow.gt-sm="true">Next ></span>
+                                <span fxShow="false" fxShow.xs="true" fxShow.sm="true">
+                                    <i class="material-icons">fast_forward</i>
+                                </span>
+                            </span>
+                            <ng-template #finish>Finish ></ng-template>
+                        </ng-template>
                     </button>
                 </div>
             </div>
