@@ -137,8 +137,7 @@
                         </button>
                     </p>
                     <div class="no-review-questions">
-
-                        <!-- TODO -->
+                        <!-- Go you! Here, have a random video -->
                         <iframe
                             width="560"
                             height="315"
@@ -150,22 +149,18 @@
                 </div>
 
                 <ng-template #reviewQuestions>
-                    <h2>Review questions</h2>
+                    <h2 class="review-questions">Review questions</h2>
             
                     <!-- Review questions -->
                     <ul *ngIf="hasReviewQuestions(); else noQuestions">
-                        <li *ngFor="let q of getCurrentReviewSet()">
-                            <div class="syllabus-ref">
-                                <span class="syllabus-ref__title">Syllabus Ref</span>
-                                {{ q.Question.SyllabusRef }}
-                            </div>
-                            <div class="question">
-                                <div class="question__question">{{ q.Question.Question }}</div>
-                                <div class="question__answer">
-                                    <div class="question__answer--icon"><i class="material-icons">keyboard_arrow_right</i></div>
-                                    <div class="question__answer--text">{{ q.Question.Answer }}</div>
-                                </div>
-                            </div>
+                        <li *ngFor="let q of getCurrentReviewSet()" class="review-question">
+                            <h4>Syllabus Ref: {{ q.Question.SyllabusRef }}</h4>
+                            <p class="question">
+                                <strong>Q.</strong> {{ q.Question.Question }}
+                            </p>
+                            <p class="answer">
+                                <strong>A.</strong> {{ q.Question.Answer }}
+                            </p>
                         </li>
                     </ul>
             
