@@ -11,6 +11,8 @@ import { FlashcardsViewerMode } from '../flashcards-shared';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { GsSnackbarComponent } from '../../gs-snackbar/gs-snackbar.component';
 import { DomSanitizer } from '@angular/platform-browser';
+import { UserService } from '../../core/services/user.service';
+import { User } from '../../core/models/user.model';
 
 @Component({
   selector: 'app-flashcards-viewer',
@@ -35,6 +37,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   public topicIdsSeen: Array<string> = new Array<string>();
   public questionIdsSeen: Array<string> = new Array<string>();
 
+  public currentUser: User;
   public currentState: FlashcardsViewerState;
   public isQuestionLoading: boolean;
   
@@ -59,17 +62,31 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   constructor(
     private router: Router,
     private apiService: ApiService,
+    private userService: UserService,
     private snackBar: MatSnackBar,
     private domSanitizer: DomSanitizer) {
     this.questions = new Array<FlashcardsViewerQuestion>();
   }
 
   ngOnInit() {
+    // Load user profile & stored review set
+    this.userService.currentUser$.subscribe((user: User) => {
+      if (user === null) { return; }
+      this.userService.getProfile(user.CognitoUser['username']).subscribe((data) => {
+        user.setProfileData(data);
+
+        // tmp
+        console.log(user.getReviewSet());
+      });
+      this.currentUser = user;
+    });
+
     this.initialise();
   }
   
   initialise() {
     this.currentQuestionIndex = -1;
+    
     if (this.viewerMode === FlashcardsViewerMode.Free) {
       this.initFreeMode();
     } else if (this.viewerMode === FlashcardsViewerMode.Premium) {
@@ -101,6 +118,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     });
   }
 
+  // DEPRECATED (local implementation of review set)
   getReviewSet(topicId: string) {
     if (this.forReview === undefined) return undefined;
     if (topicId in this.forReview) {
@@ -108,6 +126,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     }
   }
 
+  // DEPRECATED (local-only implementation of review set)
   getCurrentReviewSet() {
     return this.getReviewSet(this.currentTopicId);
   }
@@ -216,6 +235,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       && this.hasQuestions();
   }
 
+  // DEPRECATED (local-only implementation of review set)
   hasReviewQuestions() {
     const crs = this.getCurrentReviewSet();
     return crs !== undefined && crs.size > 0;
@@ -241,18 +261,31 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   isCurrentQuestionInReviewSet() {
     const q = this.questions[this.currentQuestionIndex];
-    if (q === undefined) { return false; }
-
-    let crs = this.getCurrentReviewSet();
-    if (crs === undefined) return false;
-
-    for (let reviewQuestion of Array.from(this.getCurrentReviewSet())) {
-      if (reviewQuestion.Question.QuestionId === q.Question.QuestionId) {
-        return true;
-      }
+    const rs = this.currentUser.getReviewSet();
+    if (q === undefined || rs === undefined) {
+      return false;
     }
+    return rs.QuestionIds.includes(q.Question.QuestionId);
   }
 
+
+
+  // DEPRECATED (local-only implementation of review set)
+  // isCurrentQuestionInReviewSet() {
+  //   const q = this.questions[this.currentQuestionIndex];
+  //   if (q === undefined) { return false; }
+
+  //   let crs = this.getCurrentReviewSet();
+  //   if (crs === undefined) return false;
+
+  //   for (let reviewQuestion of Array.from(this.getCurrentReviewSet())) {
+  //     if (reviewQuestion.Question.QuestionId === q.Question.QuestionId) {
+  //       return true;
+  //     }
+  //   }
+  // }
+
+  // TODO: Update this to save to the AWS review set
   saveForReview() {
     if (this.isFreeMode()) {
       this.snackBar.openFromComponent(
@@ -269,9 +302,33 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       );
       return;
     }
-    this.getCurrentReviewSet().add(this.questions[this.currentQuestionIndex]);
+    
+    if (this.currentUser === null) { 
+      this.snackBar.openFromComponent(
+        GsSnackbarComponent,
+        {
+          duration: 5000,
+          data: {
+            message: 'Please log in to save questions to your review set.',
+          },
+          panelClass: 'gs-snackbar'
+        }
+      );
+      return;
+    }
+
+    const q = this.questions[this.currentQuestionIndex].Question;
+    this.apiService.addToReviewSet(
+      this.currentUser.CognitoUser['username'], q.TopicId, q.QuestionId
+    ).subscribe((res) => {
+      // tmp
+      console.log(res);
+    })
+
+    // this.getCurrentReviewSet().add(this.questions[this.currentQuestionIndex]);
   }
 
+  // DEPRECATED (local-only implementation of review set)
   removeFromForReview() {
     const q = this.questions[this.currentQuestionIndex];
     this.getCurrentReviewSet().forEach((reviewQuestion: FlashcardsViewerQuestion) => {
