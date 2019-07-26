@@ -48,8 +48,6 @@ export class LoginComponent implements OnInit {
         this.userService.getProfile(cognitoUser['username']).subscribe((data) => {
           let user = new User(cognitoUser, data);
           this.userService.setCurrentUser(user);
-
-          console.log(user);
           this.onAuthenticationSuccess.emit();
         });
       },

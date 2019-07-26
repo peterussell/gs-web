@@ -10,7 +10,10 @@ export class User {
 
     constructor(cognitoUser: CognitoUser, profileData?: any) {
         this.CognitoUser = cognitoUser;
+        this.setProfileData(profileData);
+    }
 
+    setProfileData(profileData?: any) {
         if (profileData === undefined) { return; }
 
         this.MemberId = profileData['MemberId'];

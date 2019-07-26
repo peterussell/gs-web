@@ -19,8 +19,9 @@ export class UserService {
     constructor(private apiService: ApiService) {
         from(Auth.currentAuthenticatedUser()).subscribe(
             (cognitoUser: CognitoUser) => {
-                let user = new User(cognitoUser)
-                this._currentUser.next(user);
+                this.getProfile(cognitoUser['username']).subscribe((profileData) => {
+                    this.setCurrentUser(new User(cognitoUser, profileData));
+                });
             },
             (error: any) =>
             {
