@@ -300,7 +300,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   goToNextQuestionFreeMode() {
     // If we already have a 'Next' question, show the question instead of
-    // fetching a new one (eg. if the user clicked Previous then Next again)
+    // fetching a new one (eg. user clicked Previous then Next)
     if (this.currentQuestionIndex+1 < this.questions.length) {
       this.currentQuestionIndex++;
       return;
