@@ -7,9 +7,14 @@
         </app-flashcards-menu>
     </div>
     <div class="viewer">
+
+        <!-- In progress screen -->
         <div *ngIf="isInProgress(); else results">
             <div *ngIf="isFree() || isPremiumAndTopicHasQuestions(); else topicHasNoQuestions">
+
+                <!-- Header nav buttons -->
                 <div class="nav-buttons">
+                    <!-- Go to previous question -->
                     <button mat-flat-button
                         (click)="goToPreviousQuestion()"
                         [disabled]="!canGoToPreviousQuestion()">
@@ -19,7 +24,7 @@
                         </span>
                     </button>
 
-                    <!-- Review set -->
+                    <!-- Save to review set -->
                     <span *ngIf="!_reviewSetUpdatePending; else reviewsetupdatepending">
                         <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
                             <button mat-flat-button (click)="addToReviewSet()" [color]="'review'">
@@ -38,6 +43,7 @@
                         </button>
                     </ng-template>
 
+                    <!-- Go to next question -->
                     <button
                         mat-flat-button
                         (click)="goToNextQuestion()"
@@ -70,7 +76,9 @@
                     [isQuestionLoading]="isQuestionLoading">
                 </app-flashcards-card>
             
+                <!-- Footer nav buttons -->
                 <div class="nav-buttons">
+                    <!-- Go to previous question -->
                     <button mat-flat-button
                         (click)="goToPreviousQuestion()"
                         [disabled]="!canGoToPreviousQuestion()">
@@ -80,7 +88,7 @@
                         </span>
                     </button>
 
-                    <!-- Review set -->
+                    <!-- Save to review set -->
                     <span *ngIf="!_reviewSetUpdatePending; else reviewsetupdatepending">
                         <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
                             <button mat-flat-button (click)="addToReviewSet()" [color]="'review'">
@@ -99,6 +107,7 @@
                         </button>
                     </ng-template>
 
+                    <!-- Go to next question -->
                     <button
                         mat-flat-button
                         (click)="goToNextQuestion()"
@@ -141,6 +150,7 @@
             </ng-template>
         </div>
         
+        <!-- Results screen -->
         <ng-template #results>
             <mat-card class="results">
                 <!-- Free mode: show final screen -->
@@ -168,13 +178,13 @@
                     </div>
                 </div>
 
+                <!-- Premium mode: show any saved review questions for this topic -->
                 <ng-template #reviewQuestions>
                     <h2 class="review-questions">Review questions</h2>
-            
-                    <!-- TODO: review sets only have question IDs, we need to show actual questions -->
+
                     <!-- Review questions -->
-                    <!-- <ul *ngIf="hasReviewQuestions(); else noQuestions">
-                        <li *ngFor="let q of getReviewSet()." class="review-question">
+                    <ul *ngIf="hasReviewQuestions(); else noQuestions">
+                        <li *ngFor="let q of getReviewSetQuestions()" class="review-question">
                             <h4>Syllabus Ref: {{ q.Question.SyllabusRef }}</h4>
                             <p class="question">
                                 <strong>Q.</strong> {{ q.Question.Question }}
@@ -183,7 +193,7 @@
                                 <strong>A.</strong> {{ q.Question.Answer }}
                             </p>
                         </li>
-                    </ul> -->
+                    </ul>
             
                     <ng-template #noQuestions>
                         <div class="no-review-questions">

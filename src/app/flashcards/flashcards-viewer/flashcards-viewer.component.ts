@@ -29,7 +29,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   // Premium
   public questions: Array<FlashcardsViewerQuestion>;
-  public forReview: { [topicId: string]: Set<FlashcardsViewerQuestion> };
+  // public forReview: { [topicId: string]: Set<FlashcardsViewerQuestion> };
   public currentQuestionIndex: number;
   public currentTopicId: string;
 
@@ -101,7 +101,6 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   initPremiumMode() {
     this.loadQuestions();
-    this.initialiseReviewSets();
   }
 
   ngOnChanges() {
@@ -111,15 +110,24 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     return this.viewerMode === FlashcardsViewerMode.Free;
   }
 
-  initialiseReviewSets() {
-    this.forReview = {};
-    this.subject.Topics.forEach((t: Topic) => {
-      this.forReview[t.TopicId] = new Set<FlashcardsViewerQuestion>();
-    });
-  }
-
   getReviewSet() {
     return this.currentUser.getReviewSet();
+  }
+
+  getReviewSetQuestions() {
+    if (this.currentUser === undefined) { return; }
+    const rs = this.currentUser.getReviewSet();
+    if (rs === undefined) { return; }
+
+    // find any questions in the review set that are in the current topic
+    let reviewSetQuestions = new Array<FlashcardsViewerQuestion>();
+    rs.QuestionIds.forEach((qid) => {
+      let q = this.questions.find((fvq) => fvq.Question.QuestionId === qid);
+      if (q !== undefined) {
+        reviewSetQuestions.push(q);
+      }
+    });
+    return reviewSetQuestions;
   }
 
   getRandomQuestion() {
