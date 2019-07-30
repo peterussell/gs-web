@@ -252,6 +252,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   isCurrentQuestionInReviewSet() {
+    if (this.currentUser === undefined) { return false; }
     const q = this.questions[this.currentQuestionIndex];
     const rs = this.currentUser.getReviewSet();
     if (q === undefined || rs === undefined) {
