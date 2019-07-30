@@ -55,23 +55,6 @@ export class ApiService {
         return this.http.get(`${this.getAwsBasePathVersioned(2)}/${this.topicRelPath}/${topicId}`);
     }
 
-    /* ---- Review sets ---- */
-    public getReviewSetForUser(userId: string): Observable<QuestionSet> {
-        return this.http.get<QuestionSet>(`${this.getAwsBasePathVersioned(2)}/${this.memberInfoRelPath}/${userId}/review-sets`)
-    }
-
-    public addToReviewSet(userId: string, questionSetId: string, questionId: string): Observable<any> {
-        // TODO: tmp
-        console.log(`Adding to review set: ${userId}, ${questionSetId}, ${questionId}`);
-        return null;
-    }
-
-    public removeFromReviewSet(userId: string, questionSetId: string, questionId: string): Observable<any> {
-        // TODO: tmp
-        console.log(`Removing from review set: ${userId}, ${questionSetId}, ${questionId}`);
-        return null;
-    }
-
     public getRandomQuestion(topicIdsToInclude: Array<string>,
                              topicIdsSeen: Array<string>,
                              questionIdsSeen: Array<string>,
@@ -131,5 +114,25 @@ export class ApiService {
 
     public getUserProfile(userId: string): Observable<any> {
         return this.http.get<any>(`${this.getAwsBasePathVersioned(2)}/${this.memberInfoRelPath}/${userId}/profile`)
+    }
+
+    /* ---- Review sets ---- */
+    public addToReviewSet(userId: string, questionId: string): Observable<any> {
+        const body = {
+            'memberId': userId,
+            'questionIds': [questionId]
+        };
+        return this.http.put(
+            `${this.getAwsBasePathVersioned(2)}/${this.memberInfoRelPath}/${userId}/review-set`,
+            body,
+            this.httpOptions
+        );
+    }
+
+    public removeFromReviewSet(userId: string, questionId: string): Observable<any> {
+        return this.http.delete(
+            `${this.getAwsBasePathVersioned(2)}/${this.memberInfoRelPath}/${userId}/review-set/${questionId}`,
+            this.httpOptions
+        );
     }
 }

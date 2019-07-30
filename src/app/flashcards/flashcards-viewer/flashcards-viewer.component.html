@@ -18,16 +18,26 @@
                             <i class="material-icons">fast_rewind</i>
                         </span>
                     </button>
-                    <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
-                        <button mat-flat-button (click)="saveForReview()" [color]="'review'">
-                            <i class="material-icons">playlist_add</i>Review
-                        </button>
+
+                    <!-- Review set -->
+                    <span *ngIf="!_reviewSetUpdatePending; else reviewsetupdatepending">
+                        <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
+                            <button mat-flat-button (click)="addToReviewSet()" [color]="'review'">
+                                <i class="material-icons">playlist_add</i>Review
+                            </button>
+                        </span>
+                        <ng-template #saved>
+                            <button mat-flat-button (click)="removeFromReviewSet()" [color]="'review__saved'">
+                                <i class="material-icons">playlist_add_check</i>Saved
+                            </button>
+                        </ng-template>
                     </span>
-                    <ng-template #saved>
-                        <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
-                            <i class="material-icons">playlist_add_check</i>Saved
+                    <ng-template #reviewsetupdatepending>
+                        <button mat-flat-button [color]="'review'" disabled>
+                            <mat-spinner diameter="20"></mat-spinner>
                         </button>
                     </ng-template>
+
                     <button
                         mat-flat-button
                         (click)="goToNextQuestion()"
@@ -69,16 +79,26 @@
                             <i class="material-icons">fast_rewind</i>
                         </span>
                     </button>
-                    <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
-                        <button mat-flat-button (click)="saveForReview()" [color]="'review'">
-                            <i class="material-icons">playlist_add</i>Review
-                        </button>
+
+                    <!-- Review set -->
+                    <span *ngIf="!_reviewSetUpdatePending; else reviewsetupdatepending">
+                        <span *ngIf="!isCurrentQuestionInReviewSet(); else saved">
+                            <button mat-flat-button (click)="addToReviewSet()" [color]="'review'">
+                                <i class="material-icons">playlist_add</i>Review
+                            </button>
+                        </span>
+                        <ng-template #saved>
+                            <button mat-flat-button (click)="removeFromReviewSet()" [color]="'review__saved'">
+                                <i class="material-icons">playlist_add_check</i>Saved
+                            </button>
+                        </ng-template>
                     </span>
-                    <ng-template #saved>
-                        <button mat-flat-button (click)="removeFromForReview()" [color]="'review__saved'">
-                            <i class="material-icons">playlist_add_check</i>Saved
+                    <ng-template #reviewsetupdatepending>
+                        <button mat-flat-button [color]="'review'">
+                            <mat-spinner diameter="20"></mat-spinner>
                         </button>
                     </ng-template>
+
                     <button
                         mat-flat-button
                         (click)="goToNextQuestion()"
@@ -151,9 +171,10 @@
                 <ng-template #reviewQuestions>
                     <h2 class="review-questions">Review questions</h2>
             
+                    <!-- TODO: review sets only have question IDs, we need to show actual questions -->
                     <!-- Review questions -->
-                    <ul *ngIf="hasReviewQuestions(); else noQuestions">
-                        <li *ngFor="let q of getCurrentReviewSet()" class="review-question">
+                    <!-- <ul *ngIf="hasReviewQuestions(); else noQuestions">
+                        <li *ngFor="let q of getReviewSet()." class="review-question">
                             <h4>Syllabus Ref: {{ q.Question.SyllabusRef }}</h4>
                             <p class="question">
                                 <strong>Q.</strong> {{ q.Question.Question }}
@@ -162,7 +183,7 @@
                                 <strong>A.</strong> {{ q.Question.Answer }}
                             </p>
                         </li>
-                    </ul>
+                    </ul> -->
             
                     <ng-template #noQuestions>
                         <div class="no-review-questions">

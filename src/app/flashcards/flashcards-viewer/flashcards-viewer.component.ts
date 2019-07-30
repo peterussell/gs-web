@@ -13,6 +13,7 @@ import { GsSnackbarComponent } from '../../gs-snackbar/gs-snackbar.component';
 import { DomSanitizer } from '@angular/platform-browser';
 import { UserService } from '../../core/services/user.service';
 import { User } from '../../core/models/user.model';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-flashcards-viewer',
@@ -40,6 +41,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   public currentUser: User;
   public currentState: FlashcardsViewerState;
   public isQuestionLoading: boolean;
+
+  private _reviewSetUpdatePending = false;
   
   get progress() : number {
     if (this.questions === undefined || this.questions.length === 0) { return 0; }
@@ -72,11 +75,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     // Load user profile & stored review set
     this.userService.currentUser$.subscribe((user: User) => {
       if (user === null) { return; }
-      this.userService.getProfile(user.CognitoUser['username']).subscribe((data) => {
+      this.userService.getProfile(user.getCognitoUsername()).subscribe((data) => {
         user.setProfileData(data);
-
-        // tmp
-        console.log(user.getReviewSet());
       });
       this.currentUser = user;
     });
@@ -118,17 +118,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     });
   }
 
-  // DEPRECATED (local implementation of review set)
-  getReviewSet(topicId: string) {
-    if (this.forReview === undefined) return undefined;
-    if (topicId in this.forReview) {
-      return this.forReview[topicId];
-    }
-  }
-
-  // DEPRECATED (local-only implementation of review set)
-  getCurrentReviewSet() {
-    return this.getReviewSet(this.currentTopicId);
+  getReviewSet() {
+    return this.currentUser.getReviewSet();
   }
 
   getRandomQuestion() {
@@ -235,10 +226,11 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       && this.hasQuestions();
   }
 
-  // DEPRECATED (local-only implementation of review set)
   hasReviewQuestions() {
-    const crs = this.getCurrentReviewSet();
-    return crs !== undefined && crs.size > 0;
+    const rs = this.getReviewSet();
+    return rs !== undefined
+      && rs.QuestionIds !== undefined
+      && rs.QuestionIds.length > 0;
   }
 
   canGoToNextQuestion(): boolean {
@@ -268,25 +260,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     return rs.QuestionIds.includes(q.Question.QuestionId);
   }
 
-
-
-  // DEPRECATED (local-only implementation of review set)
-  // isCurrentQuestionInReviewSet() {
-  //   const q = this.questions[this.currentQuestionIndex];
-  //   if (q === undefined) { return false; }
-
-  //   let crs = this.getCurrentReviewSet();
-  //   if (crs === undefined) return false;
-
-  //   for (let reviewQuestion of Array.from(this.getCurrentReviewSet())) {
-  //     if (reviewQuestion.Question.QuestionId === q.Question.QuestionId) {
-  //       return true;
-  //     }
-  //   }
-  // }
-
-  // TODO: Update this to save to the AWS review set
-  saveForReview() {
+  checkCurrentUserCanAccessReviewSet(): boolean {
+    // Free mode - show snackbar error and return
     if (this.isFreeMode()) {
       this.snackBar.openFromComponent(
         GsSnackbarComponent,
@@ -300,42 +275,78 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
           panelClass: 'gs-snackbar'
         }
       );
-      return;
+      return false;
     }
-    
+
+    // User not logged in - show snackbar error and return
     if (this.currentUser === null) { 
       this.snackBar.openFromComponent(
         GsSnackbarComponent,
         {
           duration: 5000,
-          data: {
-            message: 'Please log in to save questions to your review set.',
-          },
+          data: { message: 'Please log in to save questions to your review set.' },
           panelClass: 'gs-snackbar'
         }
       );
-      return;
+      return false;
     }
-
-    const q = this.questions[this.currentQuestionIndex].Question;
-    this.apiService.addToReviewSet(
-      this.currentUser.CognitoUser['username'], q.TopicId, q.QuestionId
-    ).subscribe((res) => {
-      // tmp
-      console.log(res);
-    })
-
-    // this.getCurrentReviewSet().add(this.questions[this.currentQuestionIndex]);
+    return true;
   }
 
-  // DEPRECATED (local-only implementation of review set)
-  removeFromForReview() {
-    const q = this.questions[this.currentQuestionIndex];
-    this.getCurrentReviewSet().forEach((reviewQuestion: FlashcardsViewerQuestion) => {
-      if (reviewQuestion.Question.QuestionId === q.Question.QuestionId) {
-        this.getCurrentReviewSet().delete(reviewQuestion);
-      }
-    });
+  addToReviewSet() {
+    if (!this.checkCurrentUserCanAccessReviewSet()) { return; }
+
+    // Checks passed, trigger HTTP request to update user's review set
+    this._reviewSetUpdatePending = true;
+    const q = this.questions[this.currentQuestionIndex].Question;
+    this.apiService.addToReviewSet(this.currentUser.getCognitoUsername(), q.QuestionId)
+      .subscribe(
+        (res: any) => {
+          if (res['status'] === 200) {
+            const questionIds: Array<string> = res['body'].QuestionIds;
+            if (questionIds === undefined)
+            {
+              return;
+            }
+            // sync the local review set
+            this.currentUser.updateReviewSet(questionIds);
+          }
+        },
+        (error) => {
+          console.log(error); // TODO: log this properly
+        },
+        () => {
+          this._reviewSetUpdatePending = false;
+        }
+      );
+  }
+
+  removeFromReviewSet() {
+    if (!this.checkCurrentUserCanAccessReviewSet()) { return; }
+
+    // Checks passed, fire HTTP request to update user's review set
+    this._reviewSetUpdatePending = true;
+    const q = this.questions[this.currentQuestionIndex].Question;
+    this.apiService.removeFromReviewSet(this.currentUser.getCognitoUsername(), q.QuestionId)
+      .subscribe(
+        (res: any) => {
+          if (res['status'] === 200) {
+            const questionIds: Array<string> = res['body'].QuestionIds;
+            if (questionIds === undefined)
+            {
+              return;
+            }
+            // sync the local review set
+            this.currentUser.updateReviewSet(questionIds);
+          }
+        },
+        (error) => {
+          console.log(error); // TODO: log this properly
+        },
+        () => {
+          this._reviewSetUpdatePending = false;
+        }
+      );
   }
 
   goToFinish() {

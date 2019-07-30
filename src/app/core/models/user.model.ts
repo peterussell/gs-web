@@ -1,6 +1,7 @@
 import { Product } from "./product.model";
 import { CognitoUser } from "amazon-cognito-identity-js";
 import { QuestionSet } from "./question-set.model";
+import { ApiService } from "../services/api.service";
 
 export class User {
     public CognitoUser: CognitoUser;
@@ -27,12 +28,20 @@ export class User {
         this.QuestionSets = profileData['QuestionSets'];
     }
 
+    getCognitoUsername(): string {
+        return this.CognitoUser['username'];
+    }
+
     getReviewSet() {
         // A review set is a question set with type 'r' (for 'review')
-        if (this.QuestionSets === null || this.QuestionSets.length === 0) {
+        if (this.QuestionSets === undefined || this.QuestionSets.length === 0) {
             return;
         }
         return this.QuestionSets.find(qs => qs.Type === this._reviewSetKey);
+    }
+
+    updateReviewSet(questionIds: Array<string>) {
+        this.getReviewSet().QuestionIds = questionIds;
     }
 }
 

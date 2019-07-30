@@ -87,50 +87,6 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
   isAnswerState(): boolean {
     return this.currentState === FlashcardViewerState.Answer;
   }
-
-  // isInReviewSet() {
-  //   if (this.reviewSet === undefined || this.reviewSet.QuestionIds === undefined) {
-  //     return false;
-  //   }
-
-  //   return this.reviewSet.QuestionIds.indexOf(
-  //     this.flashcardViewerQuestion.question.questionId) > -1;
-  // }
-
-  addToReviewSet() {
-    if (this.currentUser === null) {
-      // TODO: working here - show snackbar with 'login required'
-      this.snackBar.open(
-        'Please sign in to add questions to a review list.',
-        null,
-        {
-          duration: 3000,
-          panelClass: 'gs-snackbar-warning'
-        }
-      );
-      return;
-    }
-    this.apiService.addToReviewSet(
-      this.currentUser['username'],
-      this.reviewSet.QuestionSetId,
-      this.flashcardViewerQuestion.Question.QuestionId
-    );
-  }
-
-  removeFromReviewSet() {
-    if (this.currentUser === null) {
-      return;
-    }
-    this.apiService.removeFromReviewSet(
-      this.currentUser['username'],
-      this.reviewSet.QuestionSetId,
-      this.flashcardViewerQuestion.Question.QuestionId
-    );
-  }
-
-  showAccountDialog() {
-    
-  }
 }
 
 enum FlashcardViewerState {
