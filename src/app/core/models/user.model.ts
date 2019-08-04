@@ -41,6 +41,18 @@ export class User {
     }
 
     updateReviewSet(questionIds: Array<string>) {
+        let rs = this.getReviewSet();
+        if (!rs) {
+            // If we just created the review set (happens when this is the first
+            // question that's added, so the review set is also created), we won't
+            // have a local copy on the user profile yet. We create a placeholder
+            // review set here, which will get overwritten the next time the user
+            // profile is loaded. Because the source of truth is the DB, this
+            // should be a safe way to handle this.
+            let tmpqs = new QuestionSet();
+            tmpqs.Type = 'r';
+            this.QuestionSets.push(tmpqs);
+        }
         this.getReviewSet().QuestionIds = questionIds;
     }
 }
