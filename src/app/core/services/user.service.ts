@@ -36,7 +36,7 @@ export class UserService {
 
     signOut() {
         from(Auth.signOut()).subscribe(
-            () => { this._currentUser.next(null); },
+            () => { this.setCurrentUser(null); },
             (error: any) => { console.log(error); } // tmp - TODO: log this properly or show an error
         );
     }

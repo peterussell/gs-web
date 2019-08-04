@@ -74,10 +74,11 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   ngOnInit() {
     // Load user profile & stored review set
     this.userService.currentUser$.subscribe((user: User) => {
-      if (user === null) { return; }
-      this.userService.getProfile(user.getCognitoUsername()).subscribe((data) => {
-        user.setProfileData(data);
-      });
+      if (user) {
+        this.userService.getProfile(user.getCognitoUsername()).subscribe((data) => {
+          user.setProfileData(data);
+        });
+      }
       this.currentUser = user;
     });
 
@@ -115,7 +116,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   getReviewSetQuestions() {
-    if (this.currentUser === undefined) { return; }
+    if (!this.currentUser) { return; }
     const rs = this.currentUser.getReviewSet();
     if (rs === undefined) { return; }
 
@@ -260,7 +261,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   }
 
   isCurrentQuestionInReviewSet() {
-    if (this.currentUser === undefined) { return false; }
+    if (!this.currentUser) { return false; }
     const q = this.questions[this.currentQuestionIndex];
     const rs = this.currentUser.getReviewSet();
     if (q === undefined || rs === undefined) {
@@ -277,7 +278,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
         {
           duration: 5000,
           data: {
-            message: 'Become a GroundSchool NZ premium member to access Review Sets',
+            message: 'Become a GroundSchool NZ premium member to access Review Sets.',
             linkText: 'Learn more',
             linkUrl: '/membership'
           },
@@ -288,12 +289,12 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     }
 
     // User not logged in - show snackbar error and return
-    if (this.currentUser === null) { 
+    if (!this.currentUser) {
       this.snackBar.openFromComponent(
         GsSnackbarComponent,
         {
           duration: 5000,
-          data: { message: 'Please log in to save questions to your review set.' },
+          data: { message: 'You must be logged in to save questions to your Review Set.' },
           panelClass: 'gs-snackbar'
         }
       );
