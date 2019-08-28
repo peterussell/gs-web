@@ -1,0 +1,30 @@
+.wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+
+    .content-wrapper {
+        max-width: 900px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+
+        .title, .content {
+            flex: 1 0 auto;
+        }
+    }
+}
+
+.subject-cards {
+    display: flex;
+    flex-flow: row wrap;
+
+    &__card {
+        display: flex;
+        margin: 0 10px 10px 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}

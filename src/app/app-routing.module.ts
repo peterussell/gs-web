@@ -17,6 +17,8 @@ import { SubjectResolver } from './core/services/resolvers/subject-resolver.serv
 import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
 import { ChecklistTrainerComponent } from './checklist-trainer/checklist-trainer.component';
 import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.component';
+import { PaymentSuccessComponent } from './payments/payment-success/payment-success.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
     
@@ -31,12 +33,14 @@ const appRoutes: Routes = [
     ]},
     { path: '', component: GroundschoolComponent, children: [
         { path: '', component: LandingPageComponent },
-        { path: ':course/:subject/free', component: FlashcardsFreeComponent },
-        { path: ':course/:subject', component: FlashcardsComponent },
-        { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
         { path: 'activate', component: ActivateFullPageComponent },
+        { path: 'checklists', component: ChecklistTrainerComponent },
         { path: 'contact', component: ContactComponent },
-        { path: 'checklists', component: ChecklistTrainerComponent }
+        { path: ':course/:subject', component: FlashcardsComponent },
+        { path: ':course/:subject/free', component: FlashcardsFreeComponent },
+        { path: 'dashboard', component: DashboardComponent },
+        { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
+        { path: 'payment-success', component: PaymentSuccessComponent }
     ]},
     { path: '**', redirectTo: '' }
 ];

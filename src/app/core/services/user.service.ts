@@ -13,14 +13,20 @@ import { User } from "../models/user.model";
 
 @Injectable()
 export class UserService {
-    private _currentUser: BehaviorSubject<User> = new BehaviorSubject(null);
-    public readonly currentUser$: Observable<User> = this._currentUser.asObservable();
+    private _currentUserBS: BehaviorSubject<User> = new BehaviorSubject(null);
+    public readonly currentUser$: Observable<User> = this._currentUserBS.asObservable();
+
+    private _currentUser: User;
 
     constructor(private apiService: ApiService) {
         from(Auth.currentAuthenticatedUser()).subscribe(
             (cognitoUser: CognitoUser) => {
                 this.getProfile(cognitoUser['username']).subscribe((profileData) => {
-                    this.setCurrentUser(new User(cognitoUser, profileData));
+                    const user = new User(cognitoUser, profileData);
+                    this._currentUser = user;
+
+                    // Notify subscribers
+                    this.setCurrentUser(user);
                 });
             },
             (error: any) =>
@@ -41,8 +47,12 @@ export class UserService {
         );
     }
 
+    getCurrentUser() {
+        return this._currentUser;
+    }
+
     setCurrentUser(user: User) {
-        this._currentUser.next(user);
+        this._currentUserBS.next(user);
     }
 
     // TODO: convert to observable

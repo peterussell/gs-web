@@ -51,6 +51,9 @@ import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.compo
 import { GsSnackbarComponent } from './gs-snackbar/gs-snackbar.component';
 import { PiperWarriorIiAvidyneComponent } from './checklist-trainer/aircraft/piper-warrior-ii-avidyne/piper-warrior-ii-avidyne.component';
 import { Pa38Component } from './checklist-trainer/aircraft/pa38/pa38.component';
+import { PaymentSuccessComponent } from './payments/payment-success/payment-success.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PurchasedCourseCardComponent } from './dashboard/purchased-course-card/purchased-course-card.component';
 
 
 @NgModule({
@@ -87,6 +90,9 @@ import { Pa38Component } from './checklist-trainer/aircraft/pa38/pa38.component'
     GsSnackbarComponent,
     PiperWarriorIiAvidyneComponent,
     Pa38Component,
+    PaymentSuccessComponent,
+    DashboardComponent,
+    PurchasedCourseCardComponent,
   ],
   imports: [
     BrowserModule,

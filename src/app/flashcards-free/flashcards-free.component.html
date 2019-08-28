@@ -1,16 +1,16 @@
 <div class="wrapper">
-    <div class="content-wrapper">
-      <div class="title">
-        <app-page-title *ngIf="isLoadingState()">Loading flashcards...</app-page-title>
-        <app-page-title *ngIf="isViewerState()">{{ currentCourse.Title }} > {{ currentSubject.Title }}</app-page-title>
-      </div>
-      
-      <div *ngIf="isViewerState()" class="viewer">
-        <app-flashcards-viewer
-          [subject]="currentSubject"
-          [viewerMode]="viewerMode"
-          (complete)="onViewerComplete()">
-        </app-flashcards-viewer>
-      </div>
+  <div class="content-wrapper">
+    <div class="title">
+      <app-page-title *ngIf="isLoadingState()">Loading flashcards...</app-page-title>
+      <app-page-title *ngIf="isViewerState()">{{ currentCourse.Title }} > {{ currentSubject.Title }}</app-page-title>
+    </div>
+
+    <div *ngIf="isViewerState()" class="viewer">
+      <app-flashcards-viewer
+        [subject]="currentSubject"
+        [viewerMode]="viewerMode"
+        (complete)="onViewerComplete()">
+      </app-flashcards-viewer>
     </div>
   </div>
+</div>

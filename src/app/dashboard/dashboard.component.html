@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class="content-wrapper">
+    <div class="title">
+      <app-page-title>My GroundSchool</app-page-title>
+    </div>
+
+    <div class="content">
+      <div class="purchased-courses">
+        <h3>Purchased Courses</h3>
+
+        <p *ngIf="isLoading; else courseInfo">Loading...</p>
+        <ng-template #courseInfo>
+
+            <div *ngIf="hasCourses(); else noCourses" class="subject-cards">
+              <app-purchased-course-card
+                *ngFor="let purchasedCourse of getPurchasedCourses()"
+                [subject]=purchasedCourse.Subject
+                [parentPath]="purchasedCourse.CoursePath">
+              </app-purchased-course-card>
+            </div>
+
+            <ng-template #noCourses>
+              <p>You haven't purchased any courses.</p>
+            </ng-template>
+        </ng-template>
+        
+      </div>
+      
+      <div class="review-questions">
+        <h2>Review Questions</h2>
+
+        <p *ngIf="isLoading; else reviewInfo">
+          Loading...
+        </p>
+        <ng-template #reviewInfo>
+          <ul *ngIf="reviewSet && reviewSet.QuestionIds">
+            <li *ngFor="let qid of reviewSet.QuestionIds">{{ qid }}</li>
+          </ul>
+        </ng-template>
+        
+      </div>
+    </div>
+  </div>
+</div>

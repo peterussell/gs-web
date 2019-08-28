@@ -10,8 +10,22 @@
     src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="140">
   <mat-card-actions>
     <span *ngIf="subject.PremiumVersionAvailable">
-      <button mat-button [routerLink]="['/', parentPath, subject.Path]"><strong>PREMIUM</strong></button>
+
+      <span *ngIf="ownsCourse(subject.SubjectId); else canPurchase">
+        <button mat-button [routerLink]="['/', parentPath, subject.Path]">
+          <strong>PURCHASED!</strong><br>
+          Click here for access
+        </button>
+      </span>
+      <ng-template #canPurchase>
+          <button mat-button (click)="buyCourse()">
+            <strong>BUY PREMIUM</strong><br>
+            60 days access - $20.00
+          </button>
+      </ng-template>
     </span>
-    <button mat-button [routerLink]="['/', parentPath, subject.Path, 'free']">FREE</button>
   </mat-card-actions>
 </mat-card>
+<div class="free-version">
+  <a [routerLink]="['/', parentPath, subject.Path, 'free']">Free Version</a>
+</div>
