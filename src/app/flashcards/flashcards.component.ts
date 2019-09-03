@@ -61,7 +61,7 @@ export class FlashcardsComponent implements OnInit {
 
       let loadQuestionTasks$ = [];
       this.currentSubject.Topics.forEach((t: Topic) => {
-          loadQuestionTasks$.push(this.apiService.getQuestions(t.TopicId));
+          loadQuestionTasks$.push(this.apiService.getQuestionsForTopic(t.TopicId));
       });
 
       // wait for all observables to finish then save the questions to currentSubject

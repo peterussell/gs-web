@@ -36,4 +36,10 @@ export class DashboardComponent implements OnInit {
     const courses = this.getPurchasedCourses();
     return courses && (courses.length > 0);
   }
+
+  hasReviewQuestions(): boolean {
+    return this.reviewSet
+      && this.reviewSet.Questions
+      && this.reviewSet.Questions.length > 0;
+  }
 }

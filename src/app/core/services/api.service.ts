@@ -17,6 +17,7 @@ export class ApiService {
     private readonly flashcardsRelPath = 'flashcards'
     private readonly registerInterestRelPath = 'register-interest';
     private readonly addQuestionRelPath = 'question';
+    private readonly getQuestionsByIdRelPath = 'questions';
     private readonly reportQuestionRelPath = 'report-question';
     private readonly memberInfoRelPath = 'member';
     private readonly memberProfileRelPath = 'profile'; // member/{id}/profile
@@ -51,7 +52,8 @@ export class ApiService {
         return this.http.get(`${this.getAwsBasePathVersioned(2)}/${this.coursesRelPath}`);
     }
 
-    public getQuestions(topicId: string): Observable<any> {
+    /* ---- Questions ---- */
+    public getQuestionsForTopic(topicId: string): Observable<any> {
         return this.http.get(`${this.getAwsBasePathVersioned(2)}/${this.topicRelPath}/${topicId}`);
     }
 

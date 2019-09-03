@@ -51,7 +51,7 @@ export class SubjectComponent implements OnInit {
   selectTopic(topic: Topic) {
     this.isLoading = true;
 
-    this.apiService.getQuestions(topic.TopicId).subscribe(
+    this.apiService.getQuestionsForTopic(topic.TopicId).subscribe(
       (topicWithQuestions: Topic) => {
 
         // TODO: ideally we'd just get just the questions from the API

@@ -5,7 +5,7 @@
     </div>
 
     <div class="content">
-      <div class="purchased-courses">
+      <div class="content__purchased-courses">
         <h3>Purchased Courses</h3>
 
         <p *ngIf="isLoading; else courseInfo">Loading...</p>
@@ -26,18 +26,24 @@
         
       </div>
       
-      <div class="review-questions">
-        <h2>Review Questions</h2>
+      <div class="content__review-questions">
+        <h3>Review Questions</h3>
 
-        <p *ngIf="isLoading; else reviewInfo">
-          Loading...
-        </p>
+        <p *ngIf="isLoading; else reviewInfo">Loading...</p>
         <ng-template #reviewInfo>
-          <ul *ngIf="reviewSet && reviewSet.QuestionIds">
-            <li *ngFor="let qid of reviewSet.QuestionIds">{{ qid }}</li>
-          </ul>
+
+          <div *ngIf="hasReviewQuestions(); else noReviewQuestions">
+              <ul>
+                <li *ngFor="let q of reviewSet.Questions">{{ q.Question }}<br>{{ q.Answer }}</li>
+              </ul>
+          </div>
+
+          <ng-template #noReviewQuestions>
+            <p>You don't have any saved review questions.</p>
+          </ng-template>
+
         </ng-template>
-        
+
       </div>
     </div>
   </div>

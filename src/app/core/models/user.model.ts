@@ -6,6 +6,7 @@ import { Course } from "./course.model";
 import { Subject } from "./subject.model";
 import { Topic } from "./topic.model";
 import { SubscriptionInfo } from "./subscription-info.model";
+import { Question } from "./question.model";
 
 export class User {
     public CognitoUser: CognitoUser;
@@ -13,7 +14,7 @@ export class User {
     public Name: string;
     public OrganisationId: string;
     public SubscriptionInfo: SubscriptionInfo;
-    public QuestionSets: Array<QuestionSet>;
+    public ReviewSet: QuestionSet
 
     private _reviewSetKey: string = 'r';
 
@@ -29,9 +30,8 @@ export class User {
         this.Name = profileData['Name'];
         this.OrganisationId = profileData['OrganisationId'];
         this.SubscriptionInfo = new SubscriptionInfo(profileData['SubscriptionInfo']);
-
-        // tmp: probably want a custom object like SubscriptionInfo
-        this.QuestionSets = profileData['QuestionSets'];
+        this.ReviewSet = new QuestionSet();
+        this.ReviewSet.setQuestions(profileData['ReviewSet']);
     }
 
     getCognitoUsername(): string {
@@ -51,14 +51,10 @@ export class User {
     }
 
     getReviewSet() {
-        // A review set is a question set with type 'r' (for 'review')
-        if (this.QuestionSets === undefined || this.QuestionSets.length === 0) {
-            return;
-        }
-        return this.QuestionSets.find(qs => qs.Type === this._reviewSetKey);
+        return this.ReviewSet;
     }
 
-    updateReviewSet(questionIds: Array<string>) {
+    updateReviewSet(questions: Array<Question>) {
         let rs = this.getReviewSet();
         if (!rs) {
             // If we just created the review set (happens when this is the first
@@ -69,8 +65,28 @@ export class User {
             // should be a safe way to handle this.
             let tmpqs = new QuestionSet();
             tmpqs.Type = 'r';
-            this.QuestionSets.push(tmpqs);
+            this.ReviewSet = tmpqs;
         }
-        this.getReviewSet().QuestionIds = questionIds;
+        this.ReviewSet.Questions = questions;
+    }
+
+    addToReviewSet(question: Question) {
+        let rs = this.getReviewSet();
+        if (!rs) {
+            let tmpqs = new QuestionSet();
+            tmpqs.Type = 'r';
+            this.ReviewSet = tmpqs;
+        }
+        this.ReviewSet.Questions.push(question);
+    }
+
+    removeFromReviewSet(question: Question) {
+        let rs = this.getReviewSet();
+        if (!rs) {
+            return; // shouldn't happen, but just in case
+        }
+        this.ReviewSet.Questions = rs.Questions.filter((q: Question) => {
+            return q.QuestionId !== question.QuestionId;
+        });
     }
 }

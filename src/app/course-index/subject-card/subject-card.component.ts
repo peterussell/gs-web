@@ -47,8 +47,8 @@ export class SubjectCardComponent implements OnInit {
       ],
       clientReferenceId: user.getCognitoUsername(),
       customerEmail: user.getEmail(),
-      successUrl: 'http://localhost:4200/payment-success',
-      cancelUrl: 'http://localhost:4200',
+      successUrl: 'http://localhost:4200/payment-success', // TODO: update these!!!
+      cancelUrl: 'http://localhost:4200',     // TODO: update these!!!
     }).then(function (result) {
       // should have been redirected to success/error page
     });

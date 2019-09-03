@@ -14,14 +14,10 @@ export class QuestionService {
         = new EventEmitter<{course: Course, subject: Subject}>();
     @Output() onQuestionsUpdated: EventEmitter<Topic> = new EventEmitter<Topic>();
 
-    constructor(private apiService: ApiService) {}
-
-    // updateSubject(course: Course, subject: Subject) {
-    //     this.onSubjectUpdated.emit({ course: course, subject: subject });
-    // }
+    constructor(private apiService: ApiService) { }
 
     updateTopic(topicId: string) {
-        this.apiService.getQuestions(topicId).subscribe((res) => {
+        this.apiService.getQuestionsForTopic(topicId).subscribe((res) => {
             this.topic = res;
             this.onQuestionsUpdated.emit(this.topic);
         },

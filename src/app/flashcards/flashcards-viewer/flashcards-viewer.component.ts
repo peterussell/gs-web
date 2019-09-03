@@ -20,7 +20,7 @@ import { finalize } from 'rxjs/operators';
   templateUrl: './flashcards-viewer.component.html',
   styleUrls: ['./flashcards-viewer.component.scss']
 })
-export class FlashcardsViewerComponent implements OnInit, OnChanges {
+export class FlashcardsViewerComponent implements OnInit {
   @Input() subject: Subject;
   @Input() reviewSet: QuestionSet;
   @Input() viewerMode: FlashcardsViewerMode; // TODO: validate premium against cognito/dynamodb credentials
@@ -73,15 +73,20 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     // Load user profile & stored review set
-    this.userService.currentUser$.subscribe((user: User) => {
-      if (user) {
-        this.userService.getProfile(user.getCognitoUsername()).subscribe((data) => {
-          user.setProfileData(data);
-        });
-      }
-      this.currentUser = user;
-    });
-
+    // May have already been loaded by another component, so check first.
+    this.currentUser = this.userService.getCurrentUser();
+    if (this.currentUser && this.currentUser.ReviewSet) {
+      this.reviewSet = this.currentUser.ReviewSet;
+    } else {
+      this.userService.currentUser$.subscribe((user: User) => {
+        if (user) {
+          this.userService.getProfile(user.getCognitoUsername()).subscribe((data) => {
+            user.setProfileData(data);
+          });
+        }
+        this.currentUser = user;
+      });
+    }
     this.initialise();
   }
   
@@ -104,9 +109,6 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     this.loadQuestions();
   }
 
-  ngOnChanges() {
-  }
-
   isFreeMode(): boolean {
     return this.viewerMode === FlashcardsViewerMode.Free;
   }
@@ -122,8 +124,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
 
     // find any questions in the review set that are in the current topic
     let reviewSetQuestions = new Array<FlashcardsViewerQuestion>();
-    rs.QuestionIds.forEach((qid) => {
-      let q = this.questions.find((fvq) => fvq.Question.QuestionId === qid);
+    rs.Questions.forEach((rsq) => {
+      let q = this.questions.find((fvq) => fvq.Question.QuestionId === rsq.QuestionId);
       if (q !== undefined) {
         reviewSetQuestions.push(q);
       }
@@ -238,8 +240,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
   hasReviewQuestions() {
     const rs = this.getReviewSet();
     return rs !== undefined
-      && rs.QuestionIds !== undefined
-      && rs.QuestionIds.length > 0;
+      && rs.Questions !== undefined 
+      && rs.Questions.length > 0;
   }
 
   canGoToNextQuestion(): boolean {
@@ -267,7 +269,7 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
     if (q === undefined || rs === undefined) {
       return false;
     }
-    return rs.QuestionIds.includes(q.Question.QuestionId);
+    return rs.containsQuestion(q.Question.QuestionId);
   }
 
   checkCurrentUserCanAccessReviewSet(): boolean {
@@ -313,13 +315,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       .subscribe(
         (res: any) => {
           if (res['status'] === 200) {
-            const questionIds: Array<string> = res['body'].QuestionIds;
-            if (questionIds === undefined)
-            {
-              return;
-            }
             // sync the local review set
-            this.currentUser.updateReviewSet(questionIds);
+            this.currentUser.addToReviewSet(q);
           }
         },
         (error) => {
@@ -341,13 +338,8 @@ export class FlashcardsViewerComponent implements OnInit, OnChanges {
       .subscribe(
         (res: any) => {
           if (res['status'] === 200) {
-            const questionIds: Array<string> = res['body'].QuestionIds;
-            if (questionIds === undefined)
-            {
-              return;
-            }
             // sync the local review set
-            this.currentUser.updateReviewSet(questionIds);
+            this.currentUser.removeFromReviewSet(q);
           }
         },
         (error) => {
