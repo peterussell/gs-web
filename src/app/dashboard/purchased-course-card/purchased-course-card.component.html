@@ -1,12 +1,8 @@
 <mat-card [routerLink]="['/', parentPath, subject.Path]">
-  <mat-card-header>
-    <mat-card-title>
-      <h3>{{ subject.Title }}</h3>
-    </mat-card-title>
-    <mat-card-subtitle>
-    </mat-card-subtitle>
-  </mat-card-header>
-  
+  <p class="course-title">{{ subject.Title }}</p>
   <img mat-card-image 
     src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="140">
+  <mat-card-actions>
+    <p>Expires {{ getExpiryDate() }}</p>
+  </mat-card-actions>
 </mat-card>

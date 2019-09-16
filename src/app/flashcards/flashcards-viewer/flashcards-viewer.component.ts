@@ -117,20 +117,19 @@ export class FlashcardsViewerComponent implements OnInit {
     return this.currentUser.getReviewSet();
   }
 
-  getReviewSetQuestions() {
+  getReviewSetForCurrentTopic() {
     if (!this.currentUser) { return; }
-    const rs = this.currentUser.getReviewSet();
+    let rs = this.currentUser.getReviewSet();
     if (rs === undefined) { return; }
 
     // find any questions in the review set that are in the current topic
-    let reviewSetQuestions = new Array<FlashcardsViewerQuestion>();
+    let reviewSetForTopic = new QuestionSet();
     rs.Questions.forEach((rsq) => {
-      let q = this.questions.find((fvq) => fvq.Question.QuestionId === rsq.QuestionId);
-      if (q !== undefined) {
-        reviewSetQuestions.push(q);
+      if (this.questions.find((fvq) => { return fvq.Question.QuestionId === rsq.QuestionId;})) {
+        reviewSetForTopic.Questions.push(rsq)
       }
     });
-    return reviewSetQuestions;
+    return reviewSetForTopic;
   }
 
   getRandomQuestion() {

@@ -1,50 +1,61 @@
 <div class="wrapper">
   <div class="content-wrapper">
     <div class="title">
-      <app-page-title>My GroundSchool</app-page-title>
+      <app-page-title>Welcome back<span *ngIf="currentUser && currentUser.Name">, {{ currentUser.Name }}</span>
+      </app-page-title>
     </div>
 
     <div class="content">
-      <div class="content__purchased-courses">
-        <h3>Purchased Courses</h3>
 
-        <p *ngIf="isLoading; else courseInfo">Loading...</p>
-        <ng-template #courseInfo>
+      <!-- Purchased Courses -->
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3 class="section-title">Purchased Courses</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
 
-            <div *ngIf="hasCourses(); else noCourses" class="subject-cards">
-              <app-purchased-course-card
-                *ngFor="let purchasedCourse of getPurchasedCourses()"
-                [subject]=purchasedCourse.Subject
-                [parentPath]="purchasedCourse.CoursePath">
-              </app-purchased-course-card>
-            </div>
+        <div class="panel-content-wrapper">
+          <p *ngIf="isLoading; else courseInfo">Loading...</p>
+          <ng-template #courseInfo>
 
-            <ng-template #noCourses>
-              <p>You haven't purchased any courses.</p>
-            </ng-template>
-        </ng-template>
-        
-      </div>
-      
-      <div class="content__review-questions">
-        <h3>Review Questions</h3>
+              <div *ngIf="hasCourses(); else noCourses" class="subject-cards">
+                <app-purchased-course-card
+                  *ngFor="let purchasedCourse of getPurchasedCourses()"
+                  [subject]=purchasedCourse.Subject
+                  [parentPath]="purchasedCourse.CoursePath"
+                  [expiryDate]="purchasedCourse.ExpiryDate">
+                </app-purchased-course-card>
+              </div>
 
-        <p *ngIf="isLoading; else reviewInfo">Loading...</p>
-        <ng-template #reviewInfo>
-
-          <div *ngIf="hasReviewQuestions(); else noReviewQuestions">
-              <ul>
-                <li *ngFor="let q of reviewSet.Questions">{{ q.Question }}<br>{{ q.Answer }}</li>
-              </ul>
-          </div>
-
-          <ng-template #noReviewQuestions>
-            <p>You don't have any saved review questions.</p>
+              <ng-template #noCourses>
+                <p>You haven't purchased any courses.</p>
+              </ng-template>
           </ng-template>
+        </div>
+      </mat-expansion-panel>
 
-        </ng-template>
+      <!-- Review questions -->
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3 class="section-title">Questions Marked for Review</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
 
-      </div>
+        <div class="panel-content-wrapper">
+          <p *ngIf="isLoading; else reviewInfo">Loading...</p>
+          <ng-template #reviewInfo>
+            <app-review-questions
+              [reviewSet]="reviewSet"
+              [userId]="currentUser.MemberId"
+              [showActionButtons]="true"
+              [maxQuestions]="5"
+              [showMoreLink]="'/review-set'">
+            </app-review-questions>
+          </ng-template>
+        </div>
+      </mat-expansion-panel>
     </div>
   </div>
 </div>

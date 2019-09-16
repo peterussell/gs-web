@@ -18,7 +18,26 @@
       <div class="accounts" fxShow="true" fxHide.lt-md="true">
         <span *ngIf="currentUser; else loggedOut">
           <p class="welcome-back-msg">Signed in as {{ currentUser.Name }}</p>
-          <button mat-stroked-button (click)="signOutClick()">Sign Out</button>
+          <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+            <i class="material-icons">account_circle</i>
+          </button>
+
+          <mat-menu
+            #profileMenu="matMenu"
+            [overlapTrigger]="false"
+            xPosition="before"
+            [class]="'profile-menu'">
+            <button mat-menu-item (click)="goToDashboardClick()">
+              <i class="material-icons">dns</i>
+              <span>Dashboard</span>
+            </button>
+            <hr class="divider">
+            <button mat-menu-item (click)="signOutClick()">
+              <i class="material-icons">exit_to_app</i>
+              <span>Sign out</span>
+            </button>
+          </mat-menu>
+
         </span>
         <ng-template #loggedOut>
           <button mat-stroked-button (click)="registerClick()">Register</button>

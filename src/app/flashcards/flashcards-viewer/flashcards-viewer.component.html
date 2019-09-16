@@ -168,38 +168,25 @@
                     </p>
                     <div class="no-review-questions">
                         <!-- Go you! Here, have a random video -->
-                        <iframe
+                        <!-- TODO: get this working... -->
+                        <!-- <iframe
                             width="560"
                             height="315"
                             [src]="getRandomVideoUrl()"
                             frameborder="0"
                             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                            allowfullscreen></iframe> -->
                     </div>
                 </div>
 
                 <!-- Premium mode: show any saved review questions for this topic -->
                 <ng-template #reviewQuestions>
                     <h2 class="review-questions">Review questions</h2>
-
-                    <!-- Review questions -->
-                    <ul *ngIf="hasReviewQuestions(); else noQuestions">
-                        <li *ngFor="let q of getReviewSetQuestions()" class="review-question">
-                            <h4>Syllabus Ref: {{ q.Question.SyllabusRef }}</h4>
-                            <p class="question">
-                                <strong>Q.</strong> {{ q.Question.Question }}
-                            </p>
-                            <p class="answer">
-                                <strong>A.</strong> {{ q.Question.Answer }}
-                            </p>
-                        </li>
-                    </ul>
-            
-                    <ng-template #noQuestions>
-                        <div class="no-review-questions">
-                            <p><i class="material-icons">check_circle_outline</i>No questions marked for review.</p><br>
-                        </div>
-                    </ng-template>
+                    <app-review-questions
+                        [reviewSet]="getReviewSetForCurrentTopic()"
+                        [showActionButtons]="false"
+                        [userId]="currentUser.MemberId">
+                    </app-review-questions>
             
                     <div class="nav-buttons">
                         <button mat-flat-button (click)="reloadTopic()" style="margin-bottom: 8px;">

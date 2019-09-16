@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
           let user = new User(cognitoUser, data);
           this.userService.setCurrentUser(user);
           this.onAuthenticationSuccess.emit();
+          this.router.navigate(['/dashboard']);
         });
       },
       (error: any) => {

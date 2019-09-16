@@ -1,0 +1,43 @@
+<div *ngIf="shouldDisplayShowMoreLink()">
+  <p class="show-more show-more--top">
+    <i class="material-icons">info</i>
+    Showing questions 1-{{ maxQuestions }} of {{ reviewSet.Questions.length }}.
+    <a routerLink="{{ showMoreLink }}">View full review set</a>.
+  </p>
+</div>
+
+<ul *ngIf="hasReviewQuestions(); else noQuestions">
+    <li *ngFor="let q of getReviewQuestions()" class="review-question">
+      <div class="header">
+        <h4>Syllabus Ref: {{ q.SyllabusRef }}</h4>
+        <div class="action-buttons" *ngIf="showActionButtons">
+          <i
+            class="material-icons action-buttons--delete"
+            matTooltip="Remove"
+            (click)="deleteReviewQuestion(q)">clear</i></div>
+      </div>
+      
+      <div class="content">
+        <p class="question">
+            <strong>Q.</strong> {{ q.Question }}
+        </p>
+        <p class="answer">
+            <strong>A.</strong> {{ q.Answer }}
+        </p>
+      </div>
+    </li>
+</ul>
+
+<div *ngIf="shouldDisplayShowMoreLink()">
+  <p class="show-more">
+      <i class="material-icons">info</i>
+    Showing questions 1-{{ maxQuestions }} of {{ reviewSet.Questions.length }}.
+    <a routerLink="{{ showMoreLink }}">View full review set</a>.
+  </p>
+</div>
+
+<ng-template #noQuestions>
+    <div class="no-review-questions">
+        <p><i class="material-icons">check_circle_outline</i>No questions marked for review.</p><br>
+    </div>
+</ng-template>

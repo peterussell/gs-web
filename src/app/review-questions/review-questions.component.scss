@@ -1,0 +1,65 @@
+ul {
+    padding: 0;
+    margin-top: 0px;
+    list-style-type: none;
+
+    li {
+        border-bottom: 1px solid #ddd;
+        padding: 0 0 10px 10px;
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 16px;
+
+            h4 {
+                margin: 0;
+                padding: 0 0 6px 6px;
+            }
+
+            .action-buttons {
+                &--delete {
+                    color: #c00;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        p {
+            margin: 10px 10px;
+            font-size: 0.9em;
+        }
+    }
+}
+
+.show-more {
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em;
+    text-align: center;
+
+    &--top {
+        padding-top: 6px;
+    }
+
+    i {
+        color: orange;
+        font-size: 1.4em;
+        vertical-align: middle;
+        margin-top: -4px;
+        margin-right: 4px;
+    }
+}
+
+.no-review-questions {
+    font-weight: 100;
+    margin: 40px 0 0 0;
+
+    i {
+        vertical-align: middle;
+        margin-top: -4px;
+        margin-right: 10px;
+        color: #080;
+    }
+}

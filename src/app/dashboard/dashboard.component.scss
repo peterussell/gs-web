@@ -13,13 +13,27 @@
         .title, .content {
             flex: 1 0 auto;
         }
-
-        .content {
-            &__review-questions {
-                padding-top: 20px;
-            }
-        }
     }
+}
+
+.mat-expansion-panel {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.mat-expansion-panel-header {
+    h3 {
+        margin: 0;
+        font-size: 1.4em;
+    }
+}
+
+.panel-content-wrapper {
+    font-size: 16px !important;
 }
 
 .subject-cards {

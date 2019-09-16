@@ -7,6 +7,7 @@ import { UIEventsService } from '../core/services/ui-events.service';
 import { User } from '../core/models/user.model';
 import { UserArn } from 'aws-sdk/clients/codestar';
 import { StoreService } from '../core/services/store.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -19,7 +20,8 @@ export class NavbarComponent implements OnInit {
   constructor(
     private userService: UserService,
     private uiEventsService: UIEventsService,
-    public dialog: MatDialog
+    private router: Router,
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit() {
@@ -50,6 +52,10 @@ export class NavbarComponent implements OnInit {
 
   signOutClick() {
     this.userService.signOut();
+  }
+
+  goToDashboardClick() {
+    this.router.navigate(['/dashboard/']);
   }
 
   showMenu() {

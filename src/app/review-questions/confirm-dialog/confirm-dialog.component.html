@@ -1,0 +1,12 @@
+<mat-dialog-content>
+  <p>Remove this question from your review set?</p>
+  <p class="question">
+    "{{ getQuestionTruncated() }}"
+  </p>
+</mat-dialog-content>
+
+
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="false">Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="true">Remove</button>
+</mat-dialog-actions>

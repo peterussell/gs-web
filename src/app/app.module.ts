@@ -54,6 +54,8 @@ import { Pa38Component } from './checklist-trainer/aircraft/pa38/pa38.component'
 import { PaymentSuccessComponent } from './payments/payment-success/payment-success.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PurchasedCourseCardComponent } from './dashboard/purchased-course-card/purchased-course-card.component';
+import { ReviewQuestionsComponent } from './review-questions/review-questions.component';
+import { ConfirmDialogComponent } from './review-questions/confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -93,6 +95,8 @@ import { PurchasedCourseCardComponent } from './dashboard/purchased-course-card/
     PaymentSuccessComponent,
     DashboardComponent,
     PurchasedCourseCardComponent,
+    ReviewQuestionsComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -119,6 +123,7 @@ import { PurchasedCourseCardComponent } from './dashboard/purchased-course-card/
   entryComponents: [
     ReportQuestionDialogComponent,
     AccountDialogComponent,
+    ConfirmDialogComponent,
     ActivateComponent,
     GsSnackbarComponent
   ],

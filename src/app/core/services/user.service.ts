@@ -10,6 +10,7 @@ import { fromPromise } from "rxjs/observable/fromPromise";
 import { from } from "rxjs/observable/from";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import { User } from "../models/user.model";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class UserService {
@@ -18,7 +19,9 @@ export class UserService {
 
     private _currentUser: User;
 
-    constructor(private apiService: ApiService) {
+    constructor(
+        private apiService: ApiService,
+        private router: Router) {
         from(Auth.currentAuthenticatedUser()).subscribe(
             (cognitoUser: CognitoUser) => {
                 this.getProfile(cognitoUser['username']).subscribe((profileData) => {
@@ -42,7 +45,10 @@ export class UserService {
 
     signOut() {
         from(Auth.signOut()).subscribe(
-            () => { this.setCurrentUser(null); },
+            () => {
+                this.setCurrentUser(null);
+                this.router.navigate([''])
+            },
             (error: any) => { console.log(error); } // tmp - TODO: log this properly or show an error
         );
     }
