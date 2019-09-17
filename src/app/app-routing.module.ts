@@ -19,15 +19,13 @@ import { ChecklistTrainerComponent } from './checklist-trainer/checklist-trainer
 import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.component';
 import { PaymentSuccessComponent } from './payments/payment-success/payment-success.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReviewDashboardComponent } from './review/review-dashboard/review-dashboard.component';
 
 const appRoutes: Routes = [
     
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
-    { path: 'review', component: GroundSchoolAppComponent, children: [
-        { path: ':course/:subject', component: CourseComponent, resolve: {course: CourseResolver} },
-    ]},
     { path: 'admin', component: GroundSchoolAppComponent, children: [
         { path: 'question-editor', component: QuestionEditorComponent },
     ]},
@@ -40,7 +38,8 @@ const appRoutes: Routes = [
         { path: ':course/:subject/free', component: FlashcardsFreeComponent },
         { path: 'dashboard', component: DashboardComponent },
         { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
-        { path: 'payment-success', component: PaymentSuccessComponent }
+        { path: 'payment-success', component: PaymentSuccessComponent },
+        { path: 'review-set', component: ReviewDashboardComponent }
     ]},
     { path: '**', redirectTo: '' }
 ];

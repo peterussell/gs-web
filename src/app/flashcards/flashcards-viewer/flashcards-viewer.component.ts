@@ -132,6 +132,12 @@ export class FlashcardsViewerComponent implements OnInit {
     return reviewSetForTopic;
   }
 
+  currentTopicReviewSetHasQuestions() {
+    const rs = this.getReviewSetForCurrentTopic();
+    if (!rs.Questions) { return false; }
+    return rs.Questions.length > 0;
+  }
+
   getRandomQuestion() {
     this.isQuestionLoading = true;
 

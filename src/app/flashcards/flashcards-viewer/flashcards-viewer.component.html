@@ -181,10 +181,20 @@
 
                 <!-- Premium mode: show any saved review questions for this topic -->
                 <ng-template #reviewQuestions>
-                    <h2 class="review-questions">Review questions</h2>
+                    <h2>Questions marked for review</h2>
+                    <div class="review-questions" *ngIf="currentTopicReviewSetHasQuestions()">
+                        <span class="review-questions__icon">
+                            <i class="material-icons">info_outline</i>
+                        </span>
+                        <span class="review-questions__text">
+                            <p>These questions have been saved to review later. Access
+                            them through <a routerLink="/dashboard">your dashboard.</a></p>
+                        </span>
+                    </div>
                     <app-review-questions
                         [reviewSet]="getReviewSetForCurrentTopic()"
                         [showActionButtons]="false"
+                        [enablePagination]="false"
                         [userId]="currentUser.MemberId">
                     </app-review-questions>
             

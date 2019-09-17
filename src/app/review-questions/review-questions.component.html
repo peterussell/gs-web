@@ -1,13 +1,16 @@
-<div *ngIf="shouldDisplayShowMoreLink()">
-  <p class="show-more show-more--top">
-    <i class="material-icons">info</i>
-    Showing questions 1-{{ maxQuestions }} of {{ reviewSet.Questions.length }}.
-    <a routerLink="{{ showMoreLink }}">View full review set</a>.
+<div>
+  <p class="paging-nav paging-nav--top" *ngIf="enablePagination && hasReviewQuestions()">
+    <button mat-button (click)="goToPreviousPage()" [disabled]="!canGoToPreviousPage()"><<</button>
+    Questions {{ startIndex+1 }}-{{ endIndex }} of {{ reviewSet.Questions.length }}
+    <button mat-button (click)="goToNextPage()" [disabled]="!canGoToNextPage()">>></button>
+    <span *ngIf="shouldDisplayShowMoreLink()">
+      <br><a routerLink="{{ showMoreLink }}">Gimme everything at once</a>
+    </span>
   </p>
 </div>
 
 <ul *ngIf="hasReviewQuestions(); else noQuestions">
-    <li *ngFor="let q of getReviewQuestions()" class="review-question">
+    <li *ngFor="let q of currentPage" class="review-question">
       <div class="header">
         <h4>Syllabus Ref: {{ q.SyllabusRef }}</h4>
         <div class="action-buttons" *ngIf="showActionButtons">
@@ -28,11 +31,14 @@
     </li>
 </ul>
 
-<div *ngIf="shouldDisplayShowMoreLink()">
-  <p class="show-more">
-      <i class="material-icons">info</i>
-    Showing questions 1-{{ maxQuestions }} of {{ reviewSet.Questions.length }}.
-    <a routerLink="{{ showMoreLink }}">View full review set</a>.
+<div>
+  <p class="paging-nav" *ngIf="enablePagination && hasReviewQuestions()">
+    <button mat-button (click)="goToPreviousPage()" [disabled]="!canGoToPreviousPage()"><<</button>
+    Questions {{ startIndex+1 }}-{{ endIndex }} of {{ reviewSet.Questions.length }}
+    <button mat-button (click)="goToNextPage()" [disabled]="!canGoToNextPage()">>></button>
+    <span *ngIf="shouldDisplayShowMoreLink()">
+      <br><a routerLink="{{ showMoreLink }}">Gimme everything at once</a>
+    </span>
   </p>
 </div>
 

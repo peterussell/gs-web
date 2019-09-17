@@ -33,7 +33,7 @@ ul {
     }
 }
 
-.show-more {
+.paging-nav {
     padding: 0;
     margin: 0;
     font-size: 0.9em;
@@ -43,12 +43,10 @@ ul {
         padding-top: 6px;
     }
 
-    i {
-        color: orange;
-        font-size: 1.4em;
-        vertical-align: middle;
-        margin-top: -4px;
-        margin-right: 4px;
+    .mat-button {
+        padding: 0 16px;
+        margin: 0;
+        min-width: 0;
     }
 }
 

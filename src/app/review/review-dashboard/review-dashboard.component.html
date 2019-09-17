@@ -1,3 +1,22 @@
-<p>
-  review-dashboard works!
-</p>
+<div class="wrapper">
+  <div class="content-wrapper">
+    <div class="page-title">
+      <app-page-title>Questions Marked for Review</app-page-title>
+    </div>
+
+    <div class="content">
+
+      <div *ngIf="isLoading; else reviewInfo">
+        <h3>Loading...</h3>
+      </div>
+      <ng-template #reviewInfo>
+        <app-review-questions
+          [reviewSet]="reviewSet"
+          [userId]="currentUser.MemberId"
+          [showActionButtons]="true">
+        </app-review-questions>
+      </ng-template>
+
+    </div>
+  </div>
+</div>

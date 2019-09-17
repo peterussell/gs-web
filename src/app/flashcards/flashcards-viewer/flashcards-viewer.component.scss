@@ -86,6 +86,37 @@ i.material-icons {
     }
 }
 
+.review-questions {
+    display: flex;
+    flex-direction: row;
+    border: 1px #ddd solid;
+    border-radius: 4px;
+    padding: 10px;
+
+    &__icon {
+        display: flex;
+        flex: 0 0 30px;
+        align-self: center;
+
+        i {
+            font-size: 1.4em;
+            vertical-align: middle;
+            margin-top: -4px;
+            color: #060;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex: 0 1 auto;
+        font-size: 0.9em;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
 .no-questions {
     p {
         margin: 20px 0;

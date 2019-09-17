@@ -14,15 +14,30 @@ import { ApiService } from '../core/services/api.service';
 export class ReviewQuestionsComponent implements OnInit {
   @Input() reviewSet: QuestionSet;
   @Input() showActionButtons: boolean = false;
-  @Input() maxQuestions: number;
+  @Input() enablePagination: boolean = true;
+  @Input() pageSize: number;
   @Input() showMoreLink: string = '';
   @Input() userId: string;
 
   private _reviewSetUpdatePending = false;
+  private currentPage: Question[];
+  private startIndex: number;
+  private endIndex: number;
 
   constructor(private dialog: MatDialog, private apiService: ApiService) { }
 
   ngOnInit() {
+    this.startIndex = 0;
+    if (this.enablePagination && this.pageSize) {
+      this.endIndex = this.getPageEndIndex();
+    } else {
+      if (this.reviewSet && this.reviewSet.Questions) {
+        this.endIndex = this.reviewSet.Questions.length;
+      } else {
+        this.endIndex = 0;
+      }
+    }
+    this.updateCurrentPage();
   }
 
   hasReviewQuestions() {
@@ -31,11 +46,44 @@ export class ReviewQuestionsComponent implements OnInit {
       && this.reviewSet.Questions.length > 0;
   }
 
-  getReviewQuestions() {
-    if (!this.shouldDisplayShowMoreLink()) {
-      return this.reviewSet.Questions;
+  updateCurrentPage() {
+    this.currentPage = this.reviewSet.Questions
+      .slice(this.startIndex, this.endIndex);
+  }
+
+  canGoToPreviousPage(): boolean {
+    return this.startIndex > 0;
+  }
+
+  canGoToNextPage(): boolean {
+    return this.endIndex <= this.reviewSet.Questions.length-1;
+  }
+
+  goToPreviousPage() {
+    if (!this.canGoToPreviousPage()) {
+      return;
+    }
+    this.startIndex = Math.max(0, this.startIndex-this.pageSize);
+    this.endIndex = this.getPageEndIndex();
+    this.updateCurrentPage();
+  }
+
+  goToNextPage() {
+    if (!this.canGoToNextPage()) {
+      return;
+    }
+    this.startIndex = this.startIndex+this.pageSize;
+    this.endIndex = this.getPageEndIndex();
+    this.updateCurrentPage();
+  }
+
+  // WORKING HERE
+  getPageEndIndex(): number {
+    let end = (this.startIndex + this.pageSize);
+    if (end <= this.reviewSet.Questions.length-1) {
+      return end;
     } else {
-      return this.reviewSet.Questions.slice(0, this.maxQuestions);
+      return this.reviewSet.Questions.length;
     }
   }
 
@@ -57,6 +105,12 @@ export class ReviewQuestionsComponent implements OnInit {
               if (res['status'] === 200) {
                 // sync the local review set
                 this.removeFromLocalReviewSet(question.QuestionId);
+
+                // If we're at the end of the review set and this was the only question
+                // on the page, go to the previous page
+                if (this.currentPage.length === 1) {
+                  this.goToPreviousPage();
+                }
               }
             },
             (error) => {
@@ -79,7 +133,7 @@ export class ReviewQuestionsComponent implements OnInit {
 
   shouldDisplayShowMoreLink() {
     return  this.showMoreLink &&
-            this.maxQuestions > 0 &&
-            this.maxQuestions < this.reviewSet.Questions.length;
+            this.pageSize > 0 &&
+            this.pageSize < this.reviewSet.Questions.length;
   }
 }
