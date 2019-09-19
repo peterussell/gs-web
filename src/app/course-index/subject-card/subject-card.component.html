@@ -1,19 +1,17 @@
 <mat-card>
-  <mat-card-header>
-    <mat-card-title>
-      <h3>{{ subject.Title }}</h3>
-    </mat-card-title>
-    <mat-card-subtitle>
-    </mat-card-subtitle>
-  </mat-card-header>
+  <p class="course-title">{{ subject.Title }}</p>
   <img mat-card-image 
-    src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="140">
+    src="assets/images/home/{{subject.Path}}.png"
+    alt="{{ subject.Title }}"
+    width="200"
+    height="140">
+
   <mat-card-actions>
-    <span *ngIf="subject.PremiumVersionAvailable">
+    <span *ngIf="subject.PremiumVersionAvailable; else comingSoon">
 
       <span *ngIf="ownsCourse(subject.SubjectId); else canPurchase">
         <button mat-button [routerLink]="['/', parentPath, subject.Path]">
-          <strong>PURCHASED!</strong><br>
+          <strong>PURCHASED</strong><br>
           Click here for access
         </button>
       </span>
@@ -23,7 +21,11 @@
             60 days access - $20.00
           </button>
       </ng-template>
+
     </span>
+    <ng-template #comingSoon>
+      <button mat-button disabled>PREMIUM VERSION<br>Coming soon</button>
+    </ng-template>
   </mat-card-actions>
 </mat-card>
 <div class="free-version">

@@ -3,14 +3,22 @@
 
     .content-wrapper {
         max-width: 900px;
-        background-color: #fff;
     }
+}
+
+h1 {
+    margin-bottom: 6px;
 }
 
 .mat-card {
     -webkit-box-shadow: none !important;
 	-moz-box-shadow: none !important;
-	box-shadow: none !important;
+    box-shadow: none !important;
+    padding: 14px 20px 0 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
 }
 
 .subject-cards {

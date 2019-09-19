@@ -4,11 +4,12 @@
 
 <ng-template #courseIndex>
   <div class="wrapper">
+    <h1>Courses</h1>
     <div class="content-wrapper">
 
         <mat-card *ngFor="let course of allCourses">
           <mat-card-title>
-              <h2>{{ course.Title }} Subjects</h2>
+              <h2>{{ course.Title }}</h2>
           </mat-card-title>
           <mat-card-content>
               <div class="subject-cards">
