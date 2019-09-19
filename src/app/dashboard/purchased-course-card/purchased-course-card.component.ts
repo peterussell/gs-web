@@ -12,6 +12,7 @@ export class PurchasedCourseCardComponent implements OnInit {
   @Input() subject: Subject;
   @Input() parentPath: string;
   @Input() expiryDate: Date;
+  @Input() isMoreCoursesCard: boolean;
   
   constructor() { }
 

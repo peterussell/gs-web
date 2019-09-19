@@ -36,13 +36,13 @@
     font-size: 16px !important;
 }
 
-.subject-cards {
+.subject-cards-container {
     display: flex;
     flex-flow: row wrap;
 
-    &__card {
+    &__card-container {
         display: flex;
-        margin: 0 10px 10px 0;
+        margin: 0 20px 10px 0;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;

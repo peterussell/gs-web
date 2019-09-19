@@ -1,8 +1,18 @@
-<mat-card [routerLink]="['/', parentPath, subject.Path]">
-  <p class="course-title">{{ subject.Title }}</p>
+<mat-card *ngIf="isMoreCoursesCard; else normalCard" routerLink="/">
   <img mat-card-image 
-    src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="140">
+      src="assets/images/dashboard/more-courses.png" alt="More courses" width="200" height="140">
   <mat-card-actions>
-    <p>Expires {{ getExpiryDate() }}</p>
+    <p><strong>Check out our other courses...</strong></p>
   </mat-card-actions>
 </mat-card>
+
+<ng-template #normalCard>
+  <mat-card [routerLink]="['/', parentPath, subject.Path]">
+    <p class="course-title">{{ subject.Title }}</p>
+    <img mat-card-image
+      src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}" width="200" height="140">
+    <mat-card-actions>
+      <p>Expires {{ getExpiryDate() }}</p>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>

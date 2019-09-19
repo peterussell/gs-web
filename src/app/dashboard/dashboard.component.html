@@ -19,18 +19,24 @@
           <p *ngIf="isLoading; else courseInfo">Loading...</p>
           <ng-template #courseInfo>
 
-              <div *ngIf="hasCourses(); else noCourses" class="subject-cards">
-                <app-purchased-course-card
-                  *ngFor="let purchasedCourse of getPurchasedCourses()"
-                  [subject]=purchasedCourse.Subject
-                  [parentPath]="purchasedCourse.CoursePath"
-                  [expiryDate]="purchasedCourse.ExpiryDate">
-                </app-purchased-course-card>
+              <div *ngIf="hasCourses(); else noCourses" class="subject-cards-container">
+                <div *ngFor="let purchasedCourse of getPurchasedCourses()" class="subject-cards-container__card-container">
+                  <app-purchased-course-card
+                    [subject]=purchasedCourse.Subject
+                    [parentPath]="purchasedCourse.CoursePath"
+                    [expiryDate]="purchasedCourse.ExpiryDate">
+                  </app-purchased-course-card>
+                </div>
+
+                <div class="subject-cards-container__card-container">
+                  <app-purchased-course-card [isMoreCoursesCard]="true"></app-purchased-course-card>
+                </div>
               </div>
 
               <ng-template #noCourses>
-                <p>You haven't purchased any courses.</p>
+                <p>You haven't purchased any courses. <a routerLink="/">Take a look at what's available.</a></p>
               </ng-template>
+
           </ng-template>
         </div>
       </mat-expansion-panel>
