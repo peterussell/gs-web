@@ -56,6 +56,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PurchasedCourseCardComponent } from './dashboard/purchased-course-card/purchased-course-card.component';
 import { ReviewQuestionsComponent } from './review-questions/review-questions.component';
 import { ConfirmDialogComponent } from './review-questions/confirm-dialog/confirm-dialog.component';
+import { SignedOutComponent } from './signed-out/signed-out.component';
 
 
 @NgModule({
@@ -97,6 +98,7 @@ import { ConfirmDialogComponent } from './review-questions/confirm-dialog/confir
     PurchasedCourseCardComponent,
     ReviewQuestionsComponent,
     ConfirmDialogComponent,
+    SignedOutComponent,
   ],
   imports: [
     BrowserModule,

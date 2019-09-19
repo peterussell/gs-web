@@ -47,7 +47,7 @@ export class UserService {
         from(Auth.signOut()).subscribe(
             () => {
                 this.setCurrentUser(null);
-                this.router.navigate([''])
+                this.router.navigate(['/signed-out'])
             },
             (error: any) => { console.log(error); } // tmp - TODO: log this properly or show an error
         );

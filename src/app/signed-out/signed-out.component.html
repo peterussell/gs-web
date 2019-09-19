@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="content-wrapper">
+    <div class="title">
+      <app-page-title>Signed out</app-page-title>
+    </div>
+    
+    <div class="content">
+      <mat-card>
+        <p>
+            <strong>You are now signed out.</strong>
+            You can <a routerLink="/">return to the home page</a> or
+            <a (click)="signInClick()" [routerLink]="">sign in again.</a>
+          </p>
+          <p>
+            Thanks for being a part of GroundSchool NZ.
+          </p>
+          <img src="/assets/images/signed-out/signed-out.png">
+      </mat-card>
+    </div>
+  </div>
+</div>

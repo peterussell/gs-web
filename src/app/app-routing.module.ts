@@ -20,6 +20,7 @@ import { FlashcardsFreeComponent } from './flashcards-free/flashcards-free.compo
 import { PaymentSuccessComponent } from './payments/payment-success/payment-success.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReviewDashboardComponent } from './review/review-dashboard/review-dashboard.component';
+import { SignedOutComponent } from './signed-out/signed-out.component';
 
 const appRoutes: Routes = [
     
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
         { path: 'dashboard', component: DashboardComponent },
         { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
         { path: 'payment-success', component: PaymentSuccessComponent },
-        { path: 'review-set', component: ReviewDashboardComponent }
+        { path: 'review-set', component: ReviewDashboardComponent },
+        { path: 'signed-out', component: SignedOutComponent }
     ]},
     { path: '**', redirectTo: '' }
 ];
