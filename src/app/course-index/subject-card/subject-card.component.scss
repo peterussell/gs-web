@@ -1,27 +1,28 @@
-.mat-card {
-    max-width: 200px;
+.subject-card {
     width: 200px;
-    padding-top: 0;
+    padding: 0;
     box-shadow: 0 2px 2px -1px rgba(0,0,0,.2), 1px 1px 1px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.12), -1px 0px 2px 2px rgba(0,0,0,.2), !important;
-    background-color: #eee;
+    background-color: #eee !important;
     position: relative;
-
-    p.course-title {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding-top: 8px;
-        padding-bottom: 6px;
-        background-color: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-    }
+    margin-bottom: 20px;
 }
 
-.mat-card-image {
-    margin-bottom: 2px;
+p.course-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0 6px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.mat-card img {
+    margin: 0;
+    max-width: 200px;
+    max-height: 140px;
 }
 
 .mat-card-actions {
@@ -34,6 +35,7 @@
         font-size: 0.9em;
         line-height: 1.2em;
         padding: 4px;
+        margin-bottom: 4px;
     }
 }
 

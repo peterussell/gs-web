@@ -25,6 +25,7 @@ export class SubscriptionInfo {
                 subjectData["Path"],
                 subjectData["Version"],
                 subjectData["PremiumVersionAvailable"],
+                subjectData["FreeVersionAvailable"],
                 null
             );
             this.PurchasedCourses.push(pc);

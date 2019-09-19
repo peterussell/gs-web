@@ -10,7 +10,7 @@ h1 {
     margin-bottom: 6px;
 }
 
-.mat-card {
+.course-card {
     -webkit-box-shadow: none !important;
 	-moz-box-shadow: none !important;
     box-shadow: none !important;
@@ -21,14 +21,15 @@ h1 {
     margin-bottom: 10px;
 }
 
-.subject-cards {
+.subject-cards-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 
-    &__card {
+    &__card-container {
         display: flex;
-        margin: 0 10px 10px 0;
+        flex: 1 0 30%;
+        margin: 0 10px 14px 0;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;

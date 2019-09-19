@@ -10,6 +10,7 @@ export class Subject {
         public Path: string,
         public Version: number,
         public PremiumVersionAvailable: boolean,
+        public FreeVersionAvailable: boolean,
         public Topics: Array<Topic>) {
             if (Topics) {
                 this.topics = Topics.sort();

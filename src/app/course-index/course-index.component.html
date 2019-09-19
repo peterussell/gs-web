@@ -7,13 +7,13 @@
     <h1>Courses</h1>
     <div class="content-wrapper">
 
-        <mat-card *ngFor="let course of allCourses">
+        <mat-card *ngFor="let course of allCourses" class="course-card">
           <mat-card-title>
               <h2>{{ course.Title }}</h2>
           </mat-card-title>
           <mat-card-content>
-              <div class="subject-cards">
-                <div *ngFor="let subject of course.Subjects" class="subject-cards__card">
+              <div class="subject-cards-container">
+                <div *ngFor="let subject of course.Subjects" class="subject-cards-container__card-container">
                   <app-subject-card [subject]=subject [parentPath]="course.Path"></app-subject-card>
                 </div>
               </div>
