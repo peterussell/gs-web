@@ -15,15 +15,29 @@
     </p>
 
     <h2>Accounts</h2>
-    <p class="first">
-      <a (click)="registerClick()">
-        <i class="material-icons">person_add</i> Register
-      </a>
-    </p>
-    <p>
-      <a (click)="signInClick()">
-        <i class="material-icons">forward</i> Sign In
-      </a>
-    </p>
+    <span *ngIf="currentUser; else loggedOut">
+      <p class="first">
+        <a routerLink="/dashboard">
+          <i class="material-icons">dns</i> Dashboard
+        </a>
+      </p>
+      <p>
+        <a (click)="signOutClick()">
+          <i class="material-icons">exit_to_app</i> Sign out
+        </a>
+      </p>
+    </span>
+    <ng-template #loggedOut>
+      <p class="first">
+        <a (click)="registerClick()">
+          <i class="material-icons">person_add</i> Register
+        </a>
+      </p>
+      <p>
+        <a (click)="signInClick()">
+          <i class="material-icons">forward</i> Sign in
+        </a>
+      </p>
+    </ng-template>
   </div>
 </div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AccountDialogComponent, AccountDialogState } from '../account-dialog/account-dialog.component';
+import { UserService } from '../core/services/user.service';
+import { User } from '../core/models/user.model';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,10 +10,16 @@ import { AccountDialogComponent, AccountDialogState } from '../account-dialog/ac
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  private currentUser: User;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(
+    private userService: UserService,
+    private dialog: MatDialog) { }
 
   ngOnInit() {
+    this.userService.currentUser$.subscribe((newUser: User) => {
+      this.currentUser = newUser;
+    });
   }
 
   registerClick() {
@@ -30,5 +38,9 @@ export class SidebarComponent implements OnInit {
       position: { top: '30px' },
       data: { initialState: AccountDialogState.Login }
     });
+  }
+
+  signOutClick() {
+    this.userService.signOut();
   }
 }
