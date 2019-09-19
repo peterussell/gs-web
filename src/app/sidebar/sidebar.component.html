@@ -1,9 +1,29 @@
-<div role="logo" class="sidenav__logo">
-  <img src="/assets/images/sidenav/logo.png" alt="GroundSchool NZ">
-</div>
+<div class="sidenav">
+  <div role="logo" class="sidenav__logo">
+    <img src="/assets/images/sidenav/logo.png" alt="GroundSchool NZ">
+  </div>
 
-<div class="sidenav__content" role="navigation">
-  <h2>Navigation</h2>
-  <h3><a routerLink="/">Home</a></h3>
-  <h3><a routerLink="/contact">Contact</a></h3>
+  <div class="sidenav__content" role="navigation">
+    <p class="first">
+      <a routerLink="/">
+        <i class="material-icons">home</i> Home
+      </a>
+    <p>
+      <a routerLink="/contact">
+        <i class="material-icons">chat</i> Contact
+      </a>
+    </p>
+
+    <h2>Accounts</h2>
+    <p class="first">
+      <a (click)="registerClick()">
+        <i class="material-icons">person_add</i> Register
+      </a>
+    </p>
+    <p>
+      <a (click)="signInClick()">
+        <i class="material-icons">forward</i> Sign In
+      </a>
+    </p>
+  </div>
 </div>

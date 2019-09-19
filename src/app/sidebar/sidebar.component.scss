@@ -1,25 +1,46 @@
 .sidenav {
+    background-color: #eaeaea;
+    height: 100%;
+    top: 0px;
+
     &__logo {
         width: 100%;
         text-align: center;
-        margin-top: 10px;
+        padding-top: 10px;
     }
 
     &__content {
-        width: 240px;
-        margin: 20px 0 0 20px;
+        width: 100%;
+        margin: 20px 0 0 0;
 
         h2 {
             font-weight: 100;
-            margin-right: 20px;
+            margin: 0;
+            padding: 20px 0 10px 20px;
         }
 
-        h3 {
-            margin: 16px 0 4px 10px;
+        p {
+            font-size: 1.1em;
+            padding: 10px 0 10px 30px;
+            margin: 0;
+            border-bottom: 1px solid #ccc;
+            color: #333;
+
+            i {
+                font-size: 1em;
+                color: #444;
+                vertical-align: middle;
+                margin: -4px 10px 0 0;
+            }
+
             a {
                 text-decoration: none;
                 color: #333;
             }
+        }
+
+        p.first {
+            border-top: 1px solid #ccc;
         }
     }
 }
