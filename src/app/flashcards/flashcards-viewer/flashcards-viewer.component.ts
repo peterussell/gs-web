@@ -325,7 +325,22 @@ export class FlashcardsViewerComponent implements OnInit {
           }
         },
         (error) => {
-          console.log(error); // TODO: log this properly
+          if (error['status'] === 403) {
+            // Review set full
+            this.snackBar.openFromComponent(
+              GsSnackbarComponent,
+              {
+                duration: 5000,
+                data: {
+                  message: 'Negative Ghostrider, your review set is full.'
+                },
+                panelClass: 'gs-snackbar'
+              }
+            );
+          } else {
+            console.log(error);
+          }
+          this._reviewSetUpdatePending = false;
         },
         () => {
           this._reviewSetUpdatePending = false;
