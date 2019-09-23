@@ -75,8 +75,10 @@ export class User {
         if (!rs) {
             let tmpqs = new QuestionSet();
             tmpqs.Type = 'r';
-            tmpqs.Questions = [];
+            tmpqs.Questions = new Array<Question>();
             this.ReviewSet = tmpqs;
+        } else if (this.ReviewSet.Questions === null) {
+            this.ReviewSet.Questions = new Array<Question>();
         }
         this.ReviewSet.Questions.push(question);
     }
