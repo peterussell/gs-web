@@ -41,12 +41,13 @@ export class ReviewQuestionsComponent implements OnInit {
   }
 
   hasReviewQuestions() {
-    return this.reviewSet !== undefined
-      && this.reviewSet.Questions !== undefined 
+    return this.reviewSet
+      && this.reviewSet.Questions
       && this.reviewSet.Questions.length > 0;
   }
 
   updateCurrentPage() {
+    if (!this.hasReviewQuestions()) { return; }
     this.currentPage = this.reviewSet.Questions
       .slice(this.startIndex, this.endIndex);
   }
