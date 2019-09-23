@@ -19,7 +19,6 @@ export class ActivateFullPageComponent implements OnDestroy {
     });
   }
 
-  // TODO (working here): close the dialog on router change events
   ngOnDestroy() {
     this.dialogRef.close();
   }

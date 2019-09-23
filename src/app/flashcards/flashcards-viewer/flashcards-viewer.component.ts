@@ -79,6 +79,7 @@ export class FlashcardsViewerComponent implements OnInit {
       this.reviewSet = this.currentUser.ReviewSet;
     } else {
       this.userService.currentUser$.subscribe((user: User) => {
+        this.currentUser = user;
         if (user) {
           this.userService.getProfile(user.getCognitoUsername()).subscribe((data) => {
             user.setProfileData(data);
@@ -278,23 +279,6 @@ export class FlashcardsViewerComponent implements OnInit {
   }
 
   checkCurrentUserCanAccessReviewSet(): boolean {
-    // Free mode - show snackbar error and return
-    if (this.isFreeMode()) {
-      this.snackBar.openFromComponent(
-        GsSnackbarComponent,
-        {
-          duration: 5000,
-          data: {
-            message: 'Become a GroundSchool NZ premium member to access Review Sets.',
-            linkText: 'Learn more',
-            linkUrl: '/membership'
-          },
-          panelClass: 'gs-snackbar'
-        }
-      );
-      return false;
-    }
-
     // User not logged in - show snackbar error and return
     if (!this.currentUser) {
       this.snackBar.openFromComponent(
@@ -332,6 +316,7 @@ export class FlashcardsViewerComponent implements OnInit {
               {
                 duration: 5000,
                 data: {
+                  // TODO: if member has a free account, display message about premium limit
                   message: 'Negative Ghostrider, your review set is full.'
                 },
                 panelClass: 'gs-snackbar'

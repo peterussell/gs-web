@@ -77,9 +77,11 @@ export class ReviewQuestionsComponent implements OnInit {
     this.updateCurrentPage();
   }
 
-  // WORKING HERE
   getPageEndIndex(): number {
     let end = (this.startIndex + this.pageSize);
+    if (!this.hasReviewQuestions()) {
+      return 0;
+    }
     if (end <= this.reviewSet.Questions.length-1) {
       return end;
     } else {
@@ -129,6 +131,13 @@ export class ReviewQuestionsComponent implements OnInit {
     this.reviewSet.Questions = rs.Questions.filter((q: Question) => {
       return q.QuestionId !== questionId;
     });
+    this.updateCurrentPage();
+
+    // If that was the only question on the page, go back a page
+    // (NB. goToPreviousPage() will handle whether it's possible to do so)
+    if (this.currentPage.length === 0) {
+      this.goToPreviousPage();
+    }
   }
 
   shouldDisplayShowMoreLink() {
