@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { Subject } from '../../core/models/subject.model';
 import { UserService } from '../../core/services/user.service';
 import { User } from '../../core/models/user.model';
+import { MatSnackBar } from '@angular/material';
+import { GsSnackbarComponent } from '../../gs-snackbar/gs-snackbar.component';
 
 @Component({
   selector: 'app-subject-card',
@@ -19,7 +21,8 @@ export class SubjectCardComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private userService: UserService) { }
+    private userService: UserService,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this._stripe = Stripe('pk_test_2cKdGLOWOuxYiTWrn8PaC4jS00sNO8cXJk');
@@ -38,7 +41,17 @@ export class SubjectCardComponent implements OnInit {
   // eg. 'Please log in or _register for a free account_ to buy premium courses'
   buyCourse(sku: string) {
     let user = this.userService.getCurrentUser();
-    if (!user) { return; }
+    if (!user) {
+      this.snackBar.openFromComponent(
+        GsSnackbarComponent,
+        {
+          duration: 5000,
+          data: { message: 'Please log in to purchase Premium courses.' },
+          panelClass: 'gs-snackbar'
+        }
+      );
+      return;
+    }
 
     this._stripe.redirectToCheckout({
       items: [

@@ -5,7 +5,6 @@ import { ApiService } from '../../../core/services/api.service';
 import { UserService } from '../../../core/services/user.service';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { QuestionSet } from '../../../core/models/question-set.model';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { User } from '../../../core/models/user.model';
 
 @Component({
@@ -25,7 +24,6 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
   private reviewSet: QuestionSet;
 
   constructor(
-    private snackBar: MatSnackBar,
     public apiService: ApiService,
     public userService: UserService) { }
 
@@ -35,6 +33,7 @@ export class FlashcardsCardComponent implements OnInit, OnChanges {
         this.currentUser = newUser;
 
         // TODO: needs to be updated with the new User model, deferring since this isn't in use yet
+        // (2019-09-25 - revisit this, seems to be working OK without this?)
         // (should just be user.CognitoUser['username'])
         // if (newUser) {
         //   this.apiService.getReviewSetForUser(this.currentUser['username']).subscribe(

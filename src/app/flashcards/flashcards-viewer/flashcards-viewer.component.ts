@@ -29,7 +29,6 @@ export class FlashcardsViewerComponent implements OnInit {
 
   // Premium
   public questions: Array<FlashcardsViewerQuestion>;
-  // public forReview: { [topicId: string]: Set<FlashcardsViewerQuestion> };
   public currentQuestionIndex: number;
   public currentTopicId: string;
 

@@ -11,12 +11,12 @@ import { SubscriptionInfo, PurchasedCourse } from '../core/models/subscription-i
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  private currentUser: User;
+  public currentUser: User;
+  public reviewSet: QuestionSet;
+  public isLoading: boolean;
   private subscriptionInfo: SubscriptionInfo;
   private purchasedCourses: Array<PurchasedCourse>;
-  private reviewSet: QuestionSet;
-  private isLoading: boolean;
-  
+
   constructor(private userService: UserService) { }
 
   ngOnInit() {

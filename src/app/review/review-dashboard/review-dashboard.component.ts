@@ -9,9 +9,9 @@ import { QuestionSet } from '../../core/models/question-set.model';
   styleUrls: ['./review-dashboard.component.scss']
 })
 export class ReviewDashboardComponent implements OnInit {
-  private currentUser: User;
-  private reviewSet: QuestionSet;
-  private isLoading: boolean = false;
+  public currentUser: User;
+  public reviewSet: QuestionSet;
+  public isLoading: boolean = false;
 
   constructor(private userService: UserService) { }
 

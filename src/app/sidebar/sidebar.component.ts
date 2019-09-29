@@ -10,7 +10,7 @@ import { User } from '../core/models/user.model';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  private currentUser: User;
+  public currentUser: User;
 
   constructor(
     private userService: UserService,
