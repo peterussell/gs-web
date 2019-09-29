@@ -205,13 +205,13 @@ export class QuestionEditorComponent implements OnInit {
     if (course === null) { return; }
     this.selectedCourse = course;
     // TODO: extract to utility class
-    this.subjects = this.selectedCourse.subjects.sort((a, b) => {
+    this.subjects = this.selectedCourse.Subjects.sort((a, b) => {
       if (a.Title < b.Title) return -1;
       if (a.Title > b.Title) return 1;
       return 0;
     });
-    if (this.selectedCourse.subjects !== null && this.selectedCourse.subjects.length > 0) {
-      this.selectSubject(this.selectedCourse.subjects[0]);
+    if (this.selectedCourse.Subjects !== null && this.selectedCourse.Subjects.length > 0) {
+      this.selectSubject(this.selectedCourse.Subjects[0]);
     }
   }
 
@@ -219,13 +219,13 @@ export class QuestionEditorComponent implements OnInit {
     if (subject === null) { return; }
     this.selectedSubject = subject;
     // TODO: extract to utility class
-    this.topics = this.selectedSubject.topics.sort((a, b) => {
+    this.topics = this.selectedSubject.Topics.sort((a, b) => {
       if (a.Title < b.Title) return -1;
       if (a.Title > b.Title) return 1;
       return 0;
     });
-    if (this.selectedSubject.topics !== null && this.selectedSubject.topics.length > 0) {
-      this.selectTopic(this.selectedSubject.topics[0]);
+    if (this.selectedSubject.Topics !== null && this.selectedSubject.Topics.length > 0) {
+      this.selectTopic(this.selectedSubject.Topics[0]);
     }
   }
 

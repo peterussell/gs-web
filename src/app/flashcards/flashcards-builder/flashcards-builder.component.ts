@@ -35,8 +35,8 @@ export class FlashcardsBuilderComponent implements OnInit {
     this.subjectsState = [];
     
     // Populate the checkbox states for Subjects and Topics
-    if (this.selectedCourse.subjects !== null && this.selectedCourse.subjects.length > 0) {
-      this.selectedCourse.subjects.sort((a, b) => {
+    if (this.selectedCourse.Subjects !== null && this.selectedCourse.Subjects.length > 0) {
+      this.selectedCourse.Subjects.sort((a, b) => {
         if (a.Title > b.Title) { return 1; }
         if (a.Title < b.Title) { return -1; }
         return 0;
@@ -45,7 +45,7 @@ export class FlashcardsBuilderComponent implements OnInit {
         let s = { id: subject.SubjectId, title: subject.Title, selected: true, topics: [] };
 
         // Topics for this subject
-        subject.topics.sort((a, b) => {
+        subject.Topics.sort((a, b) => {
           if (a.Title > b.Title) { return 1; }
           if (a.Title < b.Title) { return -1; }
           return 0;

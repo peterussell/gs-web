@@ -21,13 +21,13 @@ export class SubjectComponent implements OnInit {
   @Input()
     set subject(subject: Subject) {
       this._subject = subject;
-      if (this._subject !== undefined && this._subject.topics.length > 0) {
-        this._subject.topics = this._subject.topics.sort((a, b) => {
+      if (this._subject !== undefined && this._subject.Topics.length > 0) {
+        this._subject.Topics = this._subject.Topics.sort((a, b) => {
           if (a.Title < b.Title) return -1;
           if (a.Title > b.Title) return 1;
           return 0;
         });
-        this.selectTopic(this._subject.topics[0]);
+        this.selectTopic(this._subject.Topics[0]);
       }
     }
     get subject() { return this._subject; }

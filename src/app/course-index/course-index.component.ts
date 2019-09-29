@@ -11,16 +11,24 @@ export class CourseIndexComponent implements OnInit {
   public allCourses: Array<Course>;
 
   constructor(private apiService: ApiService) {
+    this.allCourses = new Array<Course>();
   }
 
   ngOnInit() {
     this.apiService.getCourses().subscribe(
       (data) => {
-        this.allCourses = data.Courses.sort((a: Course, b: Course) => {
-          if (a.Order > b.Order) return 1;
-          if (a.Order < b.Order) return -1;
-          return 0;
-        })
+        let allCourses = data.Courses;
+        allCourses.forEach(c => {
+          this.allCourses.push(new Course(c));
+        });
+
+        if (this.allCourses) {
+          this.allCourses = this.allCourses.sort((a: Course, b: Course) => {
+            if (a.Order > b.Order) return 1;
+            if (a.Order < b.Order) return -1;
+            return 0;
+          });
+        }
       },
       (error) => {
         console.log(error); // TODO: log this properly

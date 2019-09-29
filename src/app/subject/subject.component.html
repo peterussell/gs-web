@@ -1,7 +1,7 @@
 <mat-card class="topic-selector">
 <mat-form-field class="topic-selector__topic">
     <mat-select placeholder="Topic" (change)="matSelectTopic($event)" [value]="selectedTopic">
-    <mat-option *ngFor="let topic of subject.topics" [value]="topic">
+    <mat-option *ngFor="let topic of subject.Topics" [value]="topic">
         {{ topic.title }}
     </mat-option>
     </mat-select>

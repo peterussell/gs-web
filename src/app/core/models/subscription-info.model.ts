@@ -18,16 +18,7 @@ export class SubscriptionInfo {
             pc.PurchaseDate = new Date(pcData["PurchaseDate"] + 'Z');
             pc.ExpiryDate = new Date(pcData["ExpiryDate"] + 'Z');
             pc.CoursePath = pcData["CoursePath"];
-            pc.Subject = new Subject(
-                subjectData["CourseId"],
-                subjectData["SubjectId"],
-                subjectData["Title"],
-                subjectData["Path"],
-                subjectData["Version"],
-                subjectData["PremiumVersionAvailable"],
-                subjectData["FreeVersionAvailable"],
-                null
-            );
+            pc.Subject = new Subject(subjectData);
             this.PurchasedCourses.push(pc);
         }
     }

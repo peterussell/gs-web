@@ -47,7 +47,7 @@ export class CourseComponent implements OnInit {
     const course = this.allCourses.find(c => c.Path === this.coursePath);
     if (course === undefined) { this.router.navigate(['/']); }
 
-    const subject = course.subjects.find(s => s.Path === this.subjectPath);
+    const subject = course.Subjects.find(s => s.Path === this.subjectPath);
     if (subject === undefined) { this.router.navigate(['/']); }
 
     this.selectedSubject = subject;

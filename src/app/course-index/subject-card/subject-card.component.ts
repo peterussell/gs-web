@@ -39,7 +39,7 @@ export class SubjectCardComponent implements OnInit {
 
   // TODO: show an error (snackbar?) if user isn't logged in...
   // eg. 'Please log in or _register for a free account_ to buy premium courses'
-  buyCourse(sku: string) {
+  buyCourse(subject: Subject) {
     let user = this.userService.getCurrentUser();
     if (!user) {
       this.snackBar.openFromComponent(
@@ -53,10 +53,24 @@ export class SubjectCardComponent implements OnInit {
       return;
     }
 
+    const skuToPurchase = subject.getStripeSKU();
+    if (!skuToPurchase) {
+      this.snackBar.openFromComponent(
+        GsSnackbarComponent,
+        {
+          duration: 5000,
+          data: { message: 'Sorry, something went wrong while trying to buy this course.' },
+          panelClass: 'gs-snackbar'
+        }
+      );
+      console.log('Error: no SKU found for Subject.');
+      return;
+    }
+
     this._stripe.redirectToCheckout({
       items: [
         // Replace with the ID of your SKU
-        {sku: 'sku_FYkdG5siEvcNkL', quantity: 1}
+        {sku: skuToPurchase, quantity: 1}
       ],
       clientReferenceId: user.getCognitoUsername(),
       customerEmail: user.getEmail(),

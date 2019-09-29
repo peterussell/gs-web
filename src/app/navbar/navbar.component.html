@@ -17,7 +17,9 @@
       <!-- Account buttons: >= medium -->
       <div class="accounts" fxShow="true" fxHide.lt-md="true">
         <span *ngIf="currentUser; else loggedOut">
-          <p class="welcome-back-msg">Signed in as {{ currentUser.Name }}</p>
+          <p class="welcome-back-msg">Signed in 
+            <span *ngIf="currentUser.Name">as {{ currentUser.Name }}</span>
+          </p>
           <button mat-icon-button [matMenuTriggerFor]="profileMenu">
             <i class="material-icons">account_circle</i>
           </button>
