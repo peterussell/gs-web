@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, isDevMode } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject } from '../../core/models/subject.model';
 import { UserService } from '../../core/services/user.service';
@@ -25,7 +25,11 @@ export class SubjectCardComponent implements OnInit {
     private snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this._stripe = Stripe('pk_test_2cKdGLOWOuxYiTWrn8PaC4jS00sNO8cXJk');
+    if (isDevMode()) {
+      this._stripe = Stripe('pk_test_2cKdGLOWOuxYiTWrn8PaC4jS00sNO8cXJk');
+    } else {
+      this._stripe = Stripe('pk_live_nN7aq02Vr1yDxuVlVH4sSKVK005UdUv3pv');
+    }
 
     this.userService.currentUser$.subscribe((user: User) => {
       if (user) {
@@ -74,8 +78,8 @@ export class SubjectCardComponent implements OnInit {
       ],
       clientReferenceId: user.getCognitoUsername(),
       customerEmail: user.getEmail(),
-      successUrl: 'http://localhost:4200/payment-success', // TODO: update these!!!
-      cancelUrl: 'http://localhost:4200',     // TODO: update these!!!
+      successUrl: 'http://localhost:4200/payment-success',
+      cancelUrl: 'http://localhost:4200',
     }).then(function (result) {
       // should have been redirected to success/error page
     });
