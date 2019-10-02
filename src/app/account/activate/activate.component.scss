@@ -1,5 +1,22 @@
-.gs-header-image {
-    background-image: url('/assets/images/login/logo.png');
+.wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  
+    .content-wrapper {
+        max-width: 400px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.mat-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: none !important;
 }
 
 .activate-container {

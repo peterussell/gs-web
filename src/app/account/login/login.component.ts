@@ -1,13 +1,13 @@
-import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
-import { UserService } from '../core/services/user.service';
-import { AuthenticateUserResultStatus } from '../core/services/authenticate-user.result';
+import { UserService } from '../../core/services/user.service';
+import { AuthenticateUserResultStatus } from '../../core/services/authenticate-user.result';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { map, catchError } from 'rxjs/operators';
 import { Subscription } from 'rxjs/Subscription';
-import { User } from '../core/models/user.model';
-import { StoreService } from '../core/services/store.service';
+import { User } from '../../core/models/user.model';
+import { StoreService } from '../../core/services/store.service';
 
 @Component({
   selector: 'app-login',
@@ -15,10 +15,6 @@ import { StoreService } from '../core/services/store.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  @Output() onAuthenticationSuccess = new EventEmitter<any>();
-  @Output() onShowForgotPasswordForm = new EventEmitter<any>();
-  @Output() onShowRegisterForm = new EventEmitter<any>();
-
   public loginForm: FormGroup;
   public hasAuthError: boolean = false;
 
@@ -48,7 +44,6 @@ export class LoginComponent implements OnInit {
         this.userService.getProfile(cognitoUser['username']).subscribe((data) => {
           let user = new User(cognitoUser, data);
           this.userService.setCurrentUser(user);
-          this.onAuthenticationSuccess.emit();
           this.router.navigate(['/dashboard']);
         });
       },
@@ -57,13 +52,5 @@ export class LoginComponent implements OnInit {
         this.loginForm.enable();
       }
     );
-  }
-
-  showRegisterForm() {
-    this.onShowRegisterForm.emit();
-  }
-
-  showForgotPasswordForm() {
-    this.onShowForgotPasswordForm.emit();
   }
 }

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountDialogState, AccountDialogComponent } from '../account-dialog/account-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { UserService } from '../core/services/user.service';
 import { UIEventsService } from '../core/services/ui-events.service';
@@ -21,7 +19,6 @@ export class NavbarComponent implements OnInit {
     private userService: UserService,
     private uiEventsService: UIEventsService,
     private router: Router,
-    public dialog: MatDialog,
   ) { }
 
   ngOnInit() {
@@ -33,21 +30,11 @@ export class NavbarComponent implements OnInit {
   }
 
   registerClick() {
-    const dialogRef = this.dialog.open(AccountDialogComponent, {
-      width: '380px',
-      panelClass: 'container-no-padding',
-      position: { top: '30px' },
-      data: { initialState: AccountDialogState.Register }
-    });
+    this.router.navigate(['/register']);
   }
 
   signInClick() {
-    const dialogRef = this.dialog.open(AccountDialogComponent, {
-      width: '380px',
-      panelClass: 'container-no-padding',
-      position: { top: '30px' },
-      data: { initialState: AccountDialogState.Login }
-    });
+    this.router.navigate(['/login']);
   }
 
   signOutClick() {
@@ -55,7 +42,7 @@ export class NavbarComponent implements OnInit {
   }
 
   goToDashboardClick() {
-    this.router.navigate(['/dashboard/']);
+    this.router.navigate(['/dashboard']);
   }
 
   showMenu() {

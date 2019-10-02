@@ -78,8 +78,8 @@ export class SubjectCardComponent implements OnInit {
       ],
       clientReferenceId: user.getCognitoUsername(),
       customerEmail: user.getEmail(),
-      successUrl: 'http://localhost:4200/payment-success',
-      cancelUrl: 'http://localhost:4200',
+      successUrl: 'https://dev.groundschool.co.nz/payment-success', // TODO: change these for prod build!!!
+      cancelUrl: 'https://dev.groundschool.co.nz/', // TODO: change these for prod build!!!
     }).then(function (result) {
       // should have been redirected to success/error page
     });

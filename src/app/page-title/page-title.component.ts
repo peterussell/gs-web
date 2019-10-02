@@ -5,7 +5,6 @@ import { QuestionService } from '../core/services/question.service';
 import { Subject } from '../core/models/subject.model';
 import { Course } from '../core/models/course.model';
 import { MatDialog } from '@angular/material/dialog';
-import { AccountDialogState, AccountDialogComponent } from '../account-dialog/account-dialog.component';
 import { UserService } from '../core/services/user.service';
 import { CognitoUser } from 'amazon-cognito-identity-js';
 import { Observable } from 'rxjs/Observable';

@@ -1,0 +1,58 @@
+<div class="wrapper">
+  <div class="content-wrapper">
+    <mat-card class="activate-container">
+      <mat-card-title>
+        <img src="/assets/images/login/logo.png" alt="GroundSchool NZ"><br>
+        Activate Account
+      </mat-card-title>
+    
+      <mat-card-content>
+    
+        <!-- Activate form -->
+        <form [formGroup]="activateForm" (ngSubmit)="onActivate()" *ngIf="!showActivateSuccessMessage()">
+          <div>
+            <mat-form-field>
+              <input matInput formControlName="email" placeholder="Email">
+              <mat-error *ngIf="!activateForm.get('email').valid && activateForm.get('email').touched">
+                Valid email required
+              </mat-error>
+            </mat-form-field>
+          </div>
+    
+          <div>
+            <mat-form-field>
+              <input matInput formControlName="code" placeholder="Code">
+              <mat-error
+                *ngIf="!activateForm.get('code').value !== '' && activateForm.get('code').touched">
+                Required
+              </mat-error>
+            </mat-form-field>
+          </div>
+    
+          <div class="error-msg" *ngIf="hasActivationError()">
+            {{ activateErrorMessage }}
+          </div>
+          <mat-card-actions *ngIf="!showActivateSuccessMessage()">
+            <button mat-raised-button [disabled]="!activateForm.valid">Activate Account</button>
+          </mat-card-actions>
+        </form>
+    
+        <!-- Activate success -->
+        <div class="activate-success" *ngIf="showActivateSuccessMessage()">
+          <p>
+            Your account has been activated.<br>
+            Welcome to GroundSchool NZ!
+          </p>
+          <p>
+            <a routerLink="/login">Sign in</a>
+          </p>
+        </div>
+    
+        <div class="return-home">
+          <a routerLink="/">Back to GroundSchool.co.nz</a>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

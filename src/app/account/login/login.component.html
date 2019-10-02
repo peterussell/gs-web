@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <div class="content-wrapper">
+    <mat-card class="login-container">
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    
+        <mat-card-title>
+          <img src="/assets/images/login/logo.png" alt="GroundSchool NZ"><br>
+          Log In
+        </mat-card-title>
+    
+        <div>
+          <mat-form-field>
+            <input matInput formControlName="email" placeholder="Email">
+            <mat-error *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">
+              Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+    
+        <div>
+          <mat-form-field>
+            <input matInput formControlName="password" type="password" placeholder="Password">
+            <mat-error *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">
+            Required</mat-error>
+          </mat-form-field>
+        </div>
+    
+        <div class="error-msg" *ngIf="hasAuthError">
+          We didn't recognise that email/password combination, please try again.
+        </div>
+    
+        <mat-card-actions class="login-container__actions-panel">
+            <button mat-raised-button [disabled]="!loginForm.valid">
+              <span #login>Login</span>
+            </button>
+        </mat-card-actions>
+    
+        <mat-card-footer>
+          <span class="forgot-password">
+            <a routerLink="/reset-password">Forgot password?</a>
+          </span>
+    
+          <span class="create-account">
+            <a mat-stroked-button color="primary" href="/register">Create an account</a><br>
+          </span>
+          
+        </mat-card-footer>
+    
+      </form>
+    </mat-card>
+  </div>
+</div>
+

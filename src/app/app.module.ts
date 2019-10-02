@@ -13,7 +13,7 @@ import { QuestionComponent } from './subject/question/question.component';
 import { ApiService } from './core/services/api.service';
 import { QuestionService } from './core/services/question.service';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './account/login/login.component';
 import { ReviewDashboardComponent } from './review/review-dashboard/review-dashboard.component';
 import { GroundSchoolAppComponent } from './ground-school-app/ground-school-app.component';
 import { CourseComponent } from './review/course.component';
@@ -25,13 +25,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { UIEventsService } from './core/services/ui-events.service';
 import { ResponsiveService } from './core/services/responsive.service';
-import { RegisterComponent } from './register/register.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { RegisterComponent } from './account/register/register.component';
+import { ResetPasswordComponent } from './account/reset-password/reset-password.component';
 import { UserService } from './core/services/user.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ReportQuestionDialogComponent } from './subject/report-question-dialog/report-question-dialog.component';
 import { QuestionEditorComponent } from './question-editor/question-editor.component';
-import { AccountDialogComponent } from './account-dialog/account-dialog.component';
 import { FlashcardsComponent } from './flashcards/flashcards.component';
 import { FlashcardsBuilderComponent } from './flashcards/flashcards-builder/flashcards-builder.component';
 import { FlashcardsViewerComponent } from './flashcards/flashcards-viewer/flashcards-viewer.component';
@@ -39,8 +38,7 @@ import { FlashcardsCardComponent } from './flashcards/flashcards-viewer/flashcar
 import { GroundschoolComponent } from './groundschool/groundschool.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StoreService } from './core/services/store.service';
-import { ActivateComponent } from './activate/activate.component';
-import { ActivateFullPageComponent } from './activate-full-page/activate-full-page.component';
+import { ActivateComponent } from './account/activate/activate.component';
 import { ContactComponent } from './contact/contact.component';
 import { CourseIndexComponent } from './course-index/course-index.component';
 import { SubjectCardComponent } from './course-index/subject-card/subject-card.component';
@@ -56,7 +54,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PurchasedCourseCardComponent } from './dashboard/purchased-course-card/purchased-course-card.component';
 import { ReviewQuestionsComponent } from './review-questions/review-questions.component';
 import { ConfirmDialogComponent } from './review-questions/confirm-dialog/confirm-dialog.component';
-import { SignedOutComponent } from './signed-out/signed-out.component';
+import { SignedOutComponent } from './account/signed-out/signed-out.component';
+import { MatDialogModule } from '@angular/material';
 
 
 @NgModule({
@@ -74,7 +73,6 @@ import { SignedOutComponent } from './signed-out/signed-out.component';
     ResetPasswordComponent,
     LandingPageComponent,
     ReportQuestionDialogComponent,
-    AccountDialogComponent,
     QuestionEditorComponent,
     FlashcardsComponent,
     FlashcardsBuilderComponent,
@@ -83,7 +81,6 @@ import { SignedOutComponent } from './signed-out/signed-out.component';
     GroundschoolComponent,
     NavbarComponent,
     ActivateComponent,
-    ActivateFullPageComponent,
     ContactComponent,
     CourseIndexComponent,
     SubjectCardComponent,
@@ -109,7 +106,8 @@ import { SignedOutComponent } from './signed-out/signed-out.component';
     ReactiveFormsModule,
     FormsModule,
     LayoutModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule
   ],
   providers: [
     ApiService,
@@ -120,11 +118,11 @@ import { SignedOutComponent } from './signed-out/signed-out.component';
     ResponsiveService,
     CourseResolver,
     SubjectResolver,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule
   ],
   entryComponents: [
     ReportQuestionDialogComponent,
-    AccountDialogComponent,
     ConfirmDialogComponent,
     ActivateComponent,
     GsSnackbarComponent

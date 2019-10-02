@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { UserService } from '../core/services/user.service';
+import { UserService } from '../../core/services/user.service';
 
 @Component({
   selector: 'app-activate',

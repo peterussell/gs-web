@@ -1,0 +1,64 @@
+.wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  
+    .content-wrapper {
+        max-width: 400px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.mat-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: none !important;
+}
+
+.register-container {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.mat-card-actions {
+    margin-bottom: 20px !important;
+}
+
+.activate-message {
+    line-height: 1.6em;
+    margin-bottom: 30px;
+}
+
+.password-instructions {
+    padding: 0;
+    margin: 0 0 6px 0;
+
+    p {
+        font-size: 0.9em;
+        color: #999;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.error-msg {
+    padding: 0px 0 14px 0;
+    color: #f44336;
+}
+
+.mat-card-footer {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.return-to-login {
+    font-size: 0.8em;
+}

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
-import { AccountDialogComponent, AccountDialogState } from '../account-dialog/account-dialog.component';
 import { UserService } from '../core/services/user.service';
 import { User } from '../core/models/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,7 +13,7 @@ export class SidebarComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private dialog: MatDialog) { }
+    private router: Router) { }
 
   ngOnInit() {
     this.userService.currentUser$.subscribe((newUser: User) => {
@@ -23,21 +22,11 @@ export class SidebarComponent implements OnInit {
   }
 
   registerClick() {
-    const dialogRef = this.dialog.open(AccountDialogComponent, {
-      width: '380px',
-      panelClass: 'container-no-padding',
-      position: { top: '30px' },
-      data: { initialState: AccountDialogState.Register }
-    });
+    this.router.navigate(['/register']);
   }
 
   signInClick() {
-    const dialogRef = this.dialog.open(AccountDialogComponent, {
-      width: '380px',
-      panelClass: 'container-no-padding',
-      position: { top: '30px' },
-      data: { initialState: AccountDialogState.Login }
-    });
+    this.router.navigate(['/login']);
   }
 
   signOutClick() {

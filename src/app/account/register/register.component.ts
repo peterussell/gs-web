@@ -1,8 +1,8 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { UserService } from '../core/services/user.service';
-import { RegisterUserResultStatus } from '../core/services/register-user.result';
-import { GlobalVariables } from '../../globals';
+import { UserService } from '../../core/services/user.service';
+import { RegisterUserResultStatus } from '../../core/services/register-user.result';
+import { GlobalVariables } from '../../../globals';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -11,8 +11,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  @Output() onShowLoginForm = new EventEmitter<any>();
-
   public registerForm: FormGroup;
   private currentState: RegisterUserState = RegisterUserState.Initial;
   private errorMessage: string;
@@ -82,10 +80,6 @@ export class RegisterComponent implements OnInit {
 
   showActivateMessage() {
     return this.currentState === RegisterUserState.Activate;
-  }
-
-  showLoginForm() {
-    this.onShowLoginForm.emit();
   }
   
   setError(message: string) {

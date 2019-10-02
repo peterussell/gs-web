@@ -11,7 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -32,7 +31,6 @@ import { MatChipsModule } from '@angular/material/chips';
         MatToolbarModule,
         MatProgressSpinnerModule,
         MatTooltipModule,
-        MatDialogModule,
         MatRadioModule,
         MatCheckboxModule,
         MatProgressBarModule,
@@ -52,7 +50,6 @@ import { MatChipsModule } from '@angular/material/chips';
         MatToolbarModule,
         MatProgressSpinnerModule,
         MatTooltipModule,
-        MatDialogModule,
         MatRadioModule,
         MatCheckboxModule,
         MatProgressBarModule,
