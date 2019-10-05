@@ -34,11 +34,16 @@ export class LoginComponent implements OnInit {
     this.hasAuthError = false;
     this.loginForm.disable();
 
-    this.userService.signIn(
+    let signIn$ = this.userService.signIn(
       this.loginForm.get('email').value,
       this.loginForm.get('password').value
-    )
-    .subscribe(
+    );
+
+    signIn$.finally(() => {
+      this.loginForm.enable();
+    });
+
+    signIn$.subscribe(
       (cognitoUser: CognitoUser) => {
         // Load the user's profile info
         this.userService.getProfile(cognitoUser['username']).subscribe((data) => {
