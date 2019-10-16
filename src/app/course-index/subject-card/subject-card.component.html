@@ -1,8 +1,9 @@
-<mat-card class="subject-card">
+<mat-card class="subject-card" [routerLink]="['/', parentPath, subject.Path]">
   <p class="course-title">{{ subject.Title }}</p>
   <img src="assets/images/home/{{subject.Path}}.png" alt="{{ subject.Title }}">
 
-  <mat-card-actions>
+</mat-card>
+  <!-- <mat-card-actions>
     <span *ngIf="subject.PremiumVersionAvailable; else comingSoon">
 
       <span *ngIf="ownsCourse(subject.SubjectId); else canPurchase">
@@ -26,4 +27,4 @@
 </mat-card>
 <div class="free-version" *ngIf="subject.FreeVersionAvailable">
   <a [routerLink]="['/', parentPath, subject.Path, 'free']">Free Version</a>
-</div>
+</div> -->

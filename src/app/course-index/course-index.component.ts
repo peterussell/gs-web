@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../core/services/api.service';
 import { Course } from '../core/models/course.model';
+import { Subject } from '../core/models/subject.model';
 
 @Component({
   selector: 'app-course-index',
@@ -34,6 +35,32 @@ export class CourseIndexComponent implements OnInit {
         console.log(error); // TODO: log this properly
       }
     )
+  }
+
+  hasCourses() {
+    return this.allCourses && this.allCourses.length > 0;
+  }
+
+  getCoursesWithPremiumSubjects(courses: Array<Course>) {
+    let activeCourses = new Array<Course>();
+
+    courses.forEach((c) => {
+      if (c.Subjects.findIndex((s) => { return s.PremiumVersionAvailable; }) > -1) {
+        activeCourses.push(c);
+      }
+    });
+    return activeCourses;
+  }
+
+  getActiveSubjects(subjects: Array<Subject>) {
+    let activeSubjects = new Array<Subject>();
+
+    subjects.forEach((s) => {
+      if (s.PremiumVersionAvailable) {
+        activeSubjects.push(s);
+      }
+    });
+    return activeSubjects;
   }
 
 }
