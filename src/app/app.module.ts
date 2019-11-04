@@ -56,6 +56,7 @@ import { ReviewQuestionsComponent } from './review-questions/review-questions.co
 import { ConfirmDialogComponent } from './review-questions/confirm-dialog/confirm-dialog.component';
 import { SignedOutComponent } from './account/signed-out/signed-out.component';
 import { MatDialogModule } from '@angular/material';
+import { ResourcesComponent } from './resources/resources.component';
 
 
 @NgModule({
@@ -96,6 +97,7 @@ import { MatDialogModule } from '@angular/material';
     ReviewQuestionsComponent,
     ConfirmDialogComponent,
     SignedOutComponent,
+    ResourcesComponent,
   ],
   imports: [
     BrowserModule,

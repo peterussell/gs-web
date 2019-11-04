@@ -21,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReviewDashboardComponent } from './review/review-dashboard/review-dashboard.component';
 import { SignedOutComponent } from './account/signed-out/signed-out.component';
 import { ActivateComponent } from './account/activate/activate.component';
+import { ResourcesComponent } from './resources/resources.component';
 
 const appRoutes: Routes = [
     
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
         { path: 'dashboard', component: DashboardComponent },
         { path: 'flashcards', component: FlashcardsComponent, resolve: { course: CourseResolver } },
         { path: 'payment-success', component: PaymentSuccessComponent },
+        { path: 'resources', component: ResourcesComponent },
         { path: 'review-set', component: ReviewDashboardComponent },
         // account
         { path: 'register', component: RegisterComponent },
