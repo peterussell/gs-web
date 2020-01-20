@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <div class="content-wrapper">
+    <div class="title">
+      <app-page-title>Articles</app-page-title>
+    </div>
+
+    <div class="content">
+      <mat-card class="article" *ngFor="let article of Articles">
+          <mat-card-header>
+            <mat-card-title>
+              <h2>
+                <a routerLink="/articles/{{ article.ArticleUrl }}">{{ article.Title }}</a>
+              </h2>
+            </mat-card-title>
+            <mat-card-subtitle>
+              {{ article.PublishDate }}
+            </mat-card-subtitle>
+          </mat-card-header>
+          <a routerLink="/articles/{{ article.ArticleUrl }}">
+            <img mat-card-image src="/assets/images/{{ article.ImagePath }}" alt="{{ article.Title }}" style="padding-top: 16px;">
+          </a>
+          <mat-card-content>
+    
+            <p>
+              {{ article.getIntro() }} <a routerLink="/articles/{{ article.ArticleUrl }}">Read more</a>
+            </p>
+          </mat-card-content>
+        </mat-card>
+    </div>
+
+  </div>
+</div>

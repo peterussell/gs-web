@@ -22,17 +22,25 @@ import { ReviewDashboardComponent } from './review/review-dashboard/review-dashb
 import { SignedOutComponent } from './account/signed-out/signed-out.component';
 import { ActivateComponent } from './account/activate/activate.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { SoFlyingWhereDoIStartComponent } from './articles/articles/so-flying-where-do-i-start/so-flying-where-do-i-start.component';
+import { SelfStudyTipsComponent } from './articles/articles/self-study-tips/self-study-tips.component';
+import { SelfStudyTipsPartTwoComponent } from './articles/articles/self-study-tips-part-two/self-study-tips-part-two.component';
 
 const appRoutes: Routes = [
-    
-    // { path: 'login', component: LoginComponent },
-    // { path: 'register', component: RegisterComponent },
-    // { path: 'reset-password', component: ResetPasswordComponent },
-    { path: 'admin', component: GroundSchoolAppComponent, children: [
-        { path: 'question-editor', component: QuestionEditorComponent },
-    ]},
     { path: '', component: GroundschoolComponent, children: [
         { path: '', component: LandingPageComponent },
+        // admin
+        { path: 'admin', children: [
+            { path: 'question-editor', component: QuestionEditorComponent }
+        ]},
+        { path: 'articles', component: ArticlesComponent },
+
+        // ugh - for now
+        { path: 'articles/so-flying-where-do-i-start', component: SoFlyingWhereDoIStartComponent },
+        { path: 'articles/self-study-tips', component: SelfStudyTipsComponent },
+        { path: 'articles/self-study-tips-part-two', component: SelfStudyTipsPartTwoComponent },
+
         { path: 'checklists', component: ChecklistTrainerComponent },
         { path: 'contact', component: ContactComponent },
         { path: ':course/:subject', component: FlashcardsComponent },
@@ -47,7 +55,7 @@ const appRoutes: Routes = [
         { path: 'login', component: LoginComponent },
         { path: 'activate', component: ActivateComponent },
         { path: 'reset-password', component: ResetPasswordComponent },
-        { path: 'signed-out', component: SignedOutComponent },
+        { path: 'signed-out', component: SignedOutComponent }
     ]},
     { path: '**', redirectTo: '' }
 ];

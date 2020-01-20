@@ -57,6 +57,10 @@ import { ConfirmDialogComponent } from './review-questions/confirm-dialog/confir
 import { SignedOutComponent } from './account/signed-out/signed-out.component';
 import { MatDialogModule } from '@angular/material';
 import { ResourcesComponent } from './resources/resources.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { SoFlyingWhereDoIStartComponent } from './articles/articles/so-flying-where-do-i-start/so-flying-where-do-i-start.component';
+import { SelfStudyTipsComponent } from './articles/articles/self-study-tips/self-study-tips.component';
+import { SelfStudyTipsPartTwoComponent } from './articles/articles/self-study-tips-part-two/self-study-tips-part-two.component';
 
 
 @NgModule({
@@ -98,6 +102,10 @@ import { ResourcesComponent } from './resources/resources.component';
     ConfirmDialogComponent,
     SignedOutComponent,
     ResourcesComponent,
+    ArticlesComponent,
+    SoFlyingWhereDoIStartComponent,
+    SelfStudyTipsComponent,
+    SelfStudyTipsPartTwoComponent,
   ],
   imports: [
     BrowserModule,
