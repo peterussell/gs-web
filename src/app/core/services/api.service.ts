@@ -74,17 +74,19 @@ export class ApiService {
         );
     }
 
-    public addQuestion(topicId: string, question: string, answer: string,
+    public addQuestion(topicId: string, syllabusRef: string, question: string, answer: string,
         references: Array<Reference>): Observable<any> {
+
         var body = {
-            'topic_id': topicId,
-            'question': question,
-            'answer': answer,
-            'references': []
+            'TopicId': topicId,
+            'SyllabusRef': syllabusRef,
+            'Question': question,
+            'Answer': answer,
+            'References': []
         };
         references.forEach(r => {
             if (r.Text === null) { return; }
-            body['references'].push({ 'text': r.Text, 'url': r.Url });
+            body['References'].push({ 'Text': r.Text, 'Url': r.Url });
         });
 
         return this.http.post<any>(

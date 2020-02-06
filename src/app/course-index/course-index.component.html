@@ -5,6 +5,11 @@
 <ng-template #courseIndex>
   <div class="wrapper">
     <h1>Flashcards</h1>
+    <p class="page-description">
+      GroundSchool flashcards are question sets designed to help revise content covered in the CAA
+      theory exams. Questions are based directly on the CAA syllabus, meaning you only study what
+      you need to know.
+    </p>
     <div class="content-wrapper">
 
       <h2 *ngIf="!hasCourses(); else courses">Loading...</h2>

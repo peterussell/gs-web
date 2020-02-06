@@ -6,12 +6,13 @@
 
     .content-wrapper {
         max-width: 900px;
-        flex: 1 1 auto;
+        flex: 0 1 auto;
         display: flex;
         flex-direction: column;
 
         .title, .content {
-            flex: 1 0 auto;
+            flex: 0 0 auto;
+            flex-wrap: wrap;
             display: flex;
             flex-direction: row;
         }
@@ -19,8 +20,10 @@
 }
 
 .article {
-    max-width: 300px;
+    flex: 0 0 auto;
+    width: 300px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .mat-card-title {

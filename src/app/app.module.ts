@@ -61,6 +61,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { SoFlyingWhereDoIStartComponent } from './articles/articles/so-flying-where-do-i-start/so-flying-where-do-i-start.component';
 import { SelfStudyTipsComponent } from './articles/articles/self-study-tips/self-study-tips.component';
 import { SelfStudyTipsPartTwoComponent } from './articles/articles/self-study-tips-part-two/self-study-tips-part-two.component';
+import { TipsForNewAerodromesComponent } from './articles/articles/tips-for-new-aerodromes/tips-for-new-aerodromes.component';
 
 
 @NgModule({
@@ -106,6 +107,7 @@ import { SelfStudyTipsPartTwoComponent } from './articles/articles/self-study-ti
     SoFlyingWhereDoIStartComponent,
     SelfStudyTipsComponent,
     SelfStudyTipsPartTwoComponent,
+    TipsForNewAerodromesComponent,
   ],
   imports: [
     BrowserModule,

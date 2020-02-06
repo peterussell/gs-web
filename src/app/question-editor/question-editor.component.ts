@@ -33,6 +33,7 @@ export class QuestionEditorComponent implements OnInit {
   ngOnInit() {
     this.addQuestionForm = new FormGroup({
       'topic': new FormControl(null),
+      'syllabusRef': new FormControl(null, Validators.required),
       'questionText': new FormControl(null, Validators.required),
       'answerText': new FormControl(null, Validators.required),
       'references': this.formBuilder.array([]),
@@ -63,13 +64,15 @@ export class QuestionEditorComponent implements OnInit {
     this.addingQuestionReturnedSuccess = false;
     this.addingQuestionReturnedError = false;
 
+    const syllabusRef = this.addQuestionForm.get('syllabusRef').value;
     const questionText = this.addQuestionForm.get('questionText').value;
     const answerText = this.addQuestionForm.get('answerText').value;
     const references = this.mapReferenceFieldsToReferences();
 
     this.topicsToUpdate.forEach(qs => {
-      this.apiService.addQuestion(qs.topicId, questionText, answerText, references)
+      this.apiService.addQuestion(qs.TopicId, syllabusRef, questionText, answerText, references)
         .subscribe((response: any) => {
+          console.log(response);
           this.addingQuestionReturnedSuccess = true;
           this.addingQuestionReturnedError = false;
           this.resetForm();
@@ -89,14 +92,14 @@ export class QuestionEditorComponent implements OnInit {
   addSelectedTopic() {
     // Don't add topics we're already updating
     if (this.topicsToUpdate.some(
-      q => q.topicId === this.selectedTopic.TopicId)
+      q => q.TopicId === this.selectedTopic.TopicId)
     ) {
       return;
     }
 
     let toUpdate = new TopicToUpdate();
-    toUpdate.topicId = this.selectedTopic.TopicId;
-    toUpdate.description =
+    toUpdate.TopicId = this.selectedTopic.TopicId;
+    toUpdate.Description =
       `${this.selectedCourse.Title} > ${this.selectedSubject.Title} > ${this.selectedTopic.Title}`;
     this.topicsToUpdate.push(toUpdate);
   }
@@ -202,7 +205,6 @@ export class QuestionEditorComponent implements OnInit {
   }
 
   selectCourse(course: Course) {
-    if (course === null) { return; }
     this.selectedCourse = course;
     // TODO: extract to utility class
     this.subjects = this.selectedCourse.Subjects.sort((a, b) => {
@@ -236,6 +238,6 @@ export class QuestionEditorComponent implements OnInit {
 }
 
 class TopicToUpdate {
-  description: string;
-  topicId: string;
+  Description: string;
+  TopicId: string;
 }

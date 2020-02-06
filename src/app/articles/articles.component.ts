@@ -13,6 +13,13 @@ export class ArticlesComponent implements OnInit {
     // tmp until we figure out if we're moving over to Moodle or ...?
     this.Articles = new Array<ArticleSummary>();
     this.Articles.push(new ArticleSummary(
+      "Tips for flying to a new aerodrome",
+      "Despite the standardisation of procedures for operating at aerodromes in New Zealand, a few things still might catch you out during your first trip to a new field. Here are a few tips to help make sure you’re ahead of the game before you take off.",
+      "tips-for-new-aerodromes",
+      "Monday 3 Feb, 2020",
+      "articles/2020-02-03/index.jpg"
+    ));
+    this.Articles.push(new ArticleSummary(
       "Self-study tips (Part 2)",
       "Last week we imparted four tips to help you self-study for the CAA written exams. Well here's a treat - we're back with five more! Without further ado...",
       "self-study-tips-part-two",
